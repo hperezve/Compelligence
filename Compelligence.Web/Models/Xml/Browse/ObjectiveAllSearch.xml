@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ObjectiveAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>Name</property>
+      <label>ObjectiveName</label>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>AssignedToName</property>
+      <label>ObjectiveAssignedTo</label>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>Status</property>
+      <label>ObjectiveStatus</label>
+      <type class="StandardData">ObjectiveStatus</type>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>DueDate</property>
+      <label>ObjectiveDueDate</label>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>Type</property>
+      <label>ObjectiveType</label>
+      <type class="StandardData">ObjectiveType</type>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>Detail</property>
+      <label>ObjectiveDetail</label>
+    </column>
+    <column>
+      <entity>ObjectiveAllView</entity>
+      <property>Budget</property>
+      <label>ObjectiveBudget</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ObjectiveAllView as ObjectiveAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ObjectiveAllView.ClientCompany = '$S{ClientCompany}' and ( ObjectiveAllView.Status <> '$C{ObjectiveStatus.Achieved}' and ObjectiveAllView.Status <> '$C{ObjectiveStatus.NotAchieved}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ObjectiveAllView.Name
+    ]]>
+  </orderBy>
+</browse>

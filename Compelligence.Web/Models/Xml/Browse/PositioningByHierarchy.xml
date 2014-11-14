@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PositioningByHierarchyView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>PositioningByHierarchyView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column>
+      <entity>PositioningByHierarchyView</entity>
+      <property>ForType</property>
+      <label>PositioningForType</label>
+      <type class="StandardData">PositioningForType</type>
+    </column>
+    <column>
+      <entity>PositioningByHierarchyView</entity>
+      <property>Type</property>
+      <label>PositioningType</label>
+      <type class="StandardData">PositioningAllType</type>
+    </column>
+    <column>
+      <entity>PositioningByHierarchyView</entity>
+      <property>Content</property>
+      <label>PositioningContent</label>
+    </column>
+    <column>
+      <entity>PositioningByHierarchyView</entity>
+      <property>Source</property>
+      <label>PositioningSource</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningByHierarchyView as PositioningByHierarchyView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningByHierarchyView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningByHierarchyView.Lineage
+    ]]>
+  </orderBy>
+</browse>
+

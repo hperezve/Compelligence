@@ -1,0 +1,19 @@
+<NewsLetter>
+  <Sections>
+    <Section Value="Section One">
+    </Section>
+    <Section Value="Section Two">
+    </Section>
+    <Section Value="Section Three">
+      <Item Type="A" Value="Alerta de Google: michael jackson">michael jackson content.....</Item>
+      <Item Type="A" Value="BBC News Player | Business">Business content....</Item>
+    </Section>
+    <Section Value="Section Four">
+    </Section>
+    <Section Value="Section Five">
+    </Section>
+    <Section Value="Section Six">
+      <Item Type="A" Value="Work 2">Library content</Item>
+    </Section>
+  </Sections>
+</NewsLetter>

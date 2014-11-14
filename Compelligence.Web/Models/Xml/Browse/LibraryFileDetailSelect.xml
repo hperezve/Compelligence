@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LibraryFileDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>LibraryFileDetailSelectView</entity>
+      <property>Name</property>
+      <label>FileName</label>
+    </column>
+   
+    <column>
+      <entity>LibraryFileDetailSelectView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column>
+      <entity>LibraryFileDetailSelectView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryFileDetailSelectView as LibraryFileDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibraryFileDetailSelectView.ClientCompany = '$S{ClientCompany}' and LibraryFileDetailSelectView.Status ='ENBL'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryFileDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>

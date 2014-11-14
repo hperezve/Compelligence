@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>MarketTypeAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>MarketTypeAllView</entity>
+      <property>Name</property>
+      <label>IndustryName</label>
+    </column>
+    <column >
+      <entity>MarketTypeAllView</entity>
+      <property>AssignedToName</property>
+      <label>IndustryOwnerId</label>
+    </column>
+    <column >
+      <entity>MarketTypeAllView</entity>
+      <property>Description</property>
+      <label>IndustryDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.MarketTypeAllView as MarketTypeAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   MarketTypeAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    MarketTypeAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

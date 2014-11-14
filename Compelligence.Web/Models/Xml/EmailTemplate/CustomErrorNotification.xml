@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: The database is down]]></subject>
+  <message>
+    <![CDATA[
+    <html>
+    <head>
+    </head>
+    <img src="http://ebs.competitiveteam.com/exec/Content/Images/Styles/Compelligence.png"/>
+	  <img src="http://ebs.competitiveteam.com/exec/Content/Images/Styles/EmailAlerDatabase.png"/>
+    <body>
+     <b> <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div></b>
+      <br/>
+      <div>There was an error in the application Compelligence, because the database this down.</div>
+	    <div>The Database Principal has changed  to seconds </div>
+      <br/>
+      <div>Thanks</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

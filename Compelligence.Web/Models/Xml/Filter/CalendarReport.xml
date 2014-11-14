@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>Name</property>
+      <label>CalendarReportViewName</label>
+    </column>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>Type</property>
+      <label>CalendarReportViewType</label>
+      <type class="StandardData">CalendarType</type>
+    </column>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>Date</property>
+      <label>CalendarReportViewDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>AssignedToName</property>
+      <label>CalendarReportViewAssignedToName</label>
+    </column>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>EntityName</property>
+      <label>CalendarReportViewEntityName</label>
+    </column>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>Status</property>
+      <label>CalendarReportViewStatus</label>
+      <type class="StandardData">CalendarStatus</type>
+    </column>
+    <column>
+      <entity>CalendarReportView</entity>
+      <property>Description</property>
+      <label>CalendarReportViewDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CalendarReportView as CalendarReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CalendarReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CalendarReportView.Name
+    ]]>
+  </orderBy>
+</browse>

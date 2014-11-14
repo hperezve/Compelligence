@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>BudgetsbyProjectView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>BudgetsbyProjectView</entity>
+      <property>BudgetName</property>
+      <label>BudgetNameReport</label>
+    </column>
+    <column>
+      <entity>BudgetsbyProjectView</entity>
+      <property>BudgetStatus</property>
+      <label>BudgetStatusReport</label>
+      <type class="StandardData">BudgetStatus</type>
+    </column>
+    <column>
+      <entity>BudgetsbyProjectView</entity>
+      <property>Type</property>
+      <label>BudgetTypeReport</label>
+      <type class="StandardData">BudgetTypeUnit</type>
+    </column>
+    <column>
+      <entity>BudgetsbyProjectView</entity>
+      <property>AssignedToName</property>
+      <label>BudgetAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>BudgetsbyProjectView</entity>
+      <property>Value</property>
+      <label>ValueReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.BudgetsbyProjectView as BudgetsbyProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    BudgetsbyProjectView.ClientCompany = '$S{ClientCompany}' AND BudgetsbyProjectView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    BudgetsbyProjectView.ProjectId
+    ]]>
+  </orderBy>
+</browse>

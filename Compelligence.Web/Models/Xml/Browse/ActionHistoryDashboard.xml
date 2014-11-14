@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ActionHistoryDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ActionHistoryDashboardView</entity>si 
+      <property>Description</property>
+      <label>ActionHistoryDescription</label>
+      <type class="HtmlPlaneOneLine">ActionHistoryDescription</type>
+    </column>
+    <column>
+      <entity>ActionHistoryDashboardView</entity>
+      <property>CreatedDate</property>
+      <label>ActionHistoryCreatedDate</label>
+    </column>
+    
+
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ActionHistoryDashboardView as ActionHistoryDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ActionHistoryDashboardView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ActionHistoryDashboardView.CreatedDate DESC
+    ]]>
+  </orderBy>
+</browse>

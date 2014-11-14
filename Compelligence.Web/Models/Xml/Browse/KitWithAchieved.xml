@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>KitAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>KitAllView</entity>
+      <property>Name</property>
+      <label>KitName</label>
+    </column>
+    <column  >
+      <entity>KitAllView</entity>
+      <property>AssignedToName</property>
+      <label>KitAssignedTo</label>
+    </column>
+    <column >
+      <entity>KitAllView</entity>
+      <property>Status</property>
+      <label>KitStatus</label>
+      <type class="StandardData">KitStatus</type>
+    </column>
+    <column >
+      <entity>KitAllView</entity>
+      <property>DueDate</property>
+      <label>KitDueDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>KitAllView</entity>
+      <property>Type</property>
+      <label>KitType</label>
+    </column>
+    <column >
+      <entity>KitAllView</entity>
+      <property>Budget</property>
+      <type>Decimal</type>
+      <label>KitBudget</label>
+    </column>
+    <column >
+      <entity>KitAllView</entity>
+      <property>Comment</property>
+      <label>KitComment</label>
+      <type class="HtmlPlaneOneLine">Comment</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.KitAllView as KitAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    KitAllView.ClientCompany = '$S{ClientCompany}' and ( KitAllView.Status = '$C{KitStatus.Achieved}' or KitAllView.Status = '$C{KitStatus.NotAchieved}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    KitAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

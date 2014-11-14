@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+   <column>
+      <entity>ThreatDetailView</entity>
+      <property>Name</property>
+      <label>ThreatName</label>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>Source</property>
+      <label>ThreatSource</label>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>StartDate</property>
+      <label>ThreatStartDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>EndDate</property>
+      <label>ThreatEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>Description</property>
+      <label>ThreatDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ThreatDetailView as ThreatDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ThreatDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ThreatDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

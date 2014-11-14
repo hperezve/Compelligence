@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<search>
+  <search-entity id="Project" browse="ProjectAllSearch" label="Projects">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Calendar" browse="CalendarAllSearch" label="Calendars">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+</search>

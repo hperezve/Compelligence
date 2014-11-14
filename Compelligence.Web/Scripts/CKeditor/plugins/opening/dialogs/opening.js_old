@@ -1,0 +1,42 @@
+﻿/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+CKEDITOR.dialog.add( 'opening', function( editor )
+{
+	
+
+	return {
+		title : 'Opening Dialog',
+		minWidth : 390,
+		minHeight : 230,
+		contents : [
+			{
+				id : 'OpeningDialog',
+				label : '',
+				title : '',
+				expand : true,
+				padding : 0,
+				elements :
+				[
+					{
+						type : 'html',
+						html :
+				'<div style="width: 85%; float: left;" id="SectionTitle">'+
+					'<p><label class="cke_dialog_ui_labeled_label cke_required">Section :</label>'+
+					'<input type="text" style="border: medium none; width: 580px;" name="txtTitle" id="txtTitle" class="inputClass"></p>'+
+					'<p><label class="cke_dialog_ui_labeled_label cke_required">Description :</label>'+
+					'<textarea class="textClass" name="txtDescription" 					id="txtDescription"></textarea></p>'+
+				'</div>'+
+				'<div style="width: 15%; float: left;">'+
+				'<input type="button" title="Add Project/Library" value="+" onclick="loadPopup('',NewsLetterSection','SectionPanel_1','coco');" id="btnAdd"> <br>
+            <input type="button" title="Remove this Section" value="-" onclick="removeSection('SectionPanel_1');" id="btnRemove"> 
+         </div>
+					}
+				]
+			}
+		],
+		buttons : [ CKEDITOR.dialog.cancelButton ]
+	};
+} );

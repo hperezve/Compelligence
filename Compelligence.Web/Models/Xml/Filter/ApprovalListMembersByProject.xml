@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ApprovalListMembersByProjectView</entity>
+      <property>Approved</property>
+      <label>ApprovalListApproved</label>
+      <type class="StandardData">ApprovalListApproveStatus</type>
+    </column>
+    <column>
+      <entity>ApprovalListMembersByProjectView</entity>
+      <property>Sequence</property>
+      <label>ApprovalListSequence</label>
+    </column>
+    <column>
+      <entity>ApprovalListMembersByProjectView</entity>
+      <property>UserName</property>
+      <label>ApprovalListUserNameReport</label>
+    </column>
+    <column>
+      <entity>ApprovalListMembersByProjectView</entity>
+      <property>ProjectName</property>
+      <label>ApprovalListProjectNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ApprovalListMembersByProjectView as ApprovalListMembersByProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ApprovalListMembersByProjectView.ClientCompany = '$S{ClientCompany}' AND ApprovalListMembersByProjectView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ApprovalListMembersByProjectView.ProjectId
+    ]]>
+  </orderBy>
+</browse>

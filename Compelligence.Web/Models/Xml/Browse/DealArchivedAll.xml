@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DealAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>DealAllView</entity>
+      <property>Name</property>
+      <label>DealName</label>
+    </column>
+    <column >
+      <entity>DealAllView</entity>
+      <property>Status</property>
+      <label>DealStatus</label>
+      <type class="StandardData">DealStatus</type>
+    </column>
+    <column >
+      <entity>DealAllView</entity>
+      <property>DueDate</property>
+      <label>DealDueDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>DealAllView</entity>
+      <property>OpenedBy</property>
+      <label>DealOpenedBy</label>
+    </column>
+    <column >
+      <entity>DealAllView</entity>
+      <property>Rating</property>
+      <label>DealRating</label>
+      <type>Percent</type>
+    </column>
+    <column >
+      <entity>DealAllView</entity>
+      <property>CreatedDate</property>
+      <label>DealCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealAllView as DealAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealAllView.ClientCompany = '$S{ClientCompany}' and DealAllView.Status ='ARCH'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}', '$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CustomerReportView</entity>
+      <property>Name</property>
+      <label>CustomerReportViewName</label>
+    </column>
+    <column>
+      <entity>CustomerReportView</entity>
+      <property>AssignedToName</property>
+      <label>CustomerReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>CustomerReportView</entity>
+      <property>Status</property>
+      <label>CustomerReportViewStatus</label>
+      <type class="StandardData">CustomerStatus</type>
+    </column>
+    <column>
+      <entity>CustomerReportView</entity>
+      <property>Website</property>
+      <label>CustomerReportViewWebsite</label>
+    </column>
+    <column>
+      <entity>CustomerReportView</entity>
+      <property>Description</property>
+      <label>CustomerReportViewDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CustomerReportView as CustomerReportView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CustomerReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CustomerReportView.Name
+    ]]>
+  </orderBy>
+</browse>

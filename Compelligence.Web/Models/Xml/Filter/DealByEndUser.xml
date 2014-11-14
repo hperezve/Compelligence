@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>DealByEndUserView</entity>
+      <property>Name</property>
+      <label>DealNameReport</label>
+    </column>
+    <column>
+      <entity>DealByEndUserView</entity>
+      <property>Phase</property>
+      <label>PhaseReport</label>
+      <type class="StandardData">DealPhaseDate</type>
+    </column>
+    <column>
+      <entity>DealByEndUserView</entity>
+      <property>Status</property>
+      <label>DealStatus</label>
+      <type class="StandardData">DealStatus</type>
+    </column>
+    <column>
+      <entity>DealByEndUserView</entity>
+      <property>CreatedByName</property>
+      <label>DealOpenedBy</label>
+    </column>
+    <column>
+      <entity>DealByEndUserView</entity>
+      <property>AssignedToName</property>
+      <label>DealAssignedToName</label>
+    </column>
+
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealByEndUserView as DealByEndUserView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealByEndUserView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealByEndUserView.Name
+    ]]>
+  </orderBy>
+</browse>

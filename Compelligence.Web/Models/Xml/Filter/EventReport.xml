@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>IndustryStatus</property>
+      <label>EventReportViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>IndustryTier</property>
+      <label>EventReportViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>IndustryName</property>
+      <label>EventReportViewIndustryName</label>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>CompetitorStatus</property>
+      <label>EventReportViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>CompetitorTier</property>
+      <label>EventReportViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>CompetitorName</property>
+      <label>EventReportViewCompetitorName</label>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>ProductStatus</property>
+      <label>EventReportViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>ProductTier</property>
+      <label>EventReportViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column group="true">
+      <entity>EventReportView</entity>
+      <property>ProductName</property>
+      <label>EventReportViewProductName</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Name</property>
+      <label>EventName</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Status</property>
+      <label>EventStatus</label>
+      <type class="StandardData">EventStatus</type>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>TimeFrame</property>
+      <label>TimeFrame</label>
+      <type class="StandardData">EventTypePeriod</type>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Scenario</property>
+      <label>EventScenario</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Confidence</property>
+      <label>EventConfidence</label>
+      <type class="StandardData">EventConfidence</type>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>MarketTypeName</property>
+      <label>EventReportViewMarketType</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Severity</property>
+      <label>EventSeverity</label>
+      <type class="StandardData">EventSeverity</type>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>CreatedByName</property>
+      <label>EventReportViewCreatedBy</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Location</property>
+      <label>EventReportViewLocation</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>AssignedToName</property>
+      <label>EventReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Url</property>
+      <label>EventReportViewUrl</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>EventTypeName</property>
+      <label>EventType</label>
+    </column>
+    <column hidden="true" >
+      <entity>EventReportView</entity>
+      <property>StartDate</property>
+      <label>EventStartDate</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventReportView</entity>
+      <property>EndDate</property>
+      <label>EventEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>MarketImpact</property>
+      <label>EventMarketImpact</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>CompanyImpact</property>
+      <label>EventCompanyImpact</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>RecommendedActions</property>
+      <label>EventReportViewRecommendedActions</label>
+    </column>
+    <column>
+      <entity>EventReportView</entity>
+      <property>Comment</property>
+      <label>EventReportViewComment</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventReportView as EventReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventReportView.Name
+    ]]>
+  </orderBy>
+</browse>

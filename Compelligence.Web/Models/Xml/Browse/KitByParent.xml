@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>KitByParentView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>KitByParentView</entity>
+      <property>Name</property>
+      <label>KitName</label>
+    </column>
+    <column >
+      <entity>KitByParentView</entity>
+      <property>AssignedToName</property>
+      <label>KitAssignedTo</label>
+    </column>
+    <column >
+      <entity>KitByParentView</entity>
+      <property>Status</property>
+      <label>KitStatus</label>
+      <type class="StandardData">KitStatus</type>
+    </column>
+    <column >
+      <entity>KitByParentView</entity>
+      <property>DueDate</property>
+      <label>KitDueDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>KitByParentView</entity>
+      <property>Type</property>
+      <label>KitType</label>
+    </column>
+    <column>
+      <entity>KitByParentView</entity>
+      <property>Budget</property>
+      <type>Decimal</type>
+      <label>KitBudget</label>
+    </column>
+    <column >
+      <entity>KitByParentView</entity>
+      <property>Comment</property>
+      <label>KitComment</label>
+      <type class="HtmlPlaneOneLine">Comment</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.KitByParentView as KitByParentView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    KitByParentView.ClientCompany = '$S{ClientCompany}' and ( KitByParentView.Status <> '$C{KitStatus.Achieved}' and KitByParentView.Status <> '$C{KitStatus.NotAchieved}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    KitByParentView.Lineage
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

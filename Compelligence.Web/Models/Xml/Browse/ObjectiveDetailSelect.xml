@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ObjectiveDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ObjectiveDetailSelectView</entity>
+      <property>Name</property>
+      <label>ObjectiveNameLong</label>
+    </column>
+    <column>
+      <entity>ObjectiveDetailSelectView</entity>
+      <property>DueDate</property>
+      <label>ObjectiveDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ObjectiveDetailSelectView</entity>
+      <property>Detail</property>
+      <label>ObjectiveDetail</label>
+      <type class="HtmlPlaneOneLine">Detail</type>
+    </column>
+    <column>
+      <entity>ObjectiveDetailSelectView</entity>
+      <property>Status</property>
+      <label>ObjectiveStatus</label>
+      <type class="StandardData">ObjectiveStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ObjectiveDetailSelectView as ObjectiveDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ObjectiveDetailSelectView.ClientCompany = '$S{ClientCompany}' and ( ObjectiveDetailSelectView.Status ='$C{ObjectiveStatus.Enabled}' or ObjectiveDetailSelectView.Status ='$C{ObjectiveStatus.BackEndOnly}' or ObjectiveDetailSelectView.Status ='$C{ObjectiveStatus.Planned}') 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ObjectiveDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LibrariesByDealView</entity>
+      <property>LibraryName</property>
+      <label>LibrariesByDealLibraryName</label>
+    </column>
+    <column>
+      <entity>LibrariesByDealView</entity>
+      <property>DealName</property>
+      <label>LibrariesByDealNameDeal</label>
+    </column>
+    <column>
+      <entity>LibrariesByDealView</entity>
+      <property>DateAdded</property>
+      <label>LibrariesByDealDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>LibrariesByDealView</entity>
+      <property>Author</property>
+      <label>LibrariesByDealAuthor</label>
+    </column>
+    <column>
+      <entity>LibrariesByDealView</entity>
+      <property>Permanent</property>
+      <label>LibrariesByDealPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column>
+      <entity>LibrariesByDealView</entity>
+      <property>AssignedToName</property>
+      <label>LibrariesByDealAssignedToName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibrariesByDealView as LibrariesByDealView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibrariesByDealView.ClientCompany = '$S{ClientCompany}' AND LibrariesByDealView.DealId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibrariesByDealView.DealId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

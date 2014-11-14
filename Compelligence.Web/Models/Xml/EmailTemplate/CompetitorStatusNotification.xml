@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: Competitor $P{Name} has changed status.]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+      <body>
+        <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+        <br/>
+        <div>The following item has been changed. The changes are listed below. For full information about what has changed, visit the $P{urlCompany} and locate this object.</div>
+        <br/>
+        <div>Object Name: Competitor "<b>$P{Name}</b>"</div>
+        <div>User who did this: <b>$P{LastUser}</b></div>
+        <div>Changed Event: The Competitor <b>$P{Name}</b> has changed status to status: $P{Status}.</div>
+        <br/>
+        <div>If you did not expect this message or don't want to receive mails in future, please contact $P{emailOriginalAdmin}.</div>
+        <br/>
+        <div>This is an automated message. Please do not reply.</div>     
+      </body>
+  </html>
+  ]]>
+  </message>
+</email>

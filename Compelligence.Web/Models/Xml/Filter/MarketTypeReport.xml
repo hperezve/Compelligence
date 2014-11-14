@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>Name</property>
+      <label>MarketTypeReportViewName</label>
+    </column>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>AssignedToName</property>
+      <label>MarketTypeReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>Status</property>
+      <label>MarketTypeReportViewStatus</label>
+      <type class="StandardData">CustomerStatus</type>
+    </column>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>ParentName</property>
+      <label>MarketTypeReportViewParentName</label>
+    </column>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>Website</property>
+      <label>MarketTypeReportViewWebsite</label>
+    </column>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>ImageUrl</property>
+      <label>MarketTypeReportViewImageUrl</label>
+    </column>
+    <column>
+      <entity>MarketTypeReportView</entity>
+      <property>Description</property>
+      <label>MarketTypeReportViewDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.MarketTypeReportView as MarketTypeReportView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   MarketTypeReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    MarketTypeReportView.Name
+    ]]>
+  </orderBy>
+</browse>

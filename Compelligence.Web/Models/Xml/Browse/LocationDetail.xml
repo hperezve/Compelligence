@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LocationDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>CountryCode</property>
+      <label>LocationCountryCode</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>CompanyType</property>
+      <label>LocationCompanyType</label>
+      <type class="StandardData">LocationCompanyType</type>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>City</property>
+      <label>LocationCity</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>State</property>
+      <label>LocationState</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>PostalCode</property>
+      <label>LocationPostalCode</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>Description</property>
+      <label>LocationDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LocationDetailView as LocationDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LocationDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LocationDetailView.CountryCode
+    ]]>
+  </orderBy>
+</browse>

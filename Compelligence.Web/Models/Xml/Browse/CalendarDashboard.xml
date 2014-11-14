@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CalendarDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CalendarDashboardView</entity>
+      <property>Event</property>
+      <label>CalendarDashboardEvent</label>
+    </column>
+    <column>
+      <entity>CalendarDashboardView</entity>
+      <property>AssignedToName</property>
+      <label>CalendarDashboardAssignedTo</label>
+    </column>    
+    <column>
+      <entity>CalendarDashboardView</entity>
+      <property>Date</property>
+      <label>CalendarDashboardDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[  
+       var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Calendar.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Calendar')); }      
+            
+      WorkspaceSubtabs.setActiveTab('WorkspaceTab_CalendarContent');         
+			showEntity(currentPath+'/Calendar.aspx/Edit', 'Workspace', 'Calendar', id, 'CalendarAll', '#CalendarContent');     
+             
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CalendarDashboardView as CalendarDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CalendarDashboardView.ClientCompany = '$S{ClientCompany}' AND
+    CalendarDashboardView.AssignedTo = '$P{UserId}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CalendarDashboardView.Date DESC
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>DealName</property>
+      <label>DealNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>DealsbyIndustryViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>DealsbyIndustryViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>OpenedBy</property>
+      <label>OpenedByReport</label>
+    </column>
+    <column>
+    <entity>DealsbyIndustryView</entity>
+    <property>CompetitorName</property>
+    <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>CompetitorStatus</property>
+      <label>DealsbyIndustryViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>CompetitorTier</property>
+      <label>DealsbyIndustryViewCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>ProductStatus</property>
+      <label>DealsbyIndustryViewProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>ProductTier</property>
+      <label>DealsbyIndustryViewProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>CurrencyName</property>
+      <label>CurrencyNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>DueDate</property>
+      <label>DealDueDateReport</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>DealsbyIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>DealAssignedToName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealsbyIndustryView as DealsbyIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealsbyIndustryView.ClientCompany = '$S{ClientCompany}' AND DealsbyIndustryView.IndustryId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealsbyIndustryView.IndustryId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

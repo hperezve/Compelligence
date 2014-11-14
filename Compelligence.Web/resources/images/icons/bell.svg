@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../css/styles.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 10240 10240" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>bell icon</title>
+	<desc>bell icon from the IconExperience.com O-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+	<path id="curve1" class="secondaryIconColor" d="M6360 8640c-142,552 -643,960 -1240,960 -596,0 -1098,-408 -1240,-960l2479 0z"/>
+	<path id="curve0" class="secondaryIconColor" d="M6229 2172c858,413 1451,1291 1451,2308 0,1224 0,2447 839,3112 79,63 121,150 121,251l0 157c0,176 -144,320 -320,320l-6400 0c-176,0 -320,-144 -320,-320l0 -157c0,-101 42,-188 121,-251 839,-665 839,-1888 839,-3112 0,-1016 592,-1894 1451,-2308 136,-65 207,-212 173,-359 -16,-69 -24,-140 -24,-213 0,-530 430,-960 960,-960 530,0 960,430 960,960 0,73 -8,145 -24,213 -33,147 37,294 173,359zm-729 787l0 0c-37,149 -171,249 -324,242 -19,-1 -37,-1 -56,-1 -707,0 -1280,573 -1280,1280 0,1014 -9,2097 -452,3019 -55,113 -162,181 -288,181l-1 0c-113,0 -211,-54 -271,-150 -60,-96 -67,-207 -18,-309 392,-817 390,-1830 390,-2742 0,-1060 860,-1920 1920,-1920 28,0 56,1 84,2 99,4 183,49 243,128 60,80 78,173 54,269zm-380 -1679c177,0 320,143 320,320 0,177 -143,320 -320,320 -177,0 -320,-143 -320,-320 0,-177 143,-320 320,-320z"/>
+</svg>

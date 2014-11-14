@@ -1,0 +1,488 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+/*----------------------------     LESS MIXINS    -------------------------------*/
+/*--------------------------     Blue Theme    ------------------------------*/
+/* Primary color of Icons, Req Numbers, Headings, Body Text Color etc. */
+/* Graph Colors */
+/* Portlet Background Color */
+/* Page and Navigation Background Color */
+/* Input Colors */
+/* Icon Colors */
+/* Primary color of Icons, Req Numbers, Headings, Body Text Color etc. */
+header {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%);
+  background: -webkit-gradient(top, color-stop(0%, rgba(255, 255, 255, 0.9)), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%);
+  background: linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.15);
+  z-index: 999999;
+}
+header .mainNavigationBar {
+  height: 3.3rem;
+  width: 100%;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  flex-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin: 0px;
+  padding: 0px;
+}
+header .mainNavigationBar a {
+  min-width: 44px;
+  box-flex: 0 0 4.5rem;
+  -webkit-box-flex: 0 0 4.5rem;
+  -moz-box-flex: 0 0 4.5rem;
+  -webkit-flex: 0 0 4.5rem;
+  -moz-flex: 0 0 4.5rem;
+  -ms-flex: 0 0 4.5rem;
+  flex: 0 0 4.5rem;
+  text-align: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  height: 3.3rem;
+  display: inline-block;
+}
+header .mainNavigationBar a.logo {
+  box-flex: 1 2 90%;
+  -webkit-box-flex: 1 2 90%;
+  -moz-box-flex: 1 2 90%;
+  -webkit-flex: 1 2 90%;
+  -moz-flex: 1 2 90%;
+  -ms-flex: 1 2 90%;
+  flex: 1 2 90%;
+  text-align: left;
+}
+header .mainNavigationBar a.logo .headerLogo {
+  height: 3.3rem;
+  width: auto;
+  max-width: 100%;
+}
+header .mainNavigationBar a.notification {
+  box-flex: 0 1 4rem;
+  -webkit-box-flex: 0 1 4rem;
+  -moz-box-flex: 0 1 4rem;
+  -webkit-flex: 0 1 4rem;
+  -moz-flex: 0 1 4rem;
+  -ms-flex: 0 1 4rem;
+  flex: 0 1 4rem;
+  min-width: 60px;
+}
+header .mainNavigationBar a.notification .badge {
+  font-size: 0.75em;
+  background-color: #246991;
+  border-radius: 0em;
+  width: 100%;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 0.1em 0em;
+  height: 1.15rem;
+}
+header .mainNavigationBar a .linkTitle {
+  display: inline-block;
+  margin: -0.125em 0em 0em;
+  padding: 0em 0.15em;
+  text-align: center;
+  font-size: 0.75em;
+  color: #246991;
+  text-transform: capitalize;
+  font-weight: 500;
+  float: left;
+  width: 100%;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+header .mainNavigationBar .search {
+  box-flex: 1 0 auto;
+  -webkit-box-flex: 1 0 auto;
+  -moz-box-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 3.3rem;
+  display: inline-block;
+}
+header .mainNavigationBar .search input {
+  float: right;
+  height: 3.3rem;
+  margin: 0em;
+  padding: 2.5em 0em 0em 0em;
+  font-size: 0.8em;
+  border-top: 0px none;
+  border-bottom: 0px none;
+  background-image: url(../images/icons/magnifying_glass_nav.svg);
+  background-size: auto 50%;
+  background-position: center 0.5em;
+  background-repeat: no-repeat;
+  min-width: 0px;
+  width: 5.8em;
+  border-color: #3797c9;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header .mainNavigationBar .search input:hover {
+  -webkit-box-shadow: 0px 0px 0px transparent;
+  -moz-box-shadow: 0px 0px 0px transparent;
+  box-shadow: 0px 0px 0px transparent;
+}
+header .mainNavigationBar .search input:focus {
+  width: 12em;
+  -webkit-box-shadow: 0px 0px 0px transparent;
+  -moz-box-shadow: 0px 0px 0px transparent;
+  box-shadow: 0px 0px 0px transparent;
+  padding: 0em 0.5em 0em 2.25em;
+  font-size: 1em;
+  background-size: auto 48%;
+  background-position: 0.45em center;
+  text-align: left;
+}
+.icon-nav {
+  width: 100%;
+  height: 3.3rem;
+  margin: 0px auto;
+  padding: 0.35em 0em 0em;
+  display: inline-block;
+  position: relative;
+}
+.icon-nav object {
+  height: 1.6rem;
+  width: 3em;
+}
+.overlayMenu {
+  position: absolute;
+  background-image: url(../images/bgWhite.png), -moz-linear-gradient(top, rgba(243, 248, 252, 0.96) 0%, rgba(238, 238, 238, 0.9) 100%);
+  background-image: url(../images/bgWhite.png), -webkit-gradient(top, color-stop(0%, rgba(243, 248, 252, 0.96)), color-stop(100%, rgba(238, 238, 238, 0.9)));
+  background-image: url(../images/bgWhite.png), -webkit-linear-gradient(top, rgba(243, 248, 252, 0.96) 0%, rgba(238, 238, 238, 0.9) 100%);
+  background-image: url(../images/bgWhite.png), -o-linear-gradient(top, rgba(243, 248, 252, 0.96) 0%, rgba(238, 238, 238, 0.9) 100%);
+  background-image: url(../images/bgWhite.png), -ms-linear-gradient(top, rgba(243, 248, 252, 0.96) 0%, rgba(238, 238, 238, 0.9) 100%);
+  background-image: url(../images/bgWhite.png), linear-gradient(top, rgba(243, 248, 252, 0.96) 0%, rgba(238, 238, 238, 0.9) 100%);
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+}
+.overlayMenu.leftTopMenu {
+  top: 0px;
+  left: 0px;
+  padding-top: 3.3em;
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 5px 0px 35px -10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 5px 0px 35px -10px rgba(0, 0, 0, 0.35);
+  box-shadow: 5px 0px 35px -10px rgba(0, 0, 0, 0.35);
+  overflow-y: auto;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 999990;
+}
+.overlayMenu.leftTopMenu.ng-hide {
+  display: block!important;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+}
+.overlayMenu.rightTopMenu {
+  top: 0px;
+  right: 0px;
+  padding-top: 3.3em;
+  width: 25%;
+  height: auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: -5px 5px 35px -10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -5px 5px 35px -10px rgba(0, 0, 0, 0.35);
+  box-shadow: -5px 5px 35px -10px rgba(0, 0, 0, 0.35);
+  overflow-y: auto;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 999990;
+  -webkit-border-radius: 0em 0em 0em 0.25em;
+  -moz-border-radius: 0em 0em 0em 0.25em;
+  border-radius: 0em 0em 0em 0.25em;
+  max-height: 100%;
+  overflow: auto;
+}
+.overlayMenu.rightTopMenu.ng-hide {
+  display: block !important;
+  position: absolute;
+  top: -100%;
+  right: 0;
+}
+.overlayMenu .menuTop {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.overlayMenu .menuTop .closeButton {
+  padding: 0px;
+  box-flex: 0 0 4em;
+  -webkit-box-flex: 0 0 4em;
+  -moz-box-flex: 0 0 4em;
+  -webkit-flex: 0 0 4em;
+  -moz-flex: 0 0 4em;
+  -ms-flex: 0 0 4em;
+  flex: 0 0 4em;
+  min-width: 44px;
+}
+.overlayMenu .menuTop .closeButton .icon-navigate_left {
+  width: 1.45em;
+  height: 1.5em;
+  display: block;
+  margin: 0px auto;
+}
+.overlayMenu .menuTop .closeButton .icon-navigate_left object {
+  width: 1.45em;
+  height: 1.5em;
+}
+.overlayMenu h3 {
+  padding: 0.5em 0.8em 0.4em 3.25em;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #246991;
+  color: #ffffff;
+  position: relative;
+}
+.overlayMenu h3 .badge {
+  padding: 0.45em 0em 0em 0em;
+  color: #ffffff;
+  margin: 0em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2.5em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  border-radius: 0em;
+}
+.icon-sidebar {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0em 0.65em 0em 0em;
+  padding: 0em;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+.icon-sidebar object {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+.menuList {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+.menuList li {
+  padding: 0em;
+}
+.menuList li a {
+  padding: 0.75em 1em;
+  display: block;
+  width: 100%;
+  float: left;
+}
+.menuList li a .text {
+  float: left;
+  margin: 0.25em 0em 0em 0em;
+}
+.menuList.messages li a {
+  font-size: 0.95em;
+  padding: 0.5em 1em;
+}
+@media  (max-width: 990px) {
+  .overlayMenu.leftTopMenu {
+    width: 60%;
+  }
+  .overlayMenu.rightTopMenu {
+    width: 60%;
+  }
+}
+@media (max-width: 640px) {
+  header .mainNavigationBar {
+    height: 3rem;
+  }
+  header .mainNavigationBar a {
+    min-width: 44px;
+    box-flex: 0 0 44px;
+    -webkit-box-flex: 0 0 44px;
+    -moz-box-flex: 0 0 44px;
+    -webkit-flex: 0 0 44px;
+    -moz-flex: 0 0 44px;
+    -ms-flex: 0 0 44px;
+    flex: 0 0 44px;
+  }
+  header .mainNavigationBar a.sideNav {
+    -webkit-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 0;
+    -webkit-order: 0;
+    -moz-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    height: 3rem;
+  }
+  header .mainNavigationBar a.logo {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    box-flex: 1 auto;
+    -webkit-box-flex: 1 auto;
+    -moz-box-flex: 1 auto;
+    -webkit-flex: 1 auto;
+    -moz-flex: 1 auto;
+    -ms-flex: 1 auto;
+    flex: 1 auto;
+    height: 3rem;
+  }
+  header .mainNavigationBar a.logo .headerLogo {
+    max-width: 120px;
+    height: auto;
+    max-height: 3rem;
+    margin: 0.45em 0em;
+  }
+  header .mainNavigationBar a.dashboardHome {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    height: 3rem;
+  }
+  header .mainNavigationBar a.dashboardHome .icon-nav {
+    padding: 0.65em 0px 0px;
+  }
+  header .mainNavigationBar a.welcome {
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    -webkit-order: 4;
+    -moz-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    height: 3rem;
+  }
+  header .mainNavigationBar a .linkTitle {
+    font-size: 0.6em;
+    display: none;
+  }
+  header .mainNavigationBar .search {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    height: 3rem;
+  }
+  header .mainNavigationBar .search input {
+    height: 3rem;
+  }
+  header .mainNavigationBar .search input:focus {
+    box-flex: 0 0 100%;
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -moz-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    border: 0px none;
+    z-index: 99;
+  }
+  .icon-nav {
+    height: 50px;
+    width: 100%;
+    padding: 0.75em 0px 0px;
+  }
+  .icon-nav object {
+    width: 100%;
+  }
+  .overlayMenu.leftTopMenu {
+    width: 97%;
+  }
+  .overlayMenu.rightTopMenu {
+    width: 97%;
+  }
+}

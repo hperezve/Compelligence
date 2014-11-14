@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>CompetitorName</property>
+      <label>ProductByTierByCompetitorByTierCompetitorName</label>
+    </column>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>CompetitorTier</property>
+      <label>ProductByTierByCompetitorByTierCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProductByTierByCompetitorByTierCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>ProductName</property>
+      <label>ProductByTierByCompetitorByTierProductName</label>
+    </column>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>ProductTier</property>
+      <label>ProductByTierByCompetitorByTierProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>ProductStatus</property>
+      <label>ProductByTierByCompetitorByTierProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProductByTierByCompetitorByTierView</entity>
+      <property>AssignedToName</property>
+      <label>ProductByTierByCompetitorByTierCompetitorAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductByTierByCompetitorByTierView as ProductByTierByCompetitorByTierView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ProductByTierByCompetitorByTierView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductByTierByCompetitorByTierView.ProductName
+    ]]>
+  </orderBy>
+</browse>

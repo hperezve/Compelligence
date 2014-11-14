@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>CriteriaName</property>
+      <label>CriteriaNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>CriteriaSetName</property>
+      <label>CriteriaSetNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>CriteriaGroupName</property>
+      <label>CriteriaGroupNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>ProductName</property>
+      <label>CriteriaProductNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>ProductStatus</property>
+      <label>CriteriaValuesByProductAndIndustryProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>ProductTier</property>
+      <label>CriteriaValuesByProductAndIndustryProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>IndustryName</property>
+      <label>CriteriaIndustryNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>CriteriaValuesByProductAndIndustryIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>CriteriaValuesByProductAndIndustryIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByProductAndIndustryView</entity>
+      <property>Value</property>
+      <label>CriteriaValueReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriaValuesByProductAndIndustryView as CriteriaValuesByProductAndIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CriteriaValuesByProductAndIndustryView.ClientCompany = '$S{ClientCompany}' AND CriteriaValuesByProductAndIndustryView.CriteriaGroupName is not null AND CriteriaValuesByProductAndIndustryView.CriteriaName is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriaValuesByProductAndIndustryView.CriteriaGroupName
+    ]]>
+  </orderBy>
+</browse>

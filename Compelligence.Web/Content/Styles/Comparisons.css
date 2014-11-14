@@ -1,0 +1,53 @@
+﻿.comp_psave
+{
+	min-height:38px;padding-left: 10px;padding-top: 10px;
+}
+.comp_pleft
+{
+  width:75%;    	
+  float:left;
+}
+.comp_pright
+{
+  float: right; 
+  width: 25%; 
+  color: black;
+  margin-right: 0px;    	
+}
+
+
+.cloading
+ {
+	background:url(/Content/Images/Styles/uploading.gif) no-repeat left;     
+ }
+ .cell_h
+ {
+ 	display:none;
+ }
+ .cell_d
+ {
+ 	display:none;
+ }
+ 
+ .cell_d .cell_l
+ {
+ 	height:20px;
+ 	background:url(loading.gif) no-repeat left;
+ }
+ 
+ .cell_d .nts
+ { width:190px; 
+   overflow:hidden;
+   /*text-align:center; */
+ }
+ .cell_d .lks
+ { width:100%; overflow:hidden;
+ }
+ .cell_d .ops
+ {
+   width:190px;text-align:center; overflow:hidden;
+ }
+
+
+.tbl-headfilter {}
+.relevancy {}

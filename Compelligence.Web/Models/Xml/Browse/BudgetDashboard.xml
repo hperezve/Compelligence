@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>BudgetDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>BudgetDashboardView</entity>
+      <property>Name</property>
+      <label>BudgetDashboardName</label>
+    </column>
+    <column>
+      <entity>BudgetDashboardView</entity>
+      <property>Type</property>
+      <label>BudgetDashboardType</label>
+    </column>
+    <column>
+      <entity>BudgetDashboardView</entity>
+      <property>Status</property>
+      <label>BudgetDashboardStatus</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.BudgetDashboardView as BudgetDashboardView
+    ]]>
+  </from>  
+  <where>
+    <![CDATA[
+    BudgetDashboardView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    BudgetDashboardView.Name
+    ]]>
+  </orderBy>
+</browse>

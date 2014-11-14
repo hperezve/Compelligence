@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>SurveyReportView</entity>
+      <property>Title</property>
+      <label>SurveyReportViewTitle</label>
+    </column>
+    <column>
+      <entity>SurveyReportView</entity>
+      <property>Status</property>
+      <label>SurveyReportViewStatus</label>
+      <type class="StandardData">SurveyStatus</type>
+    </column>
+    <column>
+      <entity>SurveyReportView</entity>
+      <property>Type</property>
+      <label>SurveyReportViewType</label>
+      <type class="StandardData">SurveyType</type>
+    </column>
+    <column>
+      <entity>SurveyReportView</entity>
+      <property>SalesForceType</property>
+      <label>SurveyReportViewSalesForceType</label>
+      <type class="StandardData">SurveySalesForceType</type>
+    </column>
+    <column>
+      <entity>SurveyReportView</entity>
+      <property>AssignedToName</property>
+      <label>SurveyReportViewAssignedToName</label>
+    </column>
+    <column>
+      <entity>SurveyReportView</entity>
+      <property>Description</property>
+      <label>SurveyReportViewDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.SurveyReportView as SurveyReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    SurveyReportView.ClientCompany = '$S{ClientCompany}' and SurveyReportView.TargetType = '$C{QuizType.Survey}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    SurveyReportView.Title
+    ]]>
+  </orderBy>
+</browse>

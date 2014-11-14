@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PriceDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>Name</property>
+      <label>PriceName</label>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>PartNumber</property>
+      <label>PricePartNumber</label>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>Type</property>
+      <label>PriceType</label>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>Units</property>
+      <type class="StandardData">PriceUnits</type>
+      <label>PriceUnits</label>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>Value</property>
+      <type>Decimal</type>
+      <label>PriceValue</label>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>Status</property>
+      <label>PriceStatus</label>
+      <type class="StandardData">PriceStatus</type>
+    </column>
+    <column>
+      <entity>PriceDetailView</entity>
+      <property>Required</property>
+      <type class="StandardData">PriceRequired</type>
+      <label>PriceRequired</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PriceDetailView as PriceDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PriceDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PriceDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

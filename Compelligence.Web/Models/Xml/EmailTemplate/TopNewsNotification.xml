@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany} - Top News]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>
+      <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+      <br/>
+      <div>Object Name: <b>News</b> </div>
+      <div><b>$P{news}</b></div>
+      <div>This is an automated message. Please do not reply.</div>      
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

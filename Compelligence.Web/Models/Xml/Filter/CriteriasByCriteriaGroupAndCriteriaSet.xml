@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CriteriasByCriteriaGroupAndCriteriaSetView</entity>
+      <property>CriteriaName</property>
+      <label>CriteriaNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriasByCriteriaGroupAndCriteriaSetView</entity>
+      <property>CreatedDate</property>
+      <label>CriteriaCreatedDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>CriteriasByCriteriaGroupAndCriteriaSetView</entity>
+      <property>CriteriaSetName</property>
+      <label>CriteriaSetNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriasByCriteriaGroupAndCriteriaSetView</entity>
+      <property>CriteriaGroupName</property>
+      <label>CriteriaGroupNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriasByCriteriaGroupAndCriteriaSetView as CriteriasByCriteriaGroupAndCriteriaSetView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CriteriasByCriteriaGroupAndCriteriaSetView.ClientCompany = '$S{ClientCompany}' AND CriteriasByCriteriaGroupAndCriteriaSetView.CriteriaGroupName is not null AND CriteriasByCriteriaGroupAndCriteriaSetView.CriteriaName is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriasByCriteriaGroupAndCriteriaSetView.CriteriaGroupName
+    ]]>
+  </orderBy>
+</browse>

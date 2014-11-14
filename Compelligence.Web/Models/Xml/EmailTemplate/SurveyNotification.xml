@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: $P{Type} Survey $P{Title}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>$P{Type} Survey <b>$P{Title}</b> was filled</div>
+      <br />
+      <div>
+        $P{Answers}
+      <div>
+      <div>
+        $P{ItemNames}
+      <div>
+      <br />
+      <div>Thanks $P{UserName}</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

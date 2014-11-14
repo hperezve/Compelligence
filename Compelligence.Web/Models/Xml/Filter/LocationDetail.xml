@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>CountryCode</property>
+      <label>LocationCountryCode</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>AddressLine1</property>
+      <label>LocationAddressLine1</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>AddressLine2</property>
+      <label>LocationAddressLine2</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>AddressLine3</property>
+      <label>LocationAddressLine3</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>AddressLine4</property>
+      <label>LocationAddressLine4</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>City</property>
+      <label>LocationCity</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>State</property>
+      <label>LocationState</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>PostalCode</property>
+      <label>LocationPostalCode</label>
+    </column>
+    <column>
+      <entity>LocationDetailView</entity>
+      <property>Description</property>
+      <label>LocationDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LocationDetailView as LocationDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LocationDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LocationDetailView.CountryCode
+    ]]>
+  </orderBy>
+</browse>

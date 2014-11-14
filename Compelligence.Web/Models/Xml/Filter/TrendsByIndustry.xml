@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>TrendName</property>
+      <label>TrendName</label>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>TrendAssignedToName</label>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>StartDate</property>
+      <label>TrendStartDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>DateOfMaturity</property>
+      <label>TrendDateOfMaturity</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>EndDate</property>
+      <label>TrendEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>Type</property>
+      <label>TrendType</label>
+      <type class="StandardData">TrendType</type>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>Tier</property>
+      <label>TrendsByIndustryViewTrendTier</label>
+      <type class="StandardData">TrendTier</type>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>TrendsByIndustryViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>TrendsByIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>TrendsByIndustryViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TrendsByIndustryView as TrendsByIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    TrendsByIndustryView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TrendsByIndustryView.TrendName
+    ]]>
+  </orderBy>
+</browse>

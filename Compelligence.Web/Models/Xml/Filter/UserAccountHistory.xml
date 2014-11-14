@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>Date</property>
+      <label>UserAccountHistoryViewDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>UserName</property>
+      <label>UserAccountHistoryViewUser</label>
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>Action</property>
+      <label>UserAccountHistoryViewAction</label>      
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>ByWhom</property>
+      <label>UserAccountHistoryViewByWhom</label>
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>FieldName</property>
+      <label>UserAccountHistoryViewFieldChanged</label>
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>OldValue</property>
+      <label>UserAccountHistoryViewOldValue</label>
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>Value</property>
+      <label>UserAccountHistoryViewValue</label>
+    </column>
+    <column>
+      <entity>UserAccountHistoryView</entity>
+      <property>Notes</property>
+      <label>UserAccountHistoryViewNotes</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UserAccountHistoryView as UserAccountHistoryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   UserAccountHistoryView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UserAccountHistoryView.Date DESC
+    ]]>
+  </orderBy>
+</browse>

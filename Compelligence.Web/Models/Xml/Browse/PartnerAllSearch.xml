@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PartnerAllView</entity>
+      <property>Id</property>
+      <label>PartnerId</label>
+    </column>
+    <column>
+      <entity>PartnerAllView</entity>
+      <property>Name</property>
+      <label>PartnerName</label>
+    </column>
+    <column>
+      <entity>PartnerAllView</entity>
+      <property>Website</property>
+      <label>PartnerWebsite</label>
+    </column>
+    <column>
+      <entity>PartnerAllView</entity>
+      <property>AssignedToName</property>
+      <label>PartnerAssignedTo</label>
+    </column>
+    <column>
+      <entity>PartnerAllView</entity>
+      <property>Description</property>
+      <label>PartnerDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PartnerAllView as PartnerAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   PartnerAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PartnerAllView.Name
+    ]]>
+  </orderBy>
+</browse>

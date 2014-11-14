@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>TrendAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>Name</property>
+      <label>TrendAllName</label>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>Type</property>
+      <label>TrendAllType</label>
+      <type class="StandardData">TrendType</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>StartDate</property>
+      <label>TrendAllStartDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>EndDate</property>
+      <label>TrendAllEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>DateOfMaturity</property>
+      <label>TrendAllDateOfMaturity</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>AssignedToName</property>
+      <label>TrendAllAssignedTo</label>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>Tier</property>
+      <label>TrendTier</label>
+      <type class="StandardData">TrendTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TrendAllView as TrendAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   TrendAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TrendAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

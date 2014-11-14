@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Compelligence System for $P{ClientCompany}: Rejected account]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>
+        $P{UserName} 
+      </div>
+      <div>
+         Your request for an account on Compelligence has been denied. Please contact your system administrator at $P{ClientCompany} if you have questions.
+      </div>
+      <br />
+      <div>Thank you!<br />
+           This is an automated E-mail. Please do not reply to this message.</div>
+    </body>
+  </html>
+  ]]>
+  </message>
+</email>

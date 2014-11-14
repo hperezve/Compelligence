@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LabelDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>LabelDetailView</entity>
+      <property>Name</property>
+      <label>LabelName</label>
+    </column>
+    <column >
+      <entity>LabelDetailView</entity>
+      <property>Type</property>
+      <label>LabelType</label>
+      <type class="StandardData">LabelType</type>
+    </column>
+    <column >
+      <entity>LabelDetailView</entity>
+      <property>Show</property>
+      <label>LabelShow</label>
+      <type class="StandardData">LabelShow</type>
+    </column>
+    <column >
+      <entity>LabelDetailView</entity>
+      <property>Order</property>
+      <type>Decimal</type>
+      <label>LabelOrder</label>
+    </column>
+    <column >
+      <entity>LabelDetailView</entity>
+      <property>Content</property>
+      <label>LabelContent</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LabelDetailView as LabelDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LabelDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LabelDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

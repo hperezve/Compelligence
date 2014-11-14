@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>LibraryName</property>
+      <label>LibrariesByProjectLibraryName</label>
+    </column>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>ProjectName</property>
+      <label>LibrariesByProjectNameProject</label>
+    </column>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>DateAdded</property>
+      <label>LibrariesByProjectDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>Author</property>
+      <label>LibrariesByProjectAuthor</label>
+    </column>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>Permanent</property>
+      <label>LibrariesByProjectPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>AssignedToName</property>
+      <label>LibrariesByProjectAssignedToName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibrariesByProjectView as LibrariesByProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibrariesByProjectView.ClientCompany = '$S{ClientCompany}' AND LibrariesByProjectView.ProjectId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibrariesByProjectView.ProjectId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

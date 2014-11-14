@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>ProductName</property>
+      <label>ComparinatorByProductViewProduct</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>ProductStatus</property>
+      <label>ComparinatorByProductsWithoutValuesProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>ProductTier</property>
+      <label>ComparinatorByProductsWithoutValuesProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>CompetitorName</property>
+      <label>ComparinatorByProductViewCompetitor</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>CompetitorStatus</property>
+      <label>ComparinatorByProductsWithoutValuesCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>CompetitorTier</property>
+      <label>ComparinatorByProductsWithoutValuesCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>IndustryName</property>
+      <label>ComparinatorByProductViewIndustry</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>IndustryStatus</property>
+      <label>ComparinatorByProductsWithoutValuesIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>IndustryTier</property>
+      <label>ComparinatorByProductsWithoutValuesIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductsWithoutValuesView</entity>
+      <property>AssignedToName</property>
+      <label>ComparinatorByProductViewAssigned</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ComparinatorByProductsWithoutValuesView as ComparinatorByProductsWithoutValuesView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ComparinatorByProductsWithoutValuesView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ComparinatorByProductsWithoutValuesView.ProductName
+    ]]>
+  </orderBy>
+</browse>

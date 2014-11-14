@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LocationsBySupplierView</entity>
+      <property>CountryName</property>
+      <label>LocationCountryNameReport</label>
+    </column>
+    <column>
+      <entity>LocationsBySupplierView</entity>
+      <property>City</property>
+      <label>LocationCityReport</label>
+    </column>
+    <column>
+      <entity>LocationsBySupplierView</entity>
+      <property>State</property>
+      <label>LocationStateReport</label>
+    </column>
+    <column>
+      <entity>LocationsBySupplierView</entity>
+      <property>PostalCode</property>
+      <label>LocationPostalCodeReport</label>
+    </column>
+    <column>
+      <entity>LocationsBySupplierView</entity>
+      <property>Address</property>
+      <label>LocationAddressReport</label>
+    </column>
+    <column>
+      <entity>LocationsBySupplierView</entity>
+      <property>SupplierName</property>
+      <label>LocationSupplierNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LocationsBySupplierView as LocationsBySupplierView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LocationsBySupplierView.ClientCompany = '$S{ClientCompany}' AND LocationsBySupplierView.CompanyType = '$C{CompanyType.Supplier}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LocationsBySupplierView.CountryName
+    ]]>
+  </orderBy>
+</browse>

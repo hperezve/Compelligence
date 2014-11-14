@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>SurveyByQuestionsView</entity>
+      <property>QuestionText</property>
+      <label>QuestionText</label>
+    </column>
+    <column>
+      <entity>SurveyByQuestionsView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>SurveyByQuestionsView</entity>
+      <property>QuestionType</property>
+      <label>QuestionTypeReport</label>
+      <type class="StandardData">QuestionType</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.SurveyByQuestionsView as SurveyByQuestionsView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    SurveyByQuestionsView.ClientCompany = '$S{ClientCompany}' AND SurveyByQuestionsView.QuizTargetType = '$C{QuizType.Survey}' And SurveyByQuestionsView.Title is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    SurveyByQuestionsView.Title
+    ]]>
+  </orderBy>
+</browse>

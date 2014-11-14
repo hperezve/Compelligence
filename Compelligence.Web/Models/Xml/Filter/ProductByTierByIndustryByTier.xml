@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>IndustryName</property>
+      <label>ProductByTierByIndustryByTierIndustryName</label>
+    </column>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>IndustryStatus</property>
+      <label>ProductByTierByIndustryByTierIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>IndustryTier</property>
+      <label>ProductByTierByIndustryByTierIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>ProductName</property>
+      <label>ProductByTierByIndustryByTierProductName</label>
+    </column>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>ProductStatus</property>
+      <label>ProductByTierByIndustryByTierProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>ProductTier</property>
+      <label>ProductByTierByIndustryByTierProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductByTierByIndustryByTierView</entity>
+      <property>AssignedToName</property>
+      <label>ProductByTierByIndustryByTierCompetitorAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductByTierByIndustryByTierView as ProductByTierByIndustryByTierView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ProductByTierByIndustryByTierView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductByTierByIndustryByTierView.ProductName
+    ]]>
+  </orderBy>
+</browse>

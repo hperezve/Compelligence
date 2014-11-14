@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ForumResponse</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ForumResponse</entity>
+      <property>Response</property>
+      <label>Discussion</label>
+    </column>
+    <column>
+      <entity>ForumResponse</entity>
+      <property>CreatedBy</property>
+      <label>CreatedBy</label>
+    </column>
+    <column>
+      <entity>ForumResponse</entity>
+      <property>CreatedDate</property>
+      <label>Date</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.ForumResponse as ForumResponse
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ForumResponse.ClientCompany = '$S{ClientCompany}' and ForumResponse.ParentResponseId=0
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ForumResponse.Response
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

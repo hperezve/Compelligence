@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PositioningDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>PositioningDetailView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column>
+      <entity>PositioningDetailView</entity>
+      <property>IndustryName</property>
+      <label>CompetitiveMessagingDetailIndustry</label>
+    </column>
+    <column>
+      <entity>PositioningDetailView</entity>
+      <property>Status</property>
+      <label>PositioningStatus</label>
+      <type class="StandardData">PositioningStatus</type>
+    </column>
+    <column>
+      <entity>PositioningDetailView</entity>
+      <property>CreatedByName</property>
+      <label>PositioningCreatedBy</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningDetailView as PositioningDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningDetailView.ClientCompany = '$S{ClientCompany}'  and PositioningDetailView.PositioningRelation = '$C{PositioningRelation.Positioning}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningDetailView.Name
+    ]]>
+  </orderBy>
+</browse>
+

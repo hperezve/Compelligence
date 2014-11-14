@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>DealName</property>
+      <label>DealNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>CurrencyName</property>
+      <label>CurrencyNameReport</label>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>AssignedToName</property>
+      <label>DealAssignedToName</label>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>IndustryStatus</property>
+      <label>ImplicationsReportIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>IndustryTier</property>
+      <label>ImplicationsReportIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>CompetitorStatus</property>
+      <label>ImplicationsReportCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>CompetitorTier</property>
+      <label>ImplicationsReportCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>ProductStatus</property>
+      <label>ImplicationsReportProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>DealsbyProductView</entity>
+      <property>ProductTier</property>
+      <label>ImplicationsReportProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealsbyProductView as DealsbyProductView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealsbyProductView.ClientCompany = '$S{ClientCompany}' AND DealsbyProductView.ProductId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealsbyProductView.ProductId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

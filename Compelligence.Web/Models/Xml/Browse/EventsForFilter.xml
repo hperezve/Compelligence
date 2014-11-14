@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EventsAllForFilterView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>EventsAllForFilterView</entity>
+      <property>Name</property>
+      <label>EventName</label>
+    </column>
+    <column>
+      <entity>EventsAllForFilterView</entity>
+      <property>OpenedBy</property>
+      <label>EventOpenedBy</label>
+    </column>
+    <column>
+      <entity>EventsAllForFilterView</entity>
+      <property>Confidence</property>
+      <label>EventConfidence</label>
+    </column>
+    <column>
+      <entity>EventsAllForFilterView</entity>
+      <property>Severity</property>
+      <label>EventSeverity</label>
+    </column>
+    <column>
+      <entity>EventsAllForFilterView</entity>
+      <property>StartDate</property>
+      <label>EventStartDateId</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventsAllForFilterView as EventsAllForFilterView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventsAllForFilterView.ClientCompany = '$S{ClientCompany}' And EventsAllForFilterView.Status='ENBL'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventsAllForFilterView.Name
+    ]]>
+  </orderBy>
+
+
+</browse>
+

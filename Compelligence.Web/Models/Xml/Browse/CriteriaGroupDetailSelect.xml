@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CriteriaGroupDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CriteriaGroupDetailSelectView</entity>
+      <property>Name</property>
+      <label>CriteriaGroupName</label>
+    </column>
+    <column>
+      <entity>CriteriaGroupDetailSelectView</entity>
+      <property>Description</property>
+      <label>CriteriaGroupDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriaGroupDetailSelectView as CriteriaGroupDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CriteriaGroupDetailSelectView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriaGroupDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>
+

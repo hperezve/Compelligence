@@ -1,0 +1,55 @@
+(function(){
+//Section 1 : Code to execute when the toolbar button is pressed
+var a= {
+exec:function(editor){
+
+$("#AddDialog").dialog({ autoOpen: false ,height: 500,width: 500, title: 'Opening Dialog' ,
+	buttons: { "Ok": function() { 
+	$(this).dialog("close"); 
+	var cantHijos= $("[id*=SectionPanel_]").length;
+	var texto_opening=$("#WorkspaceNewsletterEditFormOpeningText").val();
+	var textofinal="";
+	for(x=1; x<=cantHijos;x++)
+	{
+		var texto_seccion=$('#SectionPanel_'+x+' input[name$="txtTitle"]').val();
+		var texto_description=$('#SectionPanel_'+x+' textarea[name$="txtDescription"]').val();
+		var texto_item=$('#SectionPanel_'+x+' input[name$="txtItem_'+x+'"]').val();
+		var texto_comment=$('#SectionPanel_'+x+' textarea[name$="txtItemComment_'+x+'"]').val();
+		
+		var str = texto_item;
+            str = str.replace(/-/g, '</li><li>');
+		
+		var text_html = '<dt><strong>Section N_</strong>'+x+'</dt>'+
+							'<dd>'+texto_seccion+'</dd>'+
+							'<dt><strong>Description of Section N_</strong>'+x+'</dt>'+
+							'<dd>'+texto_description+'</dd>'+
+							'</br><strong> List of Section N_'+x +'</strong>'+
+							'<p><strong>Items: </strong>'+
+							'<ul>'+
+							'<li>'+str+'</li>'+
+							'</ul>'+
+							'<strong>Comment: </strong>'+texto_comment+'</p>';
+							
+		var textofinal= textofinal+text_html;
+		
+	}
+		editor.insertHtml('<opening><h1>'+texto_opening+'</h1></br>'+textofinal+'</opening>');
+	}}
+});
+ $("#AddDialog").dialog('open');
+ 	}
+},
+
+//Section 2 : Create the button and add the functionality to it
+b='opening';
+CKEDITOR.plugins.add(b,{
+	init:function(editor){
+	editor.addCommand(b,a);
+	editor.ui.addButton("opening",{
+			label:'opening', 
+			icon:this.path+"icon-doc.png",
+			command:b
+			});
+		}
+	}); 
+})();

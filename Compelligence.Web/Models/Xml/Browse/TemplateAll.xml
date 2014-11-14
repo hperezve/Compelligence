@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>TemplateAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>Name</property>
+      <label>TemplateName</label>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>AssignedToName</property>
+      <label>TemplateAssignedTo</label>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>Language</property>
+      <label>TemplateLanguage</label>
+      <type class="StandardData">TemplateLanguaje</type>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>Description</property>
+      <label>TemplateDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>Version</property>
+      <label>TemplateVersion</label>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>Format</property>
+      <label>TemplateFormat</label>
+      <type class="StandardData">FileFormat</type>
+    </column>
+    <column>
+      <entity>TemplateAllView</entity>
+      <property>Weight</property>
+      <label>TemplateSize</label>
+    </column>
+    <column >
+      <entity>TemplateAllView</entity>
+      <property>CreatedDate</property>
+      <label>TemplateCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TemplateAllView as TemplateAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   TemplateAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TemplateAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

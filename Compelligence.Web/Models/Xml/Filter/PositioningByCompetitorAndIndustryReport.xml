@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column >
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>PositiongName</property>
+      <label>PositioningName</label>
+    </column>
+    <column >
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>Status</property>
+      <label>PositioningReportStatus</label>
+      <type class="StandardData">PositioningStatus</type>
+    </column>
+    <column >
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column >
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>HowTheyPositionent</property>
+      <label>PositioningHowTheyPosition</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>HowWeAttack</property>
+      <label>PositioningHowWeAttack</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>HowWePosition</property>
+      <label>PositioningHowWePosition</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>HowTheyAttack</property>
+      <label>PositioningHowTheyAttack</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryReportView</entity>
+      <property>HowWeDefend</property>
+      <label>PositioningHowWeDefend</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningByCompetitorAndIndustryReportView as PositioningByCompetitorAndIndustryReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningByCompetitorAndIndustryReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningByCompetitorAndIndustryReportView.ProductName
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

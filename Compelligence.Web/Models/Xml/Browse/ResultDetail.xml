@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ResultDetailView</entity>
+      <property>Id</property>
+	  <label>Id</label>
+      <onclick>
+        <![CDATA[  javascript: loadresultdetail('$P{ResultDetailView.Id}');              
+        ]]>
+      </onclick>
+      <type class="HyperLink">
+      </type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ResultDetailView as ResultDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ResultDetailView.ClientCompany = '$S{ClientCompany}'  
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ResultDetailView.Id
+    ]]>
+  </orderBy>
+</browse>

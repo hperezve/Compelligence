@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>ProductReportView</entity>
+      <property>Status</property>
+      <label>ProductReportViewStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>ProductReportView</entity>
+      <property>Tier</property>
+      <label>ProductReportViewTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>Name</property>
+      <label>ProductReportViewName</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>AssignedToName</property>
+      <label>ProductReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>CompetitorName</property>
+      <label>ProductReportViewCompetitorName</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>DateOfLaunch</property>
+      <label>ProductReportViewDateOfLaunch</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>EndOfLife</property>
+      <label>ProductReportViewEndOfLife</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>ProductFamilyName</property>
+      <label>ProductReportViewProductFamilyName</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>Units</property>
+      <label>ProductReportViewUnits</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>ListPrice</property>
+      <label>ProductReportViewListPrice</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>Currency</property>
+      <label>ProductReportViewCurrency</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>TransitionProducts</property>
+      <label>ProductReportViewTransitionProducts</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>Url</property>
+      <label>ProductReportViewUrl</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>ImageUrl</property>
+      <label>ProductReportViewImageUrl</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>Description</property>
+      <label>ProductReportViewDescription</label>
+    </column>
+    <column>
+      <entity>ProductReportView</entity>
+      <property>KeyWord</property>
+      <label>ProductReportViewKeyWord</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductReportView as ProductReportView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ProductReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductReportView.Name
+    ]]>
+  </orderBy>
+</browse>

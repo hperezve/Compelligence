@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>SupplierName</property>
+      <label>ProjectsbySupplierViewSupplierName</label>
+    </column>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>Status</property>
+      <label>ProjectsStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbySupplierView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectsbySupplierView as ProjectsbySupplierView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectsbySupplierView.ClientCompany = '$S{ClientCompany}' AND ProjectsbySupplierView.SupplierId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectsbySupplierView.SupplierId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Compelligence: Request for Company DNS]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>Please send me the URL of our Company in Compelligence system to the following email $P{RequesterEmail}</div>
+      <br />
+      <div>Aditional Comments: $P{Comments}</div>
+      <br />
+      <div>Thanks $P{RequesterName}</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

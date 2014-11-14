@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ObjectiveByParentView</entity>
+      <property>Name</property>
+      <label>ObjectiveName</label>
+    </column>
+    <column>
+      <entity>ObjectiveByParentView</entity>
+      <property>AssignedToName</property>
+      <label>ObjectiveAssignedTo</label>
+    </column>
+    <column>
+      <entity>ObjectiveByParentView</entity>
+      <property>Status</property>
+      <label>ObjectiveStatus</label>
+      <type class="StandardData">ObjectiveStatus</type>
+    </column>
+    <column>
+      <entity>ObjectiveByParentView</entity>
+      <property>Type</property>
+      <label>ObjectiveType</label>
+      <type class="StandardData">ObjectiveType</type>
+    </column>
+    <column>
+      <entity>ObjectiveByParentView</entity>
+      <property>Detail</property>
+      <label>ObjectiveDetail</label>
+    </column>
+    <column>
+      <entity>ObjectiveByParentView</entity>
+      <property>DueDate</property>
+      <label>ObjectiveDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ObjectiveByParentView as ObjectiveByParentView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ObjectiveByParentView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ObjectiveByParentView.Lineage
+    ]]>
+  </orderBy>
+</browse>

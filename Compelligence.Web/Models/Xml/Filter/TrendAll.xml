@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>TrendAllView</entity>
+      <property>Tier</property>
+      <label>TrendTier</label>
+      <type class="StandardData">TrendTier</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>Name</property>
+      <label>TrendAllName</label>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>AssignedToName</property>
+      <label>TrendAllAssignedTo</label>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>Type</property>
+      <label>TrendAllType</label>
+      <type class="StandardData">TrendType</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>StartDate</property>
+      <label>TrendAllStartDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>EndDate</property>
+      <label>TrendAllEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>DateOfMaturity</property>
+      <label>TrendAllDateOfMaturity</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>IndustryType</property>
+      <label>TrendIndustryType</label>
+      <type class="StandardData">TrendIndustryType</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>ProjectedValue</property>
+      <label>TrendProjectedValue</label>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>GeoType</property>
+      <label>TrendGeoType</label>
+      <type class="StandardData">TrendGeoType</type>
+    </column>
+    <column>
+      <entity>TrendAllView</entity>
+      <property>Description</property>
+      <label>TrendDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TrendAllView as TrendAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   TrendAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TrendAllView.Name
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--objects xmlns="http://www.springframework.net"-->
+<objects xmlns="http://www.springframework.net"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Compelligence web layer definitions
+  </description>
+
+  <!-- Controllers Top -->
+
+  <object id="BrowseController" type="Compelligence.Web.Controllers.BrowseController, Compelligence.Web" singleton="false">
+    <property name="BrowseService" ref="BrowseService" />
+    <property name="UserProfileCustomizationService" ref="UserProfileCustomizationService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+  </object>
+
+  <object id="EmailApproveController" type="Compelligence.Web.Controllers.EmailApproveController, Compelligence.Web" singleton="false">
+    <property name="ApprovalListService" ref="ApprovalListService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ProjectService" ref="ProjectService" />
+  </object>
+
+  <object id="EmailApproveRegistrationController" type="Compelligence.Web.Controllers.EmailApproveRegistrationController, Compelligence.Web" singleton="false">
+    <property name="ApprovalListService" ref="ApprovalListService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="SecurityGroupService" ref="SecurityGroupService" />
+    <property name="HistoryFieldService" ref="HistoryFieldService" />
+    <property name="UserActionFieldService" ref="UserActionFieldService" />
+  </object>
+
+  <object id="ForumController" type="Compelligence.Web.Controllers.ForumController, Compelligence.Web" singleton="false">
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="DealService" ref="DealService" />
+    <property name="EventService" ref="EventService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="FollowerService" ref="FollowerService" />
+    <property name="EntityFollowerService" ref="EntityFollowerService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ProductCriteriaService" ref="ProductCriteriaService" />
+  </object>
+
+  <object id="HomeController" type="Compelligence.Web.Controllers.HomeController, Compelligence.Web" singleton="false">
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="SecurityGroupService" ref="SecurityGroupService" />
+    <property name="UserProfileConfigurationService" ref="UserProfileConfigurationService" />
+    <property name="EmailService" ref="EmailService" />
+  </object>
+
+  <object id="MaintenanceAccountController" type="Compelligence.Web.Controllers.MaintenanceAccountController, Compelligence.Web" singleton="false">
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="ApplicationConfigurationService" ref="ApplicationConfigurationService" />
+  </object>
+
+  <object id="RegistrationController" type="Compelligence.Web.Controllers.RegistrationController, Compelligence.Web" singleton="false">
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="ClientCompanyConfigurationService" ref="ClientCompanyConfigurationService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="UserActionFieldService" ref="UserActionFieldService" />
+    <property name="HistoryFieldService" ref="HistoryFieldService" />
+  </object>
+
+  <!-- BackEnd Controllers -->
+  <object id="BackEndController" type="Compelligence.Web.Controllers.BackEndController, Compelligence.Web" singleton="false">
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+  <!--test of ActionHistory-->
+  <object id="BackEndFormController" type="Compelligence.Web.Controllers.BackEndFormController, Compelligence.Web" singleton="false">
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+  </object>
+
+  <object id="AnswerController" type="Compelligence.Web.Controllers.AnswerController, Compelligence.Web" singleton="false">
+    <property name="AnswerService" ref="AnswerService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="QuizService" ref="QuizService" />
+  </object>
+
+  <object id="ApprovalListController" type="Compelligence.Web.Controllers.ApprovalListController, Compelligence.Web" singleton="false">
+    <property name="ApprovalListService" ref="ApprovalListService" />
+    <property name="EmailService" ref="EmailService" />
+  </object>
+
+  <object id="BudgetController" type="Compelligence.Web.Controllers.BudgetController, Compelligence.Web" singleton="false">
+    <property name="BudgetService" ref="BudgetService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UnitMeasureService" ref="UnitMeasureService" />
+    <property name="BudgetTypeService" ref="BudgetTypeService" />
+  </object>
+
+  <object id="BudgetTypeController" type="Compelligence.Web.Controllers.BudgetTypeController, Compelligence.Web" singleton="false" >
+    <property name="BudgetTypeService" ref="BudgetTypeService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="CalendarController" type="Compelligence.Web.Controllers.CalendarController, Compelligence.Web" singleton="false">
+    <property name="CalendarService" ref="CalendarService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="DealService" ref="DealService" />
+    <property name="KitService" ref="KitService" />
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="PlanService" ref="PlanService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="EventService" ref="EventService" />
+  </object>
+
+  <object id="IndustryFinancialController" type="Compelligence.Web.Controllers.IndustryFinancialController, Compelligence.Web" singleton="false">
+    <property name="IndustryFinancialService" ref="IndustryFinancialService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="IndustryService" ref="IndustryService" />
+  </object>
+
+  <object id="CompetitorFinancialController" type="Compelligence.Web.Controllers.CompetitorFinancialController, Compelligence.Web" singleton="false">
+    <property name="CompetitorFinancialService" ref="CompetitorFinancialService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+  </object>
+
+  <object id="CustomFieldController" type="Compelligence.Web.Controllers.CustomFieldController, Compelligence.Web" singleton="false">
+    <property name="CustomFieldService" ref="CustomFieldService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="CompetitorController" type="Compelligence.Web.Controllers.CompetitorController, Compelligence.Web" singleton="false">
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="CustomFieldService" ref="CustomFieldService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+
+  <object id="CompetitorCriteriaController" type="Compelligence.Web.Controllers.CompetitorCriteriaController, Compelligence.Web" singleton="false">
+    <property name="CompetitorCriteriaService" ref="CompetitorCriteriaService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryCriteriasService" ref="IndustryCriteriasService" />
+    <property name="CriteriaService" ref="CriteriaService" />
+    <property name="CriteriaSetService" ref="CriteriaSetService" />
+    <property name="CriteriaGroupService" ref="CriteriaGroupService" />
+  </object>
+
+  <object id="ContentTypeController" type="Compelligence.Web.Controllers.ContentTypeController, Compelligence.Web" singleton="false">
+    <property name="ContentTypeService" ref="ContentTypeService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="CriteriaController" type="Compelligence.Web.Controllers.CriteriaController, Compelligence.Web" singleton="false">
+    <property name="CriteriaService" ref="CriteriaService" />
+    <property name="CriteriaSetService" ref="CriteriaSetService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryCriteriasService" ref="IndustryCriteriasService" />
+    <property name ="CriteriaGroupService" ref ="CriteriaGroupService" />
+    <property name="ProductCriteriaService" ref="ProductCriteriaService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="CompetitorCriteriaService" ref="CompetitorCriteriaService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+  </object>
+
+  <object id="CriteriaGroupController" type="Compelligence.Web.Controllers.CriteriaGroupController, Compelligence.Web" singleton="false">
+    <property name="CriteriaGroupService" ref="CriteriaGroupService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="CriteriaSetController" type="Compelligence.Web.Controllers.CriteriaSetController, Compelligence.Web" singleton="false">
+    <property name="CriteriaSetService" ref="CriteriaSetService" />
+    <property name ="CriteriaGroupService" ref ="CriteriaGroupService" />
+  </object>
+
+  <object id="CustomerController" type="Compelligence.Web.Controllers.CustomerController, Compelligence.Web" singleton="false">
+    <property name="CustomerService" ref="CustomerService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="DashboardController" type="Compelligence.Web.Controllers.DashboardController, Compelligence.Web" singleton="false">
+    <property name="DashboardService" ref="DashboardService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="ForumService" ref="ForumService"/>
+    <property name="UserProfileService" ref="UserProfileService"/>
+    <property name="ForumResponseService" ref="ForumResponseService"/>
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="DealController" type="Compelligence.Web.Controllers.DealController, Compelligence.Web" singleton="false">
+    <property name="DealService" ref="DealService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="CustomerService" ref="CustomerService" />
+    <property name="DealIndustryService" ref="DealIndustryService" />
+    <property name="DealCompetitorService" ref="DealCompetitorService" />
+    <property name="DealProductService" ref="DealProductService" />
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="DealUserProfileService" ref="DealUserProfileService" />
+    <property name="EmployeeService" ref="EmployeeService" />
+  </object>
+
+  <object id="EmployeeController" type="Compelligence.Web.Controllers.EmployeeController, Compelligence.Web" singleton="false">
+    <property name="EmployeeService" ref="EmployeeService" />
+  </object>
+
+  <object id="EntityRelationController" type="Compelligence.Web.Controllers.EntityRelationController, Compelligence.Web" singleton="false">
+    <property name="EntityRelationService" ref="EntityRelationService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="DealService" ref="DealService" />
+    <property name="EventService" ref="EventService" />
+    <property name="KitService" ref="KitService" />
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="CustomerService" ref="CustomerService" />
+    <property name="SupplierService" ref="SupplierService" />
+    <property name="CompetitorPartnerService" ref="CompetitorPartnerService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="CriteriaGroupService" ref="CriteriaGroupService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="TeamService" ref="TeamService" />
+    <property name="TemplateService" ref="TemplateService" />
+    <property name="WebsiteService" ref="WebsiteService" />
+    <property name="FileService" ref="FileService" />
+    <property name="TeamMemberService" ref="TeamMemberService" />
+  </object>
+
+  <object id="EventController" type="Compelligence.Web.Controllers.EventController, Compelligence.Web" singleton="false">
+    <property name="EventService" ref="EventService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ReportService" ref="ReportService" />
+    <property name="EventTypeService" ref="EventTypeService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="EventIndustryService" ref="EventIndustryService" />
+    <property name="EventCompetitorService" ref="EventCompetitorService" />
+    <property name="EventProductService" ref="EventProductService" />
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+
+  <object id="FileController" type="Compelligence.Web.Controllers.FileController, Compelligence.Web" singleton="false">
+    <property name="FileService" ref="FileService" />
+    <property name="TemplateService" ref="TemplateService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+
+  <object id="ForumCommentController" type="Compelligence.Web.Controllers.ForumCommentController, Compelligence.Web" singleton="false">
+    <property name="ForumCommentResponseService" ref="ForumResponseService" />
+    <property name="ForumCommentService" ref="ForumService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="ForumDiscussionController" type="Compelligence.Web.Controllers.ForumDiscussionController, Compelligence.Web" singleton="false">
+    <property name="ForumDiscussionResponseService" ref="ForumResponseService" />
+    <property name="ForumDiscussionService" ref="ForumService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="ForumFeedbackController" type="Compelligence.Web.Controllers.ForumFeedbackController, Compelligence.Web" singleton="false">
+    <property name="ForumFeedbackResponseService" ref="ForumResponseService" />
+    <property name="ForumFeedbackService" ref="ForumService" />
+  </object>
+
+  <object id="ImplicationController" type="Compelligence.Web.Controllers.ImplicationController, Compelligence.Web" singleton="false">
+    <property name="ImplicationService" ref="ImplicationService" />
+  </object>
+
+  <object id="IndustryController" type="Compelligence.Web.Controllers.IndustryController, Compelligence.Web" singleton="false">
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="DealService" ref="DealService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="CustomFieldService" ref="CustomFieldService" />
+    <property name="IndustryCriteriasService" ref="IndustryCriteriasService" />
+    <property name="CriteriaGroupService" ref="CriteriaGroupService" />
+    <property name="CriteriaSetService" ref="CriteriaSetService" />
+    <property name="FileService" ref="FileService" />
+  </object>
+
+  <object id="IndustryCriteriaController" type="Compelligence.Web.Controllers.IndustryCriteriaController, Compelligence.Web" singleton="false">
+    <property name="IndustryCriteriaService" ref="IndustryCriteriaService" />
+    <property name="CriteriaService" ref="CriteriaService" />
+  </object>
+
+  <object id="InternalSearchController" type="Compelligence.Web.Controllers.InternalSearchController, Compelligence.Web" singleton="false" >
+    <property name="SearchService" ref="SearchService" />
+    <property name="BrowseService" ref="BrowseService" />
+  </object>
+
+  <object id="KitController" type="Compelligence.Web.Controllers.KitController, Compelligence.Web" singleton="false">
+    <property name="KitService" ref="KitService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="KitTypeService" ref="KitTypeService" />
+    <property name="KitIndustryService" ref="KitIndustryService" />
+    <property name="KitCompetitorService" ref="KitCompetitorService" />
+    <property name="KitProductService" ref="KitProductService" />
+    <property name="BudgetService" ref="BudgetService" />    
+  </object>
+
+  <object id="LabelController" type="Compelligence.Web.Controllers.LabelController, Compelligence.Web" singleton="false">
+    <property name="LabelService" ref="LabelService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="LibraryController" type="Compelligence.Web.Controllers.LibraryController, Compelligence.Web" singleton="false">
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="LibraryTypeService" ref="LibraryTypeService" />
+    <property name="FileService" ref="FileService" />
+    <property name="DealService" ref="DealService" />
+    <property name="EventService" ref="EventService" />
+    <property name="KitService" ref="KitService" />
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="TrendService=" ref="TrendService" />
+    <property name="CompetitorService=" ref="CompetitorService" />
+    <property name="ProductService=" ref="ProductService" />
+    <property name="ContentTypeService=" ref="ContentTypeService" />
+  </object>
+
+  <object id="LibraryExternalSourceController" type="Compelligence.Web.Controllers.LibraryExternalSourceController, Compelligence.Web" singleton="false">
+    <property name="LibraryExternalSourceService" ref="LibraryExternalSourceService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="LibraryTypeService" ref="LibraryTypeService" />
+    <property name="NewsScoringService" ref="NewsScoringService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ConfigurationService" ref="ConfigurationService" />
+  </object>
+
+  <object id="LibraryTypeController" type="Compelligence.Web.Controllers.LibraryTypeController, Compelligence.Web" singleton="false">
+    <property name="LibraryTypeService" ref="LibraryTypeService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="EventTypeController" type="Compelligence.Web.Controllers.EventTypeController, Compelligence.Web" singleton="false">
+    <property name="EventTypeService" ref="EventTypeService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="LocationController" type="Compelligence.Web.Controllers.LocationController, Compelligence.Web" singleton="false">
+    <property name="LocationService" ref="LocationService" />
+  </object>
+
+  <object id="MetricController" type="Compelligence.Web.Controllers.MetricController, Compelligence.Web" singleton="false">
+    <property name="MetricService" ref="MetricService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="MyCompanyController" type="Compelligence.Web.Controllers.MyCompanyController, Compelligence.Web" singleton="false">
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="SalesForceService" ref="SalesForceService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="FileService" ref="FileService" />
+  </object>
+
+  <object id="MyProfileController" type="Compelligence.Web.Controllers.MyProfileController, Compelligence.Web" singleton="false">
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="UserProfileConfigurationService" ref="UserProfileConfigurationService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />  
+  </object>
+
+  <object id="NewsletterController" type="Compelligence.Web.Controllers.NewsletterController, Compelligence.Web" singleton="false">
+    <property name="NewsletterService" ref="NewsletterService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="FileService" ref="FileService" />
+    <property name="TemplateService" ref="TemplateService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="TeamService" ref="TeamService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+
+  <object id="NuggetController" type="Compelligence.Web.Controllers.NuggetController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="ObjectiveController" type="Compelligence.Web.Controllers.ObjectiveController, Compelligence.Web" singleton="false">
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ObjectiveIndustryService" ref="ObjectiveIndustryService" />
+    <property name="ObjectiveCompetitorService" ref="ObjectiveCompetitorService" />
+    <property name="ObjectiveProductService" ref="ObjectiveProductService" />
+    <property name="BudgetService" ref="BudgetService" />
+  </object>
+
+  <object id="PartnerController" type="Compelligence.Web.Controllers.PartnerController, Compelligence.Web" singleton="false">
+    <property name="PartnerService" ref="PartnerService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="PlanController" type="Compelligence.Web.Controllers.PlanController, Compelligence.Web" singleton="false">
+    <property name="PlanService" ref="PlanService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="PositioningController" type="Compelligence.Web.Controllers.PositioningController, Compelligence.Web" singleton="false">
+    <property name="PositioningService" ref="PositioningService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="PositioningIndustryService" ref="PositioningIndustryService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+
+  <object id="ProductController" type="Compelligence.Web.Controllers.ProductController, Compelligence.Web" singleton="false">
+    <property name="ProductService" ref="ProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ProductFamilyService" ref="ProductFamilyService" />
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="CustomFieldService" ref="CustomFieldService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="LibraryService" ref="LibraryService"/>
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="PriceService" ref="PriceService" />
+    <property name="IndustryService" ref="IndustryService" />
+  </object>
+
+  <object id="ProductCriteriaController" type="Compelligence.Web.Controllers.ProductCriteriaController, Compelligence.Web" singleton="false">
+    <property name="ProductCriteriaService" ref="ProductCriteriaService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryCriteriasService" ref="IndustryCriteriasService" />
+    <property name="CriteriaService" ref="CriteriaService" />
+    <property name="CriteriaSetService" ref="CriteriaSetService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="CriteriaGroupService" ref="CriteriaGroupService" />
+  </object>
+
+  <object id="ProjectController" type="Compelligence.Web.Controllers.ProjectController, Compelligence.Web" singleton="false">
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ProjectIndustryService" ref="ProjectIndustryService" />
+    <property name="ProjectCompetitorService" ref="ProjectCompetitorService" />
+    <property name="ProjectProductService" ref="ProjectProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ContentTypeService" ref="ContentTypeService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="BudgetService" ref="BudgetService" />
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="ConfigurationService" ref="ConfigurationService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="LabelService" ref="LabelService" />
+    <property name="CustomFieldService" ref="CustomFieldService" />
+  </object>
+
+  <object id="QuestionController" type="Compelligence.Web.Controllers.QuestionController, Compelligence.Web" singleton="false">
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="QuestionDetailService" ref="QuestionDetailService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="QuizClassificationController" type="Compelligence.Web.Controllers.QuizClassificationController, Compelligence.Web" singleton="false" >
+    <property name="QuizClassificationService" ref="QuizClassificationService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="ReportController" type="Compelligence.Web.Controllers.ReportController, Compelligence.Web" singleton="false">
+    <property name="ReportService" ref="ReportService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="CompetitorFinancialService" ref="CompetitorFinancialService" />
+  </object>
+
+  <object id="SourceController" type="Compelligence.Web.Controllers.SourceController, Compelligence.Web" singleton="false">
+    <property name="SourceService" ref="SourceService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="SupplierController" type="Compelligence.Web.Controllers.SupplierController, Compelligence.Web" singleton="false">
+    <property name="SupplierService" ref="SupplierService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="SurveyController" type="Compelligence.Web.Controllers.SurveyController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="AnswerService" ref="AnswerService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="QuestionDetailService" ref="QuestionDetailService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="QuizContentService" ref="QuizContentService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="FileService" ref="FileService" />
+  </object>
+
+  <object id="TeamController" type="Compelligence.Web.Controllers.TeamController, Compelligence.Web" singleton="false">
+    <property name="TeamService" ref="TeamService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="TeamMemberController" type="Compelligence.Web.Controllers.TeamMemberController, Compelligence.Web" singleton="false">
+    <property name="TeamMemberService" ref="TeamMemberService" />
+    <property name="TeamRoleService" ref="TeamRoleService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="TeamRoleController" type="Compelligence.Web.Controllers.TeamRoleController, Compelligence.Web" singleton="false">
+    <property name="TeamRoleService" ref="TeamRoleService" />
+  </object>
+
+  <object id="TemplateController" type="Compelligence.Web.Controllers.TemplateController, Compelligence.Web" singleton="false">
+    <property name="TemplateService" ref="TemplateService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="UserController" type="Compelligence.Web.Controllers.UserController, Compelligence.Web" singleton="false">
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="SecurityGroupService" ref="SecurityGroupService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UserRelationService" ref="UserRelationService" />
+    <property name="HistoryFieldService" ref="HistoryFieldService" />
+    <property name="UserActionFieldService" ref="UserActionFieldService" />
+  </object>
+
+  <object id="HistoryFieldController" type="Compelligence.Web.Controllers.HistoryFieldController, Compelligence.Web" singleton="false">
+    <property name="HistoryFieldService" ref="HistoryFieldService" />
+    <property name="UserActionFieldService" ref="UserActionFieldService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="WebsiteController" type="Compelligence.Web.Controllers.WebsiteController, Compelligence.Web" singleton="false">
+    <property name="WebsiteService" ref="WebsiteService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="WebsiteDetailService" ref="WebsiteDetailService" />
+    <property name="ContentTypeService" ref="ContentTypeService" />
+  </object>
+
+  <object id="WinLossController" type="Compelligence.Web.Controllers.WinLossController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+
+  <object id="WinLossAnalysisController" type="Compelligence.Web.Controllers.WinLossAnalysisController, Compelligence.Web" singleton="false">
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="WinLossAnalysisService" ref="WinLossAnalysisService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+
+  </object>
+
+  <object id="UserRelationController" type="Compelligence.Web.Controllers.UserRelationController, Compelligence.Web" singleton="false">
+  </object>
+
+  <object id="ComparinatorCriteriaUploaderController" type="Compelligence.Web.Controllers.ComparinatorCriteriaUploaderController, Compelligence.Web" singleton="false">
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name ="CriteriaService" ref ="CriteriaService" />
+    <property name ="CriteriaSetService" ref ="CriteriaSetService" />
+    <property name ="CriteriaGroupService" ref ="CriteriaGroupService" />
+    <property name ="ProductCriteriaService" ref ="ProductCriteriaService" />
+    <property name ="CompetitorCriteriaService" ref ="CompetitorCriteriaService" />
+    <property name ="IndustryCriteriaService" ref ="IndustryCriteriaService" />
+    <property name ="IndustryCriteriasService" ref ="IndustryCriteriasService" />
+    <property name ="FileService" ref ="FileService" />
+    <property name ="IndustryProductService" ref ="IndustryProductService" />
+    <property name ="ExportService" ref ="ExportService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="PriceService" ref="PriceService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="PricingTypeService" ref="PricingTypeService" />
+  </object>
+
+  <!-- FrontEnd Controllers -->
+  <object id="ComparinatorController" type="Compelligence.Web.Controllers.ComparinatorController, Compelligence.Web" singleton="false">
+    <property name="WebsiteService" ref="WebsiteService" />
+    <property name="WebsiteDetailService" ref="WebsiteDetailService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="LabelService" ref="LabelService" />
+    <property name="EntityNewsService" ref="EntityNewsService" />
+    <property name="SalesForceService" ref="SalesForceService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="ContentTypeService" ref="ContentTypeService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ConfigurationDefaultsService" ref="ConfigurationDefaultsService" />
+    <property name ="CriteriaService" ref ="CriteriaService" />
+    <property name ="CriteriaSetService" ref ="CriteriaSetService" />
+    <property name ="CriteriaGroupService" ref ="CriteriaGroupService" />
+    <property name ="ProductCriteriaService" ref ="ProductCriteriaService" />
+    <property name ="CompetitorCriteriaService" ref ="CompetitorCriteriaService" />
+    <property name ="IndustryCriteriaService" ref ="IndustryCriteriaService" />
+    <property name ="IndustryCriteriasService" ref ="IndustryCriteriasService" />
+    <property name ="ForumService" ref ="ForumService" />
+    <property name ="QuizService" ref ="QuizService" />
+    <property name ="ActionHistoryService" ref ="ActionHistoryService" />
+    <property name ="PositioningService" ref ="PositioningService" />
+    <property name ="ClientCompanyService" ref ="ClientCompanyService" />
+    <property name ="ExportService" ref ="ExportService" />
+    <property name ="FileService" ref ="FileService" />
+    <property name ="ForumResponseService" ref ="ForumResponseService" />
+    <property name ="PriceService" ref ="PriceService" />
+    <property name ="ResourceService" ref ="ResourceService" />
+    <property name ="IndustryProductService" ref ="IndustryProductService" />
+    <property name ="PricingTypeService" ref ="PricingTypeService" />
+    <property name ="ConfigurationUserTypeService" ref ="ConfigurationUserTypeService" />
+    <property name ="SecurityGroupService" ref ="SecurityGroupService" />
+    <property name="PositioningCompetitorService" ref="PositioningCompetitorService" />
+    <property name="PositioningIndustryService" ref="PositioningIndustryService" />
+  </object>
+
+  <object id="ContentPortalController" type="Compelligence.Web.Controllers.ContentPortalController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="ProjectIndustryService" ref="ProjectIndustryService" />
+    <property name="ProjectCompetitorService" ref="ProjectCompetitorService" />
+    <property name="ProjectProductService" ref="ProjectProductService" />
+    <property name="ContentTypeService" ref="ContentTypeService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="LabelService" ref="LabelService" />
+    <property name="ConfigurationLabelsService" ref="ConfigurationLabelsService" />
+    <property name="WebsiteService" ref="WebsiteService" />
+    <property name="WebsiteDetailService" ref="WebsiteDetailService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="SecurityGroupService" ref="SecurityGroupService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="PositioningService" ref="PositioningService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="EntityNewsService" ref="EntityNewsService" />
+    <property name="ReportService" ref="ReportService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="SalesForceService" ref="SalesForceService" />
+    <property name="CompetitorPartnerService" ref="CompetitorPartnerService" />
+    <property name="StrengthWeaknessService" ref="StrengthWeaknessService" />
+    <property name="ConfigurationDefaultsService" ref="ConfigurationDefaultsService" />
+    <property name="ProductCriteriaService" ref="ProductCriteriaService" />
+    <property name="ConfigurationUserTypeService" ref="ConfigurationUserTypeService" />
+    <property name="PositioningCompetitorService" ref="PositioningCompetitorService" />
+    <property name="PositioningIndustryService" ref="PositioningIndustryService" />
+    <property name ="CompetitorFinancialService" ref="CompetitorFinancialService" />
+  </object>
+  <object id="SalesForceController" type="Compelligence.Web.Controllers.SalesForceController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="ProjectIndustryService" ref="ProjectIndustryService" />
+    <property name="ProjectCompetitorService" ref="ProjectCompetitorService" />
+    <property name="ProjectProductService" ref="ProjectProductService" />
+    <property name="ContentTypeService" ref="ContentTypeService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="LabelService" ref="LabelService" />
+    <property name="WebsiteService" ref="WebsiteService" />
+    <property name="WebsiteDetailService" ref="WebsiteDetailService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="SecurityGroupService" ref="SecurityGroupService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="PositioningService" ref="PositioningService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="EntityNewsService" ref="EntityNewsService" />
+    <property name="ReportService" ref="ReportService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="ProductCriteriaService" ref="ProductCriteriaService" />
+    <property name="StrengthWeaknessService" ref="StrengthWeaknessService" />
+    <property name="ConfigurationDefaultsService" ref="ConfigurationDefaultsService" />
+    <property name="SalesForceService" ref="SalesForceService" />
+    <property name="PositioningCompetitorService" ref="PositioningCompetitorService" />
+    <property name="PositioningIndustryService" ref="PositioningIndustryService" />
+    <property name ="CompetitorFinancialService" ref="CompetitorFinancialService" />
+  </object>
+  <object id="ContentSearchController" type="Compelligence.Web.Controllers.ContentSearchController, Compelligence.Web" singleton="false" >
+    <property name="SearchService" ref="SearchService" />
+    <property name="FileService" ref="FileService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="DealService" ref="DealService" />
+    <property name="EventService" ref="EventService" />
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="KitService" ref="KitService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="CustomerService" ref="CustomerService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="SourceService" ref="SourceService" />
+  </object>
+
+  <object id="DealSupportController" type="Compelligence.Web.Controllers.DealSupportController, Compelligence.Web" singleton="false">
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="DealService" ref="DealService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="FileService" ref="FileService" />
+    <property name="CustomerService" ref="CustomerService" />
+    <property name="SalesForceService" ref="SalesForceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="DealIndustryService" ref="DealIndustryService" />
+    <property name="DealCompetitorService" ref="DealCompetitorService" />
+    <property name="DealProductService" ref="DealProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="DealUserProfileService" ref="DealUserProfileService" />
+    <property name="EmployeeService" ref="EmployeeService" />
+  </object>
+
+  <object id="EventsController" type="Compelligence.Web.Controllers.EventsController, Compelligence.Web" singleton="false">
+    <property name="EventService" ref="EventService" />
+    <property name="EventTypeService" ref="EventTypeService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="FileService" ref="FileService" />
+    <property name="QuizService" ref="QuizService" />
+    <property name="EventIndustryService" ref="EventIndustryService" />
+    <property name="EventCompetitorService" ref="EventCompetitorService" />
+    <property name="EventProductService" ref="EventProductService" />
+  </object>
+
+  <object id="LongSurveyController" type="Compelligence.Web.Controllers.LongSurveyController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="ShortSurveyController" type="Compelligence.Web.Controllers.ShortSurveyController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="WinLossReportController" type="Compelligence.Web.Controllers.WinLossReportController, Compelligence.Web" singleton="false">
+    <property name="QuizService" ref="QuizService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+  </object>
+
+  <object id="LibraryNewsController" type="Compelligence.Web.Controllers.LibraryNewsController, Compelligence.Web" singleton="false">
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="LibraryTypeService" ref="LibraryTypeService" />
+    <property name="FileService" ref="FileService" />
+    <property name="DealService" ref="DealService" />
+    <property name="EventService" ref="EventService" />
+    <property name="KitService" ref="KitService" />
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="TrendService=" ref="TrendService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+  <object id="ProductFamilyController" type="Compelligence.Web.Controllers.ProductFamilyController, Compelligence.Web" singleton="false">
+    <property name="ProductFamilyService" ref="ProductFamilyService" />
+  </object>
+  <object id="CompetitorPartnerController" type="Compelligence.Web.Controllers.CompetitorPartnerController, Compelligence.Web" singleton="false">
+    <property name="CompetitorPartnerService" ref="CompetitorPartnerService" />
+  </object>
+  <object id="CompetitorSupplierController" type="Compelligence.Web.Controllers.CompetitorSupplierController, Compelligence.Web" singleton="false">
+    <property name="CompetitorSupplierService" ref="CompetitorSupplierService" />
+  </object>
+  <object id="CompetitorCompetitorController" type="Compelligence.Web.Controllers.CompetitorCompetitorController, Compelligence.Web" singleton="false">
+    <property name="CompetitorCompetitorService" ref="CompetitorCompetitorService" />
+  </object>
+  <object id="MarketTypeController" type="Compelligence.Web.Controllers.MarketTypeController, Compelligence.Web" singleton="false">
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+  </object>
+  <object id="ConfigurationController" type="Compelligence.Web.Controllers.ConfigurationController, Compelligence.Web" singleton="false">
+    <property name="ConfigurationService" ref="ConfigurationService" />
+    <property name="ConfigurationDefaultsService" ref="ConfigurationDefaultsService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="ApprovalListService" ref="ApprovalListService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ConfigurationUserTypeService" ref="ConfigurationUserTypeService" />
+    <property name="ConfigurationLabelsService" ref="ConfigurationLabelsService" />
+  </object>
+  <object id="ActionHistoryController" type="Compelligence.Web.Controllers.ActionHistoryController, Compelligence.Web" singleton="false">
+    <property name="ActionHistoryService" ref="ActionHistoryService" />
+  </object>
+  <object id="TrendController" type="Compelligence.Web.Controllers.TrendController, Compelligence.Web" singleton="false">
+    <property name="TrendService" ref="TrendService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+  <object id="ProjectArchiveController" type="Compelligence.Web.Controllers.ProjectArchiveController, Compelligence.Web" singleton="false">
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="ForumService" ref="ForumService" />
+    <property name="ForumResponseService" ref="ForumResponseService" />
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="FileService" ref="FileService" />
+    <property name="ProjectIndustryService" ref="ProjectIndustryService" />
+    <property name="ProjectCompetitorService" ref="ProjectCompetitorService" />
+    <property name="ProjectProductService" ref="ProjectProductService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="IndustryProductService" ref="IndustryProductService" />
+    <property name="IndustryCompetitorService" ref="IndustryCompetitorService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="ContentTypeService" ref="ContentTypeService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="EmailService" ref="EmailService" />
+    <property name="BudgetService" ref="BudgetService" />
+    <property name="MarketTypeService" ref="MarketTypeService" />
+    <property name="ConfigurationService" ref="ConfigurationService" />
+    <property name="QuizService" ref="QuizService" />
+  </object>
+  <object id="NewsScoringController" type="Compelligence.Web.Controllers.NewsScoringController, Compelligence.Web" singleton="false">
+    <property name="NewsScoringService" ref="NewsScoringService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+  <object id="NewsController" type="Compelligence.Web.Controllers.NewsController, Compelligence.Web" singleton="false">
+    <property name="LibraryService" ref="LibraryService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="LibraryTypeService" ref="LibraryTypeService" />
+    <property name="FileService" ref="FileService" />
+    <property name="DealService" ref="DealService" />
+    <property name="EventService" ref="EventService" />
+    <property name="KitService" ref="KitService" />
+    <property name="ObjectiveService" ref="ObjectiveService" />
+    <property name="ProjectService" ref="ProjectService" />
+    <property name="TrendService=" ref="TrendService" />
+    <property name="IndustryService=" ref="IndustryService" />
+    <property name="CompetitorService=" ref="CompetitorService" />
+    <property name="ProductService=" ref="ProductService" />
+  </object>
+
+  <object id="FollowerController" type="Compelligence.Web.Controllers.FollowerController, Compelligence.Web" singleton="false">
+    <property name="LibraryService" ref="LibraryService" />
+  </object>
+
+  <object id="EntityFollowerController" type="Compelligence.Web.Controllers.EntityFollowerController, Compelligence.Web" singleton="false">
+    <property name="LibraryService" ref="LibraryService" />
+  </object>
+  <object id="WhitePaperController" type="Compelligence.Web.Controllers.WhitePaperController, Compelligence.Web" singleton="false">
+    <property name="WhitePaperService" ref="WhitePaperService" />
+    <property name="WhitePaperDetailService" ref="WhitePaperDetailService" />
+  </object>
+  <object id="ClientCompanyFilesController" type="Compelligence.Web.Controllers.ClientCompanyFilesController, Compelligence.Web" singleton="false">
+    <property name="ClientCompanyFilesService" ref="ClientCompanyFilesService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+  </object>
+  <object id="ThreatController" type="Compelligence.Web.Controllers.ThreatController, Compelligence.Web" singleton="false">
+    <property name="ThreatService" ref="ThreatService" />
+  </object>
+  <object id="PriceController" type="Compelligence.Web.Controllers.PriceController, Compelligence.Web" singleton="false">
+    <property name="PriceService" ref="PriceService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="PricingTypeService" ref="PricingTypeService" />
+  </object>
+  <object id="CompetitiveMessagingController" type="Compelligence.Web.Controllers.CompetitiveMessagingController, Compelligence.Web" singleton="false">
+    <property name="PositioningService" ref="PositioningService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="PositioningIndustryService" ref="PositioningIndustryService" />
+    <property name="PositioningCompetitorService" ref="PositioningCompetitorService" />
+  </object>
+  <object id="ConfigurationLabelsController" type="Compelligence.Web.Controllers.ConfigurationLabelsController, Compelligence.Web" singleton="false">
+    <property name="ConfigurationLabelsService" ref="ConfigurationLabelsService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+  <object id="StrengthWeaknessController" type="Compelligence.Web.Controllers.StrengthWeaknessController, Compelligence.Web" singleton="false">
+    <property name="StrengthWeaknessService" ref="StrengthWeaknessService" />
+    <property name="ResourceService" ref="ResourceService" />
+    <property name="StrengthWeaknessIndustryService" ref="StrengthWeaknessIndustryService" />
+    <property name="IndustryService" ref="IndustryService" />
+  </object>
+  <object id="SwotController" type="Compelligence.Web.Controllers.SwotController, Compelligence.Web" singleton="false">
+    <property name="SwotService" ref="SwotService" />
+    <property name="IndustryService" ref="IndustryService" />
+    <property name="CompetitorService" ref="CompetitorService" />
+    <property name="StrengthWeaknessService" ref="StrengthWeaknessService" />
+    <property name="TrendService" ref="TrendService" />
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="CompetitorFinancialService" ref="CompetitorFinancialService" />
+    <property name="StrengthWeaknessIndustryService" ref="StrengthWeaknessIndustryService" /> 
+  </object>
+
+  <object id="HelpController" type="Compelligence.Web.Controllers.HelpController, Compelligence.Web" singleton="false">
+    <property name="ClientCompanyHelpService" ref="ClientCompanyHelpService" />
+    <property name="ResourceService" ref="ResourceService" />
+  </object>
+
+  <object id="ServicesController" type="Compelligence.Web.Controllers.ServicesController, Compelligence.Web" singleton="false">
+    <property name="UserProfileService" ref="UserProfileService" />
+    <property name="ClientCompanyService" ref="ClientCompanyService" />
+    <property name="SecurityGroupService" ref="SecurityGroupService" />
+    <property name="UserProfileConfigurationService" ref="UserProfileConfigurationService" />
+  </object>
+</objects>
+

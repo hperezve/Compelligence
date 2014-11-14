@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true"  showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CompetitorProductDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>CompetitorProductDetailView</entity>
+      <property>Name</property>
+      <label>CompetitorName</label>
+    </column>
+    <column >
+      <entity>CompetitorProductDetailView</entity>
+      <property>Description</property>
+      <label>CompetitorDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>CompetitorProductDetailView</entity>
+      <property>Website</property>
+      <label>CompetitorWebsite</label>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[      
+      var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Competitor.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Competitor')); }      
+     
+      SetAndCleanActiveTab('AdminTabs_EnvironmentTab','EnvironmentTab_CompetitorContent');
+      showEntity(currentPath + '/Competitor.aspx/Edit', 'Environment', 'Competitor', id, 'CompetitorAll', '#CompetitorContent');
+      searchEntityWithTab(currentPath + '/Competitor.aspx/GetEntityName',id,currentPath,'Competitor','Environment');
+       
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorProductDetailView as CompetitorProductDetailView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CompetitorProductDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorProductDetailView.Name
+    ]]>
+  </orderBy>
+</browse> 

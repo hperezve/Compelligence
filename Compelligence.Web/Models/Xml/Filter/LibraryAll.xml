@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>Name</property>
+      <label>LibraryNameReport</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>LibraryTypeName</property>
+      <label>LibraryTypeNameReport</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>Author</property>
+      <label>LibraryAuthorReport</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>CreatedByName</property>
+      <label>LibraryAllViewCreatedBy</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>Permanent</property>
+      <label>LibraryPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>Source</property>
+      <label>LibrarySourceReport</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>DateDeletion</property>
+      <label>LibraryDateDeletionReport</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>Score</property>
+      <label>LibraryScore</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>RelatedType</property>
+      <label>LibraryRelatedType</label>
+      <type class="StandardData">NewsObjectType</type>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>RelatedName</property>
+      <label>LibraryRelated</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryAllView as LibraryAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   LibraryAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryAllView.Id
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

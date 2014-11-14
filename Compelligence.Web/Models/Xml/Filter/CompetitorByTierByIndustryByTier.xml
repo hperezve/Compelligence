@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorByTierByIndustryByTierViewCompetitorName</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>CompetitorTier</property>
+      <label>CompetitorByTierByIndustryByTierViewCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>Status</property>
+      <label>CompetitorByTierByIndustryByTierViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>Budget</property>
+      <label>CompetitorBudget</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>IndustryName</property>
+      <label>CompetitorByTierByIndustryByTierViewIndustryName</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>IndustryTier</property>
+      <label>CompetitorByTierByIndustryByTierViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>IndustryStatus</property>
+      <label>CompetitorByTierByIndustryByTierViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>CompetitorByTierByIndustryByTierView</entity>
+      <property>AssignedToName</property>
+      <label>CompetitorAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorByTierByIndustryByTierView as CompetitorByTierByIndustryByTierView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CompetitorByTierByIndustryByTierView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorByTierByIndustryByTierView.CompetitorName
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>BudgetDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>BudgetDetailView</entity>
+      <property>Name</property>
+      <label>BudgetName</label>
+    </column>
+    <column >
+      <entity>BudgetDetailView</entity>
+      <property>Type</property>
+      <label>BudgetType</label>
+      <type class="StandardData">BudgetTypeUnit</type>
+    </column>
+    <column >
+      <entity>BudgetDetailView</entity>
+      <property>UnitMeasureCode</property>
+      <label>BudgetTypeUnitMeasure</label>
+      <type class="StandardData">
+        <![CDATA[BudgetTypeFinancial:BudgetTypeTime]]>
+      </type>
+    </column>
+    <column >
+      <entity>BudgetDetailView</entity>
+      <property>Value</property>
+      <type>Decimal</type>
+      <label>BudgetValue</label>
+    </column>
+    <column >
+      <entity>BudgetDetailView</entity>
+      <property>Comment</property>
+      <label>BudgetComment</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.BudgetDetailView as BudgetDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    BudgetDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    BudgetDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

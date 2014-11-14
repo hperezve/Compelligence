@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>CompetitorAllView</entity>
+      <property>Status</property>
+      <label>CompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>CompetitorAllView</entity>
+      <property>Tier</property>
+      <label>CompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>Name</property>
+      <label>CompetitorName</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>Description</property>
+      <label>CompetitorDescription</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>Phone</property>
+      <label>CompetitorPhone</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>Fax</property>
+      <label>CompetitorFax</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>Website</property>
+      <label>CompetitorWebsite</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>Budget</property>
+      <label>CompetitorBudget</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>AssignedToName</property>
+      <label>CompetitorAssignedTo</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>MarketTypeName</property>
+      <label>CompetitorMarketTypeId</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>ImageUrl</property>
+      <label>CompetitorImageUrl</label>
+    </column>
+    <column>
+      <entity>CompetitorAllView</entity>
+      <property>KeyWord</property>
+      <label>CompetitorKeyWord</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorAllView as CompetitorAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CompetitorAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

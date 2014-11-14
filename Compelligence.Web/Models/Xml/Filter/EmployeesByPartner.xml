@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EmployeesByPartnerView</entity>
+      <property>EmployeeName</property>
+      <label>EmployeeNameReport</label>
+    </column>
+    <column>
+      <entity>EmployeesByPartnerView</entity>
+      <property>PartnerName</property>
+      <label>PartnerName</label>
+    </column>
+    <column>
+      <entity>EmployeesByPartnerView</entity>
+      <property>Division</property>
+      <label>EmployeeDivisionReport</label>
+    </column>
+    <column>
+      <entity>EmployeesByPartnerView</entity>
+      <property>Role</property>
+      <label>EmployeeRoleReport</label>
+    </column>
+    <column>
+      <entity>EmployeesByPartnerView</entity>
+      <property>Email</property>
+      <label>EmployeeEmailReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EmployeesByPartnerView as EmployeesByPartnerView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EmployeesByPartnerView.ClientCompany = '$S{ClientCompany}' AND EmployeesByPartnerView.CompanyType = '$C{CompanyType.Partner}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EmployeesByPartnerView.EmployeeId
+    ]]>
+  </orderBy>
+</browse>

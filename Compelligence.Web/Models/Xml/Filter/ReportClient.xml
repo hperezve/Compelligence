@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ReportClientView</entity>
+      <property>Name</property>
+      <label>CompanyName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ReportClientView as ReportClientView
+    ]]>
+  </from>
+  <orderBy>
+    <![CDATA[
+    ReportClientView.Name
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ThreatDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>Name</property>
+      <label>ThreatName</label>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>Source</property>
+      <label>ThreatSource</label>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>StartDate</property>
+      <label>ThreatStartDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>EndDate</property>
+      <label>ThreatEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ThreatDetailView</entity>
+      <property>Description</property>
+      <label>ThreatDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ThreatDetailView as ThreatDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ThreatDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ThreatDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

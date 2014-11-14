@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>IndustryFinancialDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column hidden="true">
+      <entity>IndustryFinancialDetailView</entity>
+      <property>IndustryName</property>
+      <label>FinancialPerformanceIndustry</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialDetailView</entity>
+      <property>TimePeriod</property>
+      <label>FinancialPerformanceTimePeriod</label>
+      <type class="StandardData">FinancialTimePeriod</type>
+    </column>
+    <column>
+      <entity>IndustryFinancialDetailView</entity>
+      <property>TimePeriodValue</property>
+      <label>FinancialPerformanceTimePeriodValue</label>
+    </column>
+    <column >
+      <entity>IndustryFinancialDetailView</entity>
+      <property>TotalAddressableMarketGlobal</property>
+      <label>FinancialPerformanceTAMG</label>
+    </column>
+    <column >
+      <entity>IndustryFinancialDetailView</entity>
+      <property>TotalAddressableMarketProjected</property>
+      <label>FinancialPerformanceTAMP</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialDetailView</entity>
+      <property>CAGRActual</property>
+      <label>FinancialPerformanceDetailCAGRActual</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialDetailView</entity>
+      <property>CAGRProjected</property>
+      <label>FinancialPerformanceDetailCAGRProjected</label>
+    </column>
+    <column hidden="true" >
+      <entity>IndustryFinancialDetailView</entity>
+      <property>Source</property>
+      <label>FinancialPerformanceSource</label>
+    </column>
+    <column >
+      <entity>IndustryFinancialDetailView</entity>
+      <property>Description</property>
+      <label>FinancialPerformanceDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.IndustryFinancialDetailView as IndustryFinancialDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   IndustryFinancialDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    IndustryFinancialDetailView.Source
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

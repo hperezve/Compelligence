@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EventAllView</entity>
+      <property>Name</property>
+      <label>EventName</label>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>Status</property>
+      <label>EventStatus</label>
+      <type class="StandardData">EventStatus</type>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>TimeFrame</property>
+      <label>TimeFrame</label>
+      <type class="StandardData">EventTypePeriod</type>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>Scenario</property>
+      <label>EventScenario</label>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>Confidence</property>
+      <label>EventConfidence</label>
+      <type class="StandardData">EventConfidence</type>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>Severity</property>
+      <label>EventSeverity</label>
+      <type class="StandardData">EventSeverity</type>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>MarketImpact</property>
+      <label>EventMarketImpact</label>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>CompanyImpact</property>
+      <label>EventCompanyImpact</label>
+    </column>
+    <column hidden="true" >
+      <entity>EventAllView</entity>
+      <property>StartDate</property>
+      <label>EventStartDate</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventAllView</entity>
+      <property>EndDate</property>
+      <label>EventEndDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>EventAllView</entity>
+      <property>EventTypeName</property>
+      <label>EventType</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventAllView as EventAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventAllView.Id
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

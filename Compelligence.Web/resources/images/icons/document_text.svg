@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../../css/styles.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 10240 10240" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>document_text icon</title>
+	<desc>document_text icon from the IconExperience.com O-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+	<path id="curve1" class="secondaryIconColor" d="M2560 7680l1920 0 0 640 -1920 0 0 -640zm0 -5760l1920 0 0 640 -1920 0 0 -640zm0 1280l1920 0 0 640 -1920 0 0 -640zm0 1920l5120 0 0 640 -5120 0 0 -640zm0 1280l4480 0 0 640 -4480 0 0 -640z"/>
+	<path id="curve0" class="primaryIconColor" d="M1280 640l5230 0c353,0 656,126 905,375l1170 1170c249,249 375,553 375,905l0 6510 -7680 0 0 -8960zm640 640l4160 0c176,0 320,144 320,320l0 1600 1600 0c176,0 320,144 320,320l0 5440 -6400 0 0 -7680zm5120 320l960 960 -960 0 0 -960z"/>
+</svg>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>ContentTypeName</property>
+      <label>ProjectsbyContentSatisfactionViewContentTypeName</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>RatingContent</property>
+      <label>RatingContentReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>RatingSum</property>
+      <label>RatingSumReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>IndustryStatus</property>
+      <label>ProjectsbyContentSatisfactionIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>IndustryTier</property>
+      <label>ProjectsbyContentSatisfactionIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProjectsbyContentSatisfactionCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>CompetitorTier</property>
+      <label>ProjectsbyContentSatisfactionCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>ProductStatus</property>
+      <label>ProjectsbyContentSatisfactionProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>ProductTier</property>
+      <label>ProjectsbyContentSatisfactionProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProjectsbyContentSatisfactionView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectsbyContentSatisfactionView as ProjectsbyContentSatisfactionView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectsbyContentSatisfactionView.ClientCompany = '$S{ClientCompany}' AND ProjectsbyContentSatisfactionView.ContentTypeId is not null AND ProjectsbyContentSatisfactionView.RatingContent >-1 AND ProjectsbyContentSatisfactionView.RatingSum >-1
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectsbyContentSatisfactionView.ContentTypeId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

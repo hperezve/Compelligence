@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+    <subject><![CDATA[$P{keyWordCompany} - Newsletter $P{Subject} checking address ]]></subject>
+    <message>
+        <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+    <<div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+        <br/>
+      <div>Cheking if email exist</div>
+      <br />
+      <div>Please verify these addresses and correct them.</div>
+    <body>
+  </html>
+  ]]>
+    </message>
+</email>

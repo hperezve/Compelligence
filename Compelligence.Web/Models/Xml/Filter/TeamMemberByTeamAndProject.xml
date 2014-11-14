@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>TeamMemberByTeamAndProjectView</entity>
+      <property>UserName</property>
+      <label>TeamMemberUserId</label>
+    </column>
+    <column>
+      <entity>TeamMemberByTeamAndProjectView</entity>
+      <property>TeamName</property>
+      <label>TeamNameReport</label>
+    </column>
+    <column>
+      <entity>TeamMemberByTeamAndProjectView</entity>
+      <property>TeamStatus</property>
+      <label>TeamStatusReport</label>
+      <type class="StandardData">TeamStatus</type>
+    </column>
+    <column>
+      <entity>TeamMemberByTeamAndProjectView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>TeamMemberByTeamAndProjectView</entity>
+      <property>ProjectStatus</property>
+      <label>ProjectStatusReport</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TeamMemberByTeamAndProjectView as TeamMemberByTeamAndProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    TeamMemberByTeamAndProjectView.ClientCompany = '$S{ClientCompany}' AND TeamMemberByTeamAndProjectView.EntityType = '$C{DomainObjectType.Project}'And TeamMemberByTeamAndProjectView.ProjectName is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TeamMemberByTeamAndProjectView.TeamName
+    ]]>
+  </orderBy>
+</browse> 

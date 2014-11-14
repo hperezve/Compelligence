@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>NewsScoringAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>NewsScoringAllView</entity>
+      <property>Name</property>
+      <label>NewsScoringAllName</label>
+    </column>
+    <column>
+      <entity>NewsScoringAllView</entity>
+      <property>Positives</property>
+      <label>NewsScoringAllPositives</label>
+    </column>
+    <column>
+      <entity>NewsScoringAllView</entity>
+      <property>Negatives</property>
+      <label>NewsScoringAllNegatives</label>
+    </column>
+    <column>
+      <entity>NewsScoringAllView</entity>
+      <property>Type</property>
+      <label>NewsScoringAllType</label>
+      <type class="StandardData">NewsScoringType</type>
+    </column>
+    <column>
+      <entity>NewsScoringAllView</entity>
+      <property>Status</property>
+      <label>NewsScoringAllStatus</label>
+      <type class="StandardData">NewsScoringStatus</type>
+    </column>
+    <column>
+      <entity>NewsScoringAllView</entity>
+      <property>CreatedDate</property>
+      <label>NewsScoringCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsScoringAllView as NewsScoringAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsScoringAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsScoringAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

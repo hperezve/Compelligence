@@ -1,0 +1,317 @@
+﻿/* jQuery TreeTable Core 2.0 stylesheet
+ *
+ * This file contains styles that are used to display the tree table. Each tree
+ * table is assigned the +treeTable+ class.
+ * ========================================================================= */
+
+/* jquery.treeTable.collapsible
+ * ------------------------------------------------------------------------- */
+.treeTable tr td .expander
+{
+    background-position: left center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 0;
+    zoom: 1; /* IE7 Hack */
+}
+
+.treeTable tr.collapsed td .expander
+{
+    background-image: url(../../content/Styles/jquery-ui/images/toggle-expand-dark.png);
+}
+
+.treeTable tr.expanded td .expander
+{
+    background-image: url(../../content/Styles/jquery-ui/images/toggle-collapse-dark.png);
+}
+
+/* jquery.treeTable.sortable
+ * ------------------------------------------------------------------------- */
+.treeTable tr.selected, .treeTable tr.accept
+{
+    background-color: #3875d7;
+    color: #fff;
+}
+
+.treeTable tr.collapsed.selected td .expander, .treeTable tr.collapsed.accept td .expander
+{
+    background-image: url(../../content/Styles/jquery-ui/images/toggle-expand-light.png);
+}
+
+.treeTable tr.expanded.selected td .expander, .treeTable tr.expanded.accept td .expander
+{
+    background-image: url(../../content/Styles/jquery-ui/images/toggle-collapse-light.png);
+}
+
+.treeTable .ui-draggable-dragging
+{
+    color: #000;
+    z-index: 1;
+}
+
+pre.listing
+{
+    background: #eee;
+    border: 1px solid #ccc;
+    margin: .3em auto;
+    padding: .1em .3em;
+    width: 90%;
+}
+pre.listing b
+{
+    color: #f00;
+}
+
+/* Table for Comments
+* ========================================================================= */
+.simpleForumGrid
+{
+    /*border: 1px solid #DFDFDF;*/
+    border-collapse: collapse; /* line-height: 1; margin: 1em auto; */
+    margin: 1em auto;
+    width: 95%;
+}
+/* Caption
+* ------------------------------------------------------------------------- */
+.simpleForumGrid caption
+{
+    font-size: .9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+/* Header
+ * ------------------------------------------------------------------------- */
+.simpleForumGrid thead
+{
+    font-size: 12px;
+    background-color:#BDBDBD;
+}
+.simpleForumGrid thead tr th
+{
+    border: 0px outset #DFDFDF;
+    font-weight: normal;
+    padding: .3em 1.67em .1em 1.67em;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+}
+/* Body
+ * ------------------------------------------------------------------------- */
+.simpleForumGrid tbody tr td
+{
+    cursor: default; /*padding: .3em 1.5em;*/
+    border: 1px outset #DFDFDF;
+    font-size: 0.75em;
+}
+.simpleForumGrid tbody tr.even
+{
+    background: #f3f3f3;
+}
+.simpleForumGrid tbody tr.odd
+{
+    background: #fff;
+}
+.simpleForumGrid span
+{
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding: .2em 0 .2em 1.5em;
+}
+.simpleForumGrid span.discussionText
+{
+    background-image: url(../content/Styles/jquery-ui/images/page_white_text.png);
+    font-style: italic;
+}
+.simpleForumGrid span.discussionTitle
+{
+    background-image: url(../Content/Images/Styles/comment.png);
+}
+
+/*
+* For Files attach
+*/
+
+.simpleForumGrid ul
+{
+    margin-left: 30px;
+    padding-left: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.simpleForumGrid li
+{
+    margin: 0;
+    padding: 0;
+}
+
+.contentDetail
+{
+    padding-left: 20px;
+    padding-top: 5px;
+    height: 316px;
+    overflow: auto;
+    background-color: #dddddd;
+}
+.columnDiscussion
+{
+    width: 80%;
+}
+
+.columnCreatedBy
+{
+    width: 15%;
+}
+.columnCreatedDate
+{
+    width: 15%;
+}
+
+
+
+/*
+ *
+  New Styles for Comments
+ *
+ */
+
+/*
+body {
+font:62.5% arial,verdana,tahoma,sans-serif;
+text-align:center;
+}*/
+
+.double .commentp, #comentarios .commentp, #trackbacks .trackp 
+{
+background:url("../../Content/Images/Styles/icon_comments2.png") no-repeat scroll 0 0 transparent;
+float:left;
+height:45px;
+margin-right:10px;
+padding-top:13px;
+width:56px;
+}
+.lista_comentarios .wrap 
+{
+ -moz-border-radius:0.5em 0.5em 0.5em 0.5em;
+ border:1px solid #CDC4B0;
+ clear:both;
+ margin-bottom:8px;
+ overflow:auto;
+}
+
+.lista_comentarios li {
+list-style:none outside none;
+}
+
+.comment .wrap, .track 
+{
+ padding:12px 5px;
+ position:relative;
+ 
+}
+.comment p
+{
+	font-size:100%;
+}
+.wrap a
+{border-bottom:0px;
+	}
+.altt 
+{
+ /*background:none repeat scroll 0 0 #ECE7DC;*/
+ background:none repeat scroll 0 0 #dcdcdc;
+ 
+}
+
+.leftarea 
+{
+ float:left;
+ margin-left:5px;
+ width:70px;
+}
+
+.rightarea 
+{
+ margin-left:75px;
+ margin-right:50px;
+}
+
+.numero {
+font-size:150%;
+position:absolute;
+right:10px;
+top:10px;
+font-weight:bold;
+}
+
+.autorcomentario 
+{
+ font-size:1.3em;
+ margin-bottom:6px;
+}
+
+.commentmetadata {
+bottom:10px;
+position:absolute;
+}
+
+.commentmetadata a{
+color:Yellow;
+}
+
+.comment-reply-link {
+bottom:10px;
+font-size:1.3em;
+position:absolute;
+right:10px;
+}
+
+
+.comment a, .altt .numero a {
+color:#004199;
+text-decoration:none;
+font-size:100%;
+}
+
+
+.altt a {
+color:#132A34;
+color:Black;
+border-bottom:0px;
+}
+
+.comment a:link,.comment a:visited {
+color:#darkblue;
+}
+
+.comment a {
+border-bottom:0px;
+}
+.commentname
+{
+}
+
+
+.double .commentp a, #comentarios .commentp a, #trackbacks .trackp a {
+color:#FFFFFF;
+display:block;
+font-size:22px;
+line-height:22px;
+margin:0 auto;
+text-align:center;
+width:45px;
+}
+
+
+
+.content-entry p, .post h2 a:link, .post h2 a:visited {
+color:#555555;
+}
+
+p {
+font-size:1.1em;
+line-height:1.6em;
+margin:0 0 0.7em;
+}
+
+

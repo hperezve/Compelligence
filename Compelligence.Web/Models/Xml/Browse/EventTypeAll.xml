@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EventTypeAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>EventTypeAllView</entity>
+      <property>Name</property>
+      <label>EventTypeName</label>
+    </column>
+    <column >
+      <entity>EventTypeAllView</entity>
+      <property>Description</property>
+      <label>EventTypeDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>EventTypeAllView</entity>
+      <property>CreatedDate</property>
+      <label>EventTypeCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventTypeAllView as EventTypeAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   EventTypeAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventTypeAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

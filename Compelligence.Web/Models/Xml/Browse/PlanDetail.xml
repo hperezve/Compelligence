@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PlanDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>PlanDetailView</entity>
+      <property>Task</property>
+      <label>PlanTask</label>
+    </column>
+    <column >
+      <entity>PlanDetailView</entity>
+      <property>Type</property>
+      <label>PlanType</label>
+      <type class="StandardData">PlanType</type>
+    </column>
+    <column >
+      <entity>PlanDetailView</entity>
+      <property>Detail</property>
+      <label>PlanDetail</label>
+      <type class="HtmlPlaneOneLine">Detail</type>
+    </column>
+    <column >
+      <entity>PlanDetailView</entity>
+      <property>DueDate</property>
+      <label>PlanDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PlanDetailView as PlanDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PlanDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PlanDetailView.Task
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PlansbyProjectView</entity>
+      <property>Task</property>
+      <label>PlanTaskReport</label>
+    </column>
+    <column>
+      <entity>PlansbyProjectView</entity>
+      <property>ProjectName</property>
+      <label>PlansbyProjectViewProjectName</label>
+    </column>
+    <column>
+      <entity>PlansbyProjectView</entity>
+      <property>Type</property>
+      <label>PlanTypeReport</label>
+      <type class="StandardData">PlanType</type>
+    </column>
+    <column>
+      <entity>PlansbyProjectView</entity>
+      <property>DueDate</property>
+      <label>PlanDueDateReport</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>PlansbyProjectView</entity>
+      <property>AssignedToName</property>
+      <label>PlanAssignedToNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PlansbyProjectView as PlansbyProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PlansbyProjectView.ClientCompany = '$S{ClientCompany}' AND PlansbyProjectView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PlansbyProjectView.ProjectId
+    ]]>
+  </orderBy>
+</browse>

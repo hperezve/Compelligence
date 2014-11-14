@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Compelligence $P{ClientCompany}, New User Registration]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>Your request for a new account on the Compelligence System for "$P{ClientCompany}" has been sent to an administrator. You will be notified when it is approved.
+      <br />
+      <div>Thank you!<br />
+           This is an automated E-mail. Please do not reply to this message.
+      </div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

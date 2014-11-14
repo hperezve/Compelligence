@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CompetitorCriteriaDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CompetitorCriteriaDetailView</entity>
+      <property>GroupName</property>
+      <label>CompetitorCriteriaGroupName</label>
+    </column>
+    <column>
+      <entity>CompetitorCriteriaDetailView</entity>
+      <property>SetName</property>
+      <label>CompetitorCriteriaSetName</label>
+    </column>
+    <column>
+      <entity>CompetitorCriteriaDetailView</entity>
+      <property>CriteriaName</property>
+      <label>CompetitorCriteriaCriteriaName</label>
+    </column>
+    <column>
+      <entity>CompetitorCriteriaDetailView</entity>
+      <property>Value</property>
+      <label>CompetitorCriteriaValue</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorCriteriaDetailView as CompetitorCriteriaDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CompetitorCriteriaDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorCriteriaDetailView.CriteriaName
+    ]]>
+  </orderBy>
+</browse>

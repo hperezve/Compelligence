@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: Forgotten Username Request]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>    
+     <body>
+      <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+      <div>A Compelligence user on your system has forgotten their username</div>     
+      <br/>
+      <br/>
+      <div>First Name: "<b>$P{FirstName}</b>"</div>
+      <br/>
+      <div>Last Name:  "<b>$P{LastName}</b>"</div>
+      <br/>
+      <div>Email: "<b>$P{Email}</b>"</div>
+      <br/>
+      <div>Phone: "<b>$P{Phone}</b>"</div>
+      <br/>      
+      <br/>
+      <div>Please provide this user with the necessary log-in information.</div>
+      <br/>
+      <div>If you did not expect this message or don't want to receive mails in future, please contact $P{emailOriginalAdmin}.</div>
+      <br/>
+      <div>This is an automated message. Please do not reply.</div>     
+      <br />
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

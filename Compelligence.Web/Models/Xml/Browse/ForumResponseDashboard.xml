@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ForumResponseDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ForumResponseDashboardView</entity>
+      <property>Response</property>
+      <label>ForumResponseDashboardResponse</label>
+    </column>
+    <column>
+      <entity>ForumResponseDashboardView</entity>
+      <property>ProjectName</property>
+      <label>ForumResponseDashboardProjectName</label>
+    </column>
+    <column>
+      <entity>ForumResponseDashboardView</entity>
+      <property>CreatedByName</property>
+      <label>ForumResponseDashboardCreatedByName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ForumResponseDashboardView as ForumResponseDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ForumResponseDashboardView.ClientCompany = '$S{ClientCompany}' And (ForumResponseDashboardView.AssignedTo = '$S{UserId}' 
+    Or ForumResponseDashboardView.CreatedBy = '$S{UserId}' 
+    Or (ForumResponseDashboardView.TeamMemberUserId = '$S{UserId}'And 
+    ForumResponseDashboardView.TeamEntityType =  '$C{DomainObjectType.Project}') ) And ForumResponseDashboardView.Type = '$C{ForumType.Discussion}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ForumResponseDashboardView.Id DESC
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>Name</property>
+      <label>ImplicationsReportName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>Source</property>
+      <label>ImplicationsReportSource</label>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>AssignedToName</property>
+      <label>ImplicationsReportAssignedToName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>IndustryName</property>
+      <label>ImplicationsReportIndustry</label>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>IndustryStatus</property>
+      <label>ImplicationsReportIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>IndustryTier</property>
+      <label>ImplicationsReportIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>ImplicationsReportCompetitor</label>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>ImplicationsReportCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ImplicationsByIndustryAndCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>ImplicationsReportCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ImplicationsByIndustryAndCompetitorView as ImplicationsByIndustryAndCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ImplicationsByIndustryAndCompetitorView.ClientCompany = '$S{ClientCompany}' AND ImplicationsByIndustryAndCompetitorView.EntityType = '$C{DomainObjectType.Competitor}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ImplicationsByIndustryAndCompetitorView.Id
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>IndustryStatus</property>
+      <label>DealReportViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>IndustryTier</property>
+      <label>DealReportViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>IndustryName</property>
+      <label>DealReportViewIndustryName</label>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>CompetitorStatus</property>
+      <label>DealReportViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>CompetitorTier</property>
+      <label>DealReportViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorReportTier</type>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>CompetitorName</property>
+      <label>DealReportViewCompetitorName</label>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>ProductStatus</property>
+      <label>DealReportViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>ProductTier</property>
+      <label>DealReportViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column group="true">
+      <entity>DealReportView</entity>
+      <property>ProductName</property>
+      <label>DealReportViewProductName</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>Name</property>
+      <label>DealReportViewName</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CreatedByName</property>
+      <label>DealReportViewCreatedBy</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CurrencyId</property>
+      <label>DealReportViewCurrencyId</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>ExternalId</property>
+      <label>DealReportViewExternalId</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>AssignedToName</property>
+      <label>DealReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>Status</property>
+      <label>DealReportViewStatus</label>
+      <type class="StandardData">DealStatus</type>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CustomerName</property>
+      <label>DealReportViewCustomer</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CustomerContact</property>
+      <label>DealReportViewCustomerContact</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CompetitorDiscount</property>
+      <label>DealReportViewCompetitorDiscount</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CompetitorAccountManager</property>
+      <label>DealReportViewAccountManager</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CreatedDate</property>
+      <label>DealReportViewCreatedDate</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>IndustryPrimaryName</property>
+      <label>DealReportViewIndustryPrimary</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>CompetitorPrimaryName</property>
+      <label>DealReportViewCompetitorPrimary</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>DueDate</property>
+      <label>DealReportViewDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>Phase</property>
+      <label>DealReportViewPhase</label>
+      <type class="StandardData">DealPhaseDate</type>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>MarketName</property>
+      <label>DealReportViewMarketName</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>Details</property>
+      <label>DealReportViewDetails</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>RequestSupported</property>
+      <label>DealReportViewRequestSupported</label>
+    </column>
+    <column>
+      <entity>DealReportView</entity>
+      <property>Notes</property>
+      <label>DealReportViewNotes</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealReportView as DealReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealReportView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealReportView.Name
+    ]]>
+  </orderBy>
+</browse>

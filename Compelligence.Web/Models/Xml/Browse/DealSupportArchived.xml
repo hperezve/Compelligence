@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DealAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DealAllView</entity>
+      <property>Name</property>
+      <label>DealName</label>
+    </column>
+    <column>
+      <entity>DealAllView</entity>
+      <property>IndustryName</property>
+      <label>DealIndustryId</label>
+    </column>
+    <column>
+      <entity>DealAllView</entity>
+      <property>CompetitorName</property>
+      <label>DealCompetitorId</label>
+    </column>
+    <column>
+      <entity>DealAllView</entity>
+      <property>OpenedBy</property>
+      <label>DealOpenedBy</label>
+    </column>
+    <column>
+      <entity>DealAllView</entity>
+      <property>DueDate</property>
+      <label>DealDueDate</label>
+    </column>    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealAllView as DealAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealAllView.ClientCompany = '$S{ClientCompany}' And DealAllView.CreatedBy='$S{UserId}' And DealAllView.Status='ARCH'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealAllView.Name
+    ]]>
+  </orderBy>
+
+
+</browse>
+

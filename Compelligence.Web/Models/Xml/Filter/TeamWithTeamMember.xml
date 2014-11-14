@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>TeamWithTeamMemberView</entity>
+      <property>TeamName</property>
+      <label>TeamNameReport</label>
+    </column>
+    <column>
+      <entity>TeamWithTeamMemberView</entity>
+      <property>UserName</property>
+      <label>UserNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TeamWithTeamMemberView as TeamWithTeamMemberView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    TeamWithTeamMemberView.ClientCompany = '$S{ClientCompany}' AND TeamWithTeamMemberView.UserId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TeamWithTeamMemberView.TeamName
+    ]]>
+  </orderBy>
+</browse>

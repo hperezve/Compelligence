@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column >
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>PositiongName</property>
+      <label>PositioningName</label>
+    </column>
+    <column >
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>Status</property>
+      <label>PositioningReportStatus</label>
+      <type class="StandardData">PositioningStatus</type>
+    </column>
+    <column >
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column >
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>HowTheyPositionent</property>
+      <label>PositioningHowTheyPosition</label>
+    </column>
+    <column>
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>HowWeAttack</property>
+      <label>PositioningHowWeAttack</label>
+    </column>
+    <column>
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>HowWePosition</property>
+      <label>PositioningHowWePosition</label>
+    </column>
+    <column>
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>HowTheyAttack</property>
+      <label>PositioningHowTheyAttack</label>
+    </column>
+    <column>
+      <entity>PositioningByProductAndIndustryReportView</entity>
+      <property>HowWeDefend</property>
+      <label>PositioningHowWeDefend</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningByProductAndIndustryReportView as PositioningByProductAndIndustryReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningByProductAndIndustryReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningByProductAndIndustryReportView.ProductName
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

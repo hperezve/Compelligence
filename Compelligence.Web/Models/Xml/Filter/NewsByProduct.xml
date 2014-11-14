@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>Name</property>
+      <label>LibraryNameReport</label>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>ProductStatus</property>
+      <label>NewsByProductViewProductStatus</label>
+      <type class="StandardData">ReportProductStatus</type>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>ProductTier</property>
+      <label>NewsByProductViewProductTier</label>
+      <type class="StandardData">ReportProductTier</type>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>Description</property>
+      <label>LibraryDescription</label>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>Permanent</property>
+      <label>LibraryPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>NewsByProductView</entity>
+      <property>Score</property>
+      <label>LibraryScoreReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsByProductView as NewsByProductView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsByProductView.ClientCompany = '$S{ClientCompany}' AND NewsByProductView.ProductId is not null AND NewsByProductView.EntityType = '$C{DomainObjectType.Product}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsByProductView.DateAdded
+    ]]>
+  </orderBy>
+</browse>

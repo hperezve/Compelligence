@@ -1,0 +1,79 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title></title>
+    </asp:ContentPlaceHolder>
+    <link href="<%= Url.Content("~/Content/Styles/rating.css) %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/Styles/DealSupportSite.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="Styles" runat="server">
+        <style type="text/css"></style>
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+        <script type="text/javascript"></script>
+        <script src="<%= Url.Content("~/Scripts/jquery-idleTimeout.js") %>" type="text/javascript""></script>
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).idleTimeout({
+                inactivity: '<%= Session["SessionTimeout"] %>',
+                noconfirm: 60000,
+                sessionAlive: 0,
+                redirect_url: '<%= Url.Action("TimeOut", "Home") %>',
+                logout_cancel: '<%= Url.Action("Login", "Home") %>',
+                dialogText: "Your Compelligence session is about to time out. Do you wish to continue?"
+            });
+        }); 
+    </script>
+        
+</head>
+
+<body id="FrontEndBody">
+    <div class="page">
+        <div id="header">
+        
+            <div id="logindisplay" align="right">
+            <% string ImageUrlFrontEnd = (string)Session["Imageurl"];         
+           if (!string.IsNullOrEmpty(ImageUrlFrontEnd))
+              {%>
+             <div style="float:left;margin: 2.5px 0px 0px 8px;">           
+            <img src="<%=Html.ImageUrl(ImageUrlFrontEnd)%>"/><label class="labelImageUrl">...powered by Compelligence</label>
+            </div>
+                  <div id="logo" style="background:none repeat scroll 0 0 transparent">
+              <%}else{
+                  %>
+                  <div id="logo">
+              <%} %>
+                <% if (Session["LoggedUser"] != null)
+                   {
+                       string userId = (string)Session["UserId"];
+                       UserProfile userProfile = Compelligence.Security.Managers.UserManager.GetInstance().GetUserProfile(userId);
+                       string userName = "Welcome " + userProfile.Name; %>
+                <%= userName%>!&nbsp;[<%= Html.ActionLink("Log Out", "Logout", "Home")%>]
+                <% }
+                   else
+                   { %>
+                [<%= Html.ActionLink("Return to Home", "Index", "Home")%>]
+                <% } %>
+            </div>
+            <div id="navigationLinks">
+                <div class="navigationLink" style="color:White; float:left; vertical-align:top"><%=Html.ActionLink("Comparinator","Index","Comparinator") %></div><div style="float:left; margin-top:7px; margin-left:5px"><img src="<%= Url.Content("~/content/Images/Icons/ComparinatorIcon.png") %>" /></div>
+                <div class="navigationLink" style="color:White; float:left"><%=Html.ActionLink("Deal Support", "Index", "DealSupport")%></div><div style="float:left; margin-top:7px; margin-left:5px"><img src="<%= Url.Content("~/content/Images/Icons/DealIcon.png") %>" /></div>
+                <div class="navigationLink" style="color:White; float:left"><%=Html.ActionLink("Root", "Index", "FrontEnd")%></div><div style="float:left; margin-top:7px; margin-left:5px"><img src="<%= Url.Content("~/content/Images/Icons/home.png") %>" /></div>
+            </div>
+        </div>
+
+        <div id="main">            
+            </div style="width:99%"><asp:ContentPlaceHolder ID="MainContentDeal" runat="server" /></div>
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

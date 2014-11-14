@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse  multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>FileDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>FileDetailView</entity>
+      <property>FileName</property>
+      <label>FileName</label>
+    </column>
+    <column>
+      <entity>FileDetailView</entity>
+      <property>Version</property>
+      <label>FileVersion</label>
+    </column>
+    <column>
+      <entity>FileDetailView</entity>
+      <property>DateOut</property>
+      <label>FileDateOut</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>FileDetailView</entity>
+      <property>DateIn</property>
+      <label>FileDateIn</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.FileDetailView as FileDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    FileDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy sort="desc">
+    <![CDATA[
+    FileDetailView.Version
+    ]]>
+  </orderBy>
+</browse>

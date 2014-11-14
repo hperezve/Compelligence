@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse  multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DealsWithAttachView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DealsWithAttachView</entity>
+      <property>Name</property>
+      <label>LibraryFileName</label>
+    </column>
+    <column>
+      <entity>DealsWithAttachView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column>
+      <entity>DealsWithAttachView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[      
+      var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Library') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Library')); }      
+      
+    SetAndCleanActiveTab('AdminTabs_EnvironmentTab','EnvironmentTab_LibraryContent');
+    showEntity(currentPath+'/Library.aspx/Edit', 'Environment', 'Library', id, 'LibraryAll', '#LibraryContent');
+    searchEntityWithTab(currentPath+'/Library.aspx/GetEntityName',id,currentPath,'Library','Environment');
+      
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealsWithAttachView as DealsWithAttachView
+    ]]>
+  </from>
+  <orderBy>
+    <![CDATA[
+    DealsWithAttachView.Name
+    ]]>
+  </orderBy>
+  <defaultEntity>DealsWithAttachView</defaultEntity>
+</browse>

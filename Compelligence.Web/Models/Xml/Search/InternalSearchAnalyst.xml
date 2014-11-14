@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<search>
+  <search-entity id="Project" browse="ProjectAllSearch" label="Projects">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Product" browse="ProductAllSearch" label="Products">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Deal" browse="DealAllSearch" label="Deals">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Event" browse="EventAllSearch" label="Events">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Quiz" browse="SurveyAllSearch" label="Surveys">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Calendar" browse="CalendarAllSearch" label="Calendars">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Objective" browse="ObjectiveAllSearch" label="Objectives">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Kit" browse="kitAllSearch" label="Kits">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Industry" browse="IndustryAllSearch" label="Industries">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Competitor" browse="CompetitorAllSearch" label="Competitors">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Customer" browse="CustomerAllSearch" label="Customers">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+  <search-entity id="Library" browse="LibraryAllSearch" label="Libraries">
+    <searchable>
+      <property>MetaData</property>
+    </searchable>
+  </search-entity>
+</search>

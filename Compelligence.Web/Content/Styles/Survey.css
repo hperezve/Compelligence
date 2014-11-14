@@ -1,0 +1,101 @@
+﻿body
+{
+   background: #F3F3EC ;
+   font-family: 'Verdana','Geneva',sans-serif;
+}
+
+.buttonSurvey
+{
+  background-image: url('../Images/Styles/bgButton.gif');
+  background-position: left top;
+  background-repeat: repeat-x;
+  border-color: -moz-use-text-color #5C5D61 #5C5D61 -moz-use-text-color;
+  border-right: 1px solid #5C5D61;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline;
+  font-family: 'Verdana','Geneva',sans-serif;
+  font-size: 75%;
+  font-weight: bold;
+  padding: 1px 3px;  
+  
+}
+    
+.title
+{
+ background-color: #DDB929;
+ border-color: #DDB929; 
+ font-family: 'Verdana','Geneva',sans-serif; 
+ margin: 15px 0 2px 5px;
+ 
+ font-size: 75%;
+ font-weight: bold; 
+ overflow: hidden;
+ padding: 2px 2px 2px 5px;
+ color: #FFFFFF;
+ width: 99%;
+ display: block; 
+ 
+}
+    
+.backLongSurvey {
+    background: none repeat scroll 0 0 #F3F3EC;
+    border: 1px solid #DDB929;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px 8px 8px;
+        
+    -moz-border-radius:4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.marginTextSurvey
+{
+    font-size: small;
+    font-weight: bold; 
+}    
+
+.padding10
+{
+    margin-left:3px;
+ }
+ 
+ .buttonBrowse
+ {
+  background-image: url('../Images/Styles/Buttonbrowse.gif');
+  margin-right:20px;
+  margin-left:5px;
+  height:20px;
+  margin-top: 4px;
+  border-color: -moz-use-text-color #5C5D61 #5C5D61 -moz-use-text-color;
+  border-right: 1px solid #5C5D61;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  cursor: pointer;
+  
+ }
+ 
+ 
+ .buttonRemove
+{
+  background-image: url('../Images/Styles/bgButton.gif');
+  background-position: left top;
+  background-repeat: repeat-x;
+  border-color: -moz-use-text-color #5C5D61 #5C5D61 -moz-use-text-color;
+  border-right: 1px solid #5C5D61;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline;
+  font-family: 'Verdana','Geneva',sans-serif;
+  font-size: 75%;
+  font-weight: bold;
+  padding: 1px 3px; 
+  margin-left:70px; 
+  
+}

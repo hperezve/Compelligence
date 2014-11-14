@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>ProductName</property>
+      <label>ComparinatorByProductViewProduct</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>ProductStatus</property>
+      <label>ComparinatorByProductViewProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>ProductTier</property>
+      <label>ComparinatorByProductViewProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>CompetitorName</property>
+      <label>ComparinatorByProductViewCompetitor</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>CompetitorStatus</property>
+      <label>ComparinatorByProductViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>CompetitorTier</property>
+      <label>ComparinatorByProductViewCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>IndustryName</property>
+      <label>ComparinatorByProductViewIndustry</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>IndustryStatus</property>
+      <label>ComparinatorByProductViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>IndustryTier</property>
+      <label>ComparinatorByProductViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductView</entity>
+      <property>AssignedToName</property>
+      <label>ComparinatorByProductViewAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ComparinatorByProductView as ComparinatorByProductView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ComparinatorByProductView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ComparinatorByProductView.ProductName
+    ]]>
+  </orderBy>
+</browse>

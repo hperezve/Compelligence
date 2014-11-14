@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse returnbyrow="true" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>NewsLetterSectionNewsView</entity>
+      <property>Id</property>
+    </column>
+    <column width="300">
+      <entity>NewsLetterSectionNewsView</entity>
+      <property>Name</property>
+      <label>NewsLetterItemName</label>
+    </column>
+    <column width="15">
+      <entity>NewsLetterSectionNewsView</entity>
+      <property>Ck</property>      
+      <type class="Checkbox">Description</type>
+    </column>
+    <column width="500">
+      <entity>NewsLetterSectionNewsView</entity>
+      <property>Description</property>
+      <label>NewsLetterItemDescription</label>
+      <type class="HtmlPlane">Description</type> 
+    </column>
+    <column hidden="true">
+      <entity>NewsLetterSectionNewsView</entity>
+      <property>AddToNewsletter</property>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsLetterSectionNewsView as NewsLetterSectionNewsView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   NewsLetterSectionNewsView.ClientCompany = '$S{ClientCompany}' and  NewsLetterSectionNewsView.LibraryTypeName = 'News'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsLetterSectionNewsView.Name Desc
+    ]]>
+  </orderBy> 
+
+</browse>
+
+
+
+  
+
+
+

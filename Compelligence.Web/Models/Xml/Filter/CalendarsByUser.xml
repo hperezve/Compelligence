@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CalendarsByUserView</entity>
+      <property>CalendarName</property>
+      <label>CalendarsByUserViewCalendarName</label>
+    </column>
+    <column>
+      <entity>CalendarsByUserView</entity>
+      <property>Type</property>
+      <label>CalendarsByUserViewType</label>
+      <type class="StandardData">CalendarType</type>
+    </column>
+    <column>
+      <entity>CalendarsByUserView</entity>
+      <property>AssignedToName</property>
+      <label>CalendarsByUserViewAssignedToName</label>
+    </column>
+    <column>
+      <entity>CalendarsByUserView</entity>
+      <property>Date</property>
+      <label>CalendarsByUserViewDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CalendarsByUserView as CalendarsByUserView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CalendarsByUserView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CalendarsByUserView.AssignedToName
+    ]]>
+  </orderBy>
+</browse>

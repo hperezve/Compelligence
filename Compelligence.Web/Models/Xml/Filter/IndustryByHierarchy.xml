@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>IndustryByHierarchyView</entity>
+      <property>Name</property>
+      <label>IndustryName</label>
+    </column>
+    <column>
+      <entity>IndustryByHierarchyView</entity>
+      <property>AssignedToName</property>
+      <label>IndustryOwnerId</label>
+    </column>
+    <column>
+      <entity>IndustryByHierarchyView</entity>
+      <property>Status</property>
+      <label>IndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>IndustryByHierarchyView</entity>
+      <property>Description</property>
+      <label>IndustryDescription</label>
+    </column>
+    <column>
+      <entity>IndustryByHierarchyView</entity>
+      <property>Tier</property>
+      <label>IndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.IndustryByHierarchyView as IndustryByHierarchyView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   IndustryByHierarchyView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    IndustryByHierarchyView.Lineage
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

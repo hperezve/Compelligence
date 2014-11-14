@@ -1,0 +1,17 @@
+div.caption .button-1 {behavior: url(images/PIE.htc); position:relative;}
+.linkLogin a {
+    color: Yellow;
+    float: left;
+    font-size: 12px;
+    margin-left: -140px;
+}
+
+.linkLogin2 a
+{
+    margin-top:2px;
+	float: left;
+	color: Yellow;
+	margin-left:15%; 
+	font-size:12px;
+    
+}

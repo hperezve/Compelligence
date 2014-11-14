@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LibraryExternalSourceAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>LibraryExternalSourceAllView</entity>
+      <property>Type</property>
+      <label>LibraryExternalSourceType</label>
+      <type class="StandardData">LibraryExternalSourceType</type>
+    </column>
+    <column >
+      <entity>LibraryExternalSourceAllView</entity>
+      <property>Source</property>
+      <label>LibraryExternalSourceSource</label>
+    </column>
+    <column >
+      <entity>LibraryExternalSourceAllView</entity>
+      <property>Target</property>
+      <label>LibraryExternalSourceTarget</label>
+      <type class="StandardData">LibraryExternalSourceTarget</type>
+    </column>
+    <column >
+      <entity>LibraryExternalSourceAllView</entity>
+      <property>CreatedDate</property>
+      <label>LibraryExternalSourceCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryExternalSourceAllView as LibraryExternalSourceAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   LibraryExternalSourceAllView.ClientCompany = '$S{ClientCompany}' and LibraryExternalSourceAllView.Type <> 'MAIL'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryExternalSourceAllView.KeyWord
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

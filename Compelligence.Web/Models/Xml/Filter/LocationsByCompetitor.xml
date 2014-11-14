@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>CountryName</property>
+      <label>LocationCountryNameReport</label>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>City</property>
+      <label>LocationCityReport</label>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>State</property>
+      <label>LocationStateReport</label>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>PostalCode</property>
+      <label>LocationPostalCodeReport</label>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>Address</property>
+      <label>LocationAddressReport</label>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>LocationCompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>LocationsByCompetitorViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>LocationsByCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>LocationsByCompetitorViewCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LocationsByCompetitorView as LocationsByCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LocationsByCompetitorView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LocationsByCompetitorView.CountryName
+    ]]>
+  </orderBy>
+</browse>

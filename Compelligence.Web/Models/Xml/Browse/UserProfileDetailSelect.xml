@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>FirstName</property>
+      <label>UserFirstName</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>LastName</property>
+      <label>UserLastName</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Status</property>
+      <label>UserStatus</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Email</property>
+      <label>UserEmail</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Title</property>
+      <label>UserTitle</label>
+    </column>
+       <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>CountryCode</property>
+      <label>UserCountryId</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>City</property>
+      <label>UserCity</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Department</property>
+      <label>UserDepartment</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Phone</property>
+      <label>UserPhone</label>
+    </column>
+    <column >
+      <entity>UserProfileDetailSelectView</entity>
+      <property>Fax</property>
+      <label>UserFax</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UserProfileDetailSelectView  as UserProfileDetailSelectView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   UserProfileDetailSelectView.ClientCompany = '$S{ClientCompany}' and UserProfileDetailSelectView.ReceiveMail ='N' and  UserProfileDetailSelectView.SecurityGroupId <> '$C{SecurityGroupBase.Root}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UserProfileDetailSelectView.FirstName
+    ]]>
+  </orderBy>
+</browse>

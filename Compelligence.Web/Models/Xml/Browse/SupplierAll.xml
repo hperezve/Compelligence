@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>SupplierAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>SupplierAllView</entity>
+      <property>Name</property>
+      <label>SupplierName</label>
+    </column>
+    <column>
+      <entity>SupplierAllView</entity>
+      <property>AssignedToName</property>
+      <label>SupplierAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.SupplierAllView as SupplierAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   SupplierAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    SupplierAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

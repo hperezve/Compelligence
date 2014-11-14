@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>MetricDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>MetricDetailView</entity>
+      <property>Name</property>
+      <label>MetricName</label>
+    </column>
+    <column >
+      <entity>MetricDetailView</entity>
+      <property>Type</property>
+      <label>MetricType</label>
+      <type class="StandardData">MetricType</type>
+    </column>
+    <column >
+      <entity>MetricDetailView</entity>
+      <property>Comment</property>
+      <label>MetricComment</label>
+    </column>
+    <column >
+      <entity>MetricDetailView</entity>
+      <property>Goal</property>
+      <label>MetricGoal</label>
+    </column>
+    <column >
+      <entity>MetricDetailView</entity>
+      <property>Actual</property>
+      <label>MetricActual</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.MetricDetailView as MetricDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    MetricDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    MetricDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

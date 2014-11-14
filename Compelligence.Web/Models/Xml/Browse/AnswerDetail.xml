@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>AnswerDetailView</entity>
+      <property>Id</property>
+	  <label>Id</label>
+    </column>
+    <column>
+      <entity>AnswerDetailView</entity>
+      <property>Users</property>
+      <label>AnswerUser</label>
+    </column>
+    <column>
+      <entity>AnswerDetailView</entity>
+      <property>CreatedDate</property>
+      <label>AnswerDate</label>
+      <type>FullDate</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.AnswerDetailView as AnswerDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    AnswerDetailView.ClientCompany = '$S{ClientCompany}'  
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    AnswerDetailView.Id
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CriteriaSetAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CriteriaSetAllView</entity>
+      <property>Name</property>
+      <label>CriteriaSetName</label>
+    </column>
+    <column>
+      <entity>CriteriaSetAllView</entity>
+      <property>CriteriaGroupName</property>
+      <label>CriteriaSetCriteriaGroupId</label>
+    </column>
+    <column>
+      <entity>CriteriaSetAllView</entity>
+      <property>IndustryName</property>
+      <label>CriteriaSetIndustry</label>
+    </column>
+    <column>
+      <entity>CriteriaSetAllView</entity>
+      <property>Description</property>
+      <label>CriteriaSetDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriaSetAllView as CriteriaSetAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CriteriaSetAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriaSetAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+
+

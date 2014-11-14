@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>WinLossReportView</entity>
+      <property>Title</property>
+      <label>WinLossTitle</label>
+    </column>
+    <column>
+      <entity>WinLossReportView</entity>
+      <property>Status</property>
+      <label>WinLossStatus</label>
+      <type class="StandardData">WinLossStatus</type>
+    </column>
+    <column>
+      <entity>WinLossReportView</entity>
+      <property>AssignedToName</property>
+      <label>WinLossReportViewAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.WinLossReportView as WinLossReportView    
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    WinLossReportView.ClientCompany = '$S{ClientCompany}' AND
+    WinLossReportView.TargetType = 'Win/Loss'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    WinLossReportView.Title
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>Status</property>
+      <label>PositioningStatus</label>
+      <type class="StandardData">PositioningStatus</type>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>PositioningRelation</property>
+      <label>PositioningAllReportViewRelation</label>
+      <type class="StandardData">PositioningRelation</type>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>UserName</property>
+      <label>PositioningCreatedBy</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>EntityType</property>
+      <label>PositioningAllReportViewEntityType</label>
+      <type class="StandardData">PositioningEntityType</type>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>EntityName</property>
+      <label>PositioningAllReportViewEntityName</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>HowWePosition</property>
+      <label>PositioningHowWePosition</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>HowTheyAttack</property>
+      <label>PositioningHowTheyAttack</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>HowWeDefend</property>
+      <label>PositioningHowWeDefend</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>HowTheyPosition</property>
+      <label>PositioningHowTheyPosition</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>HowWeAttack</property>
+      <label>PositioningHowWeAttack</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>IndustryName</property>
+      <label>PositioningIndustryId</label>
+    </column>
+    <column>
+      <entity>PositioningAllReportView</entity>
+      <property>CompetitorName</property>
+      <label>PositioningCompetitorId</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningAllReportView as PositioningAllReportView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   PositioningAllReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningAllReportView.EntityType Desc, PositioningAllReportView.Name
+    ]]>
+  </orderBy>
+</browse>

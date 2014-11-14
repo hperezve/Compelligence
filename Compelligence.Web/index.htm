@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="appDemo">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <script src="resources/js/angular.js"></script>
+
+    <script src="resources/js/angular-resource.js"></script>
+
+    <script src="resources/js/angular-cookies.js"></script>
+
+    <script src="resources/js/angular-sanitize.js"></script>
+
+    <script src="resources/js/angular-route.js"></script>
+
+    <script src="resources/js/angular-animate.js"></script>
+
+    <script src="resources/js/angular-touch.js"></script>
+
+    <!--<link rel="stylesheet" href="/Content/Styles/styles.css" type="text/css" media="screen" />-->
+    <link rel="Stylesheet" href="Content/Styles/styles.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="Scripts/app.js"></script>
+    
+    <script type="text/javascript" src="Scripts/icon-builder.js"></script>
+
+    <script type="text/javascript" src="factory/CompelligenceHTTP.js"></script>
+
+    <script type="text/javascript" src="factory/CompelligenceData.js"></script>
+
+</head>
+<body>
+    <div class="header" ng-include="'header.htm'">
+    </div>
+    <!-- Dynamic content -->
+    <!--<ng-view ></ng-view>-->
+
+    <div id="mainContent" ng-view="" class="container ng-scope">
+    </div>
+    <div class="footer" ng-include="'footer.htm'">
+    </div>
+    <!--<footer></footer>-->
+</body>
+</html>

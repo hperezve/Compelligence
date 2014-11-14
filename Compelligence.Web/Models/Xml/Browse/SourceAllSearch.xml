@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>SourceAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>SourceAllView</entity>
+      <property>Name</property>
+      <label>SourceName</label>
+    </column>
+    <column>
+      <entity>SourceAllView</entity>
+      <property>AssignedToName</property>
+      <label>SourceAssignedTo</label>
+    </column>
+    <column>
+      <entity>SourceAllView</entity>
+      <property>Type</property>
+      <label>SourceType</label>
+      <type class="StandardData">SourceType</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.SourceAllView as SourceAllView    
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    SourceAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    SourceAllView.Name
+    ]]>
+  </orderBy>
+</browse>

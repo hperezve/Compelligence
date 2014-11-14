@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>NewsAllByIndustryView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>Name</property>
+      <label>LibraryFileName</label>
+    </column>
+    <column>
+      <entity>NewsAllByIndustryView</entity>
+      <property>Score</property>
+      <label>LibraryNewsAllViewScore</label>
+    </column>
+    <column>
+      <entity>NewsAllByIndustryView</entity>
+      <property>EntityType</property>
+      <label>LibraryNewsAllViewEntityType</label>
+      <type class="StandardData">DomainObjectType</type>
+    </column>
+    <column>
+      <entity>NewsAllByIndustryView</entity>
+      <property>EntityName</property>
+      <label>LibraryNewsAllViewEntityName</label>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>LibraryTypeName</property>
+      <label>LibraryNewsAllViewLibraryType</label>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>Author</property>
+      <label>LibraryAuthor</label>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedTo</label>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>Permanent</property>
+      <label>LibraryPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>DateDeletion</property>
+      <label>LibraryDateDeletion</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>NewsAllByIndustryView</entity>
+      <property>Related</property>
+      <label>LibraryRelated</label>
+    </column>
+    <column hidden="true">
+      <entity>NewsAllByIndustryView</entity>
+      <property>EntityId</property>
+    </column>
+    <column hidden="true">
+      <entity>NewsAllByIndustryView</entity>
+      <property>NewToday</property>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsAllByIndustryView as NewsAllByIndustryView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   NewsAllByIndustryView.ClientCompany = '$S{ClientCompany}' AND NewsAllByIndustryView.Permanent = '$C{LibraryPermanent.No}' AND NewsAllByIndustryView.LibraryTypeKeyCode = '$C{LibraryTypeKeyCode.News}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsAllByIndustryView.Score Desc
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

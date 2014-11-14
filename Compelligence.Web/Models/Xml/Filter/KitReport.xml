@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>IndustryStatus</property>
+      <label>KitReportViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>IndustryTier</property>
+      <label>KitReportViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>IndustryName</property>
+      <label>KitReportViewIndustryName</label>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>CompetitorStatus</property>
+      <label>KitReportViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>CompetitorTier</property>
+      <label>KitReportViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>CompetitorName</property>
+      <label>KitReportViewCompetitorName</label>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>ProductStatus</property>
+      <label>KitReportViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>ProductTier</property>
+      <label>KitReportViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column group="true">
+      <entity>KitReportView</entity>
+      <property>ProductName</property>
+      <label>KitReportViewProductName</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>Name</property>
+      <label>KitReportViewName</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>AssignedToName</property>
+      <label>KitReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>CreatedByName</property>
+      <label>KitReportViewCreatedBy</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>DueDate</property>
+      <label>KitReportViewDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>KitTypeName</property>
+      <label>KitReportViewTypeName</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>Budget</property>
+      <label>KitReportViewBudget</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>ParentName</property>
+      <label>KitReportViewParentName</label>
+    </column>
+    <column>
+      <entity>KitReportView</entity>
+      <property>Status</property>
+      <label>KitReportViewStatus</label>
+      <type class="StandardData">KitStatus</type>
+    </column>
+    
+    <column>
+      <entity>KitReportView</entity>
+      <property>Comment</property>
+      <label>KitReportViewComment</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.KitReportView as KitReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    KitReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    KitReportView.Name
+    ]]>
+  </orderBy>
+</browse>

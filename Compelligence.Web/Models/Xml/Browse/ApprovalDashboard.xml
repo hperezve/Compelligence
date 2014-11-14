@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ApprovalDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ApprovalDashboardView</entity>
+      <property>Name</property>
+      <label>ApprovalDashboardName</label>
+    </column>
+    <column>
+      <entity>ApprovalDashboardView</entity>
+      <property>UserName</property>
+      <label>ApprovalDashboardUserId</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ApprovalDashboardView as ApprovalDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ApprovalDashboardView.ClientCompany = '$S{ClientCompany}' AND
+    ApprovalDashboardView.UserId = '$P{UserId}' AND
+    ApprovalDashboardView.Approved='1000' AND
+    ApprovalDashboardView.ActionType is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ApprovalDashboardView.Name
+    ]]>
+  </orderBy>  
+</browse>

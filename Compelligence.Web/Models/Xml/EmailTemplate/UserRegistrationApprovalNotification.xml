@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Compelligence $P{ClientCompany}, New User Registration]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>$P{UserName} has requested access to the Compelligence System for $P{ClientCompany}. Please click the link below to accept or deny this request.</div>
+      <br />
+      <div><a href="$P{ApprovalLink}">Click here</a></div>
+      <br />
+      <div>Thank you!<br />
+           This is an automated E-mail. Please do not reply to this message.</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>IndustryStatus</property>
+      <label>ObjectiveReportViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>IndustryTier</property>
+      <label>ObjectiveReportViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>IndustryName</property>
+      <label>ObjectiveReportViewIndustryName</label>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>CompetitorStatus</property>
+      <label>ObjectiveReportViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>CompetitorTier</property>
+      <label>ObjectiveReportViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>CompetitorName</property>
+      <label>ObjectiveReportViewCompetitorName</label>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>ProductStatus</property>
+      <label>ObjectiveReportViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>ProductTier</property>
+      <label>ObjectiveReportViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column group="true">
+      <entity>ObjectiveReportView</entity>
+      <property>ProductName</property>
+      <label>ObjectiveReportViewProductName</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>Name</property>
+      <label>ObjectiveReportViewName</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>AssignedToName</property>
+      <label>ObjectiveReportViewAssignedTo</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>CreatedByName</property>
+      <label>ObjectiveReportViewCreatedBy</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>Status</property>
+      <label>ObjectiveReportViewStatus</label>
+      <type class="StandardData">ObjectiveStatus</type>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>DueDate</property>
+      <label>ObjectiveReportViewDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>Type</property>
+      <label>ObjectiveReportViewType</label>
+      <type class="StandardData">ObjectiveType</type>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>ParentName</property>
+      <label>ObjectiveReportViewParentName</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>Budget</property>
+      <label>ObjectiveReportViewBudget</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>FinancialBudgetUnit</property>
+      <label>ObjectiveReportViewFinancialBudgetUnit</label>
+      <type class="StandardData">BudgetTypeFinancial</type>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>TotalFinancialBudget</property>
+      <label>ObjectiveReportViewTotalFinancialBudget</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>TimeBudgetUnit</property>
+      <label>ObjectiveReportViewTimeBudgetUnit</label>
+      <type class="StandardData">BudgetTypeTime</type>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>TotalTimeBudget</property>
+      <label>ObjectiveReportViewTotalTimeBudget</label>
+    </column>
+    <column>
+      <entity>ObjectiveReportView</entity>
+      <property>Detail</property>
+      <label>ObjectiveReportViewDetail</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ObjectiveReportView as ObjectiveReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ObjectiveReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ObjectiveReportView.Name
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puridiom 5 Style Guide</title>
+	<link rel="stylesheet" href="tdcss.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../styles.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+	<script type="text/javascript" src="tdcss.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$("#tdcss").tdcss();
+		})
+	</script>
+</head>
+<body>
+<div id="tdcss">
+<!-- # Typography -->
+<!-- & All headings will use the H1 tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Heading -->
+<div>
+	<h1>This is a heading</h1>
+</div>
+<!-- & All sub-headings will use the H3 tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Sub-Heading -->
+<div>
+	<h3>This is a sub-heading</h1>
+</div>
+<!-- & All labels will use the label tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Label -->
+<div>
+	<label>This is a label</label>
+</div>
+<!-- & All values, paragraphs, and other info will use the paragraph tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Paragraph, Value, Etc... -->
+<div>
+	<p>This is a paragraph, value, or other info</p>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Links (Anchor Tags) -->
+<div>
+	<a href="#">This is a link</a>
+</div>
+<!-- # Alert Boxes -->
+<!-- & The text for the alert will be wrapped in a paragraph tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Alert box -->
+<div>
+	<article class="alert"><h5>Alert Box<button>&times;</button></h5><p>This is the default alert box</p></article>
+</div>
+<!-- & Important alert boxes will have the class 'alert-important' on the article tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Important Alert box -->
+<div>
+	<article class="alert-important"><h5>Important!<button>&times;</button></h5><p>This is an important alert!!</p></article>
+</div>
+<!-- # Inputs and Input Types -->
+<!-- & All inputs will use the input tag with the type specified ( checkbox, date, email, file, hidden, number, password, radio, range, search, tel, text, or url ) -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Text Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Text Input Label<input type="text" placeholder="Type Text Here" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Password Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Password<input type="password" placeholder="Password" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Search Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Search<input type="search" placeholder="Search" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Date Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Date<input type="date" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- & Number Inputs should have a min and a max value -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Number Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Number Input Label<input type="number" placeholder="1" min="1" max="10" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- & Range Inputs MUST have a min, max, and step values set  -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Range Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>1<input type="range" value="2" step="1" min="1" max="10" />10</label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Email Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Email Address<input type="email" placeholder="you@example.com" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Phone Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>Phone Number<input type="tel" placeholder="123-123-4567" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>URL Input -->
+<div>
+	<form>
+		<fieldset>
+			<label>URL<input type="url" placeholder="http://www.example.com" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>File Input -->
+<div>
+	<form>
+		<fieldset>
+			<input type="file" />
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Checkbox Input -->
+<div>
+	<form>
+		<fieldset>
+			<label><input type="checkbox" />Check 1</label><br>
+			<label><input type="checkbox" checked />Check 2</label>
+		</fieldset>
+	</form>
+</div>
+<!-- & Radio buttons that are part of the same selection must have the same name in order to ensure that only one can be selected  -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Radio Input -->
+<div>
+	<form>
+		<fieldset>
+			<label><input type="radio" name="ExampleName" />Radio 1</label><br>
+			<label><input type="radio" name="ExampleName" checked />Radio 2</label>
+		</fieldset>
+	</form>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Label / Input Group -->
+<div>
+	<form>
+		<fieldset>
+			<label>Date Received:
+			<input type="text" placeholder="Insert Text Here" /></label>
+		</fieldset>
+		<fieldset>
+			<label>Date Not Received:
+			<input type="text" placeholder="Insert Text Here" /></label>
+		</fieldset>
+		<fieldset>
+			<label>Date Received:
+			<input type="text" placeholder="Insert Text Here" /></label>
+		</fieldset>
+	</form>
+</div>
+<!-- # Buttons -->
+<!-- & All buttons will use the button tag -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Button -->
+<div>
+	<button>Button Tag</button>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Button with a badge -->
+<div>
+	<button>Button Tag<span class="badge badge-white">16</span></button>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Button Group -->
+<div>
+	<article class="btnGroup">
+		<button>Button Tag 1</button>
+		<button>Button Tag 2</button>
+		<button>Button Tag 3 Long Name</button>
+		<button>Button Tag 4</button>
+	</article>
+</div>
+
+<!-- # Portlets -->
+<!-- & All Dashboard Portlets must include an h1 with an icon, title text, and a gearwheel options icon. -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		 </span>Dashboard Portlet -->
+<div>
+	<section class="portletScreen">
+		<article class="dashboardPortlet">
+			<h1 class="portlet-heading">
+				<span class="icon-clipboard">
+					<object data="../../images/icons/clipboard.svg" type="image/svg+xml"></object>
+				</span>
+				Recent Documents
+				<span class="icon-gearwheel">
+					<object data="../../images/icons/gearwheel.svg" type="image/svg+xml"></object>
+				</span>
+			</h1>
+		</article>
+	</section>
+</div>
+<!-- & All Review Portlets must include an h1 with an icon and title text. -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Review Portlet -->
+<div>
+	<section class="portletScreen">
+		<article class="reviewPortlet">
+			<h1 class="portlet-heading">
+				<span class="icon-portfolio_folder">
+					<object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+				</span>
+				General Information
+			</h1>
+		</article>
+	</section>
+</div>
+<!-- & All Heading Portlets must include a document number and status and may include an h1 heading tag inbetween with page title text. -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Heading Portlet -->
+<div>
+	<section class="portletScreen">
+		<article class="headingPortlet">
+			<span class="docNumber">R000338-12</span>
+			<h1>General Information</h1>
+			<span class="status">REQ APPROVING</span>
+		</article>
+	</section>
+</div>
+
+<!-- # Content Templates -->
+<!-- & A Two Column View may be placed inside a dashboard or review portlet, never inside a heading portlet. -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Two Column Content -->
+<div>
+	<div class="twoColContent">
+		<label>
+			<span class="labelText">Ship To Code:</span>
+			<span class="valueText">MAIN</span>
+		</label>
+		<label>
+			<span class="labelText">Shipping Code:</span>
+			<span class="valueText">*TBD*</span>
+		</label>
+		<label>
+			<span class="labelText">Priority Code:</span>
+			<span class="valueText">0</span>
+		</label>
+		<label>
+			<span class="labelText">Ship Attn:</span>
+			<span class="valueText">Zachary Bricker</span>
+		</label>
+	</div>
+</div>
+
+<!-- & A Line Item List should be placed inside of a review portlet unless needed somewhere else. -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Line Item List View -->
+<div>
+	<ul class="lineItemList">
+		<li>
+			<a>
+				<span class="firstRow">
+					<span class="itemNumber">39120 x 6</span>
+					<span class="description">21.5 x 15 x 12.5 attached lid container</span>
+					<span class="lineTotal">120.00<span class="currCode">USD</span></span>
+				</span>
+				<span class="details"><span class="detailLabel">Catalog ID:</span>PATTERSON LIFT</span>
+			</a>
+		</li>
+		<li>
+			<a>
+				<span class="firstRow">
+					<span class="itemNumber">3PVU2 x 5</span>
+					<span class="description">Eyewash Double Station North High Vis Yellow 16oz</span>
+					<span class="lineTotal">175.05<span class="currCode">USD</span></span>
+				</span>
+				<span class="details"><span class="detailLabel">Catalog ID:</span>GRAINGER</span>
+				<span class="details"><span class="detailLabel">Mfg Name:</span>NORTH</span>
+				<span class="details"><span class="detailLabel">Catalog ID:</span>GRAINGER</span>
+				<span class="details"><span class="detailLabel">Mfg Name:</span>NORTH</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<!-- & A browse view may be placed inside a dashboard or review portlet, never inside a heading portlet. -->
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Three Column Browse View -->
+<div>
+	<ul class="columnList_3">
+		<li class="columnRow">
+			<a>
+				<span class="column_1 requisitionNumber">R000339-12</span>
+				<span class="column_2 status">REQ IN PROGRESS</span>
+				<span class="column_3">Key Control Cabinet,30 Units,</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 requisitionNumber">R000338-12</span>
+				<span class="column_2 status">REQ IN PROGRESS</span>
+				<span class="column_3">21.5 x 15x 12.5  attached lid</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Four Column Browse View -->
+<div>
+	<ul class="columnList_4">
+		<li class="columnRow listHeader hide-on-mobile">
+			<a>
+				<span class="column_1 headerLabel">Number</span>
+				<span class="column_2 headerLabel">Status</span>
+				<span class="column_3 headerLabel">Type</span>
+				<span class="column_4 headerLabel">Ship To Code</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000339-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000338-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN OFFICE BUILDING</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Five Column Browse View -->
+<div>
+	<ul class="columnList_5">
+		<li class="columnRow listHeader hide-on-mobile">
+			<a>
+				<span class="column_1 headerLabel">Number</span>
+				<span class="column_2 headerLabel">Status</span>
+				<span class="column_3 headerLabel">Type</span>
+				<span class="column_4 headerLabel">Ship To Code</span>
+				<span class="column_5 headerLabel">Ship To Code</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000339-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_5"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000338-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN OFFICE BUILDING</span>
+				<span class="column_5"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Six Column Browse View -->
+<div>
+	<ul class="columnList_6">
+		<li class="columnRow listHeader hide-on-mobile">
+			<a>
+				<span class="column_1 headerLabel">Number</span>
+				<span class="column_2 headerLabel">Status</span>
+				<span class="column_3 headerLabel">Type</span>
+				<span class="column_4 headerLabel">Ship To Code</span>
+				<span class="column_5 headerLabel">Ship To Code</span>
+				<span class="column_6 headerLabel">Account Name</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000339-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_5"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_6"><span class="detailLabel hide-on-desktop hide-on-tablet">Account Name:</span>Austin Wisler</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000338-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN OFFICE BUILDING</span>
+				<span class="column_5"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_6"><span class="detailLabel hide-on-desktop hide-on-tablet">Account Name:</span>Zach Bricker</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- : <span class="icon-documentation">
+			<object data="../../images/icons/user_white.svg" type="image/svg+xml"></object>
+		</span>Seven Column Browse View -->
+<div>
+	<ul class="columnList_7">
+		<li class="columnRow listHeader hide-on-mobile">
+			<a>
+				<span class="column_1 headerLabel">Number</span>
+				<span class="column_2 headerLabel">Status</span>
+				<span class="column_3 headerLabel">Type</span>
+				<span class="column_4 headerLabel">Ship To Code</span>
+				<span class="column_5 headerLabel">Ship To Code</span>
+				<span class="column_6 headerLabel">Account Name</span>
+				<span class="column_7 headerLabel">Account Number</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1">Purchase Request</span>
+				<span class="column_2"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_3 documentNumber">R000339-12</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_5"><span class="detailLabel hide-on-desktop hide-on-tablet">Account Name:</span>Austin Wisler</span>
+				<span class="column_6 status">REQ APPROVING</span>
+				<span class="column_7"><span class="detailLabel hide-on-desktop hide-on-tablet">Account Number:</span>127-631-72</span>
+			</a>
+		</li>
+		<li class="columnRow">
+			<a>
+				<span class="column_1 documentNumber">R000338-12</span>
+				<span class="column_2 status">REQ APPROVING</span>
+				<span class="column_3">Purchase Request</span>
+				<span class="column_4"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN OFFICE BUILDING</span>
+				<span class="column_5"><span class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</span>MAIN</span>
+				<span class="column_6"><span class="detailLabel hide-on-desktop hide-on-tablet">Account Name:</span>Zach Bricker</span>
+				<span class="column_7"><span class="detailLabel hide-on-desktop hide-on-tablet">Account Number:</span>127-631-72</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+</div>
+</body>
+</html>

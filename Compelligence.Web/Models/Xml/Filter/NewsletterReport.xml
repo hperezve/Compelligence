@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>NewsletterReportView</entity>
+      <property>Title</property>
+      <label>NewsletterReportViewTitle</label>
+    </column>
+    <column>
+      <entity>NewsletterReportView</entity>
+      <property>AssignedToName</property>
+      <label>NewsletterReportViewAssignedToName</label>
+    </column>
+    <column>
+      <entity>NewsletterReportView</entity>
+      <property>TemplateName</property>
+      <label>NewsletterReportViewTemplate</label>
+    </column>
+    <column>
+      <entity>NewsletterReportView</entity>
+      <property>Content</property>
+      <label>NewsletterReportViewContent</label>
+    </column>
+    <column>
+      <entity>NewsletterReportView</entity>
+      <property>DestinationMail</property>
+      <label>NewsletterReportViewDestinationMail</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsletterReportView as NewsletterReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsletterReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsletterReportView.Title
+    ]]>
+  </orderBy>
+</browse>

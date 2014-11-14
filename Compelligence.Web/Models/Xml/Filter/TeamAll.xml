@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>TeamAllView</entity>
+      <property>Name</property>
+      <label>TeamName</label>
+    </column>
+    <column>
+      <entity>TeamAllView</entity>
+      <property>AssignedToName</property>
+      <label>TeamAssignedTo</label>
+    </column>
+    <column>
+      <entity>TeamAllView</entity>
+      <property>StartDate</property>
+      <label>TeamDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>TeamAllView</entity>
+      <property>Email</property>
+      <label>TeamEmail</label>
+    </column>
+    <column>
+      <entity>TeamAllView</entity>
+      <property>Status</property>
+      <label>TeamStatus</label>
+      <type class="StandardData">TeamStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TeamAllView as TeamAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   TeamAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TeamAllView.Name
+    ]]>
+  </orderBy>
+</browse>

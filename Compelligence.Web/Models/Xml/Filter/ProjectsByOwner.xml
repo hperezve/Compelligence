@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>IndustriesName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>IndustryStatus</property>
+      <label>ProjectsByOwnerViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>IndustryTier</property>
+      <label>ProjectsByOwnerViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>CompetitorsName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProjectsByOwnerViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>CompetitorTier</property>
+      <label>ProjectsByOwnerViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>ProductsName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>ProductStatus</property>
+      <label>ProjectsByOwnerViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>ProductTier</property>
+      <label>ProjectsByOwnerViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProjectsByOwnerView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectsByOwnerView as ProjectsByOwnerView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectsByOwnerView.ClientCompany = '$S{ClientCompany}' AND ProjectsByOwnerView.AssignedToName is not null 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectsByOwnerView.AssignedToName
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

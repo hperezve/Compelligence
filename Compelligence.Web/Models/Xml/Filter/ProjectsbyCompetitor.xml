@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>Status</property>
+      <label>ProjectsbyCompetitorViewProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>IndustryStatus</property>
+      <label>ProjectsbyCompetitorViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryReportStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>IndustryTier</property>
+      <label>ProjectsbyCompetitorViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryReportTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProjectsbyCompetitorViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorReportStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>ProjectsbyCompetitorViewCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>ProductStatus</property>
+      <label>DealsbyIndustryViewProductStatus</label>
+      <type class="MultiStandardData">ReportProductStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyCompetitorView</entity>
+      <property>ProductTier</property>
+      <label>ProjectsbyCompetitorProductTier</label>
+      <type class="MultiStandardData">ReportProductTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectsbyCompetitorView as ProjectsbyCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectsbyCompetitorView.ClientCompany = '$S{ClientCompany}' AND ProjectsbyCompetitorView.CompetitorId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectsbyCompetitorView.CompetitorName
+    ]]>
+  </orderBy>
+</browse>

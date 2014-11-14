@@ -1,0 +1,545 @@
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+
+/* Global properties ======================================================== */
+html {width:100%;}
+
+body { 	 
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%; 
+	color:#000;
+	min-width:940px;
+	background: #f7430d;
+}
+
+.bg {width:100%; background:#fff;}
+
+.main {
+	width:940px; 	
+	padding:0;
+	margin:0 auto;
+	font-size:0.75em;
+	line-height:1.5em;
+	position:relative;
+}
+
+a {color:#f7430d; outline:none;}
+a:hover {text-decoration:none;}
+
+.clear {clear:both; width:100%; line-height:0; font-size:0;}
+
+.col-1, .col-2, .col-3, .col-4 {float:left;}
+.column-1, .column-2, .column-3 {float:left;}  
+
+.wrapper {width:100%; overflow:hidden;}
+.extra-wrap {overflow:hidden;}
+.extra-box {overflow:hidden;}
+ 
+.container {width:100%;}
+
+p {margin-bottom:18px;}
+.p0 {margin-bottom:5px;}
+.p1 {margin-bottom:8px;}
+.p2 {margin-bottom:15px;}
+.p3 {margin-bottom:30px;}
+.p4 {margin-bottom:40px;}
+.p5 {margin-bottom:50px;}
+
+.reg {text-transform:uppercase;}
+
+.fleft {float:left;}
+.fright {float:right;}
+
+.alignright {text-align:right;}
+.aligncenter {text-align:center;}
+
+.title {margin-bottom:18px;}
+
+.it {font-style:italic;}
+
+.letter {letter-spacing:-1px;}
+
+.color-1 {color:#fff;}
+.color-2 {color:#000;}
+.color-3 {color:#666;}
+
+/*********************************boxes**********************************/
+.margin-bot {margin-bottom:35px;}
+
+.margin-top {margin-top:40px; margin-left: 20px;}
+
+.spacing {margin-right:35px;}
+.spacing2 {margin-right:45px;}
+.spacing3 {margin-right:60px;}
+
+.spacing-bot {margin-bottom:24px;}
+
+.indent {padding:0 0 0px 30px;}
+.indent2 {padding-left:50px;}
+.indent-bot {margin-bottom:21px;}
+.indent-bot1 {margin-bottom:23px;}
+.indent-bot2 {margin-bottom:30px;}
+.indent-bot3 {margin-bottom:45px;}
+
+.img-indent-bot {margin-bottom:27px;}
+.img-indent {float:left; margin:0 20px 0px 0;}	
+.img-indent2 {float:left; margin:0 11px 0px 0;}
+.img-indent3 {float:left; margin:0 9px 0px 0;}	
+.img-indent-r {float:right; margin:0 0px 0px 40px;}	
+
+.map-indent {float:left; margin:0 29px 0px 0;}
+
+.img-box {float:left; margin-bottom:20px;}	
+
+.prev-indent-bot {margin-bottom:10px;}
+.prev-indent {float:left; margin:0 17px 0px 0;}	
+.prev-box {float:left; margin-bottom:8px;}	
+
+.border {border:3px solid #000;}
+.border2 {border:1px solid #000;}
+
+.buttons a:hover {cursor:pointer;}
+
+.menu li a,
+.sf-menu li a,
+.list-1 li a,
+.list-2 li a,
+.list-3 li a,
+.link,
+.link-1,
+.button-1, 
+.text-bot a,
+a.box,
+.logo {text-decoration:none;}	
+
+/*********************************header*************************************/
+header {height:188px; width:100%; position:relative; background:#e0dfd3; z-index:1;}
+header.header {height:596px; width:100%; position:relative; background:#e0dfd3; z-index:1;}
+
+header .row-1{width:100%; height:108px; padding:0px 0 0 0; position:relative; background: url(images/bg-row-1.jpg) 0 0 repeat-x #ffffe1;}
+header .row-2{width:100%; height:80px; position:relative; background:url(images/bg-row-2.jpg) 0 0 repeat-x #d4d2c1; z-index:2;}
+
+h1 {float:left; padding:15px 0 0 15px; position:relative;}
+.logo {display:block; width:280px; height:70px; text-indent:-5000px; background:url(images/logo.png) 0 0 no-repeat;}
+
+#form-top {position:absolute; top:10px; right:0px;}
+.form-top {height:37px; overflow:hidden; background:url(images/bg-form-top.jpg) 0 0 repeat-x;}
+#form-top input {float:left; font-size:12px; border-radius: 5px 5px 5px 5px; border-width: 2px;}
+#form-top a {float:left; height:25px; }
+/*#form-top a:hover {background:url(images/marker-top-h.jpg) center center no-repeat; }*/
+
+
+header .works-list {float:right; margin: 18px 15px 0 0;} 
+header .works-list li {float:left; margin-left:7px;}
+header .works-list .first-item {margin-left:0px;}
+
+/* Easy Tooltip */
+#easyTooltip{
+	padding:5px;
+	border:1px solid #ccc;
+	background:#f1f1f1;
+	z-index:3;
+}
+/* // Easy Tooltip */
+
+.sf-menu {position:absolute; top:0px;left: 0px; padding:0px 0px 0 0;}
+.sf-menu li {float:left; }
+.sf-menu li.last a{float:left; margin-right: 0px;}
+.sf-menu li a {display:block; color:#fff; font-size:15px; line-height:1.2em; height: 45px; padding: 26px 35px 0 14px; text-align:left;  text-transform:uppercase; background: none;}
+.sf-menu li a.current, .sf-menu li.active a, .sf-menu li a.active, .sf-menu li a:hover {color:#ff4d17;}
+
+/*********************************content*************************************/
+#content {width:100%; padding:0px 0px 0px 0px; background:#E0DFD3;}
+
+.padding{ padding: 55px 0 70px 0;}
+
+h2 {font-size:24px; line-height:1.2em; margin:-6px 0 0px; color:#000;}
+h3 {font-size:24px; line-height:1.2em; margin:5px 0 30px; color:#fd5113;}
+h5 {font-size:20px; line-height:1.2em; margin:0; color:#000;}
+h6 {font-size:12px; line-height:18px; margin:0; color:#000;}
+
+.link {color:#f7430d;}
+.link:hover {text-decoration:underline;} 
+
+.link-1 {display:inline-block; font-size:13px; line-height:18px; color:#fd5113;}
+.link-1:hover {text-decoration:underline;}
+
+
+.border-bot {width:100%; padding-bottom:44px; background:url(images/pic-1.gif) 0 bottom repeat-x;}
+.border-bot1 {width:100%; padding-bottom:33px; background:url(images/pic-1.gif) 0 bottom repeat-x;}
+.border-bot2 {width:100%; padding-bottom:41px; background:url(images/pic-1.gif) 0 bottom repeat-x;}
+
+.list-2 li {font-size:15px; line-height:1.2em;}
+.list-2 li a {display:block; color:#fff; text-transform:uppercase; padding: 9px 0 13px 13px; background:url(../images/bg-list.jpg) 0 0 repeat-x;}
+.list-2 li a:hover, .list-1 .active {background:url(images/bg-list-h.jpg) 0 0 repeat-x;}
+
+.list-3 li {font-size:12px; line-height:24px; padding-left:1px;}
+.list-3 li a {color:#f7430d; background:url(../images/marker-1.gif) 0 4px no-repeat; padding-left:14px;}
+.list-3 li a:hover {color:#000;}
+
+.bg-1 {width:100%; background:url(../images/bg-1.png) 195px 54px no-repeat;}
+
+.linkLogin a
+{
+    color: Yellow;
+    font-size:12px;
+    float: left;
+    margin-left: -95px; 
+    
+  
+}
+
+.linkLogin2 a
+{
+    color: Yellow;
+    font-size:12px;
+    float: left;
+    margin-left:110px; 
+    margin-top:-25px;
+        
+}
+
+
+.quotes{border: 1px solid #acacac; position:relative; padding:20px 8px 27px 20px;}
+*+html .quotes{border: 1px solid #acacac; position:relative; padding:7px 8px 25px 19px;}
+.quo {position:absolute; bottom:-18px; left:33px;}
+*+html .quo {position:absolute; bottom:-15px; left:33px;}
+
+.box .padding {padding:14px 15px 14px 14px;}
+a.box {display:block; background:#fff; color:#000; border:1px solid #acacac;}
+a.box h4 {font-size:20px; line-height:1.2em; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; margin:24px 0 1px; color:#000; text-transform:none; font-weight:normal;}
+
+
+a.box:hover {background:#fd5113; color:#fff; border:1px solid #fd5113;}
+a.box:hover h4{color:#fff;}
+
+
+.map iframe {width:418px; height: 287px; overflow:hidden; border:1px solid #acacac;} 
+
+dl span {float:left; width:66px;}
+
+#form-main {width:300px;}
+#form-main label {display:block; height:46px;}
+#form-main input {width:282px; font-size:12px; line-height:18px; color:#000; padding:7px 8px 7px 8px; font-family:Arial, Helvetica, sans-serif; border:1px solid #acacac; background:#fff;}
+#form-main textarea {height:129px; overflow:auto; width:282px; font-size:12px; line-height:18px; color:#000; padding:5px 8px; font-family:Arial, Helvetica, sans-serif; border:1px solid #acacac; background:#fff;}
+
+.buttons {padding-top:25px; text-align:left;}
+.buttons a {margin-right:22px;}
+
+
+/*************************aside***************************/
+aside {width:100%; padding:47px 0 65px; background:#f6f5f2;}
+
+aside h5{font-size:20px; line-height:1.2em; margin: 0 0 17px 0; color:#000;}
+
+aside .list-1 li {font-size:12px; line-height:24px; padding-left:2px;}
+aside .list-1 li a {color:#f7430d; background:url(images/marker-1.gif) 0 4px no-repeat; padding-left:11px;}
+aside .list-1 li a:hover {color:#000;}
+
+aside .works-list { margin:0;}
+aside .works-list li {font-size:12px; line-height:18px; margin:3px 0px 3px 0; }
+aside .works-list li a {display:inline; color:#ff4d17; text-decoration:none;}
+aside .works-list li a:hover {text-decoration:underline;}
+
+
+/****************************footer************************/
+footer {padding:19px 0px 17px 0; background:#f7430d; line-height:18px;}
+
+.text-bot {float:left; font-size: 12px; color:#fff;}
+.text-bot a {color:#fff;}
+.text-bot a:hover{text-decoration:underline;}
+
+
+footer nav {float:right;}
+.menu li { float:left; font-size:13px; line-height:17px; margin-right:23px;}
+.menu li a {display:inline; color:#fff;}
+.menu li .active, .menu li a:hover {color:#000;}
+.menu li.last-item {margin-right:10px;}
+
+
+/* -- gallery begin --*/
+.gallery-box {padding:15px 15px 21px 15px; background:#fff; margin-top:14px;}
+ div.content {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	background: none;
+	display: none;
+	width: 727px;
+	height: 325px;
+	margin:  0 14px 0 0px;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
+}
+ div.content img {
+	position: relative;
+	z-index: 2;
+}
+ div.content a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+ div.content a:focus, div.content a:hover, div.content a:active {
+	text-decoration: underline;
+}
+ div.controls {
+}
+ div.controls a {
+	padding: 0px;
+}
+ div.ss-controls {
+	float: left;
+	display:none;
+}
+ div.nav-controls {
+	position:absolute;
+	left:0px;
+	width:727px;
+	bottom:0px;
+	z-index: 1;
+}
+ div.nav-controls a.prev {
+	background:url(../images/prev.gif) no-repeat 0 0;
+	width:39px;
+	height:39px;
+	text-indent:-5000px;
+	position:absolute;
+	bottom:2px;
+	left:0;
+	z-index:11;
+}
+ div.nav-controls a.prev:hover {
+	background:url(../images/prev-h.gif) no-repeat 0 0;
+}
+ div.nav-controls a.next {
+	background:url(../images/next.gif) no-repeat 0 0;
+	width:39px;
+	height:39px;
+	text-indent:-5000px;
+	position:absolute;
+	bottom:2px;
+	right:0;
+	z-index:11;
+}
+ div.nav-controls a.next:hover {
+	background:url(../images/next-h.gif) no-repeat 0 0;
+}
+ div.slideshow-container {
+	position: relative;
+	height: 325px; /* This should be set to be at least the height of the largest image in the slideshow */
+	z-index:1;
+	
+}
+ div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image:url(images/loader.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 727px;
+	height: 325px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+ div.slideshow {
+}
+ div.slideshow span.image-wrapper {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 727px;
+	height: 325px;
+}
+ div.slideshow a.advance-link {
+	display: block;
+	width: 727px;
+	height: 325px; /* This should be set to be at least the height of the largest image in the slideshow */
+	padding: 0;
+	margin: 0;
+}
+ div.slideshow a.advance-link img {
+	padding:0;
+	margin:0;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+}
+ div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+ div.slideshow img {
+}
+ div.download {
+	float: right;
+}
+ div.caption-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 727px;
+	height: 649px;
+	background:none;
+}
+ span.image-caption {
+	display: block;
+	position: absolute;
+	width: 727px;
+	height: 64px;
+	bottom: 0;
+	left: 0;
+	background:url(images/bg-caption.png) 0 0 repeat-x;
+	z-index:10;
+}
+
+div.caption{
+	width: 727px;
+	height: 64px;
+	background:none;
+}
+
+ div.caption .txt{
+	float:left;
+	line-height: 1.2em;
+	font-size: 23px;
+	color: #fff;
+	padding: 17px 0px 0 24px;
+}
+ div.caption .button-block{
+	 float:right;
+	 padding:13px 16px 2px 0px; 
+ }
+ 
+ div.caption .button-1{
+	display:inline-block;
+	padding:9px 24px 10px 24px;
+	font-size:16px;
+	line-height:1.2em;
+	color:#fff;
+	text-transform:uppercase;
+	background:url(../images/button-1.jpg) 0 0 repeat-x;
+	box-shadow:1px 1px 1px rgba(0,0,0,0.44);
+-moz-box-shadow:1px 1px 1px rgba(0,0,0,0.44);
+-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.44);
+}
+div.caption .button-1:hover{ 
+	color:#000;
+	text-decoration:none;
+}
+
+ div.image-title {
+}
+
+ div.image-desc {
+}
+ div.navigation {
+/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+}
+ div#thumbs {
+	width: 169px;
+	float: right;
+	overflow: hidden;
+	padding: 0px 0px 0 0;
+}
+ ul.thumbs {
+	width: 169px !important;
+	float: right;
+	margin-left:0;
+	padding: 0;
+}
+ ul.thumbs li {
+	height: 107px;
+	margin-bottom:2px;
+	overflow: hidden;
+	padding: 0 0 0px 0;
+	vertical-align:top;
+}
+ ul.thumbs li img {
+	border: none;
+}
+ a.thumb:focus {
+	outline: none;
+}
+ div.pagination {
+	clear: both;
+	text-align:center;
+	position:relative;
+	z-index:10;
+}
+div.top.pagination {
+	display:none;
+}
+ div.navigation div.bottom {
+}
+ div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+	padding:0 4px;
+	font-weight:bold;
+	color:#fff;
+}
+ div.pagination a:hover {
+	text-decoration: none;
+	color:#ffeaa8;
+}
+ div.pagination span.current {
+	color:#ffeaa8;
+}
+ div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}
+/* -- gallery end --*/
+
+/*--- carousel begin ---*/
+.carousel-box {
+	background:none;
+	height:109px;
+	overflow:hidden;
+	position:relative;
+}
+	.carousel-box .inner {
+		padding:0px 0 0 45px;
+	}
+		.carousel-box button {
+			background:none;
+			width:26px;
+			height:105px;
+			border:none;
+			position:absolute;
+			cursor:pointer;
+			outline:none;
+			z-index:10;
+		}
+		.carousel-box button.prev {
+			left:0;
+			top:2px;
+			background:url(../images/prev.png) no-repeat left top;
+		}
+		.carousel-box button.prev:hover {
+			background:url(../images/prev-h.png) no-repeat left top;
+		}
+		.carousel-box button.next {
+			right:0;
+			top:2px;
+			background:url(../images/next.png) no-repeat left top;
+		}
+		.carousel-box button.next:hover {
+			background:url(../images/next-h.png) no-repeat left top;
+		}
+			.carousel-box ul li {
+				margin-right:20px;
+				float:left;
+				position:relative;
+			}
+			.carousel-box ul li a {
+				width:270px;
+				height:109px;
+				position:relative;
+				float:left;
+			}
+				
+				.carousel-box ul li a:hover {
+					
+				}
+/*--- carousel end ---*/
+
+

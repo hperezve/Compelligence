@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>IndustryStatus</property>
+      <label>ProjectReportViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>IndustryTier</property>
+      <label>ProjectReportViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>IndustryName</property>
+      <label>ProjectIndustryId</label>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProjectReportViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>CompetitorTier</property>
+      <label>ProjectReportViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>CompetitorName</property>
+      <label>ProjectCompetitorId</label>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>ProductStatus</property>
+      <label>ProjectReportViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>ProductTier</property>
+      <label>ProjectReportViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column group="true">
+      <entity>ProjectReportView</entity>
+      <property>ProductName</property>
+      <label>ProjectProductId</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>Name</property>
+      <label>ProjectName</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>CreatedByName</property>
+      <label>ProjectCreatedBy</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedTo</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>CreatedDate</property>
+      <label>ProjectCreatedDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>ContentTypeName</property>
+      <label>ProjectContentType</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>FinancialBudgetUnit</property>
+      <label>ProjectReportViewFinancialBudgetUnit</label>
+      <type class="StandardData">BudgetTypeFinancial</type>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>TotalFinancialBudget</property>
+      <label>ProjectReportViewTotalFinancialBudget</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>TimeBudgetUnit</property>
+      <label>ProjectReportViewTimeBudgetUnit</label>
+      <type class="StandardData">BudgetTypeTime</type>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>TotalTimeBudget</property>
+      <label>ProjectReportViewTotalTimeBudget</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>MarketTypeName</property>
+      <label>ProjectMarketTypeId</label>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>Visibility</property>
+      <label>ProjectVisibility</label>
+      <type class="StandardData">ProjectVisibility</type>
+    </column>
+    <column>
+      <entity>ProjectReportView</entity>
+      <property>Description</property>
+      <label>ProjectDescription</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectReportView as ProjectReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectReportView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

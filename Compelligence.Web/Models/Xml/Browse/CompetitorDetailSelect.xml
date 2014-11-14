@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CompetitorDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>CompetitorDetailSelectView</entity>
+      <property>Name</property>
+      <label>CompetitorName</label>
+    </column>
+    <column >
+      <entity>CompetitorDetailSelectView</entity>
+      <property>Description</property>
+      <label>CompetitorDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column>
+      <entity>CompetitorDetailSelectView</entity>
+      <property>Status</property>
+      <label>CompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column >
+      <entity>CompetitorDetailSelectView</entity>
+      <property>Phone</property>
+      <label>CompetitorPhone</label>
+    </column>
+    <column >
+      <entity>CompetitorDetailSelectView</entity>
+      <property>Website</property>
+      <label>CompetitorWebsite</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorDetailSelectView as CompetitorDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CompetitorDetailSelectView.ClientCompany = '$S{ClientCompany}' and (CompetitorDetailSelectView.Status ='$C{CompetitorStatus.Enabled}' OR CompetitorDetailSelectView.Status ='$C{CompetitorStatus.BackEndOnly}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse> 

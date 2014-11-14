@@ -1,0 +1,2829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Office.DocumentFormat.OpenXml</name>
+	</assembly>
+	<members>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart">
+			<summary>             AlternativeFormatImportPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart.#ctor">
+			<summary>             Construtor of AlternativeFormatImportPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType">
+			<summary>             Types of AlternativeFormatImportPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.Html">
+			<summary>             Hypertext Markup Language (.htm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.Mht">
+			<summary>             MHTML Document (.mht)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.Rtf">
+			<summary>             Rich Text Format File (.rtf)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.Text">
+			<summary>             Text (.txt)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.TextPlain">
+			<summary>             Text (.txt)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.TextXml">
+			<summary>             text/xml (.xml)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.Xhtml">
+			<summary>             Extensible HyperText Markup Language File (.htm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType.Xml">
+			<summary>             XML (.xml)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPart">
+			<summary>             AudioPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPart.#ctor">
+			<summary>             Construtor of AudioPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType">
+			<summary>             Types of AudioPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.Aiff">
+			<summary>             Audio Interchange File Format (.aiff)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.Midi">
+			<summary>             MIDI Audio (.mid)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.Mp3">
+			<summary>             MP3 (.mp3)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.MpegUrl">
+			<summary>             MP3 Playlist File (.m3u)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.Wav">
+			<summary>             WAV audio (.wav)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.Wax">
+			<summary>             Windows Media Audio Redirector (.wax)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType.Wma">
+			<summary>             Windows Media Audio File (.wma)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CalculationChainPart">
+			<summary>             CalculationChainPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CalculationChainPart.#ctor">
+			<summary>             Construtor of CalculationChainPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CalculationChainPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CalculationChainPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CalculationChainPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CalculationChainPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CellMetadataPart">
+			<summary>             CellMetadataPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CellMetadataPart.#ctor">
+			<summary>             Construtor of CellMetadataPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CellMetadataPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CellMetadataPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CellMetadataPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CellMetadataPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartDrawingPart">
+			<summary>             ChartDrawingPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartDrawingPart.#ctor">
+			<summary>             Construtor of ChartDrawingPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartDrawingPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartDrawingPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartDrawingPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartDrawingPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart">
+			<summary>             ChartPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart.#ctor">
+			<summary>             Construtor of ChartPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the ChartPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartsheetPart">
+			<summary>             ChartsheetPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartsheetPart.#ctor">
+			<summary>             Construtor of ChartsheetPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartsheetPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartsheetPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartsheetPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ChartsheetPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentAuthorsPart">
+			<summary>             CommentAuthorsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentAuthorsPart.#ctor">
+			<summary>             Construtor of CommentAuthorsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentAuthorsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentAuthorsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentAuthorsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentAuthorsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart">
+			<summary>             CommentsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.#ctor">
+			<summary>             Construtor of CommentsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CommentsPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the CommentsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ConnectionsPart">
+			<summary>             ConnectionsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ConnectionsPart.#ctor">
+			<summary>             Construtor of ConnectionsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ConnectionsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ConnectionsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ConnectionsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ConnectionsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CoreFilePropertiesPart">
+			<summary>             CoreFilePropertiesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CoreFilePropertiesPart.#ctor">
+			<summary>             Construtor of CoreFilePropertiesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CoreFilePropertiesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CoreFilePropertiesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CoreFilePropertiesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CoreFilePropertiesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomFilePropertiesPart">
+			<summary>             CustomFilePropertiesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomFilePropertiesPart.#ctor">
+			<summary>             Construtor of CustomFilePropertiesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomFilePropertiesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomFilePropertiesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomFilePropertiesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomFilePropertiesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart">
+			<summary>             CustomPropertyPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart.#ctor">
+			<summary>             Construtor of CustomPropertyPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomPropertyPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlMappingsPart">
+			<summary>             CustomXmlMappingsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlMappingsPart.#ctor">
+			<summary>             Construtor of CustomXmlMappingsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlMappingsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlMappingsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlMappingsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlMappingsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPart">
+			<summary>             CustomXmlPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPart.#ctor">
+			<summary>             Construtor of CustomXmlPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPropertiesPart">
+			<summary>             CustomXmlPropertiesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPropertiesPart.#ctor">
+			<summary>             Construtor of CustomXmlPropertiesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPropertiesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPropertiesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPropertiesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.CustomXmlPropertiesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramColorsPart">
+			<summary>             DiagramColorsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramColorsPart.#ctor">
+			<summary>             Construtor of DiagramColorsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramColorsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramColorsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramColorsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramColorsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart">
+			<summary>             DiagramDataPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.#ctor">
+			<summary>             Construtor of DiagramDataPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the DiagramDataPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramDataPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the DiagramDataPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart">
+			<summary>             DiagramLayoutPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.#ctor">
+			<summary>             Construtor of DiagramLayoutPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the DiagramLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramLayoutPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the DiagramLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramStylePart">
+			<summary>             DiagramStylePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramStylePart.#ctor">
+			<summary>             Construtor of DiagramStylePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramStylePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramStylePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramStylePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DiagramStylePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart">
+			<summary>             DialogsheetPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.#ctor">
+			<summary>             Construtor of DialogsheetPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the DialogsheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the DialogsheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DialogsheetPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the DialogsheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart">
+			<summary>             DigitalSignatureOriginPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart.#ctor">
+			<summary>             Construtor of DigitalSignatureOriginPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DigitalSignatureOriginPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DocumentSettingsPart">
+			<summary>             DocumentSettingsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DocumentSettingsPart.#ctor">
+			<summary>             Construtor of DocumentSettingsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DocumentSettingsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DocumentSettingsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DocumentSettingsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DocumentSettingsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart">
+			<summary>             DrawingsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.#ctor">
+			<summary>             Construtor of DrawingsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the DrawingsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.DrawingsPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the DrawingsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPart">
+			<summary>             EmbeddedControlPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPart.#ctor">
+			<summary>             Construtor of EmbeddedControlPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType">
+			<summary>             Types of EmbeddedControlPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType.ActiveX">
+			<summary>             ActiveX (.xml)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType.ActiveXBin">
+			<summary>             ActieveX (.bin)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedObjectPart">
+			<summary>             EmbeddedObjectPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedObjectPart.#ctor">
+			<summary>             Construtor of EmbeddedObjectPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedObjectPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedObjectPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedObjectPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedObjectPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedPackagePart">
+			<summary>             EmbeddedPackagePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedPackagePart.#ctor">
+			<summary>             Construtor of EmbeddedPackagePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedPackagePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedPackagePart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedPackagePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedPackagePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart">
+			<summary>             EndnotesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.#ctor">
+			<summary>             Construtor of EndnotesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.EndnotesPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the EndnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart">
+			<summary>             ExtendedFilePropertiesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart.#ctor">
+			<summary>             Construtor of ExtendedFilePropertiesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalRelationship">
+			<summary>             Class fo external relationship             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalRelationship.#ctor(System.Uri,System.String,System.String)">
+			<summary>             ExternalRelationship constructor             </summary>
+			<param name="id">The relationship ID.</param>
+			<param name="externalUri">The uri.</param>
+			<param name="relationshipType">The relationship type.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalWorkbookPart">
+			<summary>             ExternalWorkbookPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalWorkbookPart.#ctor">
+			<summary>             Construtor of ExternalWorkbookPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalWorkbookPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalWorkbookPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalWorkbookPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalWorkbookPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPart">
+			<summary>             FontPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPart.#ctor">
+			<summary>             Construtor of FontPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPartType">
+			<summary>             Types of FontPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPartType.FontData">
+			<summary>             Font Data (.fntdata)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPartType.FontOdttf">
+			<summary>             Obfuscated TTF Font (.odttf)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPartType.FontTtf">
+			<summary>             TrueType Font (.ttf)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart">
+			<summary>             FontTablePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.#ctor">
+			<summary>             Construtor of FontTablePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.AddFontPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPartType)">
+			<summary>             Add a FontPart to the FontTablePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the FontPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontTablePart.AddFontPart(System.String)">
+			<summary>             Add a FontPart to the FontTablePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the FontPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart">
+			<summary>             FooterPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.#ctor">
+			<summary>             Construtor of FooterPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FooterPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the FooterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart">
+			<summary>             FootnotesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.#ctor">
+			<summary>             Construtor of FootnotesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.FootnotesPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the FootnotesPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart">
+			<summary>             GlossaryDocumentPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.#ctor">
+			<summary>             Construtor of GlossaryDocumentPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.GlossaryDocumentPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the GlossaryDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart">
+			<summary>             HandoutMasterPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.#ctor">
+			<summary>             Construtor of HandoutMasterPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddAudioPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType)">
+			<summary>             Add a AudioPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddAudioPart(System.String)">
+			<summary>             Add a AudioPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partTy pe">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HandoutMasterPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the HandoutMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partTy pe">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart">
+			<summary>             HeaderPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.#ctor">
+			<summary>             Construtor of HeaderPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.HeaderPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the HeaderPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.IdPartPair">
+			<summary>             A (RelationshipId, OpenXmlPart) pair             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.IdPartPair.#ctor(System.String,Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart)">
+			<summary>             Initializes a new instance of the IdPartPair with the id and part.             </summary>
+			<param name="id">The relationship ID.</param>
+			<param name="part">The OpenXmlPart.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.IFixedContentTypePart">
+			<summary>.............. All parts of fixed content type should be derived from this interface.................</summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePart">
+			<summary>             ImagePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePart.#ctor">
+			<summary>             Construtor of ImagePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType">
+			<summary>             Types of ImagePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Bmp">
+			<summary>             Windows Bitmap Graphics (.bmp)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Emf">
+			<summary>             Extended (Enhanced) Windows Metafile Format (.emf)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Gif">
+			<summary>             Graphic Interchange Format (.gif)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Icon">
+			<summary>             Windows Icon (.ico)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Jpeg">
+			<summary>             JPEG/JIFF Image (.jpeg)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Pcx">
+			<summary>             PC Paintbrush Bitmap Graphic (.pcx)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Png">
+			<summary>             Portable (Public) Network Graphic (.png)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Tiff">
+			<summary>             Tagged Image Format File (.tiff)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType.Wmf">
+			<summary>             Windows Metafile (.wmf)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart">
+			<summary>             MainDocumentPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.#ctor">
+			<summary>             Construtor of MainDocumentPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddAlternativeFormatImportPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPartType)">
+			<summary>             Add a AlternativeFormatImportPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddAlternativeFormatImportPart(System.String)">
+			<summary>             Add a AlternativeFormatImportPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AlternativeFormatImportPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.MainDocumentPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the MainDocumentPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart">
+			<summary>             NotesMasterPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.#ctor">
+			<summary>             Construtor of NotesMasterPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddAudioPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType)">
+			<summary>             Add a AudioPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddAudioPart(System.String)">
+			<summary>             Add a AudioPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="content Type">the content type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesMasterPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the NotesMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart">
+			<summary>             NotesSlidePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.#ctor">
+			<summary>             Construtor of NotesSlidePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddAudioPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType)">
+			<summary>             Add a AudioPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddAudioPart(System.String)">
+			<summary>             Add a AudioPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentT ype">the content type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NotesSlidePart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the NotesSlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart">
+			<summary>             NumberingDefinitionsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.#ctor">
+			<summary>             Construtor of NumberingDefinitionsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the NumberingDefinitionsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.NumberingDefinitionsPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the NumberingDefinitionsPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage">
+			<summary>               Base class for strong typed package (document) class.               </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.#ctor">
+			<summary>               OpenXmlPackage constructor                 </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.AddPart``1(``0)">
+			<summary>       Add the part to the document. Must use the returned part to operate the part added to the document        </summary>
+			<param name="part">The part to be added to the document.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.Close">
+			<summary>       Saves and closes the OpenXml package plus all underlying part streams.          </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.DeletePartsRecursivelyOfType``1">
+			<summary>        Delete all the parts which is the specified part type from package recursively.        </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.Dispose">
+			<summary>       Flushes and saves the content, closes the document, and releases all resources.      </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.Dispose(System.Boolean)">
+			<summary>      Flushes and saves the content, closes the document, and releases all resources.    </summary>
+			<param name="disposing">True to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.ThrowIfObjectDisposed">
+			<summary>            Throw if object is disposed.            </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackage.Validate(Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageValidationSettings)">
+			<summary>           Validate the package (do not validate the xml content in each part).            </summary>
+			<param name="validationSettings">OpenXmlPackageValidationSettings for validation events.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageException">
+			<summary>             OpenXmlPackageException             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.#ctor">
+			<summary>             Initializes a new instance of the OpenXmlPackageException class.              </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.#ctor(System.String)">
+			<summary>             Initializes a new instance of the OpenXmlPackageException class with a specified error message.              </summary>
+			<param name="message">The message that describes the error.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.#ctor(System.String,System.Exception)">
+			<summary>             Initializes a new instance of the OpenXmlPackageException class with a specified error message and a reference to the inner exception that is the cause of this exception.              </summary>
+			<param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+			<param name="message">The error message that explains the reason for the exception.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageValidationEventArgs">
+			<summary>             Class for OpenXmlPackage validation event             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageValidationSettings">
+			<summary>             Specifies the event handlers that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs.              </summary>
+		</member>
+		<member name="E:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPackageValidationSettings.EventHandler">
+			<summary>             Represents the callback method that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs.             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart">
+			<summary>              Abstract base class for all OpenXml parts.              </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart.#ctor">
+			<summary>               OpenXmlPart constructor               </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart.FeedData(System.IO.Stream)">
+			<summary>           Feed data into the part stream. The stream of the part will be truncated at first.          </summary>
+			<param name="sourceStream">The source stream to be read from.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetStream(System.IO.FileMode)">
+			<summary>         Returns the content stream opened in a specified I/O FileMode.            </summary>
+			<param name="mode">The I/O mode in which to open the content stream.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetStream(System.IO.FileMode,System.IO.FileAccess)">
+			<summary>            Returns the part content stream opened with a specified FileMode and FileAccess.          </summary>
+			<param name="access">The access permissions to use in opening the content stream.</param>
+			<param name="mode">The I/O mode in which to open the content stream.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart.ThrowIfObjectDisposed">
+			<summary>                Test whether the object is already disposed.                 </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart.ValidateXml(System.String,System.Xml.Schema.ValidationEventHandler)">
+			<summary>         Validate the xml content of the part according the specified schema.          </summary>
+			<param name="schemaFile">The XML schema to be used.</param>
+			<param name="validationEventHandler">ValidationEventHandler for validation events.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer">
+			<summary>      Part container, base class for OpenXmlPackage and OpenXmlPart.        </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.#ctor">
+			<summary>           OpenXmlPartContainer constructor           </summary>
+		</member>
+        <member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExtendedPart(System.String,System.String,System.String)">
+            <summary>
+                Add an extended part ( Application specific part )
+            </summary>
+            <param name="relationshipType">The relationship type of the part.</param>
+            <param name="contentType">The content type of the part.</param>
+            <param name="targetExt">The desired part name extension in the package.</param>
+        </member>
+        <member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExternalRelationship(System.String,System.Uri)">
+			<summary>           Add external relationship.                </summary>
+			<param name="relationshipType">The relationship type.</param>
+			<param name="externalUri">The external URI.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddPart``1(``0)">
+			<summary>      Add the part to the document. Must use the returned part to operate the part added to the document.            </summary>
+			<param name="part">The part to be added to the document.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DeleteExternalRelationship(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExternalRelationship)">
+			<summary>              Delete the external relationship.               </summary>
+			<param name="externalRelationship">The external relationship to be deleted.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DeletePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart)">
+			<summary>           Delete the specified child part from this part.                </summary>
+			<param name="part">The part to be deleted.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DeletePart(System.String)">
+			<summary>             Delete the specified child part from this part.              </summary>
+			<param name="id">The relationship ID of the part to be deleted.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DeleteParts``1(System.Collections.Generic.IEnumerable{``0})">
+			<summary>          Delete all the parts which in the passed in collection from the document.            </summary>
+			<param name="partsToBeDeleted">The part to be deleted.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.GetIdOfPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPart)">
+			<summary>             Get the relationship ID of the part.                  </summary>
+			<param name="part">The part.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.GetPartById(System.String)">
+			<summary>          Get the child part through the relationship ID.                </summary>
+			<param name="id">The relationship ID of the part.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.GetPartsOfType``1(System.Collections.Generic.ICollection{``0})">
+			<summary>           Get all the child parts of the specified type "T" into "partCollection" of this part.          </summary>
+			<param name="partCollection">The part collection to be filled in.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.ThrowIfObjectDisposed">
+			<summary>                 Test whether the object is already disposed.                 </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider">
+			<summary>             A Part Extension Provider which maintains a (Content Type, Part Extension (".xml")) dictionary. Used in OpenXmlPackage derived classes.             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider.#ctor">
+			<summary>             Initializes a new instance of the PartExtensionProvider class that is empty.             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider.#ctor(System.Int32)">
+			<summary>             Initializes a new instance of the class that is empty, has the specified initial capacity.             </summary>
+			<param name="capacity">The initial number of elements that the PartExtensionProvider can contain.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider.#ctor(Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider)">
+			<summary>             Initializes a new instance of the PartExtensionProvider class that contains elements copied from the specified PartExtensionProvider             </summary>
+			<param name="partExtProvider">The source PartExtensionProvider whose elements are copied to the new PartExtensionProvider.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider.AddPartExtension(System.String,System.String)">
+			<summary>             Add a part extension for the specified ContentType             </summary>
+			<param name="contentType">ContentType</param>
+			<param name="partExtension">Part Extension (".xml") to be used for the part with the specified content type.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PartExtensionProvider.MakeSurePartExtensionExist(System.String,System.String)">
+			<summary>             Make sure the (contentType, partExtension) is in the provider.             The (contentType, partExtension) will be added to the provider if it does not exist in the provider.             </summary>
+			<param name="contentType">ContentType</param>
+			<param name="partExtension">Part Extension (".xml") to be used for the part with the specified content type.</param>
+			<exception cref="T:System.ArgumentNullException">Throw when either parameter is null.</exception>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheDefinitionPart">
+			<summary>             PivotCacheDefinitionPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheDefinitionPart.#ctor">
+			<summary>             Construtor of PivotCacheDefinitionPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheDefinitionPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheDefinitionPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheDefinitionPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheDefinitionPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheRecordsPart">
+			<summary>             PivotCacheRecordsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheRecordsPart.#ctor">
+			<summary>             Construtor of PivotCacheRecordsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheRecordsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheRecordsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheRecordsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotCacheRecordsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotTablePart">
+			<summary>             PivotTablePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotTablePart.#ctor">
+			<summary>             Construtor of PivotTablePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotTablePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotTablePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotTablePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PivotTablePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument">
+			<summary>             The package represents a Presentation document             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.#ctor">
+			<summary>             Create a PresentationDocument             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.AddPresentationPart">
+			<summary>             Create the PresentationPart and add it to this document.             </summary>
+			<returns>The newly added PresentationPart.</returns>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the PresentationDocument             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the PresentationDocument             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.Create(System.IO.Packaging.Package,Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType)">
+			<summary>             Create a new instance of the PresentationDocument class from the spcified package.             </summary>
+			<returns>A new instance of PresentationDocument</returns>
+			<param name="type">The type of the PresentationDocument.</param>
+			<param name="package">The specified OpenXml package</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.Create(System.IO.Stream,Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType)">
+			<summary>             Create a new instance of the PresentationDocument class from the IO stream.             </summary>
+			<returns>A new instance of PresentationDocument</returns>
+			<param name="type">The type of the PresentationDocument.</param>
+			<param name="stream">The IO stream on which to open the package.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.Create(System.String,Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType)">
+			<summary>             Create a new instance of the PresentationDocument class from the specified file.             </summary>
+			<returns>A new instance of PresentationDocument</returns>
+			<param name="path">The path and file name of the target Package for the OpenXmlPackage.</param>
+			<param name="type">The type of the PresentationDocument.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.Open(System.IO.Packaging.Package)">
+			<summary>             Create a new instance of the PresentationDocument class from the spcified package.             </summary>
+			<returns>A new instance of PresentationDocument</returns>
+			<param name="package">The specified OpenXml package</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.Open(System.IO.Stream,System.Boolean)">
+			<summary>             Create a new instance of the PresentationDocument class from the IO stream.             </summary>
+			<returns>A new instance of PresentationDocument</returns>
+			<param name="readWriteMode">In ReadWrite mode. False for Read only mode.</param>
+			<param name="stream">The IO stream on which to open the package.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocument.Open(System.String,System.Boolean)">
+			<summary>             Create a new instance of the PresentationDocument class from the specified file.             </summary>
+			<returns>A new instance of PresentationDocument</returns>
+			<param name="path">The path and file name of the target Package for the OpenXmlPackage.</param>
+			<param name="readWriteMode">In ReadWrite mode. False for Read only mode.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType">
+			<summary>             Type of PresentationDocument             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.Addin">
+			<summary>             PowerPoint Addin (*.ppam)              </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.MacroEnabledPresentation">
+			<summary>             PowerPoint Macro-Enabled Presentation (*.pptm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.MacroEnabledSlideshow">
+			<summary>             PowerPoint Macro-Enabled Show (*.ppsm)              </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.MacroEnabledTemplate">
+			<summary>             PowerPoint Macro-Enabled Template (*.potm)              </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.Presentation">
+			<summary>             PowerPoint Presentation (*.pptx)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.Slideshow">
+			<summary>             PowerPoint Show (*.ppsx)              </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationDocumentType.Template">
+			<summary>             PowerPoint Template (*.potx)              </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart">
+			<summary>             PresentationPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.#ctor">
+			<summary>             Construtor of PresentationPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.AddFontPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.FontPartType)">
+			<summary>             Add a FontPart to the PresentationPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the FontPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.AddFontPart(System.String)">
+			<summary>             Add a FontPart to the PresentationPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the FontPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the PresentationPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the PresentationPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPropertiesPart">
+			<summary>             PresentationPropertiesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPropertiesPart.#ctor">
+			<summary>             Construtor of PresentationPropertiesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPropertiesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPropertiesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPropertiesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.PresentationPropertiesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.QueryTablePart">
+			<summary>             QueryTablePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.QueryTablePart.#ctor">
+			<summary>             Construtor of QueryTablePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.QueryTablePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.QueryTablePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.QueryTablePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.QueryTablePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SharedStringTablePart">
+			<summary>             SharedStringTablePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SharedStringTablePart.#ctor">
+			<summary>             Construtor of SharedStringTablePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SharedStringTablePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SharedStringTablePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SharedStringTablePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SharedStringTablePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SingleCellTablePart">
+			<summary>             SingleCellTablePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SingleCellTablePart.#ctor">
+			<summary>             Construtor of SingleCellTablePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SingleCellTablePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SingleCellTablePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SingleCellTablePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SingleCellTablePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideCommentsPart">
+			<summary>             SlideCommentsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideCommentsPart.#ctor">
+			<summary>             Construtor of SlideCommentsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideCommentsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideCommentsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideCommentsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideCommentsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart">
+			<summary>             SlideLayoutPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.#ctor">
+			<summary>             Construtor of SlideLayoutPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddAudioPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType)">
+			<summary>             Add a AudioPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddAudioPart(System.String)">
+			<summary>             Add a AudioPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideLayoutPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the SlideLayoutPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart">
+			<summary>             SlideMasterPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.#ctor">
+			<summary>             Construtor of SlideMasterPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddAudioPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType)">
+			<summary>             Add a AudioPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddAudioPart(System.String)">
+			<summary>             Add a AudioPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideMasterPart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the SlideMasterPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart">
+			<summary>             SlidePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.#ctor">
+			<summary>             Construtor of SlidePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddAudioPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.AudioPartType)">
+			<summary>             Add a AudioPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddAudioPart(System.String)">
+			<summary>             Add a AudioPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the AudioPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddVideoPart(System.String)">
+			<summary>             Add a VideoPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the VideoPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlidePart.AddVideoPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType)">
+			<summary>             Add a VideoPart to the SlidePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the VideoPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideSyncDataPart">
+			<summary>             SlideSyncDataPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideSyncDataPart.#ctor">
+			<summary>             Construtor of SlideSyncDataPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideSyncDataPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideSyncDataPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideSyncDataPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SlideSyncDataPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument">
+			<summary>             The package represents a Spreadsheet document             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.#ctor">
+			<summary>             Create a SpreadsheetDocument             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the SpreadsheetDocument             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the SpreadsheetDocument             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.AddWorkbookPart">
+			<summary>             Create the WorkbookPart and add it to this document.             </summary>
+			<returns>The newly added WorkbookPart.</returns>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Create(System.IO.Packaging.Package,Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType)">
+			<summary>             Create a new instance of the SpreadsheetDocument class from the spcified package.             </summary>
+			<returns>A new instance of SpreadsheetDocument</returns>
+			<param name="type">The type of the SpreadsheetDocument.</param>
+			<param name="package">The specified OpenXml package</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Create(System.IO.Stream,Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType)">
+			<summary>             Create a new instance of the SpreadsheetDocument class from the IO stream.             </summary>
+			<returns>A new instance of SpreadsheetDocument</returns>
+			<param name="type">The type of the SpreadsheetDocument.</param>
+			<param name="stream">The IO stream on which to open the package.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Create(System.String,Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType)">
+			<summary>             Create a new instance of the SpreadsheetDocument class from the specified file.             </summary>
+			<returns>A new instance of SpreadsheetDocument</returns>
+			<param name="path">The path and file name of the target Package for the OpenXmlPackage.</param>
+			<param name="type">The type of the SpreadsheetDocument.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(System.IO.Packaging.Package)">
+			<summary>             Create a new instance of the SpreadsheetDocument class from the spcified package.             </summary>
+			<returns>A new instance of SpreadsheetDocument</returns>
+			<param name="package">The specified OpenXml package</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(System.IO.Stream,System.Boolean)">
+			<summary>             Create a new instance of the SpreadsheetDocument class from the IO stream.             </summary>
+			<returns>A new instance of SpreadsheetDocument</returns>
+			<param name="readWriteMode">In ReadWrite mode. False for Read only mode.</param>
+			<param name="stream">The IO stream on which to open the package.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(System.String,System.Boolean)">
+			<summary>             Create a new instance of the SpreadsheetDocument class from the specified file.             </summary>
+			<returns>A new instance of SpreadsheetDocument</returns>
+			<param name="path">The path and file name of the target Package for the OpenXmlPackage.</param>
+			<param name="readWriteMode">In ReadWrite mode. False for Read only mode.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType">
+			<summary>             Type of SpreadsheetDocument             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType.Addin">
+			<summary>             Excel Add-in (*.xlam)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType.MacroEnabledTemplate">
+			<summary>             Excel Macro-Enabled Template (*.xltm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType.MacroEnabledWorkbook">
+			<summary>             Excel Macro-Enabled Workbook (*.xlsm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType.Template">
+			<summary>             Excel Template (*.xltx)              </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetDocumentType.Workbook">
+			<summary>             Excel Workbook (*.xlsx)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart">
+			<summary>             SpreadsheetPrinterSettingsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart.#ctor">
+			<summary>             Construtor of SpreadsheetPrinterSettingsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.SpreadsheetPrinterSettingsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.StyleDefinitionsPart">
+			<summary>             StyleDefinitionsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.StyleDefinitionsPart.#ctor">
+			<summary>             Construtor of StyleDefinitionsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.StyleDefinitionsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.StyleDefinitionsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.StyleDefinitionsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.StyleDefinitionsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableDefinitionPart">
+			<summary>             TableDefinitionPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableDefinitionPart.#ctor">
+			<summary>             Construtor of TableDefinitionPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableDefinitionPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableDefinitionPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableDefinitionPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableDefinitionPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableStylesPart">
+			<summary>             TableStylesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableStylesPart.#ctor">
+			<summary>             Construtor of TableStylesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableStylesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableStylesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableStylesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.TableStylesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemeOverridePart">
+			<summary>             ThemeOverridePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemeOverridePart.#ctor">
+			<summary>             Construtor of ThemeOverridePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemeOverridePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemeOverridePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemeOverridePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemeOverridePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart">
+			<summary>             ThemePart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.#ctor">
+			<summary>             Construtor of ThemePart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the ThemePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThemePart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the ThemePart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPart">
+			<summary>             ThumbnailPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPart.#ctor">
+			<summary>             Construtor of ThumbnailPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType">
+			<summary>             Types of ThumbnailPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType.Emf">
+			<summary>             Extended (Enhanced) Windows Metafile Format (.emf)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType.Jpeg">
+			<summary>             JPEG/JPG Image (.jpeg)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType.Wmf">
+			<summary>             Windows Metafile (.wmf)             </summary>
+		</member>
+        <member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedPart">
+            <summary>
+                Class for all extended parts (Application specific part).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedPart.#ctor">
+            <summary>
+                Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ExtendedPart.#ctor(System.String)">
+            <summary>
+                Initialize a new instance of ExtendedPart.
+            </summary>
+            <param name="relationshipType"></param>
+        </member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart">
+			<summary>             UserDefinedTagsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart.#ctor">
+			<summary>             Construtor of UserDefinedTagsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPart">
+			<summary>             VideoPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPart.#ctor">
+			<summary>             Construtor of VideoPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType">
+			<summary>             Types of VideoPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Asf">
+			<summary>             Advanced Streaming Format (.asf)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Asx">
+			<summary>             Advanced Stream Redirector File (.asx)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Avi">
+			<summary>             Audio Video Interleave File (.avi)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Mpeg">
+			<summary>             MPEG 1 System Stream (.mpeg)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Mpg">
+			<summary>             MPEG 1 System Stream (.mpg)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.WM">
+			<summary>             Windows Media A/V File (.wm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Wmv">
+			<summary>             Windows Media File (.wmv)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Wmx">
+			<summary>             Windows Media Player A/V Shortcut (.wmx)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VideoPartType.Wvx">
+			<summary>             Windows Media Redirector (.wvx)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ViewPropertiesPart">
+			<summary>             ViewPropertiesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ViewPropertiesPart.#ctor">
+			<summary>             Construtor of ViewPropertiesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ViewPropertiesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ViewPropertiesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ViewPropertiesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.ViewPropertiesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart">
+			<summary>             VmlDrawingPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.#ctor">
+			<summary>             Construtor of VmlDrawingPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the VmlDrawingPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VmlDrawingPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the VmlDrawingPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VolatileDependenciesPart">
+			<summary>             VolatileDependenciesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VolatileDependenciesPart.#ctor">
+			<summary>             Construtor of VolatileDependenciesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VolatileDependenciesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VolatileDependenciesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VolatileDependenciesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.VolatileDependenciesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WebSettingsPart">
+			<summary>             WebSettingsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WebSettingsPart.#ctor">
+			<summary>             Construtor of WebSettingsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WebSettingsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WebSettingsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WebSettingsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WebSettingsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument">
+			<summary>             The package represents a Word document             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.#ctor">
+			<summary>             Create a WordprocessingDocument             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.AddMainDocumentPart">
+			<summary>             Create the MainDocumentPart and add it to this document.             </summary>
+			<returns>The newly added MainDocumentPart.</returns>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the WordprocessingDocument             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the WordprocessingDocument             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Create(System.IO.Packaging.Package,Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType)">
+			<summary>             Create a new instance of the WordprocessingDocument class from the spcified package.             </summary>
+			<returns>A new instance of WordprocessingDocument</returns>
+			<param name="type">The type of the WordprocessingDocument.</param>
+			<param name="package">The specified OpenXml package</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Create(System.IO.Stream,Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType)">
+			<summary>             Create a new instance of the WordprocessingDocument class from the IO stream.             </summary>
+			<returns>A new instance of WordprocessingDocument</returns>
+			<param name="type">The type of the WordprocessingDocument.</param>
+			<param name="stream">The IO stream on which to open the package.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Create(System.String,Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType)">
+			<summary>             Create a new instance of the WordprocessingDocument class from the specified file.             </summary>
+			<returns>A new instance of WordprocessingDocument</returns>
+			<param name="path">The path and file name of the target Package for the OpenXmlPackage.</param>
+			<param name="type">The type of the WordprocessingDocument.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Open(System.IO.Packaging.Package)">
+			<summary>             Create a new instance of the WordprocessingDocument class from the spcified package.             </summary>
+			<returns>A new instance of WordprocessingDocument</returns>
+			<param name="package">The specified OpenXml package</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Open(System.IO.Stream,System.Boolean)">
+			<summary>             Create a new instance of the WordprocessingDocument class from the IO stream.             </summary>
+			<returns>A new instance of WordprocessingDocument</returns>
+			<param name="readWriteMode">In ReadWrite mode. False for Read only mode.</param>
+			<param name="stream">The IO stream on which to open the package.</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Open(System.String,System.Boolean)">
+			<summary>             Create a new instance of the WordprocessingDocument class from the specified file.             </summary>
+			<returns>A new instance of WordprocessingDocument</returns>
+			<param name="path">The path and file name of the target Package for the OpenXmlPackage.</param>
+			<param name="readWriteMode">In ReadWrite mode. False for Read only mode.</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType">
+			<summary>             Type of WordprocessingDocument             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType.Document">
+			<summary>             Word Document (*.docx)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType.MacroEnabledDocument">
+			<summary>             Word Macro-Enabled Document (*.docm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType.MacroEnabledTemplate">
+			<summary>             Word Macro-Enabled Template (*.dotm)             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingDocumentType.Template">
+			<summary>             Word Template (*.dotx)             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart">
+			<summary>             WordprocessingPrinterSettingsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart.#ctor">
+			<summary>             Construtor of WordprocessingPrinterSettingsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart.TargetExtConstant">
+			<summary>             The fixed value of the TargetExt             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WordprocessingPrinterSettingsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart">
+			<summary>             WorkbookPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart.#ctor">
+			<summary>             Construtor of WorkbookPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart.AddThumbnailPart(System.String)">
+			<summary>             Add a ThumbnailPart to the WorkbookPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ThumbnailPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookPart.AddThumbnailPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ThumbnailPartType)">
+			<summary>             Add a ThumbnailPart to the WorkbookPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ThumbnailPart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionHeaderPart">
+			<summary>             WorkbookRevisionHeaderPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionHeaderPart.#ctor">
+			<summary>             Construtor of WorkbookRevisionHeaderPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionHeaderPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionHeaderPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionHeaderPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionHeaderPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionLogPart">
+			<summary>             WorkbookRevisionLogPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionLogPart.#ctor">
+			<summary>             Construtor of WorkbookRevisionLogPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionLogPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionLogPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionLogPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookRevisionLogPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookStylesPart">
+			<summary>             WorkbookStylesPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookStylesPart.#ctor">
+			<summary>             Construtor of WorkbookStylesPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookStylesPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookStylesPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookStylesPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookStylesPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookUserDataPart">
+			<summary>             WorkbookUserDataPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookUserDataPart.#ctor">
+			<summary>             Construtor of WorkbookUserDataPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookUserDataPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookUserDataPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookUserDataPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorkbookUserDataPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetCommentsPart">
+			<summary>             WorksheetCommentsPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetCommentsPart.#ctor">
+			<summary>             Construtor of WorksheetCommentsPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetCommentsPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetCommentsPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetCommentsPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetCommentsPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart">
+			<summary>             WorksheetPart             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.#ctor">
+			<summary>             Construtor of WorksheetPart             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.ContentTypeConstant">
+			<summary>             The fixed value of the ContentType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.RelationshipTypeConstant">
+			<summary>             The fixed value of the RelationshipType             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.TargetNameConstant">
+			<summary>             The fixed value of the TargetName             </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.TargetPathConstant">
+			<summary>             The fixed value of the TargetPath             </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.AddEmbeddedControlPart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.EmbeddedControlPartType)">
+			<summary>             Add a EmbeddedControlPart to the WorksheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.AddEmbeddedControlPart(System.String)">
+			<summary>             Add a EmbeddedControlPart to the WorksheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedControlPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.AddEmbeddedObjectPart(System.String)">
+			<summary>             Add a EmbeddedObjectPart to the WorksheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedObjectPart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.AddEmbeddedPackagePart(System.String)">
+			<summary>             Add a EmbeddedPackagePart to the WorksheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the EmbeddedPackagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.AddImagePart(Microsoft.Office.DocumentFormat.OpenXml.Packaging.ImagePartType)">
+			<summary>             Add a ImagePart to the WorksheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="partType">the part type of the ImagePart</param>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.WorksheetPart.AddImagePart(System.String)">
+			<summary>             Add a ImagePart to the WorksheetPart             </summary>
+			<returns>The newly added part</returns>
+			<param name="contentType">the content type of the ImagePart</param>
+		</member>
+		<member name="T:Microsoft.Office.DocumentFormat.OpenXml.Packaging.XmlSignaturePart">
+			<summary>                   XmlSignaturePart              </summary>
+		</member>
+		<member name="M:Microsoft.Office.DocumentFormat.OpenXml.Packaging.XmlSignaturePart.#ctor">
+			<summary>                XmlSignaturePart constructor                 </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.XmlSignaturePart.ContentTypeConstant">
+			<summary>              The fixed value of the ContentType.               </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.XmlSignaturePart.RelationshipTypeConstant">
+			<summary>           The fixed value of the RelationshipType.              </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.XmlSignaturePart.TargetNameConstant">
+			<summary>           The fixed value of the TargetName.               </summary>
+		</member>
+		<member name="F:Microsoft.Office.DocumentFormat.OpenXml.Packaging.XmlSignaturePart.TargetPathConstant">
+			<summary>          The fixed value of the TargetPath.           </summary>
+		</member>
+	</members>
+</doc>

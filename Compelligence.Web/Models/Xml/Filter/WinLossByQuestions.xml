@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>WinLossByQuestionsView</entity>
+      <property>QuestionText</property>
+      <label>QuestionText</label>
+    </column>
+    <column>
+      <entity>WinLossByQuestionsView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>WinLossByQuestionsView</entity>
+      <property>QuestionType</property>
+      <label>WinLossByQuestionType</label>
+      <type class="StandardData">QuestionType</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.WinLossByQuestionsView as WinLossByQuestionsView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    WinLossByQuestionsView.ClientCompany = '$S{ClientCompany}' AND WinLossByQuestionsView.QuizTargetType = '$C{QuizType.WinLoss}' And WinLossByQuestionsView.Title is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    WinLossByQuestionsView.Title
+    ]]>
+  </orderBy>
+</browse>

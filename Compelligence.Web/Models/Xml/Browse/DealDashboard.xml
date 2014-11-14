@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DealDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DealDashboardView</entity>
+      <property>Name</property>
+      <label>DealDashboardName</label>
+    </column>
+    <column>
+      <entity>DealDashboardView</entity>
+      <property>Status</property>
+      <label>DealDashboardStatus</label>
+      <type class="StandardData">DealStatus</type>
+    </column>
+    <column>
+      <entity>DealDashboardView</entity>
+      <property>DueDate</property>
+      <label>DealDashboardDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>DealDashboardView</entity>
+      <property>Activity</property>
+      <label>DealDashboardActivity</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[  
+      var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Deal.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Deal')); }      
+            
+      WorkspaceSubtabs.setActiveTab('WorkspaceTab_DealContent');         
+			showEntity(currentPath+'/Deal.aspx/Edit', 'Workspace', 'Deal', id, 'DealAll', '#DealContent');
+             
+      ]]>
+    </event>
+  </events>
+    <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealDashboardView as DealDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealDashboardView.ClientCompany = '$S{ClientCompany}' And 
+    (DealDashboardView.AssignedTo = '$P{UserId}' Or (DealDashboardView.TeamMemberUserId = '$P{UserId}' And 
+    DealDashboardView.TeamEntityType =  '$C{DomainObjectType.Deal}'))
+    ]]>
+  </where>
+  <orderBy> 
+    <![CDATA[
+    DealDashboardView.DueDate,DealDashboardView.Activity DESC
+    ]]>
+  </orderBy>
+</browse>

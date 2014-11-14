@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProjectDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ProjectDetailSelectView</entity>
+      <property>Name</property>
+      <label>ProjectName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectDetailSelectView as ProjectDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectDetailSelectView.ClientCompany = '$S{ClientCompany}' and (ProjectDetailSelectView.Status <> '$C{ProjectStatus.Archived}' and ProjectDetailSelectView.Status <> '$C{ProjectStatus.Published}' and ProjectDetailSelectView.Status <> '$C{ProjectStatus.Rejected}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>

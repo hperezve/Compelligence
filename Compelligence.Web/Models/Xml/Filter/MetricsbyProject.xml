@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>MetricName</property>
+      <label>MetricNameReport</label>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>ProjectName</property>
+      <label>MetricsByProjectViewProjectName</label>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>StartDate</property>
+      <label>StartDateMetric</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>EndDate</property>
+      <label>EndDateMetric</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>AssignedToName</property>
+      <label>MetricAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>MetricType</property>
+      <label>MetricTypeReport</label>
+      <type class="StandardData">MetricType</type>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>Goal</property>
+      <label>MetricGoalReport</label>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>Actual</property>
+      <label>MetricActual</label>
+    </column>
+    
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>RatingSum</property>
+      <label>ProjectRatingSum</label>
+    </column>
+    <column>
+      <entity>MetricsByProjectView</entity>
+      <property>DownloadCounter</property>
+      <label>ProjectDownloadCounter</label>
+    </column>
+    
+    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.MetricsByProjectView as MetricsByProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    MetricsByProjectView.ClientCompany = '$S{ClientCompany}' AND MetricsByProjectView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    MetricsByProjectView.ProjectId
+    ]]>
+  </orderBy>
+</browse>

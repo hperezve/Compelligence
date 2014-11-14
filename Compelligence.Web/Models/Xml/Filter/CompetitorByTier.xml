@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>Name</property>
+      <label>CompetitorName</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>Tier</property>
+      <label>CompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>Status</property>
+      <label>CompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>Description</property>
+      <label>CompetitorDescription</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>Phone</property>
+      <label>CompetitorPhone</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>Fax</property>
+      <label>CompetitorFax</label>
+    </column>
+    <column>
+      <entity>CompetitorByTierView</entity>
+      <property>AssignedToName</property>
+      <label>CompetitorAssignedTo</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorByTierView as CompetitorByTierView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CompetitorByTierView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorByTierView.Name
+    ]]>
+  </orderBy>
+</browse>

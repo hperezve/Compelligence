@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProductsByTierView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>ProductsByTierView</entity>
+      <property>Name</property>
+      <label>ProductName</label>
+    </column>
+    <column>
+      <entity>ProductsByTierView</entity>
+      <property>Status</property>
+      <label>ProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column >
+      <entity>ProductsByTierView</entity>
+      <property>Description</property>
+      <label>ProductDescription</label>
+    </column>
+    <column >
+      <entity>ProductsByTierView</entity>
+      <property>CompetitorName</property>
+      <label>ProductCompetitorId</label>
+    </column>
+    <column >
+      <entity>ProductsByTierView</entity>
+      <property>AssignedToName</property>
+      <label>ProductOwnerId</label>
+    </column>
+    <column>
+      <entity>ProductsByTierView</entity>
+      <property>Tier</property>
+      <label>ProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductsByTierView as ProductsByTierView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProductsByTierView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductsByTierView.Name
+    ]]>
+  </orderBy>
+</browse>

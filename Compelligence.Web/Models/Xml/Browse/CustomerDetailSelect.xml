@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CustomerDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CustomerDetailSelectView</entity>
+      <property>Name</property>
+      <label>CustomerName</label>
+    </column>
+    <column>
+      <entity>CustomerDetailSelectView</entity>
+      <property>AssignedToName</property>
+      <label>CustomerAssignedTo</label>
+    </column>
+    <column>
+      <entity>CustomerDetailSelectView</entity>
+      <property>Status</property>
+      <label>CustomerStatus</label>
+      <type class="StandardData">CustomerStatus</type>
+    </column>
+    <column>
+      <entity>CustomerDetailSelectView</entity>
+      <property>Description</property>
+      <label>CustomerDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CustomerDetailSelectView as CustomerDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CustomerDetailSelectView.ClientCompany = '$S{ClientCompany}' and CustomerDetailSelectView.Status ='$C{CustomerStatus.Enabled}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CustomerDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse> 

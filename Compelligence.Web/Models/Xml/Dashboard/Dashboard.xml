@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<graphics>
+  <graphic>
+    <name>Project Utilization</name>
+    <hql>
+      <![CDATA[
+      select UtilizationDashboardView.DownloadCounter, UtilizationDashboardView.Name
+      from Compelligence.Domain.Entity.Views.UtilizationDashboardView UtilizationDashboardView
+      where UtilizationDashboardView.ClientCompany = '$S{ClientCompany}' 
+      And (UtilizationDashboardView.AssignedTo = '$P{UserId}' 
+      Or UtilizationDashboardView.CreatedBy = '$P{UserId}' )
+      And UtilizationDashboardView.Status = '3000'
+      ) 
+      ]]>
+    </hql>
+    <axisXTitle></axisXTitle>
+    <axisYTitle>Downloads</axisYTitle>
+    <seriesName>$P{UserName}</seriesName>
+    <height>220</height>
+    <width>290</width>
+    <type>Line</type>
+  </graphic>
+  <graphic>
+    <name>Project Rating</name>
+    <hql>
+      <![CDATA[
+        select ProjectRatingView.Rating , ProjectRatingView.Name
+      from Compelligence.Domain.Entity.Views.ProjectRatingView ProjectRatingView
+      where ProjectRatingView.ClientCompany = '$S{ClientCompany}' 
+      And ProjectRatingView.Status = '3000'
+      And (ProjectRatingView.AssignedTo = '$P{UserId}' 
+      Or ProjectRatingView.CreatedBy = '$P{UserId}' )
+      ]]>
+    </hql>
+    <axisXTitle></axisXTitle>
+    <axisYTitle>Rating</axisYTitle>
+    <seriesName>$P{UserName}</seriesName>
+    <height>220</height>
+    <width>290</width>
+    <type>Bar</type>
+  </graphic>
+</graphics>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>QuizAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>QuizAllView</entity>
+      <property>Title</property>
+      <label>SurveyTitle</label>
+    </column>
+    <column>
+      <entity>QuizAllView</entity>
+      <property>Status</property>
+      <label>SurveyStatus</label>
+      <type class="StandardData">SurveyStatus</type>
+    </column>
+    <column>
+      <entity>QuizAllView</entity>
+      <property>Type</property>
+      <label>SurveyType</label>
+      <type class="StandardData">SurveyType</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.QuizAllView as QuizAllView    
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    QuizAllView.ClientCompany = '$S{ClientCompany}' AND
+    QuizAllView.TargetType = 'Survey'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    QuizAllView.Title
+    ]]>
+  </orderBy>
+</browse>

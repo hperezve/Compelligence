@@ -1,0 +1,50 @@
+﻿			<form name="formId" ng-submit="login()" role="form">
+				<div class="loginOuterParent">
+						<div class="loginInnerParent">
+							<section class="loginPage">								
+									<article class="logo">
+                                        <img id="imglogo" src="./Content/Images/Styles/compelligence-1.png" />
+                                        <h1>Welcome to Compelligence</h1>
+                                    </article>
+                                    <!--<output class="LoginError"></output>-->
+                                    <div ng-show="load" class="loadingScreen"></div>
+				                    <!-- In this section return if the session contain any error for wrong user or password-->
+				                    <output class="loginError" ng-show="errorsLogin">{{errorsMessage}}</output>
+                                    <article class="inputs">
+                                        <label>
+                                            <span class="icon-login-user">                                            
+                                            <!--<iconbuilder icon='user'></iconbuilder> -->
+                                             <object data="Content/Images/Icons/user_blue.png" type="image/png"></object>
+					                        </span>
+					                        <input type="hidden" class="ng-pristine ng-valid">
+                                            <input ng-model="username" class="ng-pristine ng-valid ng-valid-email" type="email" name="username" id="username" placeholder="Enter your username" />
+                                        </label>
+                                        <label>
+                                            <span class="icon-login-pass">
+                                            <!--<iconbuilder icon='key'> </iconbuilder> -->	
+                                            <object data="Content/Images/Icons/key_blue.png" type="image/png"></object>			                        						                        
+					                        </span>
+					                        <input type="hidden" class="ng-pristine ng-valid">
+                                            <input ng-model="kennwort" type="password" id="kennwort" name="kennwort" autocomplete="off" placeholder="Enter your password" />
+                                        </label>
+                                    </article>
+                                    <article class="btnGroup">
+                                           <a href="/Registration.aspx/RegisterUser">
+                                                <button type="submit">Go</button>
+                                           </a>
+                                           <a href="#register">
+                                                <button id ="ButtonReg">Register</button>       
+	                                       </a>
+                                    </article>
+                                    <article class="forgotPass">
+                                        <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A16529%2F&region=follow_link&screen_name=compelligence&tw_p=followbutton">Follow @Compelligence
+                                        </a>
+                                    </article>
+                                    <article class="forgotPass">
+                                        <a href="/Home.aspx/ForgotKennwort">Forgot Your Password?</a>
+                                        <a href="/Home.aspx/ForgotUserName">Forgot Your User Name?</a>
+                                    </article>
+                                </section>
+								    </div>
+						</div>
+				</form>

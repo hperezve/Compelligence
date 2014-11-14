@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>ProductName</property>
+      <label>ComparinatorByProductWithValuesProduct</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>ProductStatus</property>
+      <label>ComparinatorByProductWithValuesProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>ProductTier</property>
+      <label>ComparinatorByProductWithValuesProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>CompetitorName</property>
+      <label>ComparinatorByProductWithValuesCompetitor</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>CompetitorStatus</property>
+      <label>ComparinatorByProductWithValuesCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>CompetitorTier</property>
+      <label>ComparinatorByProductWithValuesCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>IndustryName</property>
+      <label>ComparinatorByProductWithValuesIndustry</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>IndustryStatus</property>
+      <label>ComparinatorByProductWithValuesIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>IndustryTier</property>
+      <label>ComparinatorByProductWithValuesIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>Value</property>
+      <label>ComparinatorByProductWithValuesValue</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>Notes</property>
+      <label>ComparinatorByProductWithValuesNotes</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>CriteriaName</property>
+      <label>ComparinatorByProductWithValuesCriteria</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>CriteriaSetName</property>
+      <label>ComparinatorByProductWithValuesCriteriaSet</label>
+    </column>
+    <column>
+      <entity>ComparinatorByProductWithValuesView</entity>
+      <property>CriteriaGroupName</property>
+      <label>ComparinatorByProductWithValuesCriteriaGroup</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ComparinatorByProductWithValuesView as ComparinatorByProductWithValuesView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ComparinatorByProductWithValuesView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ComparinatorByProductWithValuesView.ProductName
+    ]]>
+  </orderBy>
+</browse>

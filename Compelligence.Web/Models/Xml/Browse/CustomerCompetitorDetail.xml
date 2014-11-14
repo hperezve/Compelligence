@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true"  togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CustomerCompetitorDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CustomerCompetitorDetailView</entity>
+      <property>Name</property>
+      <label>CustomerName</label>
+    </column>
+    <column>
+      <entity>CustomerCompetitorDetailView</entity>
+      <property>AssignedToName</property>
+      <label>CustomerAssignedTo</label>
+    </column>
+    <column>
+      <entity>CustomerCompetitorDetailView</entity>
+      <property>Description</property>
+      <label>CustomerDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CustomerCompetitorDetailView as CustomerCompetitorDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CustomerCompetitorDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CustomerCompetitorDetailView.Name
+    ]]>
+  </orderBy>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

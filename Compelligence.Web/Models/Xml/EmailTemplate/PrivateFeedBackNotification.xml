@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{Title}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+     <body>
+      <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY TO THIS EMAIL.</div>
+       <br/>
+      <div>On $P{DateStr} at $P{TimeStr}, $P{UserName} $P{Action}.</div>
+      <br/>
+      <div>$P{FeedbackComment}</div>
+      <br/>
+      <div>This user's email address is $P{Email}.</div>
+      <br/>
+      <div>$P{Files}</div>
+      <div>If you did not expect this message or don't want to receive mails in future, please contact $P{emailOriginalAdmin}.</div>
+      </br>
+      <div>This is an automated message. Please do not reply.</div>      
+    </body>
+  </html>
+  ]]>
+  </message>
+</email>

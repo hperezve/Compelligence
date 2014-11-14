@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EventTrendDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>EventTrendDetailView</entity>
+      <property>EventName</property>
+      <label>EventName</label>
+    </column>
+    <column>
+      <entity>EventTrendDetailView</entity>
+      <property>AssignedToName</property>
+      <label>EventOwnerId</label>
+    </column>
+    <column>
+      <entity>EventTrendDetailView</entity>
+      <property>Details</property>
+      <label>EventDetails</label>
+      <type class="HtmlPlaneOneLine">Details</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventTrendDetailView as EventTrendDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventTrendDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventTrendDetailView.EventName
+    ]]>
+  </orderBy>
+</browse>

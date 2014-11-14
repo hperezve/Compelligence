@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../../css/styles.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 10240 10240" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>key icon</title>
+	<desc>key icon from the IconExperience.com O-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+	<path id="curve0" class="primaryIconColor" d="M5064 1555c875,-875 2394,-773 3394,226 1000,1000 1101,2519 226,3394 -738,738 -1935,781 -2892,176l-3218 3218c-125,125 -328,125 -453,0l-453 -453c-125,-125 -125,-328 0,-453l3218 -3218c-605,-957 -562,-2154 176,-2892zm-2263 7241l1358 -1358 1131 1131 -453 453 -453 -453 -453 453 453 453 -453 453 -1131 -1131zm3168 -6336c375,-375 1084,-274 1584,226 500,500 601,1209 226,1584 -375,375 -1084,274 -1584,-226 -500,-500 -601,-1209 -226,-1584z"/>
+</svg>

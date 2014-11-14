@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DealSupportView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DealSupportView</entity>
+      <property>Name</property>
+      <label>DealName</label>
+    </column>
+    <column>
+      <entity>DealSupportView</entity>
+      <property>IndustryName</property>
+      <label>DealIndustryId</label>
+    </column>
+    <column>
+      <entity>DealSupportView</entity>
+      <property>CompetitorName</property>
+      <label>DealCompetitorId</label>
+    </column>
+    <column>
+      <entity>DealSupportView</entity>
+      <property>OpenedBy</property>
+      <label>DealOpenedBy</label>
+    </column>
+    <column>
+      <entity>DealSupportView</entity>
+      <property>DueDate</property>
+      <label>DealDueDate</label>
+    </column>    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealSupportView as DealSupportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealSupportView.ClientCompany = '$S{ClientCompany}' And (DealSupportView.UserWithAccess='$S{UserId}' )And DealSupportView.Status='ENBL'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealSupportView.Name
+    ]]>
+  </orderBy>
+
+
+</browse>
+

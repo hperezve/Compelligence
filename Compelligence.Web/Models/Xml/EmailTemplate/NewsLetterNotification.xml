@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+	<subject><![CDATA[Newsletter: $P{Subject}]]></subject>
+	<message>
+		<![CDATA[ $P{Content} ]]>
+	</message>
+</email>
+
+

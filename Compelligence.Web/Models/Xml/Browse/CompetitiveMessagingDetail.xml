@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CompetitiveMessagingDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CompetitiveMessagingDetailView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column>
+      <entity>CompetitiveMessagingDetailView</entity>
+      <property>IndustryName</property>
+      <label>CompetitiveMessagingDetailIndustry</label>
+    </column>
+    <column>
+      <entity>CompetitiveMessagingDetailView</entity>
+      <property>CompetitorName</property>
+      <label>PositioningCompetitor</label>
+    </column>
+    <column>
+      <entity>CompetitiveMessagingDetailView</entity>
+      <property>Status</property>
+      <label>PositioningStatus</label>
+      <type class="StandardData">PositioningStatus</type>
+    </column>
+    <column>
+      <entity>CompetitiveMessagingDetailView</entity>
+      <property>CreatedByName</property>
+      <label>PositioningCreatedBy</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitiveMessagingDetailView as CompetitiveMessagingDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CompetitiveMessagingDetailView.ClientCompany = '$S{ClientCompany}' and CompetitiveMessagingDetailView.PositioningRelation = '$C{PositioningRelation.CompetitiveMessaging}'  
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitiveMessagingDetailView.Name
+    ]]>
+  </orderBy>
+</browse>
+

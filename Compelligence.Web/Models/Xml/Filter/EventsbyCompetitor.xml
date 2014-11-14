@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>EventName</property>
+      <label>EventNameReport</label>
+    </column>
+    <column>
+    <entity>EventsbyCompetitorView</entity>
+    <property>CompetitorName</property>
+    <label>EventsbyCompetitorViewCompetitorName</label>
+  </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>TimeFrame</property>
+      <label>EventTimeFrameReport</label>
+      <type class="StandardData">EventTypePeriod</type>
+    </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>AssignedToName</property>
+      <label>EventAssignedToName</label>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyCompetitorView</entity>
+      <property>StartDate</property>
+      <label>EventStartDate</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyCompetitorView</entity>
+      <property>EndDate</property>
+      <label>EventEndDate</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyCompetitorView</entity>
+      <property>StartIntervalDate</property>
+      <label>EventStartIntervalDate</label>
+    </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>EventTypeName</property>
+      <label>EventType</label>
+    </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>ReportCompetitorStatus</label>
+      <type class="StandardData">CompetitorReportStatus</type>
+    </column>
+    <column>
+      <entity>EventsbyCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>ReportCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventsbyCompetitorView as EventsbyCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventsbyCompetitorView.ClientCompany = '$S{ClientCompany}' AND EventsbyCompetitorView.CompetitorId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventsbyCompetitorView.CompetitorId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

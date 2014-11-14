@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PlanDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>PlanDashboardView</entity>
+      <property>Task</property>
+      <label>PlanDashboardTask</label>
+    </column>
+    <column>
+      <entity>PlanDashboardView</entity>
+      <property>DueDate</property>
+      <label>PlanDashboardDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[    
+       var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Competitor.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Competitor')); }      
+      
+      showEntityData(id,currentPath);      
+                    
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PlanDashboardView as PlanDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PlanDashboardView.ClientCompany = '$S{ClientCompany}' And PlanDashboardView.AssignedTo = '$P{UserId}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PlanDashboardView.DueDate DESC
+    ]]>
+  </orderBy>
+</browse>

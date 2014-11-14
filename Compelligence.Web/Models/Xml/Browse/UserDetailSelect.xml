@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>UserDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>UserDetailSelectView</entity>
+      <property>FirstName</property>
+      <label>UserFirstName</label>
+    </column>
+    <column>
+      <entity>UserDetailSelectView</entity>
+      <property>LastName</property>
+      <label>UserLastName</label>
+    </column>
+
+    <column>
+      <entity>UserDetailSelectView</entity>
+      <property>Email</property>
+      <label>UserEmail</label>
+    </column>
+    <column>
+      <entity>UserDetailSelectView</entity>
+      <property>Status</property>
+      <label>UserStatus</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UserDetailSelectView  as UserDetailSelectView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   UserDetailSelectView.ClientCompany = '$S{ClientCompany}' and UserDetailSelectView.Status ='$C{UserStatus.Enabled}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UserDetailSelectView.FirstName
+    ]]>
+  </orderBy>
+</browse>

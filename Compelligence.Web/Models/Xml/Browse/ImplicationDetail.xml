@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ImplicationDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ImplicationDetailView</entity>
+      <property>Name</property>
+      <label>ImplicationName</label>
+    </column>
+    <column>
+      <entity>ImplicationDetailView</entity>
+      <property>Description</property>
+      <label>ImplicationDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column>
+      <entity>ImplicationDetailView</entity>
+      <property>Source</property>
+      <label>ImplicationSource</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ImplicationDetailView as ImplicationDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ImplicationDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ImplicationDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

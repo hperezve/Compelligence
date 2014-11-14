@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ActionHistorybyUserView</entity>
+      <property>ActionFrom</property>
+      <label>ActionHistoryActionFrom</label>
+      <type class="StandardData">ActionFrom</type>
+    </column>
+    <column>
+      <entity>ActionHistorybyUserView</entity>
+      <property>EntityType</property>
+      <label>ActionHistoryEntityType</label>
+      <type class="StandardData">EntityRelationType</type>
+    </column>
+    <column>
+      <entity>ActionHistorybyUserView</entity>
+      <property>EntityAction</property>
+      <label>ActionHistoryEntityAction</label>
+    </column>
+    <column>
+      <entity>ActionHistorybyUserView</entity>
+      <property>Description</property>
+      <label>ActionHistoryDescription</label>
+    </column>
+    <column>
+      <entity>ActionHistorybyUserView</entity>
+      <property>ClientCompanyName</property>
+      <label>ActionHistoryClientCompanyName</label>
+    </column>
+    <column>
+      <entity>ActionHistorybyUserView</entity>
+      <property>CreatedByName</property>
+      <label>ActionHistoryCreatedByName</label>
+    </column>
+    <column >
+      <entity>ActionHistorybyUserView</entity>
+      <property>CreatedDate</property>
+      <label>UserActionDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ActionHistorybyUserView as ActionHistorybyUserView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ActionHistorybyUserView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ActionHistorybyUserView.Id
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

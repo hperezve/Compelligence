@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>Name</property>
+      <label>ProjectName</label>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedTo</label>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>IndustryName</property>
+      <label>ProjectIndustryId</label>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>CompetitorName</property>
+      <label>ProjectCompetitorId</label>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>ProductName</property>
+      <label>ProjectProductId</label>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>ProjectAllView</entity>
+      <property>ContentTypeName</property>
+      <label>ProjectContentType</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectAllView as ProjectAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

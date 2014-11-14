@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true"  showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProjectTeamDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ProjectTeamDetailView</entity>
+      <property>Name</property>
+      <label>ProjectName</label>
+    </column>
+    <column>
+      <entity>ProjectTeamDetailView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectOwnerId</label>
+    </column>
+</select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[      
+    var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Project.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Project')); }       
+    
+    SetAndCleanActiveTab('AdminTabs_WorkspaceTab','WorkspaceTab_ProjectContent');
+    showEntity(currentPath+'/Project.aspx/Edit', 'Workspace', 'Project', id, 'ProjectAll', '#ProjectContent');
+    searchEntityWithTab(currentPath+'/Project.aspx/GetEntityName',id,currentPath,'Project','Workspace');
+      
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectTeamDetailView as ProjectTeamDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ProjectTeamDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectTeamDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

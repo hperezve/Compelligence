@@ -1,0 +1,148 @@
+/////////////
+// BROWSE -- CONTENT TEMPLATE
+///////////
+ul {
+	&.columnList_3, &.columnList_4, &.columnList_5, &.columnList_6, &.columnList_7 {
+		a { width:100%; float:left; .displayFlex(); .flexFlow(row nowrap);.flexJustify(start, flex-start); }
+		.columnRow {
+			padding:0.35em 0px;
+			.clearfix;
+			width:100%;
+			display:inline-block;
+			&.listHeader {
+				.shadow(inset 0px -12px 15px -10px rgba(0,0,0,0.2));
+				padding:0em;
+				border-bottom:2px solid @borderColor;
+				.headerLabel, .headerLabel:hover, .headerLabel:active, .headerLabel:focus {
+					font-size:1em;
+					font-weight:400;
+					color:@bodyTextColor;
+					padding:0em 0em;
+				}
+			}
+			&:last-of-type { border-bottom:0px none transparent; }
+			.column_1, .column_2,
+			.column_3, .column_4,
+			.column_5, .column_6,
+			.column_7 {
+				.ellipsis(); .flex(1 auto);display:inline-block;
+				.detailLabel { width:auto; color:@labelColor; padding:0em 0.3em 0em 0em; }
+			}
+		}
+	}
+	&.columnList_3 {
+		.columnRow { .column_1, .column_2, .column_3 { .flex(0 0 32%); } }
+	}
+	&.columnList_4 {
+		.columnRow { .column_1, .column_2, .column_3, .column_4 { .flex(0 0 24%); } }
+	}
+	&.columnList_5 {
+		.columnRow { .column_1, .column_2, .column_3, .column_4, .column_5 { .flex(0 0 19%); } }
+	}
+	&.columnList_6 {
+		.columnRow { .column_1, .column_2, .column_3, .column_4, .column_5, .column_6 { .flex(0 0 15%); } }
+	}
+	&.columnList_7 {
+		.columnRow { .column_1, .column_2, .column_3, .column_4, .column_5, .column_6, .column_7 { .flex(0 0 13%); } }
+	}
+	li {
+		padding: .2em .4em .2em .8em;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		&:last-of-type { border-bottom:0px none transparent; }
+		.autoValues {
+			.value {
+				width:auto;
+				min-width:0px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ 2Col Inputs -------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+.twoColInputs {
+	.flex-container-parent {
+		margin:0px;
+		padding:0px;
+		.displayFlex();
+		.flexFlow(row wrap);
+		.flex(1 50%);
+		.flexJustify(start, flex-start);
+		.flex-container {
+			.flex(1 100%);
+			.inputLabel {
+				.flex(0 1 45%);
+			}
+		}
+	}
+	.autoValuesBox {
+		padding:0.5em 1em;
+		margin:0em 0.5em 0.5em;
+		.flex(0 1 100%);
+		background-color:@light;
+		border:1px solid rgba(0,0,0,0.1);
+		.autoValues {
+			.flex(1 49%);
+			.displayFlex();
+			span {
+				.flex(1 0 49%);
+			}
+		}
+	}
+	.autoValues {
+		color:@labelColor;
+		.value {
+			color:@bodyTextColor;
+			padding:0em 0em 0em 0.5em;
+		}
+	}
+}
+
+ul {
+	&.lineItemList {
+		.itemNumber {
+			float:left;
+			font-size:1em;
+			height:auto;
+			background-color:transparent;
+			color:@primary;
+			font-weight:700;
+			padding:0em 0.7em 0em;
+			margin:0px;
+			border-bottom:0px none transparent;
+			width: auto;
+			text-align: left;
+		}
+		.lineTotal {
+			color:@primary;
+			font-weight:700;
+			padding: 0.3em 0.7em 0em;
+			float:right;
+			font-size:1.25em;
+			text-align:right;
+			min-width:0px;
+			width:auto;
+			small {
+				font-size:0.75em;
+				color:@labelColor;
+				padding:0em 0em 0em 0.25em;
+			}
+			&.totals {
+				width:100%;
+				text-align:right;
+				small:first-of-type {
+					padding:0em 0.25em 0em 0em;
+				}
+			}
+		}
+		.details {
+			white-space:normal;
+		}
+	}
+}

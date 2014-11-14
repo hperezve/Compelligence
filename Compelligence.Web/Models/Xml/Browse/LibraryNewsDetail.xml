@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse  multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LibraryNewsDetailView</entity>
+      <property>Id</property>
+    </column>
+   
+    <column >
+      <entity>LibraryNewsDetailView</entity>
+      <property>Name</property>
+      <label>LibraryFileName</label>
+      <onclick>
+        <![CDATA[  javascript: window.open('$P{LibraryNewsDetailView.Link}','$P{LibraryNewsDetailView.NameToUrl}','width=700,height=400,scrollbars=yes'); return false;
+              ]]>
+      </onclick>
+      <type class="LinkOnclick">
+      </type>
+    </column>
+    <column>
+      <entity>LibraryNewsDetailView</entity>
+      <property>Score</property>
+      <label>LibraryScore</label>
+    </column>
+    <column >
+      <entity>LibraryNewsDetailView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>LibraryNewsDetailView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column >
+      <entity>LibraryNewsDetailView</entity>
+      <property>LibraryTypeKey</property>
+      <label>LibraryType</label>
+      <type class="StandardData">LibraryNewsType</type>
+    </column>
+    <column hidden="true">
+      <entity>LibraryNewsDetailView</entity>
+      <property>Link</property>
+      <label>LibraryLink</label>
+    </column>
+    <column hidden="true">
+      <entity>LibraryNewsDetailView</entity>
+      <property>NameToUrl</property>
+      <label>LibraryNameToUrl</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryNewsDetailView as LibraryNewsDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   LibraryNewsDetailView.ClientCompany = '$S{ClientCompany}' and  (LibraryNewsDetailView.LibraryTypeKey ='$C{LibraryNewsType.News}' or LibraryNewsDetailView.LibraryTypeKey ='$C{LibraryNewsType.Email}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryNewsDetailView.CreatedDate DESC
+    ]]>
+  </orderBy>
+</browse>

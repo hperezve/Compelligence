@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[New $P{ClientCompany} Company was created to Compelligence]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>
+        New $P{ClientCompany} Company was Created 
+      </div>
+      <br />
+      <div>
+      Company Detail:
+      </div>
+      <ul>
+         <li>Company Name: $P{ClientCompany}.</li>
+         <li>Company Domain: <a href="http://$P{Domain}.compelligence.com">http://$P{Domain}.compelligence.com</a></li>
+         <li>Company Address: $P{Email}.</li>
+         <li>Company Address: $P{Address}.</li>
+         <li>Company City: $P{City}.</li>
+         <li>Company State: $P{State}.</li>
+         <li>Company ZipCode: $P{ZipCode}.</li>
+         <li>Company Phone: $P{Phone}.</li>
+         <li>Company Description: $P{Description}.</li>
+         <li>Created Date: $P{CreatedDate}.</li>
+      </ul>
+      <br />
+      <div>
+        User Detail:
+      </div>
+      <ul>
+         <li>User Name: $P{UserName}.</li>
+         <li>User Email: $P{UserEmail}.</li>
+      </ul>
+      <br />
+      <div>Thanks</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

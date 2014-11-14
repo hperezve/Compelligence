@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany} : Error sending newsletter titled $P{Title}]]></subject>
+  <message>
+    <![CDATA[ 
+    <html>
+    <head>
+    </head>
+     <body>
+      <div>On "<b>$P{Date}</b>" I was unable to send the newsletter titled "<b>$P{Title}</b>" to the following destinations</div>
+      <br/>
+      <div>
+        <ul>
+        $P{InvalidAddress}
+        </ul>
+      </div>
+      <br />
+      <div>
+        Please verify these addresses and correct them.
+      <div>
+      <br/>
+      <div>The newsletter is referenced below</div>
+      <br/>
+      <div>
+      $P{Content}
+      </div>
+    <body>
+  </html>
+    ]]>
+  </message>
+</email>
+

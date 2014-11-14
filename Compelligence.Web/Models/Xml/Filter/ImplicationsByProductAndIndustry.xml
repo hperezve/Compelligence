@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>Name</property>
+      <label>ImplicationsReportName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>Source</property>
+      <label>ImplicationsReportSource</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>ImplicationsReportAssignedToName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>IndustryName</property>
+      <label>ImplicationsReportIndustry</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>ImplicationsReportIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>ImplicationsReportIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>ProductName</property>
+      <label>ImplicationsReportProduct</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>ProductStatus</property>
+      <label>ImplicationsReportProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ImplicationsByProductAndIndustryView</entity>
+      <property>ProductTier</property>
+      <label>ImplicationsReportProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ImplicationsByProductAndIndustryView as ImplicationsByProductAndIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ImplicationsByProductAndIndustryView.ClientCompany = '$S{ClientCompany}' AND ImplicationsByProductAndIndustryView.EntityType = '$C{DomainObjectType.Product}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ImplicationsByProductAndIndustryView.Id
+    ]]>
+  </orderBy>
+</browse>

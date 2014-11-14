@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" sql-query="Browse.DashboardFeedback">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>FeedbackDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>FeedbackDashboardView</entity>
+      <property>Response</property>
+      <label>FeedbackDashboardMessage</label>
+    </column>
+    <column hidden="true">
+      <entity>FeedbackDashboardView</entity>
+      <property>EntityType</property>
+    </column>
+    <column hidden="true">
+      <entity>FeedbackDashboardView</entity>
+      <property>EntityId</property>
+    </column>
+    <column>
+      <entity>FeedbackDashboardView</entity>
+      <property>CreatedByName</property>
+      <label>FeedbackDashboardCreatedBy</label>
+    </column>
+    <column>
+      <entity>FeedbackDashboardView</entity>
+      <property>CreatedDate</property>
+      <label>FeedbackDashboardProjectDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[      
+      var feedEntityType =  $.trim($(this).jqGrid('getCell', id, 'FeedbackDashboardView.EntityType'));
+      var enitityId = $.trim($(this).jqGrid('getCell', id, 'FeedbackDashboardView.EntityId'));
+      var currentScope = null; 
+      var currentEntity = null; 
+      if (feedEntityType == '$C{DomainObjectType.Project}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Project'; 
+      }
+      if (feedEntityType == '$C{DomainObjectType.CompetitorCriteria}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'CompetitorCriteria'; 
+      }
+      if (feedEntityType == '$C{DomainObjectType.Competitor}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Competitor'; 
+      }
+      if (feedEntityType == '$C{DomainObjectType.Event}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Event'; 
+      }
+      if (feedEntityType == '$C{DomainObjectType.Industry}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Industry'; 
+      }
+      if (feedEntityType == '$C{DomainObjectType.ProductCriteria}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'ProductCriteria'; 
+      }
+      if (feedEntityType == '$C{DomainObjectType.Product}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Product'; 
+      }
+      
+      if (currentScope != null && currentEntity != null) { 
+        var innercode = " if (BackEndTabs.getItem('AdminTabs_" + currentScope + "Tab') != null) { ";
+        innercode += " BackEndTabs.setActiveTab('AdminTabs_" + currentScope + "Tab'); ";
+        innercode += " if (" + currentScope + "Subtabs != null) { ";
+        innercode += " postLoadContent = function() {";
+        innercode += " getFeedBackEntity('$P{currentPath}', currentScope, currentEntity, enitityId); ";
+        innercode += " };";
+        innercode += currentScope + "Subtabs.setActiveTab('" + currentScope + "Tab_" + currentEntity + "Content');";
+        innercode += " } else { alert('You do not have access to item'); } ";
+        innercode += " } else { alert('You do not have access to item'); } ";
+        eval(innercode);
+      } else { 
+        alert('You do not have access to item'); 
+      } 
+    ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.FeedbackDashboardView as FeedbackDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    FeedbackDashboardView.ClientCompany = '$S{ClientCompany}' and FeedbackDashboardView.UserId  = '$P{UserId}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    FeedbackDashboardView.CreatedDate DESC
+    ]]>
+  </orderBy>
+</browse>

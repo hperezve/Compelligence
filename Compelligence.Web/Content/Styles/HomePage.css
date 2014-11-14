@@ -1,0 +1,29 @@
+﻿#PleaseBrowse
+   {
+   	text-align:center;
+   	font-family:arial;
+   	font-size:13px;
+   	width:416px;
+   	margin-left:auto;
+   	margin-right:auto; 	
+   	}
+    .List_Action
+    {
+    display:none;     
+    }
+   
+   .Actions
+   {
+    display:none;
+    _display:none;
+   }
+   #TdDownload
+   {
+   	display:none;
+   }
+   #ContentInformation
+   {
+    margin-left:103px;
+   }
+   
+   

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EventDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>EventDetailView</entity>
+      <property>Name</property>
+      <label>EventName</label>
+    </column>
+    <column>
+      <entity>EventDetailView</entity>
+      <property>AssignedToName</property>
+      <label>EventOwnerId</label>
+    </column>
+    <column>
+      <entity>EventDetailView</entity>
+      <property>Details</property>
+      <label>EventDetails</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventDetailView as EventDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

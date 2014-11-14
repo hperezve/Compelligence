@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>FirstName</property>
+      <label>FirstNameReport</label>
+    </column>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>LastName</property>
+      <label>LastNameReport</label>
+    </column>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>SecurityGroupName</property>
+      <label>UsersProfilebySecurityGroupViewSecurityGroupName</label>
+    </column>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>Email</property>
+      <label>EmailReport</label>
+    </column>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>Status</property>
+      <label>StatusReport</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>Phone</property>
+      <label>PhoneReport</label>
+    </column>
+    <column>
+      <entity>UsersProfilebySecurityGroupView</entity>
+      <property>Fax</property>
+      <label>FaxReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UsersProfilebySecurityGroupView as UsersProfilebySecurityGroupView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    UsersProfilebySecurityGroupView.ClientCompany = '$S{ClientCompany}' AND UsersProfilebySecurityGroupView.SecurityGroupId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UsersProfilebySecurityGroupView.SecurityGroupId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

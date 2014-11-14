@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>IndustryByParentView</entity>
+      <property>Id</property>
+      <label>IndustryName</label>
+    </column>
+    <column>
+      <entity>IndustryByParentView</entity>
+      <property>Name</property>
+      <label>IndustryName</label>
+    </column>
+    <column>
+      <entity>IndustryByParentView</entity>
+      <property>Description</property>
+      <label>IndustryDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column>
+      <entity>IndustryByParentView</entity>
+      <property>AssignedToName</property>
+      <label>IndustryOwnerId</label>
+    </column>
+    <column>
+      <entity>IndustryByParentView</entity>
+      <property>Status</property>
+      <label>IndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.IndustryByParentView as IndustryByParentView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   IndustryByParentView.ClientCompany = '$S{ClientCompany}' and (IndustryByParentView.Status ='$C{IndustryStatus.Enabled}' OR IndustryByParentView.Status ='$C{IndustryStatus.BackEndOnly}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    IndustryByParentView.Lineage
+    ]]>
+  </orderBy>
+</browse>

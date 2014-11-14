@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>UserAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>FirstName</property>
+      <label>UserFirstName</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>LastName</property>
+      <label>UserLastName</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>Status</property>
+      <label>UserStatus</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>Email</property>
+      <label>UserEmail</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>Title</property>
+      <label>UserTitle</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>SecurityGroup</property>
+      <label>UserSecurityGroupId</label>
+      <type class="StandardData">SecurityGroupBase</type>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>ReportTo</property>
+      <label>UserReportTo</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>CountryCode</property>
+      <label>UserCountryId</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>City</property>
+      <label>UserCity</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>Department</property>
+      <label>UserDepartment</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>Phone</property>
+      <label>UserPhone</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>Fax</property>
+      <label>UserFax</label>
+    </column>
+    <column >
+      <entity>UserAllView</entity>
+      <property>CreatedDate</property>
+      <label>UserCreatedDate</label>
+      <type>Date</type>
+    </column>
+    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UserAllView  as UserAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   UserAllView.ClientCompany = '$S{ClientCompany}' and UserAllView.Id <> '$S{UserId}' and  (UserAllView.SecurityGroup is null or (UserAllView.SecurityGroup <> '$C{SecurityGroupBase.Root}'))
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UserAllView.FirstName
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

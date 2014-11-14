@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DealsAllForFilterView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DealsAllForFilterView</entity>
+      <property>Name</property>
+      <label>DealName</label>
+    </column>
+    <column>
+      <entity>DealsAllForFilterView</entity>
+      <property>OpenedBy</property>
+      <label>DealOpenedBy</label>
+    </column>
+    <column>
+      <entity>DealsAllForFilterView</entity>
+      <property>IndustryName</property>
+      <label>DealIndustryId</label>
+    </column>
+    <column>
+      <entity>DealsAllForFilterView</entity>
+      <property>CompetitorName</property>
+      <label>DealCompetitorId</label>
+    </column>
+    <column>
+      <entity>DealsAllForFilterView</entity>
+      <property>DueDate</property>
+      <label>DealDueDate</label>
+    </column>    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DealsAllForFilterView as DealsAllForFilterView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    DealsAllForFilterView.ClientCompany = '$S{ClientCompany}' And DealsAllForFilterView.CreatedBy='$S{UserId}' And DealsAllForFilterView.Status='ENBL'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DealsAllForFilterView.Name
+    ]]>
+  </orderBy>
+
+
+</browse>
+

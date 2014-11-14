@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>Task</property>
+      <label>PlanTaskReport</label>
+    </column>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>Type</property>
+      <label>PlanTypeReport</label>
+      <type class="StandardData">PlanType</type>
+    </column>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>DueDate</property>
+      <label>PlanDueDateReport</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>AssignedToName</property>
+      <label>PlanAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>Status</property>
+      <label>PlansByCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>PlansByCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>ReportCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PlansByCompetitorView as PlansByCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PlansByCompetitorView.ClientCompany = '$S{ClientCompany}' AND PlansByCompetitorView.EntityType = '$C{DomainObjectType.Competitor}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PlansByCompetitorView.CompetitorId
+    ]]>
+  </orderBy>
+</browse>

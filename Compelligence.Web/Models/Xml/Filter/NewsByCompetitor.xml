@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>Name</property>
+      <label>LibraryNameReport</label>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>Description</property>
+      <label>LibraryDescription</label>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>Permanent</property>
+      <label>LibraryPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>NewsByCompetitorViewCompetitorStatus</label>
+      <type class="StandardData">ReportCompetitorStatus</type>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>NewsByCompetitorViewCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>NewsByCompetitorView</entity>
+      <property>Score</property>
+      <label>LibraryScoreReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsByCompetitorView as NewsByCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsByCompetitorView.ClientCompany = '$S{ClientCompany}' AND NewsByCompetitorView.CompetitorId is not null AND NewsByCompetitorView.EntityType = '$C{DomainObjectType.Competitor}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsByCompetitorView.DateAdded
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EmployeesBySupplierView</entity>
+      <property>EmployeeName</property>
+      <label>EmployeeNameReport</label>
+    </column>
+    <column>
+      <entity>EmployeesBySupplierView</entity>
+      <property>SupplierName</property>
+      <label>EmployeesBySupplierViewSupplierName</label>
+    </column>
+    <column>
+      <entity>EmployeesBySupplierView</entity>
+      <property>Division</property>
+      <label>EmployeeDivisionReport</label>
+    </column>
+    <column>
+      <entity>EmployeesBySupplierView</entity>
+      <property>Role</property>
+      <label>EmployeeRoleReport</label>
+    </column>
+    <column>
+      <entity>EmployeesBySupplierView</entity>
+      <property>Email</property>
+      <label>EmployeeEmailReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EmployeesBySupplierView as EmployeesBySupplierView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EmployeesBySupplierView.ClientCompany = '$S{ClientCompany}' AND EmployeesBySupplierView.CompanyType = '$C{CompanyType.Supplier}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EmployeesBySupplierView.EmployeeId
+    ]]>
+  </orderBy>
+</browse>

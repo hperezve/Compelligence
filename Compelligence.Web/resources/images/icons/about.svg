@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../css/styles.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 10240 10240" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>about icon</title>
+	<desc>about icon from the IconExperience.com O-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+	<path id="curve1" class="secondaryIconColor" d="M4700 6720l853 0c117,0 213,96 213,213l0 853c0,117 -96,213 -213,213l-853 0c-117,0 -213,-96 -213,-213l0 -853c0,-117 96,-213 213,-213zm-220 -4480l1280 0c88,0 160,72 160,160l0 1059c0,272 -20,504 -68,773l-308 1736c-14,77 -79,132 -158,132l-532 0c-78,0 -144,-55 -158,-132l-308 -1736c-48,-269 -68,-501 -68,-773l0 -1059c0,-88 72,-160 160,-160z"/>
+	<path id="curve0" class="primaryIconColor" d="M5120 640c2474,0 4480,2006 4480,4480 0,2474 -2006,4480 -4480,4480 -2474,0 -4480,-2006 -4480,-4480 0,-2474 2006,-4480 4480,-4480zm0 640c2121,0 3840,1719 3840,3840 0,2121 -1719,3840 -3840,3840 -2121,0 -3840,-1719 -3840,-3840 0,-2121 1719,-3840 3840,-3840z"/>
+</svg>

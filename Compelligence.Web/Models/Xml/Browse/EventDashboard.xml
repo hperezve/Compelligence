@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EventDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>EventDashboardView</entity>
+      <property>EventName</property>
+      <label>EventDashboardName</label>
+    </column>
+    <column>
+      <entity>EventDashboardView</entity>
+      <property>Date</property>
+      <label>EventDashboardDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[ 
+      var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Event.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Event')); }      
+      
+      WorkspaceSubtabs.setActiveTab('WorkspaceTab_EventContent');         
+			showEntity(currentPath+ '/Event.aspx/Edit', 'Workspace', 'Event', id, 'EventAll', '#EventContent'); 
+             
+      ]]>
+    </event>
+  </events>  
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventDashboardView as EventDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventDashboardView.ClientCompany = '$S{ClientCompany}' And 
+    (EventDashboardView.AssignedTo = '$P{UserId}' Or (EventDashboardView.TeamMemberUserId = '$P{UserId}' And EventDashboardView.TeamEntityType =  '$C{DomainObjectType.Event}'))
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventDashboardView.EventName
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>QuizAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>QuizAllView</entity>
+      <property>Title</property>
+      <label>SurveyTitle</label>
+    </column>
+    <column >
+      <entity>QuizAllView</entity>
+      <property>TargetType</property>
+      <label>SurveyTargetType</label>
+    </column>
+    <column >
+      <entity>QuizAllView</entity>
+      <property>Type</property>
+      <label>QuizAllType</label>
+      <type class="StandardData">SurveyType</type>
+    </column>
+    <column >
+      <entity>QuizAllView</entity>
+      <property>SalesForceType</property>
+      <label>QuizAllViewSalesForceType</label>
+      <type class="StandardData">SurveySalesForceType</type>
+    </column>
+    <column >
+      <entity>QuizAllView</entity>
+      <property>CreatedDate</property>
+      <label>SurveyCreationDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>QuizAllView</entity>
+      <property>Status</property>
+      <label>SurveyStatus</label>
+      <type class="StandardData">SurveyStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.QuizAllView as QuizAllView    
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    QuizAllView.ClientCompany = '$S{ClientCompany}' AND
+    QuizAllView.TargetType = 'Survey'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    QuizAllView.Title
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

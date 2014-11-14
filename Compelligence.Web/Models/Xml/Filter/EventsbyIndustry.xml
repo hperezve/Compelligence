@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>EventName</property>
+      <label>EventNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>IndustryName</property>
+      <label>EventsbyIndustryViewIndustryName</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>TimeFrame</property>
+      <label>EventTimeFrameReport</label>
+      <type class="StandardData">EventTypePeriod</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyIndustryView</entity>
+      <property>StartDate</property>
+      <label>EventStartDateReport</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyIndustryView</entity>
+      <property>EndDate</property>
+      <label>EventEndDate</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyIndustryView</entity>
+      <property>StartIntervalDate</property>
+      <label>EventStartIntervalDate</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>EventAssignedToName</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>EventTypeName</property>
+      <label>EventType</label>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>ImplicationsReportIndustryStatus</label>
+      <type class="StandardData">IndustryReportStatus</type>
+    </column>
+    <column>
+      <entity>EventsbyIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>ImplicationsReportIndustryTier</label>
+      <type class="StandardData">IndustryReportTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventsbyIndustryView as EventsbyIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventsbyIndustryView.ClientCompany = '$S{ClientCompany}' AND EventsbyIndustryView.IndustryId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventsbyIndustryView.IndustryId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

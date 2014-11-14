@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>UserDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>UserDetailView</entity>
+      <property>FirstName</property>
+      <label>UserFirstName</label>
+    </column>
+    <column>
+      <entity>UserDetailView</entity>
+      <property>LastName</property>
+      <label>UserLastName</label>
+    </column>
+    <column>
+      <entity>UserDetailView</entity>
+      <property>Email</property>
+      <label>UserEmail</label>
+    </column>
+    <column>
+      <entity>UserDetailView</entity>
+      <property>Status</property>
+      <label>UserStatus</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UserDetailView  as UserDetailView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   UserDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UserDetailView.FirstName
+    ]]>
+  </orderBy>
+</browse>

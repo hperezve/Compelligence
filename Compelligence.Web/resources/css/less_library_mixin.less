@@ -1,0 +1,156 @@
+/*----------------------------     LESS MIXINS    -------------------------------*/
+
+@desktop: ~"(min-width: 991px)";
+@tablet: ~" (max-width: 990px)";
+@mobile: ~"(max-width: 640px)";
+//(min-width: 641px) and
+
+.transition( @time ) {
+	-webkit-transition: all @time;
+	-moz-transition: all @time;
+	transition: all @time;
+}
+
+.transform(@args...) {
+	-webkit-transform:@args;
+	-moz-transform:@args;
+	-ms-transform:@args;
+	transform:@args;
+}
+
+.boxSizing( @value: border-box ) {
+	-webkit-box-sizing: @value;
+	-moz-box-sizing: @value;
+	box-sizing: @value;
+}
+.shadow(@shadows...) {
+	-webkit-box-shadow: @shadows;
+	-moz-box-shadow: @shadows;
+	box-shadow: @shadows;
+}
+.shadowExtra(@shadows, @shadows2, @shadows3) {
+	-webkit-box-shadow: @shadows, @shadows2, @shadows3;
+	-moz-box-shadow: @shadows, @shadows2, @shadows3;
+	box-shadow: @shadows, @shadows2, @shadows3;
+}
+.borderRadius(@pixel...) {
+	-webkit-border-radius: @pixel;
+	-moz-border-radius: @pixel;
+	border-radius: @pixel;
+}
+.displayFlex() {
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+.flexFlow(@rowCol...) {
+	-webkit-flex-flow: @rowCol;
+	-moz-flex-flow: @rowCol;
+	-ms-flex-flow: @rowCol;
+	flex-flow: @rowCol;
+}
+.flex(@basis...) {
+	box-flex: @basis;
+	-webkit-box-flex: @basis;
+	-moz-box-flex: @basis;
+	-webkit-flex: @basis;
+	-moz-flex: @basis;
+	-ms-flex:@basis;
+	flex: @basis;
+}
+.order(@value) {
+	-webkit-box-ordinal-group: @value;
+	-moz-box-ordinal-group: @value;
+	-webkit-order: @value;
+	-moz-order: @value;
+	-ms-flex-order:@value;
+	order: @value;
+}
+.flexJustify(@justify, @justify2) {
+	flex-pack: @justify;
+	-ms-flex-pack: @justify;
+	-webkit-justify-content: @justify2;
+	justify-content: @justify2;
+}
+.alignItems(@align2:start,@align:flex-start) {
+	-ms-flex-align:@align2;
+	-webkit-align-items:@align;
+	align-items:@align;
+	-webkit-align-content:@align;
+	align-content:@align;
+
+}
+.ellipsis() {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.iconCreate(@classname, @width, @height, @margin) {
+	.icon-@{classname} {
+		width: @width;
+		height: @height;
+		float: left;
+		margin: @margin;
+		object {
+			width:@width;
+			height:@height;
+			display:block;
+		}
+	}
+}
+.gradientGreyStripe(@place, @percent1, @percent2) {
+	background-image: url(../images/bgGrey.png),-moz-linear-gradient(@place, @backgroundColorStart @percent1, @backgroundColorEnd @percent2);
+	background-image: url(../images/bgGrey.png),-webkit-gradient(@place, color-stop(@percent1,@backgroundColorStart), color-stop(@percent2,@backgroundColorEnd));
+	background-image: url(../images/bgGrey.png),-webkit-linear-gradient(@place, @backgroundColorStart @percent1,@backgroundColorEnd @percent2);
+	background-image: url(../images/bgGrey.png),-o-linear-gradient(@place, @backgroundColorStart @percent1,@backgroundColorEnd @percent2);
+	background-image: url(../images/bgGrey.png),-ms-linear-gradient(@place, @backgroundColorStart @percent1,@backgroundColorEnd @percent2);
+	background-image: url(../images/bgGrey.png),linear-gradient(@place, @backgroundColorStart @percent1,@backgroundColorEnd @percent2);
+}
+.gradientOverlay(@place, @percent1, @percent2) {
+	background-image: url(../images/bgWhite.png),-moz-linear-gradient(@place, fadeout(lighten(@backgroundColorStart, 12%), 4%) @percent1, fadeout(@backgroundColorEnd, 10%) @percent2);
+	background-image: url(../images/bgWhite.png),-webkit-gradient(@place, color-stop(@percent1,fadeout(lighten(@backgroundColorStart, 12%), 4%)), color-stop(@percent2,fadeout(@backgroundColorEnd, 10%)));
+	background-image: url(../images/bgWhite.png),-webkit-linear-gradient(@place, fadeout(lighten(@backgroundColorStart, 12%), 4%) @percent1,fadeout(@backgroundColorEnd, 10%) @percent2);
+	background-image: url(../images/bgWhite.png),-o-linear-gradient(@place, fadeout(lighten(@backgroundColorStart, 12%), 4%) @percent1,fadeout(@backgroundColorEnd, 10%) @percent2);
+	background-image: url(../images/bgWhite.png),-ms-linear-gradient(@place, fadeout(lighten(@backgroundColorStart, 12%), 4%) @percent1,fadeout(@backgroundColorEnd, 10%) @percent2);
+	background-image: url(../images/bgWhite.png),linear-gradient(@place, fadeout(lighten(@backgroundColorStart, 12%), 4%) @percent1,fadeout(@backgroundColorEnd, 10%) @percent2);
+}
+.normalTwoColorGradient(@place, @color1, @color2) {
+	background: -moz-linear-gradient(@place, @color1 0%, @color2 100%);
+	background: -webkit-gradient(@place, color-stop(0%,@color1), color-stop(100%,@color2));
+	background: -webkit-linear-gradient(@place, @color1 0%,@color2 100%);
+	background: -o-linear-gradient(@place, @color1 0%,@color2 100%);
+	background: -ms-linear-gradient(@place, @color1 0%,@color2 100%);
+	background: linear-gradient(@place, @color1 0%,@color2 100%);
+}
+.gradientNav(@place, @percent1, @percent2) {
+	background: -moz-linear-gradient(@place, @navbarColorStart @percent1, @navbarColorEnd @percent2);
+	background: -webkit-gradient(@place, color-stop(@percent1,@navbarColorStart), color-stop(@percent2,@navbarColorEnd));
+	background: -webkit-linear-gradient(@place, @navbarColorStart @percent1,@navbarColorEnd @percent2);
+	background: -o-linear-gradient(@place, @navbarColorStart @percent1,@navbarColorEnd @percent2);
+	background: -ms-linear-gradient(@place, @navbarColorStart @percent1,@navbarColorEnd @percent2);
+	background: linear-gradient(@place, @navbarColorStart @percent1,@navbarColorEnd @percent2);
+}
+.gridSystem(@classname, @percent) {
+	.grid-@{classname} { float: left;width: @percent; }
+	.prefix-@{classname} { margin-left: @percent; }
+	.suffix-@{classname} { margin-right: @percent; }
+	.push-@{classname} { left: @percent; }
+	.pull-@{classname} { left: -@percent; }
+}
+.gridSystemTablet(@classname, @percent) {
+	.tablet-grid-@{classname} { float: left;width: @percent; }
+	.tablet-prefix-@{classname} { margin-left: @percent; }
+	.tablet-suffix-@{classname} { margin-right: @percent; }
+	.tablet-push-@{classname} { left: @percent; }
+	.tablet-pull-@{classname} { left: -@percent; }
+}
+.gridSystemMobile(@classname, @percent) {
+	.mobile-grid-@{classname} { float: left;width: @percent; }
+	.mobile-prefix-@{classname} { margin-left: @percent; }
+	.mobile-suffix-@{classname} { margin-right: @percent; }
+	.mobile-push-@{classname} { left: @percent; }
+	.mobile-pull-@{classname} { left: -@percent; }
+}

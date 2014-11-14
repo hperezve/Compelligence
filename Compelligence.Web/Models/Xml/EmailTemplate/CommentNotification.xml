@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: Comment to  $P{Name}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+      <br/>
+      <div>The following item has been changed. The changes are listed below. For full information about what has changed, visit the $P{urlCompany} and locate this object.</div>
+      <br/>
+      <div>Object Name: <b>$P{EntityType}</b> "<b>$P{Name}</b>"</div>
+      <div>User who did this: <b>$P{CreatedBy}</b></div>
+      <div>Changed Event: <Detail></div>
+      <br/>
+      <div>A New Object added to $P{EntityType}.</div>
+      </br>
+      <div>$P{Response}</div>
+      <br />
+      <br />
+      <div>
+          $P{Files}
+      </div>
+      <div>The new comment was uploaded for <b>$P{EntityType}</b> <b>$P{Name}</b></div>
+      <br/>
+      <div>If you did not expect this message or don't want to receive mails in future, please contact $P{emailOriginalAdmin}.</div>
+      </br>
+      <div>This is an automated message. Please do not reply.</div>
+      </br>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

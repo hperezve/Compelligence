@@ -1,0 +1,113 @@
+.onSelectedItem
+{
+	color:#990000;
+	font-weight:bold;
+	background-color: red;
+	/*background-image:url (../images/treeview/folder_selected.gif) repeat;*/
+}
+
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	background-color: white;
+	margin-top: 4px;
+}
+
+.treeview .hitarea {
+	background: url(../images/treeview/treeview-default.gif) -64px -25px no-repeat;
+	background-color:#ffffff;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+	background-color:#ffffff;
+	/*background-image: url(../images/treeview/bg_bluebar.gif); */
+}
+.active{font-weight:bold; color:yellow;}
+.treeview a.selected {
+	background-color: blue;
+	background-image: url(../images/treeview/folder_gray.gif);
+	
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover {background: url(../images/treeview/folder-closed.gif) 15px 2px no-repeat; background-repeat:no-repeat; font-weight:bold; color: black; cursor: pointer;   }
+/*.treeview span.subfolder:hover{font-weight:bold; color: black;}*/
+/*.treeview span.subfolder:active{font-weight:bold; color: #990000;}*/
+.treeview span.subfolder:visited{font-weight:bold; color: green;}
+/*.treeview span.subfolder:focus:hover{font-weight:bold; color: yellow;}*/
+.treeview li { background: url(../images/treeview/treeview-default-line.gif) 0 0 no-repeat; background-color:#ffffff; }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; background-color:#ffffff; }
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(../images/treeview/treeview-default.gif); background-color:#ffffff;}  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; background: url(../images/treeview/bg_bluebar.gif) 0 0 repeat-x; }
+
+.treeview-red li { background-image: url(../images/treeview/treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url(../images/treeview/treeview-red.gif); } 
+
+.treeview-black li { background-image: url(../images/treeview/treeview-black-line.gif); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url(../images/treeview/treeview-black.gif); }  
+
+.treeview-gray li { background-image: url(../images/treeview/treeview-gray-line.gif); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url(../images/treeview/treeview-gray.gif); } 
+
+.treeview-famfamfam li { background-image: url(../images/treeview/treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url(../images/treeview-famfamfam.gif); } 
+
+
+.filetree li { padding: 3px 0 2px 16px; }
+
+.filetree span.folder, .filetree span.file { padding: 1px 0 1px 16px; display: block; }
+.filetree span.folder { background: url(../images/treeview/folder.gif) 0 0 no-repeat; color:black; }
+.filetree span.folder.hover { background: url(../images/treeview/folder_selected.gif) 0 0 no-repeat; }
+.filetreeTwo span.folder { background: url(../images/treeview/folder_selected.gif) 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url(../images/treeview/folder-closed.gif) 0 0 no-repeat; }
+.filetree span.file { background: url(../images/treeview/file.gif) 0 0 no-repeat; }
+
+.filetree span.subfolder, .filetree span.file { padding: 1px 0 1px 16px; display: block;cursor: pointer; }
+.filetree span.subfolder { background: url(../images/treeview/folder_gray.gif) 0 0 no-repeat; cursor: pointer;}
+.filetreeTwo span.subfolder { background: url(../images/treeview/folder_selected.gif) 0 0 no-repeat; }
+.filetree span.subfolder:hover{ background: url(../images/treeview/folder.gif) 0 0 no-repeat; cursor: pointer;}
+.filetree li.expandable span.subfolder { background: url(../images/treeview/folder_gray_closed.gif) 0 0 no-repeat; cursor: pointer;}
+.filetree span.file { background: url(../images/treeview/file.gif) 0 0 no-repeat; cursor: pointer; }
+
+/*.filetree span.subsubfolder, .filetree span.file { padding: 1px 0 1px 16px; display: block; cursor: pointer;}
+.filetree span.subsubfolder { background: url(../images/treeview/folder_gray.gif) 0 0 no-repeat; cursor: pointer;}
+.filetree li.expandable span.subsubfolder { background: url(../images/treeview/folder_gray_closed.gif) 0 0 no-repeat; cursor: pointer; }
+.filetree span.file { background: url(../images/treeview/file.gif) 0 0 no-repeat; cursor: pointer;}*/
+
+.itemDeselect
+{
+	font-weight:normal;
+	color:red;
+	background-image: url(../images/treeview/folder_gray_closed.gif);	
+}
+.itemSelect
+{
+	background: url(../images/treeview/file.gif) 0 0 no-repeat;
+	font-weight:bold;
+	color:black;	
+}
+

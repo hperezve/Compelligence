@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Welcome to Compelligence System for $P{ClientCompany}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>
+        Welcome $P{UserName} 
+      </div>
+      <div>
+         Your account on Compelligence is now active. You may login at <a href="$P{ClientCompanyDomain}">$P{ClientCompanyDomain}</a>.
+      </div>
+      <br />
+      <div>Thank you!<br />
+           This is an automated E-mail. Please do not reply to this message.</div>
+    </body>
+  </html>
+  ]]>
+  </message>
+</email>

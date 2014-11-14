@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LibraryExternalSourceByTypeView</entity>
+      <property>Type</property>
+      <label>LibraryExternalSourceType</label>
+      <type class="StandardData">LibraryExternalType</type>
+    </column>
+    <column>
+      <entity>LibraryExternalSourceByTypeView</entity>
+      <property>KeyWord</property>
+      <label>LibraryExternalSourceKeyWord</label>
+    </column>
+    <column>
+      <entity>LibraryExternalSourceByTypeView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryExternalSourceAssignedTo</label>
+    </column>
+    <column>
+      <entity>LibraryExternalSourceByTypeView</entity>
+      <property>Source</property>
+      <label>LibraryExternalSourceSource</label>
+    </column>
+    <column>
+      <entity>LibraryExternalSourceByTypeView</entity>
+      <property>LastUpdated</property>
+      <label>LibraryExternalSourceLastUpdated</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryExternalSourceByTypeView as LibraryExternalSourceByTypeView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibraryExternalSourceByTypeView.ClientCompany = '$S{ClientCompany}' AND LibraryExternalSourceByTypeView.Type is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryExternalSourceByTypeView.Type
+    ]]>
+  </orderBy>
+</browse> 

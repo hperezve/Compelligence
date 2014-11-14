@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>UserAccountHistoryDetailView</entity>
+      <property>Id</property>
+      <label>GroupField</label>
+    </column>
+    <column >
+      <entity>UserAccountHistoryDetailView</entity>
+      <property>Date</property>
+      <label>UserAccountHistoryViewDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>UserAccountHistoryDetailView</entity>
+      <property>Action</property>
+      <label>UserAccountHistoryViewAction</label>
+    </column>
+    <column >
+      <entity>UserAccountHistoryDetailView</entity>
+      <property>ByWhom</property>
+      <label>UserAccountHistoryViewByWhom</label>
+    </column>
+    <column >
+      <entity>UserAccountHistoryDetailView</entity>
+      <property>Notes</property>
+      <label>UserAccountHistoryViewNotes</label>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[
+       showHistoryResult(id);
+    ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+     Compelligence.Domain.Entity.Views.UserAccountHistoryDetailView as UserAccountHistoryDetailView    
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    UserAccountHistoryDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>  
+  <orderBy>
+    <![CDATA[
+    UserAccountHistoryDetailView.Date DESC
+    ]]>
+  </orderBy>
+</browse>

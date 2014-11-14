@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ImplicationsByProjectView</entity>
+      <property>ImplicationName</property>
+      <label>ImplicationName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProjectView</entity>
+      <property>ImplicationSource</property>
+      <label>ImplicationSource</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProjectView</entity>
+      <property>AssignedToName</property>
+      <label>ImplicationAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>ImplicationsByProjectView</entity>
+      <property>ProjectName</property>
+      <label>ImplicationProjectNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ImplicationsByProjectView as ImplicationsByProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ImplicationsByProjectView.ClientCompany = '$S{ClientCompany}' AND ImplicationsByProjectView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ImplicationsByProjectView.ProjectId
+    ]]>
+  </orderBy>
+</browse>

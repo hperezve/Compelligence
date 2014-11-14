@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CompetitorFinancialByCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorFinancialByCompetitorViewCompetitorName</label>
+    </column>
+
+ 
+
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorFinancialByCompetitorView as ICompetitorFinancialByCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CompetitoryFinancialByCompetitorView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorFinancialByCompetitorView.Id
+    ]]>
+  </orderBy>
+</browse>

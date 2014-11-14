@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>IndustryStatus</property>
+      <label>PositioningAllViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>IndustryTier</property>
+      <label>PositioningAllViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>IndustryName</property>
+      <label>PositioningIndustryName</label>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>CompetitorStatus</property>
+      <label>PositioningAllViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>CompetitorTier</property>
+      <label>PositioningAllViewCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>CompetitorName</property>
+      <label>PositioningCompetitorName</label>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>ProductStatus</property>
+      <label>PositioningAllViewProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>ProductTier</property>
+      <label>PositioningAllViewProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column group="true">
+      <entity>PositioningAllView</entity>
+      <property>ProductName</property>
+      <label>PositioningProductName</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>ForType</property>
+      <label>PositioningForType</label>
+      <type class="StandardData">PositioningForType</type>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>AssignedToName</property>
+      <label>PositioningAssignedToName</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>Type</property>
+      <label>PositioningType</label>
+      <type class="StandardData">PositioningAllType</type>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>Content</property>
+      <label>PositioningContent</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>Source</property>
+      <label>PositioningSource</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>EntityType</property>
+      <label>PositioningEntityType</label>
+      <type class="StandardData">PositioningEntityType</type>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>EntityName</property>
+      <label>PositioningEntityName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningAllView as PositioningAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningAllView.Id
+    ]]>
+  </orderBy>
+</browse>

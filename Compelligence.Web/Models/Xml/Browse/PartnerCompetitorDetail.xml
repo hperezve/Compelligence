@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>PartnerName</property>
+      <label>PartnerCompetitorDetailPartnerName</label>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>AssignedToName</property>
+      <label>PartnerCompetitorDetailAssignedTo</label>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>Status</property>
+      <label>PartnerCompetitorDetailStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>Budget</property>
+      <label>PartnerCompetitorDetailBudget</label>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>Tier</property>
+      <label>PartnerCompetitorDetailTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>Description</property>
+      <label>PartnerCompetitorDetailDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column>
+      <entity>PartnerCompetitorDetailView</entity>
+      <property>Website</property>
+      <label>PartnerCompetitorDetailWebsite</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PartnerCompetitorDetailView as PartnerCompetitorDetailView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   PartnerCompetitorDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PartnerCompetitorDetailView.PartnerName
+    ]]>
+  </orderBy>
+</browse>

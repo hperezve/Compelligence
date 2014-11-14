@@ -1,0 +1,571 @@
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-Thin.ttf);font-weight:100; }
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-Light.ttf);font-weight:300;}
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-Regular.ttf);font-weight:400; }
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-Medium.ttf);font-weight:500; }
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-Bold.ttf);font-weight:700; }
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-LightItalic.ttf);font-weight:300;font-style:italic; }
+@font-face { font-family: Roboto;src: url(../fonts/Roboto/Roboto-MediumItalic.ttf);font-weight:500;font-style:italic; }
+@import "less_library_mixin";
+@import "themes/library_theme_blues";
+/*------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Login ---------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.loginOuterParent {
+	width:100%;
+	height:auto;
+	display:table;
+	margin:1em 0em 0em;
+	float:left;
+	@media @mobile {
+		margin:0em;
+	}
+	.loginInnerParent {
+		display:table-cell;
+		width:100%;
+		vertical-align:middle;
+		.loginPage {
+			.displayFlex();
+			.flexFlow(row wrap);
+			.flexJustify(start, flex-start);
+			width:38%;
+			min-width:450px;
+			max-width:550px;
+			margin:0px auto;
+			background-color:@light;
+			padding:1.75em 0em 2.5em;
+			text-align:center;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			position:relative;
+			article {
+				.flex(1 1 100%);
+				&.inputs {
+					.displayFlex();
+					.flexFlow(column wrap);
+					.flexJustify(start, flex-start);
+					label {
+						.flex(0 1 auto);
+						margin:0px auto;
+						padding:0px;
+						.displayFlex();
+						.flexJustify(center, center);
+						span {
+							.flex(0 1 auto);
+							text-align:right;
+							margin:0em;
+						}
+						input {
+							.flex(0 1 auto);
+							text-align:left;
+							max-width:220px;
+							height:44px;
+							&:focus:invalid {
+								background-image:none;
+								border-color:@primary;
+								padding-left:6px;
+							}
+						}
+					}
+				}
+				&.langSelect {
+					padding:0.65em 0em 1.25em;
+					label {
+						margin:0px;
+						padding:0.45em 0.5em 0em;
+						width:100%;
+						float:left;
+						@media @mobile {
+							padding:0.55em 0.5em 0em;
+						}
+						.text {
+							display:inline-block;
+							margin:0em 0.2em 0em 0em;
+						}
+						input, select {
+							display:inline-block;
+							vertical-align:middle;
+						}
+					}
+				}
+				&.forgotPass {
+					padding:0.75em 0em 0.25em;
+				}
+				&.btnGroup {
+					margin:0em auto;
+					padding:0em;
+					min-width:220px;
+					max-width:400px;
+					button {
+						border-right-width:0px;
+						width:50%;
+					}
+					button:last-child {
+						border-right-width:1px;
+					}
+				}
+				&.logo {
+					width:100%;
+					margin:0px;
+					padding:0px;
+					img {
+						width:336px;
+						height:100px;
+					}
+					h1 {
+						margin: 0.5em 0em 0.9em;
+						padding: 0.4em 0em;
+						width: 100%;
+						font-size: 1.2em;
+						background-color:@primary;
+						color: @light;
+						border-top: 1px solid rgba(0,0,0,0.25);
+						border-bottom: 1px solid rgba(0,0,0,0.25);
+						box-shadow: inset 0px 1px 3px rgba(255,255,255,0.25), inset 0px -2px 4px rgba(0,0,0,0.1);
+						text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Register ---------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.registerOuterParent {
+	width:100%;
+	height:auto;
+	display:table;
+	margin:1em 0em 0em;
+	float:left;
+	.registerInnerParent {
+		display:table-cell;
+		width:100%;
+		vertical-align:middle;
+		.registerPage {
+			.displayFlex();
+			.flexFlow(row wrap);
+			.flexJustify(start, flex-start);
+			width:50%;
+			min-width:740px;
+			margin:0px auto;
+			background-color:@light;
+			padding:1.75em 0em 2.5em;
+			text-align:center;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			article {
+				.flex(1 1 100%);
+				&.inputs {
+					.displayFlex();
+					.flexFlow(row wrap);
+					.flexJustify(start, flex-start);
+					padding:0.5em 1em 1.5em 1em;
+					label {
+						.flex(1 0 50%);
+						margin:0px auto;
+						padding:0px;
+						.displayFlex();
+						.flexFlow(row wrap);
+						.flexJustify(start, flex-start);
+						span {
+							.flex(1 0 40%);
+							display:inline-block;
+							text-align:right;
+							margin:0em;
+							padding:0.75em 0.35em 0em 0em;
+						}
+						input {
+							.flex(1 0 50%);
+							text-align:left;
+							max-width:220px !important;
+							height:44px;
+							&:focus:invalid {
+								background-image:none;
+								border-color:@primary;
+								padding-left:6px;
+							}
+						}
+					}
+				}
+				&.btnGroup {
+					margin:0em auto;
+					padding:0em;
+					min-width:220px;
+					max-width:400px;
+					button {
+						border-right-width:0px;
+						width:50%;
+					}
+					button:last-child {
+						border-right-width:1px;
+					}
+				}
+				&.logo {
+					width:100%;
+					margin:0px;
+					padding:0px;
+					img {
+						width:336px;
+						height:100px;
+					}
+					h1 {
+						margin: 0.5em 0em 0.9em;
+						padding: 0.4em 0em;
+						width: 100%;
+						font-size: 1.2em;
+						background-color:@primary;
+						color: @light;
+						border-top: 1px solid rgba(0,0,0,0.25);
+						border-bottom: 1px solid rgba(0,0,0,0.25);
+						box-shadow: inset 0px 1px 3px rgba(255,255,255,0.25), inset 0px -2px 4px rgba(0,0,0,0.1);
+						text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- Register ---------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.registerOptionOuterParent {
+	width:100%;
+	height:auto;
+	display:table;
+	margin:1em 0em 0em;
+	float:left;
+	.registerOptionInnerParent {
+		display:table-cell;
+		width:100%;
+		vertical-align:middle;
+		.registerOptionPage {
+			.displayFlex();
+			.flexFlow(row wrap);
+			width:50%;
+			min-width:740px;
+			margin:0px auto;
+			background-color:@light;
+			padding:1.75em 0em 2.5em;
+			text-align:center;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			article {
+				.flex(1 1 100%);
+				&.inputs {
+					.displayFlex();
+					.flexFlow(row wrap);
+					padding:0.5em 2.5em 1.5em 2.5em;
+					label {
+						.flex(1 0 100%);
+						margin:0px auto;
+						padding:0px;
+						.displayFlex();
+						-ms-flex-pack: center;
+						span {
+							.flex(0 0 30%);
+							display:inline-block;
+							text-align:right;
+							margin:0em;
+							padding:0.75em 0.35em 0em 0em;
+						}
+						input {
+							.flex(0 0 70%);
+							text-align:left;
+							max-width:none !important;
+							height:44px;
+							&:focus:invalid {
+								background-image:none;
+								border-color:@primary;
+								padding-left:6px;
+							}
+						}
+						&.doubleInput {
+							.flex(0 0 66%);
+							span {
+								.flex(0 0 percentage(0.4545454545));
+								text-align:right;
+								margin:0em;
+								padding:0.75em 0.35em 0em 0em;
+							}
+							input {
+								.flex(0 0 percentage(0.5555555555));
+								text-align:left;
+								max-width:none !important;
+								height:44px;
+								min-width:0px;
+								border-right-width:0px;
+								&:focus:invalid {
+									background-image:none;
+									border-color:@primary;
+									padding-left:6px;
+								}
+							}
+							&.Second {
+								.flex(0 0 34%);
+								input {
+									.flex(0 0 100%);
+									border-right-width:1px;
+								}
+							}
+						}
+					}
+				}
+				&.helpText {
+					width:100%;
+					padding:0.5em 1em 1.5em;
+				}
+				&.helpTextAlt {
+					width:100%;
+					padding:0.25em 1em 0.5em;
+				}
+				&.btnGroup {
+					margin:0em auto;
+					padding:0em;
+					min-width:220px;
+					max-width:400px;
+					button {
+						border-right-width:0px;
+						width:50%;
+					}
+					button:last-child {
+						border-right-width:1px;
+					}
+				}
+				&.forgotPass {
+					padding:0.75em 0em 0.25em;
+				}
+				&.logo {
+					width:100%;
+					margin:0px;
+					padding:0px;
+					img {
+						width:336px;
+						height:100px;
+					}
+					h1 {
+						margin: 0.5em 0em 0.9em;
+						padding: 0.4em 0em;
+						width: 100%;
+						font-size: 1.2em;
+						background-color:@primary;
+						color: @light;
+						border-top: 1px solid rgba(0,0,0,0.25);
+						border-bottom: 1px solid rgba(0,0,0,0.25);
+						box-shadow: inset 0px 1px 3px rgba(255,255,255,0.25), inset 0px -2px 4px rgba(0,0,0,0.1);
+						text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+@media @tablet {
+	.registerOuterParent {
+		.registerInnerParent {
+			.registerPage {
+				width:100%;
+				min-width:0px;
+				article {
+					&.inputs {
+						padding:0.5em 3em 1.5em 3em;
+						label {
+							.flexFlow(row wrap);
+							padding:0em 0em 0.5em 0em;
+							span {
+								.flex(1 0 100%);
+								text-align:left;
+								padding:0em;
+							}
+							input {
+								.flex(1 0 100%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.registerOptionOuterParent {
+		.registerOptionInnerParent {
+			.registerOptionPage {
+				width:100%;
+				min-width:0px;
+			}
+		}
+	}
+}
+@media @mobile {
+	.loginOuterParent {
+		.loginInnerParent {
+			vertical-align:top;
+			.loginPage {
+				width:100%;
+				margin:0px;
+				min-width:0px;
+				max-width:none;
+				background-color:@light;
+				padding:1em 0em;
+				text-align:center;
+				border:0px none;
+
+				.shadow(0px 0px 0px transparent);
+				article {
+					&.inputs {
+						label {
+							span {
+								margin:0em;
+							}
+							input {
+								max-width:none;
+							}
+						}
+					}
+					&.langSelect {
+						padding:0.65em 0em 1.25em;
+					}
+					&.forgotPass {
+						padding:0.5em 0em 0.25em;
+					}
+					&.btnGroup {
+						margin:0em auto;
+						padding:0em;
+						min-width:220px;
+						max-width:none;
+						button {
+							border-right-width:0px;
+							width:50%;
+						}
+						button:last-child {
+							border-right-width:1px;
+						}
+					}
+					&.logo {
+						img {
+							width:100%;
+							max-width:360px;
+							height:auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	.registerOptionOuterParent {
+		.registerOptionInnerParent {
+			.registerOptionPage {
+				width:100%;
+				min-width:0px;
+				padding:0.5em 0em 0em 0em;
+				article {
+					&.inputs {
+						padding:0.5em 1em 1.5em 1em;
+						label {
+							.flexFlow(row wrap);
+							padding:0.5em 0em 0em 0em;
+							.flex(1 0 100%);
+							span {
+								.flex(0 0 100%);
+								text-align:left;
+								padding:0em;
+							}
+							input {
+								.flex(0 0 100%);
+								border-right-width:1px;
+							}
+							&.doubleInput {
+								.flex(0 0 100%);
+								span {
+									.flex(0 0 100%);
+									text-align:left;
+									padding:0em;
+								}
+								input {
+									.flex(0 0 100%);
+									margin-bottom:0px;
+									border-right-width:1px;
+								}
+								&.Second {
+									.flex(0 0 100%);
+									padding:0em;
+									input {
+										border-top-width:0px;
+										margin-top:0px;
+										border-right-width:1px;
+									}
+								}
+							}
+						}
+					}
+					&.btnGroup {
+						min-width:0px;
+						max-width:none;
+						width:100%;
+					}
+					&.logo {
+						img {
+							width:100%;
+							max-width:336px;
+							height:auto;
+							max-height:100px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.registerOuterParent {
+		.registerInnerParent {
+			.registerPage {
+				width:100%;
+				min-width:0px;
+				padding:0.5em 0em 0em 0em;
+				article {
+					&.inputs {
+						padding:0.5em 3em 1.5em 3em;
+						label {
+							.flexFlow(row wrap);
+							padding:0em 0em 0.5em 0em;
+							.flex(1 0 100%);
+							span {
+								.flex(1 0 100%);
+								text-align:left;
+								padding:0em;
+							}
+							input {
+								.flex(1 0 100%);
+							}
+						}
+					}
+					&.btnGroup {
+						min-width:0px;
+					}
+					&.logo {
+						img {
+							width:100%;
+							max-width:336px;
+							height:auto;
+							max-height:100px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+output.loginError {
+	.flex(0 1 100%);
+	margin: 0em 0em 1em;
+	background-color: rgba(255,40,0,0.3);
+	color: #881100;
+	padding: 0.75em 1em;
+	font-size: 0.9em;
+	border-top: 2px solid #881100;
+	border-bottom: 2px solid #881100;
+	font-weight:500;
+	overflow:hidden;
+	white-space:pre;
+	text-overflow:ellipsis;
+}

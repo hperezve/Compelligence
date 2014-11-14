@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>SourceDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>SourceDetailView</entity>
+      <property>Name</property>
+      <label>SourceName</label>
+    </column>
+    <column >
+      <entity>SourceDetailView</entity>
+      <property>Type</property>
+      <label>SourceType</label>
+      <type class="StandardData">SourceType</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[   
+     var currentPath = '$P{currentPath}';             
+     if (currentPath.indexOf('/Source.aspx') >= 0)           
+     { currentPath = currentPath.substring(0, currentPath.indexOf('/Source')); }      
+    
+    SetAndCleanActiveTab('AdminTabs_ToolsTab','ToolsTab_SourceContent');
+    showEntity(currentPath+'/Source.aspx/Edit', 'Tools', 'Source', id, 'SourceAll', '#SourceContent');
+    searchEntityWithTab(currentPath+'/Source.aspx/GetEntityName',id,currentPath,'Source','Tools');
+      ]]>
+    </event>
+  </events>  
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.SourceDetailView as SourceDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    SourceDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    SourceDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

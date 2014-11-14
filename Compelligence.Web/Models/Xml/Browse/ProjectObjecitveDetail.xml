@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProjectObjecitveDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>ProjectObjecitveDetailView</entity>
+      <property>Name</property>
+      <label>ProjectName</label>
+    </column>
+    <column >
+      <entity>ProjectObjecitveDetailView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedTo</label>
+    </column>
+    <column >
+      <entity>ProjectObjecitveDetailView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column >
+      <entity>ProjectObjecitveDetailView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>ProjectObjecitveDetailView</entity>
+      <property>ContentTypeName</property>
+      <label>ProjectType</label>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[      
+     var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Project.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Project')); }       
+             
+    SetAndCleanActiveTab('AdminTabs_WorkspaceTab','WorkspaceTab_ProjectContent');
+    showEntity(currentPath+'/Project.aspx/Edit', 'Workspace', 'Project', id, 'ProjectAll', '#ProjectContent');
+    searchEntityWithTab(currentPath+'/Project.aspx/GetEntityName',id,currentPath,'Project','Workspace');
+      
+      ]]>
+    </event>
+  </events>  
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectObjecitveDetailView as ProjectObjecitveDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectObjecitveDetailView.ClientCompany = '$S{ClientCompany}' and (ProjectObjecitveDetailView.Status <> '$C{ProjectStatus.Archived}' and ProjectObjecitveDetailView.Status <> '$C{ProjectStatus.Published}' and ProjectObjecitveDetailView.Status <> '$C{ProjectStatus.Rejected}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectObjecitveDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

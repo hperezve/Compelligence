@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>BudgetTypeAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>BudgetTypeAllView</entity>
+      <property>Name</property>
+      <label>BudgetTypeName</label>
+    </column>
+    <column>
+      <entity>BudgetTypeAllView</entity>
+      <property>UnitMeasure</property>
+      <label>BudgetTypeUnitMeasure</label>
+      <type class="StandardData">BudgetTypeUnitMeasure</type>
+    </column>
+    <column>
+      <entity>BudgetTypeAllView</entity>
+      <property>Description</property>
+      <label>BudgetTypeDescription</label>
+      <type class="HtmlPlaneOneLine">BudgetTypeDescription</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.BudgetTypeAllView as BudgetTypeAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    BudgetTypeAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    BudgetTypeAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

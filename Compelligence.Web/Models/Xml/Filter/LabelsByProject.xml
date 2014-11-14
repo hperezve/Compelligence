@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>LabelName</property>
+      <label>LabelNameReport</label>
+    </column>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>ProjectName</property>
+      <label>LabelsByProjectViewProjectName</label>
+    </column>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>LabelType</property>
+      <label>LabelTypeReport</label>
+      <type class="StandardData">LabelType</type>
+    </column>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>Show</property>
+      <label>LabelShowReport</label>
+      <type class="StandardData">LabelShow</type>
+    </column>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>Order</property>
+      <label>LabelOrderReport</label>
+    </column>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>Content</property>
+      <label>LabelContentReport</label>
+    </column>
+    <column>
+      <entity>LabelsByProjectView</entity>
+      <property>AssignedToName</property>
+      <label>LabelAssignedToNameReport</label>
+    </column> 
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LabelsByProjectView as LabelsByProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LabelsByProjectView.ClientCompany = '$S{ClientCompany}' AND LabelsByProjectView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LabelsByProjectView.ProjectId
+    ]]>
+  </orderBy>
+</browse>

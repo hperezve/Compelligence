@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CalendarAllView</entity>
+      <property>Id</property>
+      <label>CalendarId</label>
+    </column>
+    
+    <column >
+      <entity>CalendarAllView</entity>
+      <property>Name</property>
+      <label>CalendarName</label>
+    </column>
+    <column >
+      <entity>CalendarAllView</entity>
+      <property>Date</property>
+      <label>CalendarDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>CalendarAllView</entity>
+      <property>Type</property>
+      <label>CalendarType</label>
+      <type class="StandardData">CalendarType</type>
+    </column>
+    <column >
+      <entity>CalendarAllView</entity>
+      <property>AssignedToName</property>
+      <label>CalendarOwner</label>
+    </column>
+    <column >
+      <entity>CalendarAllView</entity>
+      <property>Description</property>
+      <label>CalendarDescription</label>
+      <type class="HtmlPlane">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CalendarAllView as CalendarAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CalendarAllView.ClientCompany = '$S{ClientCompany}'AND CalendarAllView.AssignedTo ='$S{UserId}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CalendarAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

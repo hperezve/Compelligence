@@ -1,0 +1,110 @@
+﻿li a:hover
+{
+    background-color: Transparent;
+}
+
+.cmt a, .cmtAlt .cmtNum a
+{
+    color: #004199;
+}
+
+.cmtsList
+{
+    margin-top: 15px; /*width: 100%;*/
+}
+
+.cmtsList li
+{
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+.cmtsList .cmtWrap
+{
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+    border: 1px solid #CDC4B0;
+    clear: both;
+    margin-bottom: 8px;
+    overflow: auto;
+}
+
+.cmtsList .cmtChild
+{
+    border-left: 1px solid #CED0D0;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+
+.cmt .cmtWrap
+{
+    padding: 12px 5px;
+    position: relative;
+}
+
+.cmtAlt
+{
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: #ECE7DC none repeat scroll 0 0;
+}
+
+.cmtLftArea
+{
+    float: left;
+    margin-left: 5px;
+    width: 70px;
+}
+
+.cmtLftArea img
+{
+    margin-bottom: 10px;
+    padding: 4px;
+}
+
+.cmtRgtArea
+{
+    margin-left: 75px;
+    margin-right: 50px;
+}
+
+.cmtNum
+{
+    font-size: 150%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.cmtAuth
+{
+    font-size: 1.3em;
+    margin-bottom: 6px;
+}
+
+p
+{
+    font-size: 1.3em;
+    line-height: 1.6em;
+    margin: 0 0 0.7em;
+}
+
+.cmtMetadata
+{
+    bottom: 10px;
+    position: absolute;
+}
+
+.cmtReply
+{
+    bottom: 10px;
+    font-size: 1.3em;
+    position: absolute;
+    right: 10px;
+    text-transform: none;
+}

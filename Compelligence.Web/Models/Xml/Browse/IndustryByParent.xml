@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>IndustryByParentView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>Name</property>
+      <label>IndustryName</label>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>AssignedToName</property>
+      <label>IndustryOwnerId</label>
+    </column>
+    <column hidden="true">
+      <entity>IndustryByParentView</entity>
+      <property>Parent</property>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>Status</property>
+      <label>IndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>Budget</property>
+      <type>Decimal</type>
+      <label>IndustryBudget</label>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>Description</property>
+      <label>IndustryDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>Tier</property>
+      <label>IndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column >
+      <entity>IndustryByParentView</entity>
+      <property>CreatedDate</property>
+      <label>IndustryCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.IndustryByParentView as IndustryByParentView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   IndustryByParentView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    IndustryByParentView.Lineage 
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

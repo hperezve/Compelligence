@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+<select>
+  <column hidden="true" id="true" filter="false">
+    <entity>EntityAllAssignedToView</entity>
+    <property>EntityId</property>
+  </column>
+  <column hidden="true" >
+    <entity>EntityAllAssignedToView</entity>
+    <property>EntityType</property>
+  </column>
+  <column >
+    <entity>EntityAllAssignedToView</entity>
+    <property>EntityName</property>
+    <label>EntityAllAssignedToName</label>
+  </column> 
+  <column >
+    <entity>EntityAllAssignedToView</entity>
+    <property>EntityType</property>
+    <label>EntityAllAssignedToType</label>
+    <type class="StandardData">DomainObjectType</type>
+  </column>
+ 
+</select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[
+      var dissEntityType = $.trim($(this).jqGrid('getCell', id, 'EntityAllAssignedToView.EntityType'));
+      var currentScope = null; 
+      var currentEntity = null; 
+      
+      if (dissEntityType == '$C{DomainObjectType.Project}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Project'; 
+      } 
+         
+      if (dissEntityType == '$C{DomainObjectType.Deal}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Deal'; 
+        } 
+ 
+     if (dissEntityType == '$C{DomainObjectType.Event}') { 
+         currentScope = 'Workspace';
+        currentEntity = 'Event'; 
+     } 
+    
+     if (dissEntityType == '$C{DomainObjectType.Calendar}') { 
+       currentScope = 'Workspace'; 
+        currentEntity = 'Calendar'; 
+     } 
+        
+     if (dissEntityType == '$C{DomainObjectType.Newsletter}') { 
+       currentScope = 'Workspace'; 
+       currentEntity = 'Newsletter'; 
+     }
+          
+    if (dissEntityType == '$C{DomainObjectType.Objective}') { 
+         currentScope = 'Environment'; 
+          currentEntity = 'Objective'; 
+      } 
+         
+    if (dissEntityType == '$C{DomainObjectType.Kit}') { 
+           currentScope = 'Environment'; 
+          currentEntity = 'Kit'; 
+      } 
+     
+    if (dissEntityType == '$C{DomainObjectType.Industry}') { 
+         currentScope = 'Environment'; 
+          currentEntity = 'Industry'; 
+          } 
+
+    if (dissEntityType == '$C{DomainObjectType.Competitor}') { 
+            currentScope = 'Environment'; 
+            currentEntity = 'Competitor'; 
+          } 
+
+    if (dissEntityType == '$C{DomainObjectType.Product}') { 
+            currentScope = 'Environment';
+          currentEntity = 'Product';
+        } 
+ 
+    if (dissEntityType == '$C{DomainObjectType.Customer}') { 
+        currentScope = 'Environment'; 
+           currentEntity = 'Customer';
+        } 
+
+    if (dissEntityType == '$C{DomainObjectType.Library}') { 
+      currentScope = 'Environment';
+      currentEntity = 'Library'; 
+      } 
+
+    if (dissEntityType == '$C{DomainObjectType.MarketType}') { 
+         currentScope = 'Environment'; 
+        currentEntity = 'MarketType'; 
+     } 
+
+    if (dissEntityType == '$C{DomainObjectType.Template}') { 
+        currentScope = 'Admin'; 
+        currentEntity = 'Template'; 
+     } 
+ 
+    if (dissEntityType == '$C{DomainObjectType.Team}') { 
+           currentScope = 'Admin'; 
+           currentEntity = 'Team'; 
+    } 
+
+    if (dissEntityType == '$C{DomainObjectType.Website}') { 
+        currentScope = 'Admin'; 
+        currentEntity = 'Website'; 
+    } 
+
+    if (dissEntityType == '$C{DomainObjectType.LibraryExternalSource}') { 
+        currentScope = 'Admin'; 
+        currentEntity = 'LibraryExternalSource'; 
+    } 
+
+    if (dissEntityType =='$C{DomainObjectType.ContentType}') { 
+        currentScope = 'Admin'; 
+        currentEntity = 'ContentType'; 
+    } 
+
+   if (dissEntityType == '$C{DomainObjectType.Trend}') {  
+       currentScope = 'Admin'; 
+       currentEntity = 'Trend'; 
+    }
+  
+       SetAndCleanActiveTab('AdminTabs_'+ currentScope + 'Tab',currentScope +'Tab_'+ currentEntity +'Content');     
+       showEntity(currentEntity +'.aspx/Edit', currentScope, currentEntity, id, currentEntity + 'All', '#' + currentEntity +'Content');         
+
+                
+    ]]>
+    </event>
+  </events> 
+  
+ <from>
+  <![CDATA[
+    Compelligence.Domain.Entity.Views.EntityAllAssignedToView as EntityAllAssignedToView    
+    ]]>
+</from>
+<where>
+  <![CDATA[
+    EntityAllAssignedToView.ClientCompany = '$S{ClientCompany}'
+   ]]>
+</where>
+<orderBy>
+  <![CDATA[
+    EntityAllAssignedToView.EntityType
+    ]]>
+</orderBy>
+<loadComplete>
+  <![CDATA[
+    hideLoadingDialog();
+    ]]>
+</loadComplete>
+</browse>

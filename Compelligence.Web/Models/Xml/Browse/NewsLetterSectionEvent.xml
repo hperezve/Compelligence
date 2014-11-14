@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse returnbyrow="true" showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>NewsLetterSectionEventView</entity>
+      <property>Id</property>
+    </column>
+    <column width="300">
+      <entity>NewsLetterSectionEventView</entity>
+      <property>Name</property>
+      <label>NewsLetterItemName</label>
+    </column>
+    <column width="15">
+      <entity>NewsLetterSectionEventView</entity>
+      <property>Ck</property>      
+      <type class="Checkbox">Description</type>
+    </column>
+    <column width="500">
+      <entity>NewsLetterSectionEventView</entity>
+      <property>Description</property>
+      <label>NewsLetterItemDescription</label>
+    </column>
+   
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsLetterSectionEventView as NewsLetterSectionEventView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsLetterSectionEventView.ClientCompany = '$S{ClientCompany}' and NewsLetterSectionEventView.Status = '$C{eventStatus.Enable}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsLetterSectionEventView.Name
+    ]]>
+  </orderBy>
+</browse>

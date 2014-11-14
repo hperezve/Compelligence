@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+     <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>LibraryName</property>
+      <label>LibraryNameReport</label>
+    </column>
+    <column>
+    <entity>LibrariesbyIndustryView</entity>
+    <property>IndustryName</property>
+    <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>IndustryStatusReport</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>IndustryTierReport</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>Author</property>
+      <label>LibraryAuthor</label>
+    </column>
+    <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>Permanent</property>
+      <label>LibraryPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column>
+      <entity>LibrariesbyIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedToNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibrariesbyIndustryView as LibrariesbyIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibrariesbyIndustryView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibrariesbyIndustryView.IndustryId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

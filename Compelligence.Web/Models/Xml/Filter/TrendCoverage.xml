@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>TrendCoverageView</entity>
+      <property>IndustryName</property>
+      <label>IndustryName</label>
+    </column>
+    <column>
+      <entity>TrendCoverageView</entity>
+      <property>Status</property>
+      <label>IndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>TrendCoverageView</entity>
+      <property>Budget</property>
+      <label>TrendCoverageViewBudget</label>
+    </column>
+    <column>
+      <entity>TrendCoverageView</entity>
+      <property>AssignedToName</property>
+      <label>IndustryOwnerId</label>
+    </column>
+    <column>
+      <entity>TrendCoverageView</entity>
+      <property>Tier</property>
+      <label>IndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TrendCoverageView as TrendCoverageView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   TrendCoverageView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TrendCoverageView.IndustryName
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

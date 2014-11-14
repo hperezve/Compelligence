@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>TimePeriod</property>
+      <label>IndustryFinancialByIndustryViewTimePeriod</label>
+      <type class="StandardData">FinancialTimePeriod</type>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>Source</property>
+      <label>IndustryFinancialByIndustryViewSource</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>Required</property>
+      <label>IndustryFinancialByIndustryViewRequired</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>Description</property>
+      <label>IndustryFinancialByIndustryViewDescription</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>IndustryName</property>
+      <label>IndustryFinancialByIndustryViewIndustryName</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>Status</property>
+      <label>IndustryFinancialByIndustryViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>Tier</property>
+      <label>IndustryFinancialByIndustryViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>CAGRActual</property>
+      <label>IndustryFinancialByIndustryViewCAGRActual</label>
+    </column>
+    <column>
+      <entity>IndustryFinancialByIndustryView</entity>
+      <property>CAGRProjected</property>
+      <label>IndustryFinancialByIndustryViewCAGRProjected</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.IndustryFinancialByIndustryView as IndustryFinancialByIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    IndustryFinancialByIndustryView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    IndustryFinancialByIndustryView.Id
+    ]]>
+  </orderBy>
+</browse>

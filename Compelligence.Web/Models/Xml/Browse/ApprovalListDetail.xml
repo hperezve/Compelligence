@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ApprovalListDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>ApprovalListDetailView</entity>
+      <property>ApproverName</property>
+      <label>ApprovalListApproverName</label>
+    </column>
+    <column >
+      <entity>ApprovalListDetailView</entity>
+      <property>Approved</property>
+      <label>ApprovalListApproved</label>
+      <type class="StandardData">ApprovalListApproveStatus</type>
+    </column>
+    <column >
+      <entity>ApprovalListDetailView</entity>
+      <property>DateAssigned</property>
+      <label>ApprovalListDateAssigned</label>
+    </column>
+    <column >
+      <entity>ApprovalListDetailView</entity>
+      <property>DateApproved</property>
+      <label>ApprovalListDateApproved</label>
+    </column>
+    <column >
+      <entity>ApprovalListDetailView</entity>
+      <property>ApproverNotes</property>
+      <label>ApprovalListApproverNotes</label>
+    </column>
+    <column hidden="true" filter="false">
+      <entity>ApprovalListDetailView</entity>
+      <property>EntityId</property>
+      <label>ApprovalListEntityId</label>
+    </column>
+    <column hidden="true" filter="false">
+      <entity>ApprovalListDetailView</entity>
+      <property>ApproverId</property>
+      <label>ApprovalListApproverId</label>
+    </column>
+    <column>
+      <entity>ApprovalListDetailView</entity>
+      <property>ReSend</property>
+      <label>ApprovalListReSend</label>
+      <onclick>
+        <![CDATA[javascript:ReSendMail('$P{ApprovalListDetailView.EntityId}','$P{ApprovalListDetailView.ApproverId}');
+        ]]>
+      </onclick>
+      <type class="button"></type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ApprovalListDetailView as ApprovalListDetailView
+    ]]>
+  </from>
+  <orderBy>
+    <![CDATA[
+    ApprovalListDetailView.ApproverName
+    ]]>
+  </orderBy>
+  <defaultEntity>ApprovalListDetailView</defaultEntity>
+</browse>

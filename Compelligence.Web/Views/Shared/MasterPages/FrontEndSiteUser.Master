@@ -1,0 +1,78 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Compelligence.Security.Managers" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script src="<%= Url.Content("~/Scripts/jquery-1.9.1.js") %>" type="text/javascript"></script>
+    <script src="<%= Url.Content("~/Scripts/jquery-migrate-1.1.1.js") %>" type="text/javascript"></script>
+    <script src="<%= Url.Content("~/Scripts/jquery-idleTimeout.js") %>" type="text/javascript""></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title></title>
+    </asp:ContentPlaceHolder>
+    <link href="<%= Url.Content("~/Content/Images/Icons/favicon.ico") %>"rel="shortcut icon" type="image/x-icon" />
+    <link href="<%= Url.Content("~/Content/Styles/FrontEndSite.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/Styles/rating.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="Styles" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <script src="<%= Url.Content("~/Scripts/System/FrontEnd/Menu.js") %>" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).idleTimeout({
+                inactivity: '<%= Session["SessionTimeout"] %>',
+                noconfirm: 60000,
+                sessionAlive: 0,
+                redirect_url: '<%= Url.Action("TimeOut", "Home") %>',
+                logout_cancel:'<%= Url.Action("Login", "Home") %>',
+                dialogText: "Your Compelligence session is about to time out. Do you wish to continue?"
+            });
+        }); 
+    </script>
+ 
+</head>
+
+
+<body id="FrontEndBody" >
+    <div class="page">
+        <div id="header">
+        <div id="logindisplay" align="right">
+          <% string ImageUrlFrontEnd = (string)Session["Imageurl"];         
+             string dynstyle=string.Empty;
+            if (!string.IsNullOrEmpty(ImageUrlFrontEnd))
+              { 
+                %>
+            <div style="float:left;margin: 2.5px 0px 0px 8px;">           
+            <img height="70px" src="<%=Html.ImageUrl(ImageUrlFrontEnd)%>"/><label class="labelImageUrl">...powered by Compelligence</label>
+            </div>
+                  <%dynstyle = "background:none repeat scroll 0 0 transparent";%>
+              <%} %>
+              <div id="logo" style="<%=dynstyle%>"> 
+                <% if (Session["UserId"] != null)
+                   {
+                       string userId = (string)Session["UserId"];
+                       UserProfile userProfile = UserManager.GetInstance().GetUserProfile(userId);
+                %>
+                <%= userProfile.Name %>&nbsp;&nbsp;
+               <%-- | <%=Html.ActionLink("Comparinator", "Index", "Comparinator")%>&nbsp;&nbsp;--%><br /> 
+                <% }
+                   else
+                   { %>
+                &nbsp;&nbsp;[<%= Html.ActionLink("Return to Home", "Index", "Home")%>]
+                <% } %>
+                &nbsp;&nbsp;[<%= Html.ActionLink("Log Out", "Logout", "Home")%>]&nbsp;&nbsp;
+            </div>
+            
+        </div>    
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    
+
+</body>
+
+
+</html>

@@ -1,0 +1,48 @@
+// This odd java formatting is documented in the CKEDitor plugin guide
+// http://syrinx.ph/articles/CkEditorPluginGuide.aspx
+CKEDITOR.plugins.add( 'opening',
+{
+   init : function( editor )
+   {
+      editor.addCommand( 'opening', new CKEDITOR.examenLinkCommand() );
+      editor.ui.addButton( 'opening',
+         {
+            label : editor.lang.link.toolbar,
+            command : 'opening',
+            icon: this.path +'images/iconComments.png'
+         } );
+      
+      // I'm not sure I need this
+      // Add the CSS styles for anchor placeholders.
+      editor.addCss(
+         'img.cke_anchor' +
+         '{' +
+            'background-image: url(' + CKEDITOR.getUrl( this.path + 'images/iconComments.png' ) + ');' +
+            'background-position: center center;' +
+            'background-repeat: no-repeat;' +
+            'border: 1px solid #a9a9a9;' +
+            'width: 18px;' +
+            'height: 18px;' +
+         '}\n' +
+         'a.cke_anchor' +
+         '{' +
+            'background-image: url(' + CKEDITOR.getUrl( this.path + 'images/iconComments.png' ) + ');' +
+            'background-position: 0 center;' +
+            'background-repeat: no-repeat;' +
+            'border: 1px solid #a9a9a9;' +
+            'padding-left: 18px;' +
+         '}'
+            );
+
+   }
+});
+
+CKEDITOR.examenLinkCommand = function(){};
+CKEDITOR.examenLinkCommand.prototype =
+{
+   /** @ignore */
+   exec : function( editor )
+   {
+      alert("Got here");
+   }
+};

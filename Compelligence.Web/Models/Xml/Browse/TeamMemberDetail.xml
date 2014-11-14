@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>TeamMemberDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>TeamMemberDetailView</entity>
+      <property>FirstName</property>
+      <label>TeamMemberFirstName</label>
+    </column>
+    <column>
+      <entity>TeamMemberDetailView</entity>
+      <property>LastName</property>
+      <label>TeamMemberLastName</label>
+    </column>
+    <column>
+      <entity>TeamMemberDetailView</entity>
+      <property>Name</property>
+      <label>TeamMemberRole</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TeamMemberDetailView as TeamMemberDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    TeamMemberDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TeamMemberDetailView.FirstName
+    ]]>
+  </orderBy>
+</browse>

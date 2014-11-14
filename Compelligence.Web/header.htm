@@ -1,0 +1,116 @@
+﻿<div ng-show="load" id="loadingContainer" class="loadingScreen"><div id="loadingText" class="text">Loading, Please Wait</div></div>
+<div ng-show="error" id="errorContainer" class="errorScreen">
+	<div class="errorWindow">
+		<h1>Something Went Wrong
+			<a href="#">
+				<button><div class="buttonText">Login</div><div class="icon-button"><object data="resources/images/icons_white/delete.svg" type="image/svg+xml"></object></div></button>
+			</a>
+		</h1>
+		<div id="errorText" class="text">Something went wrong. Please login again or contact your system administrator.</div>
+		<img class="puridiomMan" src="resources/images/puridiom_searching.png" />
+	</div>
+</div>
+<div ng-controller="HeaderController">
+    <header> <!--<header>-->
+        <nav class="mainNavigationBar">
+            <a ng-click="showLeftPlease = !showLeftPlease" class="sideNav  ng-hide" ng-hide="hideMenu"   ng-show="showOptionMenu">
+				<div class="icon-nav">
+				<!--<iconbuilder icon='menu'></iconbuilder>	-->
+					<object data="Content/Images/Icons/menu_blue.png" type="image/png"></object>
+					<div class="linkTitle">Menu</div>
+				</div>
+			</a>
+            <a class="logo ng-hide" ng-show="showCompanyLogo" ng-hide="hideMenu" ng-show="showOptionMenu">
+                <img class="headerLogo" src="{{logoClient}}" />
+            </a>
+            <a class="companyLogo">
+                <img class="headerLogo" src="./Content/Images/Styles/compelligence-1.png" alt="Compelligence v2.0" />
+            </a>
+            <a href="#demo"  class="dashboardHome ng-hide" ng-hide="hideMenu"   ng-show="showOptionMenu">
+                <div class="icon-nav">
+                <!--<iconbuilder icon='home'></iconbuilder>-->	
+                <!--<div src="'resources/images/icons/home.svg'" ng-include="" class="ng-scope">
+                </div>--> 
+                    <object data="Content/Images/Icons/home_blue.png" type="image/png"></object>
+                    <div class="linkTitle">Home</div>
+                </div>
+            </a>
+            <!--<a href="#index"  class="dashboardHome ng-hide" ng-hide="hideMenu"   ng-show="showOptionMenu">
+                <div class="icon-nav">
+                    <object data="Content/Images/Icons/home_v2.png" type="image/png"></object>
+                    <div class="linkTitle">Logout</div>
+                </div>
+            </a>-->
+        </nav>
+    </header>    
+    <section id="optionsMenu" ng-click="showLeftPlease = !showLeftPlease" ng-show="showLeftPlease"
+        class="overlayMenu leftTopMenu ng-hide">
+        <ul class="menuList">
+           <li >
+                <a  href="Comparinator.aspx/Index">
+                    <div class="icon-sidebar">
+                        <!--<div src="'resources/images/icons/users_relation.svg'" ng-include="" class="ng-scope">
+                        </div>-->   
+                        <object data="Content/Images/Icons/users_relation_blue.png" type="image/png"></object>                                             
+                    </div>
+                    <div class="text">Generate a competitive sales stategy</div>                    
+                </a>
+            </li>
+            <li>
+                <a href="ContentPortal.aspx/Index">
+                    <div class="icon-sidebar">
+                        <!--<div src="'resources/images/icons/gearwheel.svg'" ng-include="" class="ng-scope">
+                        </div>-->
+                        <object data="Content/Images/Icons/gearwheel-blue.png" type="image/png"></object>                                           
+                        
+                    </div>
+                    <div class="text">Research Markets & Competitors</div>
+                </a>
+            </li>
+            <!--<li>
+                <a href="#">
+                    <div class="icon-sidebar">
+                        <object data="Content/Images/Icons/home_v2.png" type="image/png"></object>
+                    </div>
+                    <div class="text">Find Competitive Content</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-sidebar">
+                        <object data="Content/Images/Icons/home_v2.png" type="image/png"></object>
+                    </div>
+                    <div class="text">Report a Win/Loss</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-sidebar">
+                        <object data="Content/Images/Icons/home_v2.png" type="image/pngl"></object>
+                    </div>
+                    <div class="text">Discuss the Competition</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-sidebar">
+                        <object data="Content/Images/Icons/home_v2.png" type="image/png"></object>
+                    </div>
+                    <div class="text">Report a Competitive Sighting</div>
+                </a>
+            </li>-->
+            <li><a href="#logout">
+					<div class="icon-sidebar">
+						<!--<div src="'resources/images/icons/navigate_left.svg'" ng-include="" class="ng-scope">
+                        </div>-->
+                        <object data="Content/Images/Icons/logout_blue.png" type="image/png"></object>                                                            
+					</div>
+					<div class="text">Logout</div>
+				</a>
+			</li>
+        </ul>
+    </section>
+    <section class="subNav ng-hide" ng-hide="hideMenu">
+        <div class="text ng-binding">I want to... </div>
+    </section>
+</div>

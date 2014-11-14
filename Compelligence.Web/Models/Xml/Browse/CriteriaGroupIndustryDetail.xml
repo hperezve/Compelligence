@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CriteriaGroupIndustryDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>CriteriaGroupIndustryDetailView</entity>
+      <property>Name</property>
+      <label>CriteriaGroupName</label>
+    </column>
+    <column>
+      <entity>CriteriaGroupIndustryDetailView</entity>
+      <property>Description</property>
+      <label>CriteriaGroupDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriaGroupIndustryDetailView as CriteriaGroupIndustryDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CriteriaGroupIndustryDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriaGroupIndustryDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProjectDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ProjectDetailView</entity>
+      <property>Name</property>
+      <label>ProjectName</label>
+    </column>
+    <column>
+      <entity>ProjectDetailView</entity>
+      <property>CompetitorId</property>
+      <label>ProjectCompetitorId</label>
+    </column>
+    <column>
+      <entity>ProjectDetailView</entity>
+      <property>IndustryId</property>
+      <label>ProjectIndustryId</label>
+    </column>
+    <column>
+      <entity>ProjectDetailView</entity>
+      <property>ProductId</property>
+      <label>ProjectProductId</label>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+    <![CDATA[      
+      var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Project.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Project')); }      
+             
+    SetAndCleanActiveTab('AdminTabs_WorkspaceTab','WorkspaceTab_ProjectContent');
+    showEntity(currentPath+'/Project.aspx/Edit', 'Workspace', 'Project', id, 'ProjectAll', '#ProjectContent');
+    searchEntityWithTab(currentPath+'/Project.aspx/GetEntityName',id,currentPath,'Project','Workspace');
+      
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectDetailView as ProjectDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

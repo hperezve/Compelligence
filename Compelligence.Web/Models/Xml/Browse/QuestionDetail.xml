@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>QuestionView</entity>
+      <property >Id</property>
+    </column>
+    <column>
+      <entity>QuestionView</entity>
+      <property>Item</property>
+      <label>QuestionItem</label>
+    </column>
+    <column>
+      <entity>QuestionView</entity>
+      <property>Type</property>
+      <label>QuestionType</label>
+      <type class="StandardData">QuestionType</type>
+    </column>
+    <column>
+      <entity>QuestionView</entity>
+      <property>QuestionText</property>
+      <label>QuestionText</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.QuestionView as QuestionView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    QuestionView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    QuestionView.Item
+    ]]>
+  </orderBy>
+</browse>

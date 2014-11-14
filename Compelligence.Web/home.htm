@@ -1,0 +1,43 @@
+﻿    <!--<section class="subNav" ng-hide="hideMenu">
+    <div class="text ng-binding">I want to...</div>
+    </section>-->
+<section class="portletScreen ng-scope">
+    <!--<article class="dashboardTilesPortlet" ng-repeat="tile in tiles">
+        <a href="{{tile.link}}" class="ng-scope">
+            <h1 class="portlet-heading">{{tile.title}}</h1>
+            <h3 class="half">
+                    <span class="icon-tile">
+                        <img src="{{tile.logo}}"  alt="{{tile.title}}"/>
+                    </span>
+            </h3>
+            <span class="description">{{tile.description}}</span>
+        </a>
+    </article>-->
+<!--    <section class="subNav" ng-hide="hideMenu">
+    <div class="text ng-binding">I want to...</div>
+    </section>-->
+    <article class="dashboardTilesPortlet" ng-repeat="tile in tiles">
+        <a href="{{tile.link}}" class="ng-scope">
+            <h1  class="portlet-heading ng-binding">
+                {{tile.title}}
+                <div></div>
+            </h1>
+            <div typebuilder>
+                <h3 class="full ng-scope">
+                    <div class="icon-tile"> 
+                        <!--<span class="icon-login-user"> -->
+                         <object data="Content/Images/Icons/gearwheel-blue.png" type="image/png"></object>
+					    <!--</span> -->                   
+                        <!--<div src="'resources/images/icons/gearwheel.svg'" ng-include="" class="ng-scope">
+                        </div>-->
+                            <div ng-include="" class="ng-scope" src="{{tile.logo}}">
+							    <img src="{{tile.logo}}"  alt="{{tile.title}}"/>							    
+						    </div>                        
+                    </div>
+                    <div class="number ng-binding"></div>
+                </h3>
+                <div class="description ng-scope ng-binding">{{tile.description}}</div>
+            </div>
+        </a>
+    </article>
+</section>

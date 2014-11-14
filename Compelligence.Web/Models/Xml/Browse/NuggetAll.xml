@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>QuizAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>QuizAllView</entity>
+      <property>Title</property>
+      <label>NuggetTitle</label>
+    </column>
+    <column>
+      <entity>QuizAllView</entity>
+      <property>Status</property>
+      <label>NuggetStatus</label>
+      <type class="StandardData">NuggetStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.QuizAllView as QuizAllView    
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    QuizAllView.ClientCompany = '$S{ClientCompany}' AND
+    QuizAllView.TargetType = 'Nugget'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    QuizAllView.Title
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

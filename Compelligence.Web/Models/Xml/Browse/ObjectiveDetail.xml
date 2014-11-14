@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ObjectiveDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>ObjectiveDetailView</entity>
+      <property>Name</property>
+      <label>ObjectiveNameLong</label>
+    </column>
+    <column >
+      <entity>ObjectiveDetailView</entity>
+      <property>DueDate</property>
+      <label>ObjectiveDueDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>ObjectiveDetailView</entity>
+      <property>Detail</property>
+      <label>ObjectiveDetail</label>
+      <type class="HtmlPlaneOneLine">Detail</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[  
+     var currentPath = '$P{currentPath}';             
+     if (currentPath.indexOf('/Objective.aspx') >= 0)           
+     { currentPath = currentPath.substring(0, currentPath.indexOf('/Objective')); }      
+          
+    SetAndCleanActiveTab('AdminTabs_WorkspaceTab','WorkspaceTab_ObjectiveContent');
+    showEntity(currentPath+'/Objective.aspx/Edit', 'Workspace', 'Objective', id, 'ObjectiveAll', '#ObjectiveContent');
+    searchEntityWithTab(currentPath+'/Objective.aspx/GetEntityName',id,currentPath,'Objective','Workspace');
+      
+      ]]>
+    </event>
+  </events>
+  
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ObjectiveDetailView as ObjectiveDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ObjectiveDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ObjectiveDetailView.Name
+    ]]>
+  </orderBy>
+</browse>

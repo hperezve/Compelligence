@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net debug="false">
+
+  <appender name="AspNetTraceAppender" type="log4net.Appender.AspNetTraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="[%thread] %-5level - %message" />
+    </layout>
+  </appender>
+
+  <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/log.txt" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="100KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5level %M - %message%newline" />
+    </layout>
+  </appender>
+
+  <!-- Set default logging level to DEBUG -->
+  <root>
+    <level value="ERROR" />
+    <!--<appender-ref ref="AspNetTraceAppender" />-->
+    <appender-ref ref="ConsoleAppender" />
+    <appender-ref ref="TraceAppender" />
+    <appender-ref ref="RollingFileAppender" />
+  </root>
+  <!--
+    In Spring.NET there is a 1-1 correspondence between the logger name and
+    the namespace of the class doing the logging...
+  -->
+  <logger name="Spring">
+    <level value="ERROR" />
+  </logger>
+  <logger name="NHibernate">
+    <level value="ERROR" />
+  </logger>
+  <logger name="NHibernate.Engine.Query">
+    <level value="ERROR" />
+  </logger>
+  <logger name="NHibernate.Transaction">
+    <level value="ERROR" />
+  </logger>
+  <logger name="NHibernate.Type">
+    <level value="ERROR" />
+  </logger>
+  <logger name="NHibernate.SQL">
+    <level value="ERROR" />
+  </logger>
+  <logger name="NHibernate.Impl.SessionImpl">
+    <level value="ERROR" />
+  </logger>
+  
+  <logger name="Compelligence.BusinessLogic.Implementation">
+    <level value="INFO" />
+  </logger>
+  <logger name="Compelligence.Schedule.Jobs">
+    <level value="INFO" />
+  </logger>
+
+</log4net>

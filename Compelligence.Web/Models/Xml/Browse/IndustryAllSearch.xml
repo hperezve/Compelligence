@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>IndustryAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>IndustryAllView</entity>
+      <property>Name</property>
+      <label>IndustryName</label>
+    </column>
+    <column>
+      <entity>IndustryAllView</entity>
+      <property>AssignedToName</property>
+      <label>IndustryOwnerId</label>
+    </column>
+    <column>
+      <entity>IndustryAllView</entity>
+      <property>Status</property>
+      <label>IndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>IndustryAllView</entity>
+      <property>Budget</property>
+      <type>Decimal</type>
+      <label>IndustryBudget</label>
+    </column>
+    <column>
+      <entity>IndustryAllView</entity>
+      <property>Description</property>
+      <label>IndustryDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.IndustryAllView as IndustryAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   IndustryAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    IndustryAllView.Name
+    ]]>
+  </orderBy>
+</browse>

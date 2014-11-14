@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>UserProfileAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>FirstName</property>
+      <label>UserFirstName</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>LastName</property>
+      <label>UserLastName</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>Status</property>
+      <label>UserStatus</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    <column>
+      <entity>UserProfileAllView</entity>
+      <property>Email</property>
+      <label>UserEmail</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>Title</property>
+      <label>UserTitle</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>CountryCode</property>
+      <label>UserCountryId</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>City</property>
+      <label>UserCity</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>Department</property>
+      <label>UserDepartment</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>Phone</property>
+      <label>UserPhone</label>
+    </column>
+    <column >
+      <entity>UserProfileAllView</entity>
+      <property>Fax</property>
+      <label>UserFax</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.UserProfileAllView  as UserProfileAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   UserProfileAllView.ClientCompany = '$S{ClientCompany}' and UserProfileAllView.ReceiveMail ='Y' and  UserProfileAllView.SecurityGroupId <> '$C{SecurityGroupBase.Root}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    UserProfileAllView.FirstName
+    ]]>
+  </orderBy>
+ </browse>

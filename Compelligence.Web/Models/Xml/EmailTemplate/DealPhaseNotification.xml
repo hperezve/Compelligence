@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: Deal $P{DealName}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>The phase of Deal <b>$P{DealName}</b> was changed to <b>$P{Phase}</b></div>
+      <br />
+      <br />
+      <div>Thanks $P{UserName}</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

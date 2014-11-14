@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true" pagesize="30">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>Name</property>
+      <label>CriteriaName</label>
+    </column>
+    <column >
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>Group</property>
+      <label>CriteriaGroup</label>
+    </column>
+    <column >
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>OrderGroup</property>
+      <label>CriteriaOrderGroup</label>
+    </column>
+    <column >
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>Set</property>
+      <label>CriteriaSet</label>
+    </column>
+    <column hidden="true">
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>OrderSet</property>
+      <label>CriteriaOrderSet</label>
+    </column>
+    <column >
+      <entity>CriteriaIndustryDetailView</entity>
+      <property>Visible</property>
+      <label>CriteriaVisible</label>
+      <type class="StandardData">CriteriaVisible</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriaIndustryDetailView as CriteriaIndustryDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CriteriaIndustryDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriaIndustryDetailView.OrderGroup, CriteriaIndustryDetailView.OrderSet
+    ]]>
+  </orderBy>
+</browse>

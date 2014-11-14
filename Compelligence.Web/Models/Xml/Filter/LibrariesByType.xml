@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LibrariesByTypeView</entity>
+      <property>LibraryName</property>
+      <label>LibraryNameReport</label>
+    </column>
+    <column>
+      <entity>LibrariesByTypeView</entity>
+      <property>LibraryTypeName</property>
+      <label>LibraryTypeNameReport</label>
+    </column>
+    <column>
+      <entity>LibrariesByTypeView</entity>
+      <property>Author</property>
+      <label>LibraryAuthorReport</label>
+    </column>
+    <column>
+      <entity>LibrariesByTypeView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>LibrariesByProjectView</entity>
+      <property>Permanent</property>
+      <label>LibrariesByProjectPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibrariesByTypeView as LibrariesByTypeView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibrariesByTypeView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibrariesByTypeView.LibraryName
+    ]]>
+  </orderBy>
+</browse> 

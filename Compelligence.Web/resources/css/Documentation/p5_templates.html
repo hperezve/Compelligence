@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puridiom 5 Style Guide</title>
+	<link rel="stylesheet" href="tdcss.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../styles.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+	<script type="text/javascript" src="tdcss.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$("#tdcss").tdcss();
+		})
+	</script>
+</head>
+<body>
+<div id="tdcss">
+	<!-- &
+		<div class="mainDescription">
+			<div class="icon-documentation">
+				<object data="../../images/icons/icons_documentation.svg" type="image/svg+xml"></object>
+			</div>
+			Puridiom5 uses the O-Collection Icon library which can be found here -
+			<a target="_blank" href="http://www.iconexperience.com/o_collection/icons/">IconExperience O-Collection</a>
+		</div>
+	-->
+	<!-- # Portlets -->
+		<!-- : Dashboard Tile -->
+		<div>
+			<section class="portletScreen">
+				<article class="dashboardTilesPortlet">
+					<a href="#">
+						<h1 class="portlet-heading">
+							Tile Title
+							<div class="icon-tileRefresh">
+								<object data="../../images/icons/refresh_white.svg" type="image/svg+xml"></object>
+							</div>
+						</h1>
+						<div>
+							<h3 class="full">
+								<div class="icon-tile">
+									<object data="../../images/icons/briefcase_document_white.svg" type="image/svg+xml"></object>
+								</div>
+								<div class="number">217</div>
+							</h3>
+							<div class="description">Tile Description</div>
+						</div>
+					</a>
+				</article>
+			</section>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Dashboard Portlet -->
+		<div>
+			<section class="portletScreen">
+				<article class="dashboardPortlet">
+					<h1 class="portlet-heading">
+						<div class="icon-portlet">
+							<object data="../../images/icons/clipboard.svg" type="image/svg+xml"></object>
+						</div>
+						Portlet Title
+						<div class="icon-gearwheel portletSettings">
+							<object data="../../images/icons/gearwheel.svg" type="image/svg+xml"></object>
+						</div>
+					</h1>
+				</article>
+			</section>
+		</div>
+		<!-- & <hr> -->
+		<!-- : Review Portlet -->
+		<div>
+			<section class="portletScreen">
+				<article class="reviewPortlet">
+					<a>
+						<h1 class="portlet-heading">
+							<div class="icon-portlet">
+								<object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+							</div>
+							Portlet Title
+						</h1>
+					</a>
+				</article>
+			</section>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Heading Portlet -->
+		<div>
+			<section class="portletScreen">
+				<article class="headingPortlet">
+					<article class="headingInfo">
+						<div class="requisitionNumber">Requisition Number</div>
+						<h1>Page Title</h1>
+						<div class="status">STATUS</div>
+					</article>
+				</article>
+			</section>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Add Comment -->
+		<div>
+			<article class="commentsAddPortlet">
+		      <h1 class="portlet-heading">
+		         <div class="icon-portlet">
+		            <object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+		         </div>
+		         Add Comment
+		      </h1>
+		      <div class="options">
+		         <div class="inputArea">
+		            <textarea>This is where the user would input the text for the comment.</textarea>
+		         </div>
+		         <label class="print">Print:<input type="checkbox" /></label>
+		         <label class="placement">Placement:
+		            <select>
+		               <option></option>
+		               <option>Before</option>
+		               <option>After</option>
+		            </select>
+		         </label>
+		      </div>
+		   </article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Browse Standard Comment -->
+		<div>
+		   <article class="commentsBrowsePortlet">
+		      <h1 class="portlet-heading">
+		         <div class="icon-portlet">
+		            <object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+		         </div>
+		         Standard Comments
+		      </h1>
+		      <ul class="buttonBrowse">
+		         <li class="columnRow">
+		            <div class="browseRows">
+		               <div class="row name">Terms and Conditions</div>
+		               <div class="row comment">The terms and condtions are as follows:The terms and condtions are as follows:The terms and condtions are as follows: </div>
+		            </div>
+		            <div class="button">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/add_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		         </li>
+		         <li class="columnRow">
+		            <div class="browseRows">
+		               <div class="row name">Example</div>
+		               <div class="row comment">This is a standard comment that may be selected for this requisition</div>
+		            </div>
+						<div class="button">
+							<button>
+								<div class="icon-button">
+									<object data="../../images/icons/add_white.svg" type="image/svg+xml"></object>
+								</div>
+							</button>
+						</div>
+		         </li>
+		         <li class="columnRow">
+		            <div class="browseRows">
+		               <div class="row name">Test</div>
+		               <div class="row comment">Testing of the standard comment browse.</div>
+		            </div>
+						<div class="button">
+							<button>
+								<div class="icon-button">
+									<object data="../../images/icons/add_white.svg" type="image/svg+xml"></object>
+								</div>
+							</button>
+						</div>
+		         </li>
+		      </ul>
+		   </article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : View Comments -->
+		<div>
+		   <article class="commentsShowPortlet">
+		      <h1 class="portlet-heading">
+		         <div class="icon-portlet">
+		            <object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+		         </div>
+		         Comments
+		      </h1>
+		      <ul class="commentList_6">
+		         <li>
+		            <div class="column_1 edit">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/edit_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		            <div class="column_2 name">Renzo Ramos</div>
+		            <div class="column_3 comment">This is a test of the comment that Renzo wrote for this requisition.</div>
+		            <div class="column_4 delete">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		            <div class="column_5 print"><div class="detailLabel">Print:</div><div class="text">Y</div></div>
+		            <div class="column_6 placement"><div class="detailLabel">Placement:</div><div class="text">After</div></div>
+		         </li>
+		         <li>
+		            <div class="column_1 edit">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/edit_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		            <div class="column_2 name">Renzo Ramos</div>
+		            <div class="column_3 comment">Short comment here.</div>
+		            <div class="column_4 delete">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		            <div class="column_5 print"><div class="detailLabel">Print:</div><div class="text">Y</div></div>
+		            <div class="column_6 placement"><div class="detailLabel">Placement:</div><div class="text">After</div></div>
+		         </li>
+		         <li>
+		            <div class="column_1 edit">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/edit_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		            <div class="column_2 name">Renzo Ramos</div>
+		            <div class="column_3 comment">This is to test an extra long comment so i might end up copying and pasteing this sentence, or can i make it long enough just by typing all of this? How about we add a little more just for fun.</div>
+		            <div class="column_4 delete">
+		               <button>
+		                  <div class="icon-button">
+		                     <object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object>
+		                  </div>
+		               </button>
+		            </div>
+		            <div class="column_5 print"><div class="detailLabel">Print:</div><div class="text">Y</div></div>
+		            <div class="column_6 placement"><div class="detailLabel">Placement:</div><div class="text">After</div></div>
+		         </li>
+		      </ul>
+		   </article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Add Attachment -->
+		<div>
+			<article class="attachmentsAddPortlet">
+				<h1 class="portlet-heading">
+					<div class="icon-portlet">
+						<object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+					</div>
+					Add Attachment
+				</h1>
+				<div class="options">
+					<div class="inputArea">
+						<label class="title">
+							<div class="text">Title:</div>
+							<input type="text" placeholder="title" />
+						</label>
+						<label class="file">
+							<input type="file" />
+						</label>
+						<label class="print">
+							<div class="text">Print:</div>
+							<input type="checkbox" />
+						</label>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : View Attachments -->
+		<div>
+			<article class="attachmentsPortlet">
+				<h1 class="portlet-heading">
+					<div class="icon-portlet">
+						<object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+					</div>
+					Attachments
+				</h1>
+				<ul class="columnList_5">
+					<li class="columnRow listHeader hide-on-mobile">
+						<div class="column_1 headerLabel">Title</div>
+						<div class="column_2 headerLabel">Print</div>
+						<div class="column_3 headerLabel">Filename</div>
+						<div class="column_4 headerLabel">Size</div>
+						<div class="column_5 headerLabel buttons"></div>
+					</li>
+					<li class="columnRow">
+						<div class="column_1"><div class="detailLabel hide-on-desktop hide-on-tablet">Title:</div><div class="text">Test Attachment</div></div>
+						<div class="column_2"><div class="detailLabel hide-on-desktop hide-on-tablet">Print:</div><div class="text"><div class="icon-button">
+							<object data="../../images/icons/check.svg" type="image/svg+xml"></object>
+						</div></div></div>
+						<div class="column_3"><div class="detailLabel hide-on-desktop hide-on-tablet">Filename:</div><div class="text">01234_test.txt</div></div>
+						<div class="column_4"><div class="detailLabel hide-on-desktop hide-on-tablet">Size:</div><div class="text">43.51KB</div></div>
+						<div class="column_5 buttons">
+							<button>
+								<div class="icon-button">
+									<object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object>
+								</div>
+							</button>
+						</div>
+					</li>
+					<li class="columnRow">
+						<div class="column_1"><div class="detailLabel hide-on-desktop hide-on-tablet">Title:</div><div class="text">Background Pattern</div></div>
+						<div class="column_2"><div class="detailLabel hide-on-desktop hide-on-tablet">Print:</div><div class="text"><div class="icon-button">
+							<object data="../../images/icons/delete.svg" type="image/svg+xml"></object>
+						</div></div></div>
+						<div class="column_3"><div class="detailLabel hide-on-desktop hide-on-tablet">Filename:</div><div class="text">background_pattern.png</div></div>
+						<div class="column_4"><div class="detailLabel hide-on-desktop hide-on-tablet">Size:</div><div class="text">21.73KB</div></div>
+						<div class="column_5 buttons">
+							<button>
+								<div class="icon-button">
+									<object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object>
+								</div>
+							</button>
+						</div>
+					</li>
+				</ul>
+			</article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Routing List -->
+		<div>
+			<article class="routingPortlet">
+				<h1 class="portlet-heading">
+					<span class="icon-portfolio_folder"><object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object></span>
+					Routing List
+				</h1>
+				<ul class="columnList_5">
+					<li class="columnRow listHeader hide-on-mobile">
+						<div class="column_1 buttons headerLabel"></div>
+						<div class="column_2 number headerLabel"></div>
+						<div class="column_3 ApproverName headerLabel">Approver Name</div>
+						<div class="column_4 CallForward headerLabel">Call Forward</div>
+						<div class="column_5 delete headerLabel"></div>
+					</li>
+					<li class="columnRow">
+						<div class="column_1 buttons">
+							<button class="disabled">
+								<div class="icon-approval"><object data="../../images/icons/navigate_up_white.svg" type="image/svg+xml"></object></div>
+							</button>
+							<button>
+								<div class="icon-approval"><object data="../../images/icons/navigate_down_white.svg" type="image/svg+xml"></object></div>
+							</button>
+						</div>
+						<div class="column_2 number"><div class="detailLabel hide-on-desktop hide-on-tablet">Number:</div>1</div>
+						<div class="column_3 ApproverName"><div class="detailLabel hide-on-desktop hide-on-tablet">Approver Name:</div>Shelley Sherony</div>
+						<div class="column_4 CallForward"><div class="detailLabel hide-on-desktop hide-on-tablet">Call Forward:</div>Zach Bricker</div>
+						<div class="column_5 delete">
+							<button>
+								<div class="icon-approval"><object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object></div>
+							</button>
+						</div>
+					</li>
+					<li class="columnRow">
+						<div class="column_1 buttons">
+							<button>
+								<div class="icon-approval"><object data="../../images/icons/navigate_up_white.svg" type="image/svg+xml"></object></div>
+							</button>
+							<button>
+								<div class="icon-approval"><object data="../../images/icons/navigate_down_white.svg" type="image/svg+xml"></object></div>
+							</button>
+						</div>
+						<div class="column_2 number"><div class="detailLabel hide-on-desktop hide-on-tablet">Number:</div>2</div>
+						<div class="column_3 ApproverName"><div class="detailLabel hide-on-desktop hide-on-tablet">Approver Name:</div>Renzo Ramos</div>
+						<div class="column_4 CallForward"><div class="detailLabel hide-on-desktop hide-on-tablet">Call Forward:</div>Celtson Toote</div>
+						<div class="column_5 delete">
+							<button>
+								<div class="icon-approval"><object data="../../images/icons/delete_white.svg" type="image/svg+xml"></object></div>
+							</button>
+						</div>
+					</li>
+				</ul>
+			</article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Approvals Routing List -->
+		<div>
+			<article class="approvalPortlet">
+				<h1 class="portlet-heading">
+					<span class="icon-portlet"><object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object></span>
+					Approval List
+				</h1>
+				<ul class="columnList_3">
+					<li class="columnRow listHeader hide-on-mobile">
+						<div class="column_1 approverName headerLabel">Approver Name</div>
+						<div class="column_2 callForward headerLabel">Call Forward</div>
+						<div class="column_3 dateApproved headerLabel">Date Approved</div>
+					</li>
+					<li class="columnRow">
+						<div class="column_1 approverName"><div class="detailLabel hide-on-desktop hide-on-tablet">Approver Name:</div>Shelley Sherony</div>
+						<div class="column_2 callForward"><div class="detailLabel hide-on-desktop hide-on-tablet">Call Forward:</div>Zach Bricker</div>
+						<div class="column_3 dateApproved"><div class="detailLabel hide-on-desktop hide-on-tablet">Date Approved:</div>8/26/14</div>
+						<div class="column_4 comment"><div class="detailLabel hide-on-desktop hide-on-tablet">Comments:</div>There are terms and conditions for this requisition but they are attached as a file instead of being a comment.</div>
+					</li>
+					<li class="columnRow">
+						<div class="column_1 approverName"><div class="detailLabel hide-on-desktop hide-on-tablet">Approver Name:</div>Renzo Ramos</div>
+						<div class="column_2 callForward"><div class="detailLabel hide-on-desktop hide-on-tablet">Call Forward:</div>Celtson Toote</div>
+						<div class="column_3 dateApproved"><div class="detailLabel hide-on-desktop hide-on-tablet">Date Approved:</div></div>
+						<div class="column_4 comment"><div class="detailLabel hide-on-desktop hide-on-tablet">Comments:</div>There are terms and conditions for this requisition but they are attached as a file instead of being a comment.</div>
+					</li>
+				</ul>
+			</article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Approvals Add Notes -->
+		<div>
+			<article class="approvalNotesPortlet">
+				<h1 class="portlet-heading">
+					<div class="icon-portlet">
+						<object data="../../images/icons/portfolio_folder.svg" type="image/svg+xml"></object>
+					</div>
+					Add Note
+				</h1>
+				<div class="options">
+					<div class="inputArea">
+						<textarea>This is where the user would input the text for the note.</textarea>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Navigation Bar -->
+		<div class="headerExample">
+			<header>
+				<nav class="mainNavigationBar">
+					<a ng-click="showLeftPlease = !showLeftPlease" class="sideNav">
+						<div class="icon-nav">
+							<object data="../../images/icons/menu.svg" type="image/svg+xml"></object>
+							<div class="linkTitle">Menu</div>
+						</div>
+					</a>
+					<a class="logo" href="#DashboardCeltson">
+						<img class="headerLogo" src="../../images/p-logo.png" alt="Puridiom 5.0" />
+					</a>
+					<div class="search">
+						<input class="navSearchBar" type="text" placeholder="Search" />
+					</div>
+					<a href="#DashboardTiles/REQ_DASH_VIEW/REQ_DASH_VIEW" class="dashboardHome">
+						<div class="icon-nav">
+							<object data="../../images/icons/home.svg" type="image/svg+xml"></object>
+							<div class="linkTitle">Home</div>
+						</div>
+					</a>
+					<a class="welcome" style="display:none;">
+						<div class="icon-nav">
+							<object data="../../images/icons/user.svg" type="image/svg+xml"></object>
+							<div id="displayFullNameId" class="linkTitle"></div>
+						</div>
+					</a>
+					<a ng-click="showRightPlease = !showRightPlease" class="notification hide-on-mobile">
+						<div class="icon-nav">
+							<object data="../../images/icons/bell.svg" type="image/svg+xml"></object>
+							<div class="linkTitle badge" id="alertNumber">0</div>
+						</div>
+					</a>
+				</nav>
+			</header>
+		</div>
+
+
+
+	<!-- # Content -->
+		<!-- & <hr> -->
+		<!-- : Browse -->
+		<div>
+			<ul class="columnList_4">
+				<li class="columnRow listHeader hide-on-mobile">
+					<a>
+						<div class="column_1 headerLabel">Number</div>
+						<div class="column_2 headerLabel">Status</div>
+						<div class="column_3 headerLabel">Type</div>
+						<div class="column_4 headerLabel">Ship To Code</div>
+					</a>
+				</li>
+				<li class="columnRow">
+					<a>
+						<div class="column_1 requisitionNumber">R000339-12</div>
+						<div class="column_2 status">REQ APPROVING</div>
+						<div class="column_3">Purchase Request</div>
+						<div class="column_4"><div class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</div>MAIN</div>
+					</a>
+				</li>
+				<li class="columnRow">
+					<a>
+						<div class="column_1 requisitionNumber">R000338-12</div>
+						<div class="column_2 status">REQ APPROVING</div>
+						<div class="column_3">Purchase Request</div>
+						<div class="column_4"><div class="detailLabel hide-on-desktop hide-on-tablet">Ship To Code:</div>MAIN OFFICE BUILDING</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Two Column Content -->
+		<div>
+			<div class="twoColContent">
+				<label>
+					<div class="labelText">Ship To Code:</div>
+					<div class="valueText">MAIN</div>
+				</label>
+				<label>
+					<div class="labelText">Shipping Code:</div>
+					<div class="valueText">*TBD*</div>
+				</label>
+				<label>
+					<div class="labelText">Priority Code:</div>
+					<div class="valueText">0</div>
+				</label>
+				<label>
+					<div class="labelText">Ship Attn:</div>
+					<div class="valueText">Zachary Bricker</div>
+				</label>
+			</div>
+		</div>
+
+		<!-- & <hr> -->
+		<!-- : Line Item List -->
+		<div>
+			<ul class="lineItemList">
+				<li>
+					<a>
+						<div class="firstRow">
+							<div class="itemNumber">39120 x 6</div>
+							<div class="description">21.5 x 15 x 12.5 attached lid container</div>
+							<div class="lineTotal">120.00<div class="currCode">USD</div></div>
+						</div>
+						<div class="details"><div class="detailLabel">Catalog ID:</div>PATTERSON LIFT</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						<div class="firstRow">
+							<div class="itemNumber">3PVU2 x 5</div>
+							<div class="description">Eyewash Double Station North High Vis Yellow 16oz</div>
+							<div class="lineTotal">175.05<div class="currCode">USD</div></div>
+						</div>
+						<div class="details"><div class="detailLabel">Catalog ID:</div>GRAINGER</div>
+						<div class="details"><div class="detailLabel">Mfg Name:</div>NORTH</div>
+						<div class="details"><div class="detailLabel">Catalog ID:</div>GRAINGER</div>
+						<div class="details"><div class="detailLabel">Mfg Name:</div>NORTH</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+</div>
+</body>
+</html>

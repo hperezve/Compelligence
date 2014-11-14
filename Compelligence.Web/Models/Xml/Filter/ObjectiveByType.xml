@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ObjectiveByTypeView</entity>
+      <property>Name</property>
+      <label>ObjectiveName</label>
+    </column>
+    <column>
+      <entity>ObjectiveByTypeView</entity>
+      <property>AssignedToName</property>
+      <label>ObjectiveAssignedTo</label>
+    </column>
+    <column>
+      <entity>ObjectiveByTypeView</entity>
+      <property>Status</property>
+      <label>ObjectiveStatus</label>
+      <type class="StandardData">ObjectiveStatus</type>
+    </column>
+    <column>
+      <entity>ObjectiveByTypeView</entity>
+      <property>Type</property>
+      <label>ObjectiveType</label>
+      <type class="StandardData">ObjectiveType</type>
+    </column>
+    <column>
+      <entity>ObjectiveByTypeView</entity>
+      <property>Detail</property>
+      <label>ObjectiveDetail</label>
+    </column>
+    <column>
+      <entity>ObjectiveByTypeView</entity>
+      <property>DueDate</property>
+      <label>ObjectiveDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ObjectiveByTypeView as ObjectiveByTypeView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ObjectiveByTypeView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ObjectiveByTypeView.Name
+    ]]>
+  </orderBy>
+</browse>

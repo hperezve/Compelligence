@@ -1,0 +1,85 @@
+#star ul.star 
+{ LIST-STYLE: none; 
+  MARGIN: 0; 
+  PADDING: 0; 
+  WIDTH: 85px; 
+  HEIGHT: 20px; 
+  LEFT: 10px; 
+  TOP: -5px; 
+  POSITION: relative; 
+  FLOAT: left; 
+  BACKGROUND: url('../Images/Styles/stars.gif') repeat-x; 
+  CURSOR: pointer; 
+  }
+#star li 
+{ PADDING: 0; 
+  MARGIN: 0; 
+  FLOAT: left; 
+  DISPLAY: block; 
+  WIDTH: 85px; 
+  HEIGHT: 20px; 
+  TEXT-DECORATION: none; 
+  text-indent: -9000px; 
+  Z-INDEX: 20; 
+  POSITION: relative; 
+  PADDING: 0; 
+}
+
+#star li.curr 
+{ BACKGROUND: url('../Images/Styles/stars.gif') left 25px; 
+  FONT-SIZE: 1px; 
+}
+
+#star div.user 
+{ LEFT: 15px; 
+  POSITION: relative; 
+  FLOAT: left; 
+  FONT-SIZE: 13px; 
+  FONT-FAMILY: Arial; 
+  COLOR: #ffffff; 
+}
+
+.ratingBox
+{
+  /*background-color:gray;*/
+  height:25px;
+  width:125px;
+  float:left;  
+  margin-right:15px;
+}
+
+
+.rating
+{
+  width:85px;
+  height:25px;
+  background-image: url('../Images/Styles/compelligence.stars.gif');
+  background-position: left 50px ;
+  float:left;
+  z-index: 15;
+}
+
+.rating-foreground
+{
+  width:50px;
+  height:25px;
+  background-image:url('../Images/Styles/compelligence.stars.gif');
+  background-position: left 25px ;
+}
+
+.rating-average
+{
+  width:85px;
+  height:25px;
+  background-image:url('../Images/Styles/compelligence.stars.gif');
+  float:left
+}
+
+.rating-percent
+{
+  width:25px;
+  height:25px;
+  float:left;
+  padding: 5px 0px 0px 5px;  
+  margin: 0px 0px 0px 0px;  
+}

@@ -1,0 +1,20 @@
+<NewsLetter>
+  <Sections>
+    <Section>
+      <Title>First Section </Title>
+      <Description>First Section  Description</Description>
+    </Section>
+    <Section>
+      <Title>Second section</Title>
+      <Description>Second section description</Description>
+      <Items>
+        <Item Type="A" Value="BBC News Player | Business">bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content bbs content </Item>
+        <Item Type="A" Value="Red Project">there is a dynamic project for texting newsletter today. there is a dynamic project for texting newsletter today. there is a dynamic project for texting newsletter today. there is a dynamic project for texting newsletter today. there is a dynamic project for texting newsletter today. there is a dynamic project for texting newsletter today. </Item>
+      </Items>
+    </Section>
+    <Section>
+      <Title>Thrid Section</Title>
+      <Description>Third Section work. Third Section work. Third Section work. Third Section work. Third Section work. Third Section work. Third Section work. Third Section work. </Description>
+    </Section>
+  </Sections>
+</NewsLetter>

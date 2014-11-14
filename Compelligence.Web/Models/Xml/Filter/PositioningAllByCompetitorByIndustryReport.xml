@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>CompetitorName</property>
+      <label>PositioningCompetitorId</label>
+    </column>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>IndustryName</property>
+      <label>PositioningIndustryId</label>
+    </column>
+    
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>ClientCompetitorName</property>
+      <label>PositioningClientCompetitorName</label>
+    </column>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>HowWePosition</property>
+      <label>PositioningHowWePosition</label>
+    </column>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>HowTheyAttack</property>
+      <label>PositioningHowTheyAttack</label>
+    </column>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>HowWeDefend</property>
+      <label>PositioningHowWeDefend</label>
+    </column>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>HowTheyPosition</property>
+      <label>PositioningHowTheyPosition</label>
+    </column>
+    <column>
+      <entity>PositioningAllByCompetitorByIndustryReportView</entity>
+      <property>HowWeAttack</property>
+      <label>PositioningHowWeAttack</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningAllByCompetitorByIndustryReportView as PositioningAllByCompetitorByIndustryReportView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   PositioningAllByCompetitorByIndustryReportView.ClientCompany = '$S{ClientCompany}' and PositioningAllByCompetitorByIndustryReportView.P_PositioningRelation= '$C{PositioningRelation.Positioning}' and PositioningAllByCompetitorByIndustryReportView.P_IsCompetitorCompany='N' and PositioningAllByCompetitorByIndustryReportView.P_EntityType='$C{PositioningEntityType.Competitor}' and PositioningAllByCompetitorByIndustryReportView.P_Status='$C{PositioningStatus.Enabled}' 
+    and PositioningAllByCompetitorByIndustryReportView.PC_PositioningRelation= '$C{PositioningRelation.Positioning}' and PositioningAllByCompetitorByIndustryReportView.PC_IsCompetitorCompany='Y' and PositioningAllByCompetitorByIndustryReportView.PC_EntityType='$C{PositioningEntityType.Competitor}' and PositioningAllByCompetitorByIndustryReportView.PC_Status='$C{PositioningStatus.Enabled}' 
+     and PositioningAllByCompetitorByIndustryReportView.CM_PositioningRelation= '$C{PositioningRelation.CompetitiveMessaging}' and PositioningAllByCompetitorByIndustryReportView.CM_IsCompetitorCompany='Y' and PositioningAllByCompetitorByIndustryReportView.CM_EntityType='$C{PositioningEntityType.Competitor}' and PositioningAllByCompetitorByIndustryReportView.CM_Status='$C{PositioningStatus.Enabled}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningAllByCompetitorByIndustryReportView.IndustryName, PositioningAllByCompetitorByIndustryReportView.CompetitorName, PositioningAllByCompetitorByIndustryReportView.ClientCompetitorName
+    ]]>
+  </orderBy>
+</browse>

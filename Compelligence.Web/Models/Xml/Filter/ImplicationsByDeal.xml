@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ImplicationsByDealView</entity>
+      <property>ImplicationName</property>
+      <label>ImplicationsByDealImplicationName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByDealView</entity>
+      <property>ImplicationSource</property>
+      <label>ImplicationsByDealSource</label>
+    </column>
+    <column>
+      <entity>ImplicationsByDealView</entity>
+      <property>AssignedToName</property>
+      <label>ImplicationsByDealAssignedToName</label>
+    </column>
+    <column>
+      <entity>ImplicationsByDealView</entity>
+      <property>DealName</property>
+      <label>ImplicationsByDealName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ImplicationsByDealView as ImplicationsByDealView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ImplicationsByDealView.ClientCompany = '$S{ClientCompany}' AND ImplicationsByDealView.EntityType = '$C{DomainObjectType.Deal}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ImplicationsByDealView.DealId
+    ]]>
+  </orderBy>
+</browse>

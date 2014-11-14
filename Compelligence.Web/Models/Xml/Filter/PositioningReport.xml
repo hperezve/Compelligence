@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column >
+      <entity>PositioningReportView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column >
+      <entity>PositioningReportView</entity>
+      <property>Status</property>
+      <label>PositioningReportStatus</label>
+      <type class="StandardData">PositioningStatus</type>
+    </column>
+    <column >
+      <entity>PositioningReportView</entity>
+      <property>PositionRela</property>
+      <label>PositioningReportPositionRelation</label>
+      <type class="StandardData">PositioningRelation</type>
+    </column>
+    <column >
+      <entity>PositioningReportView</entity>
+      <property>UserName</property>
+      <label>PositioningReportUserName</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>EntityType</property>
+      <label>PositioningEntityType</label>
+      <type class="StandardData">PositioningEntityType</type>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>EntityName</property>
+      <label>PositioningEntityName</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>HowWePosition</property>
+      <label>PositioningHowWePosition</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>HowTheyAttack</property>
+      <label>PositioningHowTheyAttack</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>HowWeDefend</property>
+      <label>PositioningHowWeDefend</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>HowTheyPosition</property>
+      <label>PositioningHowTheyPosition</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>HowWeAttack</property>
+      <label>PositioningHowWeAttack</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>IndustryName</property>
+      <label>PositioningReportIndustry</label>
+    </column>
+    <column>
+      <entity>PositioningReportView</entity>
+      <property>CompetitorName</property>
+      <label>PositioningReportCompetitor</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningReportView as PositioningReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningReportView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

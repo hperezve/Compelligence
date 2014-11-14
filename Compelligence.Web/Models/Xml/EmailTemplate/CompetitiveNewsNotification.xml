@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}- Competitive News: $P{LibraryName}.]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+      <body>
+      <div><b>$P{LibraryDescription}</b></div>
+      <br/>
+  </html>
+  ]]>
+  </message>
+</email>

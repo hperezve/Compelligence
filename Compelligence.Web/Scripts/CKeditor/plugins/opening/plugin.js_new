@@ -1,0 +1,31 @@
+(function(){
+//Section 1 : Code to execute when the toolbar button is pressed
+var a= {
+exec:function(editor){
+
+ var theSelectedText = editor.getSelection().getNative();
+ var FormattedText = '<opening>'+theSelectedText+'</opening>';
+ alert(FormattedText);
+ editor.insertHtml(FormattedText);
+ 
+ 
+$(".indexTwo").dialog({ autoOpen: false ,height: 400,width: 500, title: 'Heading'});
+$(".indexTwo").dialog('open');
+
+ 			//CKEDITOR.dialog.add( 'opening', this.path + 'dialogs/opening.js' );
+	}
+},
+
+//Section 2 : Create the button and add the functionality to it
+b='opening';
+CKEDITOR.plugins.add(b,{
+	init:function(editor){
+	editor.addCommand(b,a);
+	editor.ui.addButton("opening",{
+			label:'opening', 
+			icon:this.path+"icon-doc.png",
+			command:b
+			});
+		}
+	}); 
+})();

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PlanReportView</entity>
+      <property>Task</property>
+      <label>PlanTask</label>
+    </column>
+    <column>
+      <entity>PlanReportView</entity>
+      <property>CreatedByName</property>
+      <label>PlanCreatedByName</label>
+    </column>
+    <column>
+      <entity>PlanReportView</entity>
+      <property>AssignedToName</property>
+      <label>PlanAssignedToName</label>
+    </column>
+    <column>
+      <entity>PlanReportView</entity>
+      <property>DueDate</property>
+      <label>PlanDueDate</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>PlanReportView</entity>
+      <property>Type</property>
+      <label>PlanType</label>
+      <type class="StandardData">PlanType</type>
+    </column>
+    <column>
+      <entity>PlanReportView</entity>
+      <property>Detail</property>
+      <label>PlanDetail</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PlanReportView as PlanReportView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PlanReportView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PlanReportView.Task
+    ]]>
+  </orderBy>
+</browse>

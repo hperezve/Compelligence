@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LibraryAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>Name</property>
+      <label>LibraryFileName</label>
+    </column>
+    <column>
+      <entity>LibraryAllView</entity>
+      <property>Score</property>
+      <label>LibraryScore</label>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>LibraryTypeName</property>
+      <label>LibraryType</label>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>Author</property>
+      <label>LibraryAuthor</label>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryAssignedTo</label>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>Permanent</property>
+      <label>LibraryPermanent</label>
+      <type class="StandardData">LibraryPermanent</type>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>DateDeletion</property>
+      <label>LibraryDateDeletion</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>LibraryAllView</entity>
+      <property>Related</property>
+      <label>LibraryRelated</label>
+    </column>
+    <column toggleunchecked="true">
+      <entity>LibraryAllView</entity>
+      <property>Description</property>
+      <label>LibraryDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryAllView as LibraryAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibraryAllView.ClientCompany = '$S{ClientCompany}'  and ((LibraryAllView.ExistInEntityNews ='N' and LibraryAllView.LibraryTypeKeyCode <> '$C{LibraryTypeKeyCode.News}' ) or (LibraryAllView.ExistInEntityNews ='Y' and LibraryAllView.LibraryTypeKeyCode = '$C{LibraryTypeKeyCode.News}' and LibraryAllView.Permanent = '$C{LibraryPermanent.Yes}')  or (LibraryAllView.ExistInEntityNews ='N' and LibraryAllView.Permanent = '$C{LibraryPermanent.Yes}') )
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryAllView.CreatedDate DESC
+    ]]>
+  </orderBy>
+</browse>

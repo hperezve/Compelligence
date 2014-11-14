@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: Win/Loss submission to Compelligence]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div> Dear $P{UserName}<br />
+            The Win/Loss $P{Title} submitted to $P{ClientCompany}
+      </div>
+      <div>Win/Loss <b>$P{Title}</b> was filled with:</div>
+      <br />
+      <div>
+        $P{Answers}
+      <div>
+      <br />
+      <div>Thanks $P{UserName}</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

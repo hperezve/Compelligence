@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>CompetitorName</property>
+      <label>ProductsByCompetitorViewCompetitorName</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>AssignedToName</property>
+      <label>ProductAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>ProductFamilyName</property>
+      <label>ProductProductFamilyName</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>Tier</property>
+      <label>ProductsByCompetitorShortTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>ProductStatus</property>
+      <label>ProductsByCompetitorProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>CompetitorTier</property>
+      <label>ReportCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorShortView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProductsByCompetitorCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductsByCompetitorShortView as ProductsByCompetitorShortView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProductsByCompetitorShortView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductsByCompetitorShortView.CompetitorName
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,596 @@
+/*----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Basic Page Styling ----------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+* { .boxSizing(); }
+html {
+	font-size:1.1em;
+	height: 100%;
+	margin: 0px;
+	min-height: 100%;
+	padding: 0px;
+	width: 100%;
+}
+body {
+	.gradientGreyStripe(top, 0%, 100%);
+	background-attachment:fixed;
+	background-color:@backgroundColorEnd;
+	background-repeat:repeat, no-repeat;
+	color:@bodyTextColor;
+	font-family:'Roboto', sans-serif;
+	font-size:1em;
+	height: 100%;
+	line-height: 1.4;
+	margin: 0px;
+	min-height: 100%;
+	padding: 0px;
+	width: 100%;
+}
+h1 { font-size:1.5em;font-weight:500;padding:0.3em 0.6em;margin:0px;color:@headingColor;
+	@media @tablet {
+		font-size:1.45em;
+	}
+	@media @mobile {
+		font-size:1.25em;
+	}
+}
+h3 { font-size:1.15em;font-weight:500;padding:0.3em 0.6em;margin:0px;color:@headingColor;
+	@media @tablet {
+		font-size:1.05em;
+	}
+	@media @mobile {
+		font-size:1.05em;
+	}
+}
+label { font-size:1em;font-weight:400;padding:5px 5px 5px 0px;margin:0px;color:@labelColor;
+	.value {
+		color:@bodyTextColor;
+	}
+	.inputLabel {
+		padding:0.7em 0.25em 0em 0em;
+	}
+	.required {
+		color:@primary;
+		text-shadow:1px 1px 0px rgba(0,0,0,0.25);
+	}
+}
+p, td { font-size:1em;font-weight:400;padding:5px 0px 5px 0px;margin:0px; }
+ul { margin:0px;padding:0px;
+	li { list-style:none; }
+}
+
+a {
+	text-decoration:none;
+	.transition(.2s);
+	color:@bodyTextColor;
+	&:hover, &:active, &:focus {
+		color:@primary;
+		.transition(0.2s);
+		cursor:pointer;
+	}
+}
+audio, canvas, img, video { vertical-align: middle; }
+::-moz-selection { background: @primary; text-shadow: none; }
+::selection { background: @primary; text-shadow: none; }
+
+.primaryIconColor { fill:@primaryIcon }
+.secondaryIconColor { fill:@secondaryIcon; }
+.starIconColor { fill:mix(@primaryIcon, #FFCC00, 22%); }
+.starNoIconColor { fill:fadeout(mix(@primaryIcon, #FFCC00, 50%), 37%); }
+.whiteIconColor { fill:@light; }
+.redIconColor { fill:@error; }
+.errorIconColor { fill:@error; }
+.warningIconColor { fill:@warning; }
+.neutralIconColor { fill:@labelColor; }
+
+.status { color:@primary;font-size:0.75em;font-weight:700;padding-top:0.35em; }
+
+.detailLabel {
+	color:@labelColor;
+	padding:0em 0.3em 0em 0em;
+}
+
+div.container.ng-scope {
+	padding:3.3rem 2.75em 5rem 1.5em;
+	position:relative;
+	min-height:100%;
+	margin:0em 0em -5rem;
+	@media @mobile {
+		padding:3rem 0em 0em;
+	}
+}
+
+.errorMessage {
+	text-align:left;
+	.flex(1 auto);
+	color:#AA3333;
+	font-weight:400;
+}
+object { pointer-events:none; }
+
+.loadingScreen {
+	background-color:fadeout(@light, 25%);
+	background-image:url(../images/PuridiomLoading.gif);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:7rem;
+	height:100%;
+	left:0px;
+	position:fixed;
+	top:0px;
+	width:100%;
+	z-index:999999999;
+	.text {
+		position:absolute;
+		text-align:center;
+		bottom:0;
+		top:50%;
+		height:1.5em;
+		margin:3em auto 0em;
+		font-size:1.3em;
+		color:@labelColor;
+		font-weight:600;
+		left:0;
+		right:0;
+	}
+}
+
+.errorScreen {
+	background-color:fadeout(#000, 50%);
+	height:100%;
+	left:0px;
+	position:fixed;
+	top:0px;
+	width:100%;
+	z-index:99999999;
+	.errorWindow {
+		background-color:@light;
+		margin:10% 25% 0%;
+		width:50%;
+		height:50%;
+		overflow:auto;
+		border:1px solid @labelColor;
+		.borderRadius(0.25em);
+		.shadowExtra(0px 2px 2px rgba(0,0,0,0.25), inset 0px 0px 10px fadeout(@primary, 50%), 0px 0px 0px transparent);
+		padding:0em;
+		text-align:center;
+		position:relative;
+		@media @tablet {
+			margin:10% 10% 0%;
+			width:80%;
+			height:65%;
+		}
+		@media @mobile {
+			margin:5% 2% 0%;
+			width:96%;
+			height:85%;
+		}
+		h1 {
+			width:100%;
+			text-align:left;
+			background-color:@primary;
+			color:@light;
+			font-size:1.3em;
+			padding:0.6em 0.8em;
+			position:relative;
+			@media @mobile {
+				font-size:1.15em;
+			}
+			a {
+				float:right;
+				font-size:1rem;
+				padding:0em;
+				position:absolute;
+				top:0em;
+				right:0em;
+				height:100%;
+				button {
+					margin:0em;
+					height:100%;
+					position:relative;
+					border:0px none transparent;
+					border-left:1px solid rgba(0,0,0,0.25);
+					.icon-button {
+						display:none;
+						@media @mobile {
+							display:block;
+						}
+					}
+					.buttonText {
+						display:block;
+						@media @mobile {
+							display:none;
+						}
+					}
+				}
+			}
+		}
+		.text {
+			padding:0.5em 1em;
+		}
+		.puridiomMan {
+			position:absolute;
+			left:0px;
+			bottom:0px;
+			width:7em;
+			height:auto;
+			opacity:.7;
+		}
+	}
+}
+
+
+::-webkit-input-placeholder { font-weight:400;color:#AAA; }
+:-moz-placeholder { font-weight:400;color:#AAA; }
+::-moz-placeholder { font-weight:400;color:#AAA; }
+:-ms-input-placeholder { font-weight:400;color:#AAA; }
+
+.pieGraph {
+	width: 100%;
+	height: auto;
+	min-width: 30em;
+	margin: 1em 0em 0em 0em;
+	text {
+		font-size: 1.45em !important;
+	}
+	path.slice {
+		stroke-width:0em;
+	}
+	path.slice {
+		&:nth-of-type(6n+1) { fill:@graph_1; }
+		&:nth-of-type(6n+2) { fill:@graph_2; }
+		&:nth-of-type(6n+3) { fill:@graph_3; }
+		&:nth-of-type(6n+4) { fill:@graph_4; }
+		&:nth-of-type(6n+5) { fill:@graph_5; }
+		&:nth-of-type(6n) { fill:@graph_6; }
+	}
+	text {
+		&:nth-of-type(6n+1) { fill:darken(@graph_1, 22%);/*text-shadow:1px 1px 1px fadeout(darken(@graph_1, 20%), 80%);*/ }
+		&:nth-of-type(6n+2) { fill:darken(@graph_2, 22%);/*text-shadow:1px 1px 1px fadeout(darken(@graph_2, 20%), 80%);*/ }
+		&:nth-of-type(6n+3) { fill:darken(@graph_3, 22%);/*text-shadow:1px 1px 1px fadeout(darken(@graph_3, 20%), 80%);*/ }
+		&:nth-of-type(6n+4) { fill:darken(@graph_4, 22%);/*text-shadow:1px 1px 1px fadeout(darken(@graph_4, 20%), 80%);*/ }
+		&:nth-of-type(6n+5) { fill:darken(@graph_5, 22%);/*text-shadow:1px 1px 1px fadeout(darken(@graph_5, 20%), 80%);*/ }
+		&:nth-of-type(6n) { fill:darken(@graph_6, 22%);/*text-shadow:1px 1px 1px fadeout(darken(@graph_6, 20%), 80%);*/ }
+	}
+	polyline {
+		stroke-width: 2px;
+		fill: none;
+		&:nth-of-type(6n+1) { stroke:darken(@graph_1, 10%); }
+		&:nth-of-type(6n+2) { stroke:darken(@graph_2, 10%); }
+		&:nth-of-type(6n+3) { stroke:darken(@graph_3, 10%); }
+		&:nth-of-type(6n+4) { stroke:darken(@graph_4, 10%); }
+		&:nth-of-type(6n+5) { stroke:darken(@graph_5, 10%); }
+		&:nth-of-type(6n) { stroke:darken(@graph_6, 10%); }
+	}
+}
+.barGraph {
+	width: 100%;
+	height: auto;
+	min-width: 30em;
+	margin:0em;
+	text {
+		font-size: 0.9em !important;
+	}
+	rect.bar {
+		&:nth-of-type(6n+1) { fill:@graph_1; }
+		&:nth-of-type(6n+2) { fill:@graph_2; }
+		&:nth-of-type(6n+3) { fill:@graph_3; }
+		&:nth-of-type(6n+4) { fill:@graph_4; }
+		&:nth-of-type(6n+5) { fill:@graph_5; }
+		&:nth-of-type(6n) { fill:@graph_6; }
+	}
+	.x.axis {
+		.tick {
+			&:nth-of-type(6n+1) { text { fill:darken(@graph_1, 22%); } }
+			&:nth-of-type(6n+2) { text { fill:darken(@graph_2, 22%); } }
+			&:nth-of-type(6n+3) { text { fill:darken(@graph_3, 22%); } }
+			&:nth-of-type(6n+4) { text { fill:darken(@graph_4, 22%); } }
+			&:nth-of-type(6n+5) { text { fill:darken(@graph_5, 22%); } }
+			&:nth-of-type(6n) { text { fill:darken(@graph_6, 22%); } }
+			line {
+				stroke-width: 3;
+				fill: none;
+			}
+			&:nth-of-type(6n+1) { line { stroke:darken(@graph_1, 10%); } }
+			&:nth-of-type(6n+2) { line { stroke:darken(@graph_2, 10%); } }
+			&:nth-of-type(6n+3) { line { stroke:darken(@graph_3, 10%); } }
+			&:nth-of-type(6n+4) { line { stroke:darken(@graph_4, 10%); } }
+			&:nth-of-type(6n+5) { line { stroke:darken(@graph_5, 10%); } }
+			&:nth-of-type(6n) { line { stroke:darken(@graph_6, 10%); } }
+		}
+		path.domain {
+			display:none;
+		}
+	}
+	.y.axis path.domain {
+		fill:none;
+		stroke-width:2;
+		stroke:black;
+	}
+}
+
+label.required {
+	.labelText:after{
+		content: "/1F784 ";
+		color:@primary;
+		position:relative;
+		top:-0.25em;
+		left:-0.15em;
+		font-size:1.2em;
+	}
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------- General Class Styles ----------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* Don't allow other elements to float to either side */
+.clear { clear:both; }
+
+/* Hide an element and do not keep its place */
+.hide { display:none; visibility:hidden; }
+
+/* Show an element that has been hidden */
+.show { display:block; visibility:visible; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden { border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px; }
+
+/* Align text to the left, center, or right */
+.left { text-align:left; }
+.center { text-align:center; }
+.right { text-align:right; }
+
+/* Control how bold the text is */
+.light { font-weight:300; }
+.normal { font-weight:400; }
+.bold { font-weight:500; }
+.bolder { font-weight:700; }
+
+/* Add or remove an underline from text */
+.underline { text-decoration:underline; }
+.noUnderline { text-decoration:none; }
+
+/* Make text italic */
+.italic { font-style:italic; }
+
+/* Make text lowercase, uppercase, or capitalize each word */
+.lowercase { text-transform:lowercase; }
+.capitalize { text-transform:capitalize; }
+.uppercase { text-transform:uppercase; }
+
+/* Remove padding or margin from element */
+.noPadding { padding:0px; }
+.noMargin { margin:0px; }
+
+/* Make text overflow to ellipsis if box is smaller than text line length */
+.ellipsis { .ellipsis(); }
+
+/* Remove border or bullets from element */
+.noBorder { border:0px none; }
+.noBullets { list-style:none; }
+
+/* Float element to the left or right */
+.floatLeft { float:left; }
+.floatRight { float:right; }
+
+/* Cursor styles: pointer or move */
+.pointer, button, .btn { cursor: pointer; }
+.move { cursor:move; }
+
+/* Use on the parent of floated elements if you do not want the parent element to collapse */
+.clearfix {
+	display: block;
+	zoom: 1;
+	&:after {
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Inputs and Forms ----------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+input[type="text"], input[type="password"],
+input[type="search"], input[type="date"],
+input[type="number"], input[type="email"],
+input[type="tel"], input[type="url"], textarea {
+	-webkit-appearance: none;
+	.borderRadius(0px);
+	.transition(.2s);
+	background-color:@inputBg;
+	border:1px solid @borderColor;
+	color:@labelColor;
+	font-size:0.85em;
+	margin:5px 0px;
+	min-width:190px;
+	outline:none;
+	padding:6px;
+	&:hover {
+		border-color:@labelColor;
+		.shadow(1px 1px 2px rgba(0,0,0,0.25));
+		.transition(0.2s);
+	}
+	&:focus {
+		border-color:@primary;
+		.transition(0.2s);
+		.shadow(1px 1px 2px rgba(0, 0, 0, 0.25));
+	}
+	&:required {
+		border-color:@inputRequired;
+		.shadow(inset 0px 0px 0px 1px @inputRequired);
+	}
+	&:required:valid {
+		padding-right:1.75em;
+		border-color: #55AA00;
+		.shadow(inset 0px 0px 0px 1px #55AA00);
+	}
+	&.errorInput {
+		border-color: #AA3333;
+		background-color: #FFEEEE;
+		color: #AA3333;
+		font-weight: 700;
+	}
+	&.browseOpen {
+		margin:10px 0em 0em 0em;
+		border-bottom-color:@inputBg;
+		&:required {
+			.shadowExtra(inset 0px 1px 0px 0px @inputRequired,inset 1px 0px 0px 0px @inputRequired,inset -1px 1px 0px 0px @inputRequired)
+		}
+		&:focus {
+			.shadow(0px 0px 0px transparent);
+		}
+	}
+}
+input[readonly], textarea[readonly],
+input[readonly]:hover, textarea[readonly]:hover,
+input[readonly]:focus, textarea[readonly]:focus,
+input[readonly]:active, textarea[readonly]:active {
+	background-color:fadeout(@inputBg, 90%);
+	border:1px solid fadeout(@borderColor, 50%);
+	color:@labelColor;
+	.shadow(0px 0px 0px transparent);
+}
+input[type="date"] { font-family:'Roboto', sans-serif;min-height:35px; }
+input[type="checkbox"], input[type="radio"] { margin:0px 10px 0px 0px; }
+input[type="range"] { margin:0px 5px; }
+// input[type="date"], input[type="tel"] { max-width:160px; }
+textarea { resize: vertical; }
+
+@media @mobile {
+	input[type="date"], input[type="tel"] {
+		max-width:none !important;
+	}
+	input[type="text"], input[type="password"],
+	input[type="search"], input[type="date"],
+	input[type="number"], input[type="email"],
+	input[type="tel"], input[type="url"], textarea {
+		min-height:40px;
+		min-width:44px;
+	}
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*---------------------------------------- Buttons ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+button {
+	.transition(0.35s);
+	background-color:@primary;
+	.normalTwoColorGradient(top, @primary, darken(@primary, 7%));
+	border:1px solid rgba(0,0,0,0.25);
+	color:@light;
+	font-size:0.9em;
+	min-height:44px;
+	padding:0px 1.5em;
+	text-shadow:1px 1px 2px rgba(0,0,0,0.25);
+	&:hover {
+		.transition(0.35s);
+		.normalTwoColorGradient(top, darken(@primary, 8%), darken(@primary, 15%));
+	}
+	&:active {
+		.shadow(inset 0px 0px 5px rgba(0,0,0,0.5));
+		outline:none;
+	}
+	&:focus {
+		outline:none;
+	}
+}
+.btnGroup {
+	margin:0px;
+	padding:10px 0px;
+	button {
+		border-right-width:0px;
+		float:left;
+	}
+	button:last-child, a:last-child button {
+		border-right-width:1px;
+	}
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Alert Boxes ----------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+article {
+	&.alert, &.alert-important {
+		margin:0px;
+		padding:0px;
+		h5 {
+			color:@light;
+			font-size:1em;
+			margin:0px;
+			padding:0.4em 1em;
+			width:100%;
+			button {
+				background-color:transparent;
+				border:0px none;
+				color: @light;
+				float: right;
+				font-size:1em;
+				height: 2.2em;
+				margin: -0.5em -1em 0px 0px;
+				min-height:0px;
+				padding:0px;
+				text-align: center;
+				width: 2.2em;
+				&:hover {
+					background-color:transparent;
+					color:fadeout(@light, 50%);
+					cursor:pointer;
+				}
+				&:active, &:focus {
+					.shadow(0px 0px 0px transparent);
+					background-color:transparent;
+					outline:none;
+				}
+			}
+		}
+		p {
+			background-color:@light;
+			padding:10px;
+			width:100%;
+		}
+	}
+	&.alert {
+		border:2px solid @labelColor;
+		.shadow(0px 0px 5px rgba(0,0,0,0.3));
+		h5 {
+			background-color:@labelColor;
+		}
+		p {
+			color:@labelColor;
+		}
+	}
+	&.alert-important {
+		border:2px solid @primary;
+		.shadow(0px 0px 5px darken(@primary, 5%));
+		h5 {
+			background-color:@primary;
+		}
+		p {
+			color:darken(@primary, 5%);
+		}
+	}
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Badge Styling ----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+.badge {
+	background-color:fadeout(@light, 75%);
+	color:@light;
+	font-weight:700;
+	margin:0em -0.4em 0em 0.7em;
+	padding:0.3em 0.5em;
+	text-shadow:0px 0px 0px transparent;
+}
+.badge-white {
+	color:@primary;
+}

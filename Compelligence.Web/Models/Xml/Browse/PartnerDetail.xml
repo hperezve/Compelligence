@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PartnerDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>PartnerDetailView</entity>
+      <property>PartnerName</property>
+      <label>PartnerCompetitorDetailPartnerName</label>
+    </column>
+    <column>
+      <entity>PartnerDetailView</entity>
+      <property>Website</property>
+      <label>PartnerCompetitorDetailWebsite</label>
+    </column>
+    <column>
+      <entity>PartnerDetailView</entity>
+      <property>AssignedToName</property>
+      <label>PartnerCompetitorDetailAssignedTo</label>
+    </column>
+    <column>
+      <entity>PartnerDetailView</entity>
+      <property>Description</property>
+      <label>PartnerCompetitorDetailDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PartnerDetailView as PartnerDetailView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   PartnerDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PartnerDetailView.PartnerName
+    ]]>
+  </orderBy>
+</browse>

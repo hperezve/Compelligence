@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+    <subject><![CDATA[Compelligence $P{ClientCompany}, This is a test message to check smtp server]]></subject>
+    <message>
+        <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>your email $P{Email} is enabled to send message </div>
+      <br />
+      <div>Thanks $P{UserName}</div>
+    <body>
+  </html>
+  ]]>
+    </message>
+</email>

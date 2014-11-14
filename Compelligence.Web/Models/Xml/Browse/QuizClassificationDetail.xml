@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>QuizClassificationDetailView</entity>
+      <property >Id</property>
+    </column>
+    <column>
+      <entity>QuizClassificationDetailView</entity>
+      <property>IndustryName</property>
+      <label>QuizClassificationDetailViewIndustryName</label>
+    </column>
+    <column>
+      <entity>QuizClassificationDetailView</entity>
+      <property>CompetitorName</property>
+      <label>QuizClassificationDetailViewCompetitorName</label>
+    </column>
+    <column>
+      <entity>QuizClassificationDetailView</entity>
+      <property>ProductName</property>
+      <label>QuizClassificationDetailViewProductName</label>
+    </column>
+    <column>
+      <entity>QuizClassificationDetailView</entity>
+      <property>Visible</property>
+      <label>QuizClassificationDetailViewVisible</label>
+      <type class="StandardData">QuizClassificationVisible</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.QuizClassificationDetailView as QuizClassificationDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    QuizClassificationDetailView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    QuizClassificationDetailView.IndustryName
+    ]]>
+  </orderBy>
+</browse>

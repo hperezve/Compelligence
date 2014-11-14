@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>FeedbackByProjectView</entity>
+      <property>Name</property>
+      <label>FeedbackByProjectViewName</label>
+    </column>
+    <column>
+      <entity>FeedbackByProjectView</entity>
+      <property>Response</property>
+      <label>FeedbackByProjectViewResponse</label>
+    </column>
+    <column>
+      <entity>FeedbackByProjectView</entity>
+      <property>AssignedToName</property>
+      <label>FeedbackByProjectViewAssignedToName</label>
+    </column>
+    <column>
+      <entity>FeedbackByProjectView</entity>
+      <property>ForumResponseUserName</property>
+      <label>FeedbackByProjectViewForumResponseUserName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.FeedbackByProjectView as FeedbackByProjectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    FeedbackByProjectView.ClientCompany = '$S{ClientCompany}' AND FeedbackByProjectView.ForumType = '$C{ForumType.FeedBack}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    FeedbackByProjectView.Response
+    ]]>
+  </orderBy>
+</browse>

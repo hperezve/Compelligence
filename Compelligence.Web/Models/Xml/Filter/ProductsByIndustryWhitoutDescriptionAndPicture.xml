@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>AssignedToName</property>
+      <label>ProductAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>ProductFamilyName</property>
+      <label>ProductProductFamilyName</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>Tier</property>
+      <label>ProductsByIndustryLargeProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>ProductStatus</property>
+      <label>ProductsByIndustryLargeProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>IndsutryTier</property>
+      <label>ProductsByIndustryLargeIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProductsByIndustryWhitoutDescriptionAndPictureView</entity>
+      <property>IndustryStatus</property>
+      <label>ProductsByIndustryLargeIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductsByIndustryWhitoutDescriptionAndPictureView as ProductsByIndustryWhitoutDescriptionAndPictureView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProductsByIndustryWhitoutDescriptionAndPictureView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductsByIndustryWhitoutDescriptionAndPictureView.IndustryName
+    ]]>
+  </orderBy>
+</browse>

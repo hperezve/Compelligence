@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Message has been sent.]]></subject>
+  <message>    
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+      <body>
+        <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+        <br/>
+        <div>
+        <table style="text-align: left;">
+        <tbody>
+          <tr>
+            <td><div>Date</div></td>
+            <td>:<b>$P{Date}</b></td>
+          </tr>
+          <tr>
+            <td><div>Name</div></td>
+            <td>:<b>$P{Name}</b></td>
+          </tr>
+          <tr>
+            <td><div>Email</div></td>
+            <td>:<b>$P{Email}</b></td>
+          </tr>
+          <tr>
+            <td><div>Phone</div></td>
+            <td>:<b>$P{PhoneNumber}</b></td>
+          </tr>
+          <tr>
+            <td><div>Company</div></td>
+            <td>:<b>$P{Company}</b></td>
+          </tr>
+          <tr>
+            <td><div>Message</div></td>
+            <td>:<b>$P{Message}</b></td>
+          </tr>
+        </tbody>
+      </table>
+        </div>                                                
+        <br/>
+        <div>This is an automated message. Please do not reply.</div>        
+        <br/>        
+      </body>
+  </html>
+  ]]>
+  </message>
+</email>

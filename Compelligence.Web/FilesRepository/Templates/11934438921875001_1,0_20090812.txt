@@ -1,0 +1,60 @@
+*************************************************************************************************************
+
+Edit de Deal 
+
+se agrego un div para alinear y se borraron errores de escritura
+
+
+**************************************************************************************************************
+
+Edit
+
+
+
+,
+                    { contentEl: '<%= ViewData["Scope"] %>CustomerLibraryContent', title: 'Library', id: '<%= ViewData["Scope"] %>CustomerLibraryContent',
+                        listeners: { activate: function() {
+                            loadDetailList('<%= Url.Action("GetDetails", "Customer") %>', getIdValue('<%= ViewData["Scope"] %>', 'Customer'),
+                            '<%= ViewData["Scope"] %>Customer', '<%= (int) DetailType.Library %>', '#<%= ViewData["Scope"] %>CustomerLibraryContent');
+                        }}}
+
+
+
+case DetailType.Library:
+                    AddFilter(detailFilter, "Library.EntityId", parentId.ToString());
+                    AddFilter(detailFilter, "Library.EntityType", DomainObjectType.Customer);
+                    AddFilter(browseDetailFilter, "LibraryDetailView.EntityId", parentId.ToString());
+                    childController = "Library";
+                    break;
+
+
+
+
+Deal, Event, Supplier, 
+
+************************************************************************************************************* 
+
+En el subtab plan se corrigio un error enves de TYPE se puso OBJECTIVE
+
+************************************************************************************************************
+
+CREATE PROCEDURE dbo.CreateClientCompany 
+   -- @ClientCompany VARCHAR(15) OUTPUT,
+	
+AS
+	declare	@Rows numeric 
+    declare @i numeric(18,0)
+SELECT @Rows = 0
+    SELECT @i = 1
+    Select @Rows = (SELECT count(*) FROM dbo.KitType)
+    WHILE(@i<=@Rows)
+   -- FOR( @i;@i<=@Rows;@i:=@i+1)
+    BEGIN
+    print @Rows
+    select @i=@i + 1
+	END
+    
+DROP PROCEDURE [dbo].[CreateClientCompany]
+GO
+
+exec dbo.CreateClientCompany

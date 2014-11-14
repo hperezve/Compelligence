@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LibraryTypeAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>LibraryTypeAllView</entity>
+      <property>Name</property>
+      <label>LibraryTypeName</label>
+    </column>
+    <column >
+      <entity>LibraryTypeAllView</entity>
+      <property>DeletionUnit</property>
+      <label>LibraryTypeDeletionUnit</label>
+    </column>
+    <column >
+      <entity>LibraryTypeAllView</entity>
+      <property>DeletionPeriod</property>
+      <label>LibraryTypeDeletionPeriod</label>
+      <type class="StandardData">LibraryTypePeriod</type>
+    </column>
+    <column >
+      <entity>LibraryTypeAllView</entity>
+      <property>Description</property>
+      <label>LibraryTypeDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>LibraryTypeAllView</entity>
+      <property>CreatedDate</property>
+      <label>LibraryTypeCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryTypeAllView as LibraryTypeAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibraryTypeAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryTypeAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

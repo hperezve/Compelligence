@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[Welcome to Compelligence]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>
+         Hello $P{UserName} $P{LastName}
+      </div>
+      <div>
+         Thank you for registering on the Compelligence system! Once your account is activated, you will have access to a variety of tools that will allow you to compete more effectively and win deals faster! An administrator will contact you shortly about activating your account.
+      </div>
+      <br />
+      <div>
+         Below are your account details, you will need your username and password to access your system.
+      </div>
+      <div>
+         Company Name: $P{ClientCompany}<br>
+         Company Domain: <a href="http://$P{Domain}.compelligence.com">http://$P{Domain}.compelligence.com</a><br>
+         Company Address: $P{Address} ,$P{City}, $P{State}, $P{CountryCode}<br>
+         User Name/Email: $P{Account} <br>
+         Password: $P{Password} <br>
+         
+      </div>
+      <br />
+      <div>If you have any questions, please contact us at info@compelligence.com.</div>
+       <br />
+      <div>Thank you!</div>
+       <br />
+      <div>The Compelligence Team</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

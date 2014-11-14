@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>NewsletterAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>NewsletterAllView</entity>
+      <property>Title</property>
+      <label>NewsletterTitle</label>
+    </column>
+    <column>
+      <entity>NewsletterAllView</entity>
+      <property>AssignedToName</property>
+      <label>NewsletterAssignedTo</label>
+    </column>    
+    <column >
+      <entity>NewsletterAllView</entity>
+      <property>CreatedDate</property>
+      <label>NewsletterCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsletterAllView as NewsletterAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsletterAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsletterAllView.Title
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

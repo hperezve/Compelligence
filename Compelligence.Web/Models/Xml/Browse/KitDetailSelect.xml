@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>KitDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>KitDetailSelectView</entity>
+      <property>Name</property>
+      <label>KitNameLong</label>
+    </column>
+    <column>
+      <entity>KitDetailSelectView</entity>
+      <property>Comment</property>
+      <label>KitComment</label>
+      <type class="HtmlPlaneOneLine">Comment</type>
+    </column>
+    <column>
+      <entity>KitDetailSelectView</entity>
+      <property>Status</property>
+      <label>KitStatus</label>
+      <type class="StandardData">KitStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.KitDetailSelectView as KitDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    KitDetailSelectView.ClientCompany = '$S{ClientCompany}' and (KitDetailSelectView.Status ='$C{KitStatus.Enabled}' or KitDetailSelectView.Status ='$C{KitStatus.Planned}' or KitDetailSelectView.Status ='$C{KitStatus.BackEndOnly}')
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    KitDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>

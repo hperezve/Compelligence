@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>NewsDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>NewsDetailSelectView</entity>
+      <property>Name</property>
+      <label>LibraryName</label>
+    </column>
+    <column>
+      <entity>NewsDetailSelectView</entity>
+      <property>Source</property>
+      <label>LibrarySource</label>
+    </column>
+    <column>
+      <entity>NewsDetailSelectView</entity>
+      <property>DateAdded</property>
+      <label>LibraryDateAdded</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NewsDetailSelectView as NewsDetailSelectView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NewsDetailSelectView.ClientCompany = '$S{ClientCompany}' and ( NewsDetailSelectView.KeyCode = '$C{LibraryTypeKeyCode.News}' and  NewsDetailSelectView.KeyCode is not null)  AND NewsDetailSelectView.Permanent = '$C{LibraryPermanent.No}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NewsDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>

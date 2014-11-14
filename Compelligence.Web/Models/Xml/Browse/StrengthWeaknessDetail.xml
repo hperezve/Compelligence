@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>StrengthWeaknessDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>StrengthWeaknessDetailView</entity>
+      <property>Name</property>
+      <label>StrengthWeaknessName</label>
+    </column>
+    <column >
+      <entity>StrengthWeaknessDetailView</entity>
+      <property>Type</property>
+      <label>StrengthWeaknessType</label>
+      <type class="StandardData">StrengthWeaknessType</type>
+    </column>
+    <column >
+      <entity>StrengthWeaknessDetailView</entity>
+      <property>Description</property>
+      <label>StrengthWeaknessDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>StrengthWeaknessDetailView</entity>
+      <property>LastDate</property>
+      <label>StrengthWeaknessLastDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.StrengthWeaknessDetailView  as StrengthWeaknessDetailView     
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    StrengthWeaknessDetailView .ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    StrengthWeaknessDetailView .Name
+    ]]>
+  </orderBy>
+</browse>

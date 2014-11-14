@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>FirstName</property>
+      <label>EmployeeFirstName</label>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>LastName</property>
+      <label>EmployeeLastName</label>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>Division</property>
+      <label>EmployeeDivision</label>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>Role</property>
+      <label>EmployeeRole</label>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>Email</property>
+      <label>EmployeeEmail</label>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>EmployeesbyCompetitorCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+    <column>
+      <entity>EmployeesbyCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>EmployeesbyCompetitorCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EmployeesbyCompetitorView as EmployeesbyCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EmployeesbyCompetitorView.ClientCompany = '$S{ClientCompany}' AND EmployeesbyCompetitorView.CompanyType = '$C{CompanyType.Competitor}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EmployeesbyCompetitorView.EmployeeId
+    ]]>
+  </orderBy>
+</browse>

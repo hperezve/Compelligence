@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>CompetitorName</property>
+      <label>ProductsByCompetitorViewCompetitorName</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>AssignedToName</property>
+      <label>ProductAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>Description</property>
+      <label>ProductDescription</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>ImageUrl</property>
+      <label>ProductImageUrl</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>ProductFamilyName</property>
+      <label>ProductProductFamilyName</label>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>Tier</property>
+      <label>ProductsByCompetitorTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>ProductStatus</property>
+      <label>ProductsByCompetitorProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>CompetitorTier</property>
+      <label>ReportCompetitorTier</label>
+      <type class="StandardData">CompetitorReportTier</type>
+    </column>
+    <column>
+      <entity>ProductsByCompetitorView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProductsByCompetitorCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductsByCompetitorView as ProductsByCompetitorView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProductsByCompetitorView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductsByCompetitorView.CompetitorName
+    ]]>
+  </orderBy>
+</browse>

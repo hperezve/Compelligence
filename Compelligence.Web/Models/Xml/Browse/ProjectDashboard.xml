@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select distinct="true">
+    <column hidden="true" id="true" filter="false">
+      <entity>ProjectDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ProjectDashboardView</entity>
+      <property>Name</property>
+      <label>ProjectDashboardName</label>
+    </column>
+    <column>
+      <entity>ProjectDashboardView</entity>
+      <property>DueDate</property>
+      <label>ProjectDashboardDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[ 
+       var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Project.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Project')); }            
+      
+       WorkspaceSubtabs.setActiveTab('WorkspaceTab_ProjectContent');         
+       showEntity(currentPath+'/Project.aspx/Edit', 'Workspace', 'Project', id, 'ProjectAll', '#ProjectContent');        
+             
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectDashboardView as ProjectDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectDashboardView.ClientCompany = '$S{ClientCompany}' and
+    ProjectDashboardView.AssignedTo = '$P{UserId}'
+    ]]>
+  </where>
+  <!--<groupBy>
+    <![CDATA[
+    Project.Id, Project.Name, Project.DueDate
+    ]]>
+  </groupBy>-->
+  <orderBy>
+    <![CDATA[
+    ProjectDashboardView.DueDate DESC
+    ]]>
+  </orderBy>
+</browse>

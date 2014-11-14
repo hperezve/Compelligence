@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProductAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ProductAllView</entity>
+      <property>Name</property>
+      <label>ProductName</label>
+    </column>
+    <column>
+      <entity>ProductAllView</entity>
+      <property>AssignedToName</property>
+      <label>ProductOwnerId</label>
+    </column>
+    <column>
+      <entity>ProductAllView</entity>
+      <property>Description</property>
+      <label>ProductDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductAllView as ProductAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ProductAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductAllView.Name
+    ]]>
+  </orderBy>
+</browse>

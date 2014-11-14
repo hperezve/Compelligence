@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>IndustryStatus</property>
+      <label>ImplicationsReportIndustryStatus</label>
+      <type class="StandardData">IndustryReportStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>IndustryTier</property>
+      <label>ImplicationsReportIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>CompetitorStatus</property>
+      <label>ImplicationsReportCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>CompetitorTier</property>
+      <label>ImplicationsReportCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>ProductStatus</property>
+      <label>ImplicationsReportProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>ProductTier</property>
+      <label>ImplicationsReportProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProjectsbyIndustriesView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectsbyIndustriesView as ProjectsbyIndustriesView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectsbyIndustriesView.ClientCompany = '$S{ClientCompany}' AND ProjectsbyIndustriesView.IndustryId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectsbyIndustriesView.IndustryId
+    ]]>
+  </orderBy>
+</browse>

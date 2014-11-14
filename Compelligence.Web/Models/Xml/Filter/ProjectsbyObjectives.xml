@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>ProjectName</property>
+      <label>ProjectNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>ObjectiveName</property>
+      <label>ObjectiveNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>IndustryStatus</property>
+      <label>ProjectsbyObjectivesViewIndustryStatus</label>
+      <type class="MultiStandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>IndustryTier</property>
+      <label>ProjectsbyObjectivesViewIndustryTier</label>
+      <type class="MultiStandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>CompetitorStatus</property>
+      <label>ProjectsbyObjectivesViewCompetitorStatus</label>
+      <type class="MultiStandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>CompetitorTier</property>
+      <label>ProjectsbyObjectivesViewCompetitorTier</label>
+      <type class="MultiStandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>ProductStatus</property>
+      <label>ProjectsbyObjectivesViewProductStatus</label>
+      <type class="MultiStandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>ProductTier</property>
+      <label>ProjectsbyObjectivesViewProductTier</label>
+      <type class="MultiStandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>Status</property>
+      <label>ProjectStatus</label>
+      <type class="StandardData">ProjectStatus</type>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProjectsbyObjectivesView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProjectsbyObjectivesView as ProjectsbyObjectivesView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProjectsbyObjectivesView.ClientCompany = '$S{ClientCompany}' AND ProjectsbyObjectivesView.EntityType = '$C{DomainObjectType.Project}' AND ProjectsbyObjectivesView.ObjectiveId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProjectsbyObjectivesView.ObjectiveId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

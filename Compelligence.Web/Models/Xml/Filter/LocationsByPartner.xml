@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>LocationsByPartnerView</entity>
+      <property>CountryName</property>
+      <label>LocationCountryNameReport</label>
+    </column>
+    <column>
+      <entity>LocationsByPartnerView</entity>
+      <property>City</property>
+      <label>LocationCityReport</label>
+    </column>
+    <column>
+      <entity>LocationsByPartnerView</entity>
+      <property>State</property>
+      <label>LocationStateReport</label>
+    </column>
+    <column>
+      <entity>LocationsByPartnerView</entity>
+      <property>PostalCode</property>
+      <label>LocationPostalCodeReport</label>
+    </column>
+    <column>
+      <entity>LocationsByPartnerView</entity>
+      <property>Address</property>
+      <label>LocationAddressReport</label>
+    </column>
+    <column>
+      <entity>LocationsByPartnerView</entity>
+      <property>PartnerName</property>
+      <label>LocationPartnerNameReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LocationsByPartnerView as LocationsByPartnerView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LocationsByPartnerView.ClientCompany = '$S{ClientCompany}' AND LocationsByPartnerView.CompanyType = '$C{CompanyType.Partner}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LocationsByPartnerView.CountryName
+    ]]>
+  </orderBy>
+</browse>

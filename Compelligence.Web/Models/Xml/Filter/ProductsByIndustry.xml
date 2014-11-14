@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>ProductName</property>
+      <label>ProductNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>ProductAssignedToName</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>Description</property>
+      <label>ProductDescription</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>ImageUrl</property>
+      <label>ProductImageUrl</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>ProductFamilyName</property>
+      <label>ProductProductFamilyName</label>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>Tier</property>
+      <label>ProductsByIndustryViewProductTier</label>
+      <type class="StandardData">ProductTier</type>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>ProductStatus</property>
+      <label>ProductsByIndustryViewProductStatus</label>
+      <type class="StandardData">ProductStatus</type>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>ProductsByIndustryIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>ProductsByIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>ProductsByIndustryIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductsByIndustryView as ProductsByIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ProductsByIndustryView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductsByIndustryView.IndustryName
+    ]]>
+  </orderBy>
+</browse>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany} - Compelligence Project Update: $P{ProjectName}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>Please click in the following link in order to approve $P{ProjectName}</div>
+      <br />
+      <div><a href="$P{ApprovalLink}">Click here</a></div>
+      <br />
+      <div>Thanks $P{UserName}</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

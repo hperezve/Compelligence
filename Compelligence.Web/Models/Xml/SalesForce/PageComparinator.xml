@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Comparinator>
+  <name>comp_comparinator</name>
+  <label>Compelligence Comparinator</label>
+  <content>
+    <![CDATA[
+    <apex:page >
+      <script src="http://compelligence.com/compelligencetest/Scripts/compelligence.encode.js"></script>
+      <script type="text/javascript">
+        window.onload=function() {
+        var offset=Math.floor(Math.random()*10)
+        var u=Encode('{!$User.Email}',offset);
+        var url='http://[Domain].compelligence.com/compelligencetest/Comparinator.aspx/SalesForce?U='+u+'&C=[ClientEncode]'
+        document.getElementById('compelligencebox').src=url;
+        };
+      </script>
+    
+       <apex:iframe id="compelligencebox" frameborder="false" src="javascript:void(0)" scrolling="true"/>
+    </apex:page>
+    		
+     ]]>
+  </content>
+</Comparinator>

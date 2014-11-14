@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ActionHistoryDetailView</entity>
+      <property>Id</property>
+      <label>Id</label>
+    </column>
+    <column >
+      <entity>ActionHistoryDetailView</entity>
+      <property>CreatedDate</property>
+      <label>ActionHistoryCreatedDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>ActionHistoryDetailView</entity>
+      <property>EntityAction</property>
+      <label>ActionHistoryEntityAction</label>
+    </column>
+    <column >
+      <entity>ActionHistoryDetailView</entity>
+      <property>CreatedByName</property>
+      <label>ActionHistoryDetailCreatedByName</label>
+    </column>
+    <column >
+      <entity>ActionHistoryDetailView</entity>
+      <property>Description</property>
+      <label>ActionHistoryDescription</label>
+      <type class="HtmlPlaneOneLine">ActionHistoryDescription</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ActionHistoryDetailView as ActionHistoryDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    ActionHistoryDetailView.ClientCompany = '$S{ClientCompany}'  and ActionHistoryDetailView.EntityType = '$C{DomainObjectType.Project}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ActionHistoryDetailView.Id
+    ]]>
+  </orderBy>
+</browse>
+

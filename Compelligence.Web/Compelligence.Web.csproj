@@ -1,0 +1,2805 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00BE322D-F545-4D6C-92E0-12107A3ADFF5}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Compelligence.Web</RootNamespace>
+    <AssemblyName>Compelligence.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveUp.Net.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6cceae6a4844c51b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\ActiveUp\ActiveUp.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Imap4, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=9d424b1770e92b68, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\ActiveUp\ActiveUp.Net.Imap4.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Spring.NET\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Log4Net\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Log4Net\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.BusinessLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.DataSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.DataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.DataTransfer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.DataTransfer.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.Emails, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.Emails.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.Reports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.ReportsV12, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.ReportsV12.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.SalesForceAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.SalesForceAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Compelligence.Util, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\compelligence\bin\Compelligence.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Openxml\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Higuchi.Mail, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Mail\Higuchi.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Npoi\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.1.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Tools\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.DocumentFormat.OpenXml, Version=1.0.531.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Openxml\Microsoft.Office.DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Reports\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Reports\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Reports\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcContrib, Version=1.0.0.978, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\MVCContrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.Spring, Version=1.0.0.978, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\MVCContrib\MvcContrib.Spring.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Npoi\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Npoi\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Npoi\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Npoi\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenXmlPowerTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Openxml\OpenXmlPowerTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Spring.NET\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Spring.NET\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Spring.NET\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate21, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Spring.NET\Spring.Data.NHibernate21.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Spring.NET\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Chart\System.Web.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\Chart\System.Web.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CompelligenceProjects\Libraries\MVC\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\LabelResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LabelResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MessagesResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessagesResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BackEnd\ActionHistoryController.cs" />
+    <Compile Include="Controllers\BackEnd\ApprovalListController.cs" />
+    <Compile Include="Controllers\BackEnd\BackEndController.cs" />
+    <Compile Include="Controllers\BackEnd\ComparinatorCriteriaUploaderController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitiveMessagingController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitorCompetitorController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitorFinancialController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitorSupplierController.cs" />
+    <Compile Include="Controllers\BackEnd\ConfigurationController.cs" />
+    <Compile Include="Controllers\BackEnd\ConfigurationGeneralController.cs" />
+    <Compile Include="Controllers\BackEnd\ConfigurationsController.cs" />
+    <Compile Include="Controllers\BackEnd\ConfigurationLabelsController.cs" />
+    <Compile Include="Controllers\BackEnd\HistoryFieldController.cs" />
+    <Compile Include="Controllers\BackEnd\IndustryFinancialController.cs" />
+    <Compile Include="Controllers\BackEnd\CustomFieldController.cs" />
+    <Compile Include="Controllers\BackEnd\MarketTypeController.cs" />
+    <Compile Include="Controllers\BackEnd\NewsController.cs" />
+    <Compile Include="Controllers\BackEnd\NewsScoringController.cs" />
+    <Compile Include="Controllers\BackEnd\PriceController.cs" />
+    <Compile Include="Controllers\BackEnd\ProductFamilyController.cs" />
+    <Compile Include="Controllers\BackEnd\EventTypeController.cs" />
+    <Compile Include="Controllers\BackEnd\ForumCommentController.cs" />
+    <Compile Include="Controllers\BackEnd\ForumDiscussionController.cs" />
+    <Compile Include="Controllers\BackEnd\ForumFeedbackController.cs" />
+    <Compile Include="Controllers\BackEnd\Generics\BackEndAsyncFormController.cs" />
+    <Compile Include="Controllers\BackEnd\Generics\BackEndFormController.cs" />
+    <Compile Include="Controllers\BackEnd\Generics\GenericBackEndController.cs" />
+    <Compile Include="Controllers\BackEnd\InternalSearchController.cs" />
+    <Compile Include="Controllers\BackEnd\LibraryNewsController.cs" />
+    <Compile Include="Controllers\BackEnd\MyCompanyController.cs" />
+    <Compile Include="Controllers\BackEnd\MyProfileController.cs" />
+    <Compile Include="Controllers\BackEnd\ProjectArchiveController.cs" />
+    <Compile Include="Controllers\BackEnd\StrengthWeaknessController.cs" />
+    <Compile Include="Controllers\BackEnd\SwotController.cs" />
+    <Compile Include="Controllers\BackEnd\ThreatController.cs" />
+    <Compile Include="Controllers\BackEnd\TrendController.cs" />
+    <Compile Include="Controllers\BackEnd\WinLossAnalysisController.cs" />
+    <Compile Include="Controllers\BrowseController.cs" />
+    <Compile Include="Controllers\BackEnd\BudgetController.cs" />
+    <Compile Include="Controllers\BackEnd\BudgetTypeController.cs" />
+    <Compile Include="Controllers\ClientCompanyFilesController.cs" />
+    <Compile Include="Controllers\ClientCompanyHelpController.cs" />
+    <Compile Include="Controllers\CustomErrorController.cs" />
+    <Compile Include="Controllers\FrontEnd\EntityFollowerController.cs" />
+    <Compile Include="Controllers\FollowerController.cs" />
+    <Compile Include="Controllers\FrontEnd\ComparinatorController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitorController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitorCriteriaController.cs" />
+    <Compile Include="Controllers\BackEnd\ContentTypeController.cs" />
+    <Compile Include="Controllers\BackEnd\CalendarController.cs" />
+    <Compile Include="Controllers\BackEnd\AnswerController.cs" />
+    <Compile Include="Controllers\BackEnd\CriteriasController.cs" />
+    <Compile Include="Controllers\EmailApproveRegistrationController.cs" />
+    <Compile Include="Controllers\BackEnd\EntityRelationController.cs" />
+    <Compile Include="Controllers\FrontEnd\ContentSearchController.cs" />
+    <Compile Include="Controllers\FrontEnd\EventsController.cs" />
+    <Compile Include="Controllers\FrontEnd\Generics\FrontEndFormController.cs" />
+    <Compile Include="Controllers\FrontEnd\Generics\GenericFrontEndController.cs" />
+    <Compile Include="Controllers\FrontEnd\LongSurveyController.cs" />
+    <Compile Include="Controllers\FrontEnd\ShortSurveyController.cs" />
+    <Compile Include="Controllers\FrontEnd\WinLossReportController.cs" />
+    <Compile Include="Controllers\Generics\GenericController.cs" />
+    <Compile Include="Controllers\BackEnd\LibraryExternalSourceController.cs" />
+    <Compile Include="Controllers\BackEnd\LibraryTypeController.cs" />
+    <Compile Include="Controllers\EmailApproveController.cs" />
+    <Compile Include="Controllers\BackEnd\IndustryCriteriaController.cs" />
+    <Compile Include="Controllers\BackEnd\LocationController.cs" />
+    <Compile Include="Controllers\BackEnd\EmployeeController.cs" />
+    <Compile Include="Controllers\ForumController.cs" />
+    <Compile Include="Controllers\HelpController.cs" />
+    <Compile Include="Controllers\MaintenanceAccountController.cs" />
+    <Compile Include="Controllers\BackEnd\NewsletterController.cs" />
+    <Compile Include="Controllers\BackEnd\NuggetController.cs" />
+    <Compile Include="Controllers\BackEnd\CriteriaSetController.cs" />
+    <Compile Include="Controllers\BackEnd\CustomerController.cs" />
+    <Compile Include="Controllers\BackEnd\DashboardController.cs" />
+    <Compile Include="Controllers\BackEnd\CriteriaController.cs" />
+    <Compile Include="Controllers\BackEnd\DealController.cs" />
+    <Compile Include="Controllers\FrontEnd\DealSupportController.cs" />
+    <Compile Include="Controllers\BackEnd\CriteriaGroupController.cs" />
+    <Compile Include="Controllers\BackEnd\ImplicationController.cs" />
+    <Compile Include="Controllers\BackEnd\LabelController.cs" />
+    <Compile Include="Controllers\BackEnd\LibraryController.cs" />
+    <Compile Include="Controllers\BackEnd\MetricController.cs" />
+    <Compile Include="Controllers\BackEnd\ObjectiveController.cs" />
+    <Compile Include="Controllers\BackEnd\EventController.cs" />
+    <Compile Include="Controllers\BackEnd\FileController.cs" />
+    <Compile Include="Controllers\FrontEnd\ContentPortalController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BackEnd\IndustryController.cs" />
+    <Compile Include="Controllers\BackEnd\KitController.cs" />
+    <Compile Include="Controllers\BackEnd\PlanController.cs" />
+    <Compile Include="Controllers\BackEnd\PositioningController.cs" />
+    <Compile Include="Controllers\BackEnd\ProductController.cs" />
+    <Compile Include="Controllers\BackEnd\ProductCriteriaController.cs" />
+    <Compile Include="Controllers\BackEnd\ProjectController.cs" />
+    <Compile Include="Controllers\BackEnd\QuestionController.cs" />
+    <Compile Include="Controllers\BackEnd\QuizClassificationController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\BackEnd\ReportController.cs" />
+    <Compile Include="Controllers\BackEnd\SourceController.cs" />
+    <Compile Include="Controllers\BackEnd\SupplierController.cs" />
+    <Compile Include="Controllers\BackEnd\SurveyController.cs" />
+    <Compile Include="Controllers\BackEnd\TeamController.cs" />
+    <Compile Include="Controllers\BackEnd\TeamMemberController.cs" />
+    <Compile Include="Controllers\BackEnd\TeamRoleController.cs" />
+    <Compile Include="Controllers\BackEnd\TemplateController.cs" />
+    <Compile Include="Controllers\BackEnd\UserController.cs" />
+    <Compile Include="Controllers\BackEnd\CompetitorPartnerController.cs" />
+    <Compile Include="Controllers\BackEnd\WebsiteController.cs" />
+    <Compile Include="Controllers\BackEnd\WinLossController.cs" />
+    <Compile Include="Controllers\SalesForceController.cs" />
+    <Compile Include="Controllers\BackEnd\UserRelationController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\WhitePaperController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Helpers\CalendarHelper.cs" />
+    <Compile Include="Models\Helpers\CommentHelper.cs" />
+    <Compile Include="Models\Helpers\CriteriaHelper.cs" />
+    <Compile Include="Models\Helpers\FeatureHelper.cs" />
+    <Compile Include="Models\Helpers\FormControlsHelper.cs" />
+    <Compile Include="Models\Helpers\HtmlComponentExtensionsHelper.cs" />
+    <Compile Include="Models\Helpers\HtmlContentHelper.cs" />
+    <Compile Include="Models\Helpers\HtmlSelectHelper.cs" />
+    <Compile Include="Models\Helpers\ImageHelper.cs" />
+    <Compile Include="Models\Helpers\LeftContentHelper.cs" />
+    <Compile Include="Models\Helpers\MultiUploadHelper.cs" />
+    <Compile Include="Models\Helpers\PanelHelper.cs" />
+    <Compile Include="Models\Helpers\QuestionDetailHelper.cs" />
+    <Compile Include="Models\Helpers\ReadExcelHelper.cs" />
+    <Compile Include="Models\Helpers\StaticDataGridHelper.cs" />
+    <Compile Include="Models\Helpers\TreeViewHelper.cs" />
+    <Compile Include="Models\Util\ControllerUtility.cs" />
+    <Compile Include="Models\Util\FileUploadJsonResult.cs" />
+    <Compile Include="Models\Util\JsonP.cs" />
+    <Compile Include="Models\Web\Attributes\HandleSystemErrorAttribute.cs" />
+    <Compile Include="Models\Web\Operations.cs" />
+    <Compile Include="Models\Helpers\ControlExtensions.cs" />
+    <Compile Include="Models\Helpers\ContentPanelHelper.cs" />
+    <Compile Include="Models\Helpers\DataGridHelper.cs" />
+    <Compile Include="Models\Helpers\QuestionHelper.cs" />
+    <Compile Include="Models\Helpers\RatingHelper.cs" />
+    <Compile Include="Models\Helpers\RoleHelper.cs" />
+    <Compile Include="Models\Helpers\SearchResultsHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Report\DynViewReport.aspx.cs">
+      <DependentUpon>DynViewReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Report\DynViewReport.aspx.designer.cs">
+      <DependentUpon>DynViewReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Report\PreViewReport.aspx.cs">
+      <DependentUpon>PreViewReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Report\PreViewReport.aspx.designer.cs">
+      <DependentUpon>PreViewReport.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Log4Net.xml" />
+    <Content Include="App_GlobalResources\LabelResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>LabelResource.designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Config\Web.xml" />
+    <Content Include="Content\Images\Ajax\loader.gif" />
+    <Content Include="Content\Images\Icons\icon_delete.gif" />
+    <Content Include="Content\Images\Icons\icon_edit.gif" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Product\Edit.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Content\Styles\Site.css" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\UtilityPages\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\MasterPages\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\default\box\corners-blue.gif" />
+    <Content Include="Content\Images\default\box\corners.gif" />
+    <Content Include="Content\Images\default\box\l-blue.gif" />
+    <Content Include="Content\Images\default\box\l.gif" />
+    <Content Include="Content\Images\default\box\r-blue.gif" />
+    <Content Include="Content\Images\default\box\r.gif" />
+    <Content Include="Content\Images\default\box\tb-blue.gif" />
+    <Content Include="Content\Images\default\box\tb.gif" />
+    <Content Include="Content\Images\default\button\btn-arrow.gif" />
+    <Content Include="Content\Images\default\button\btn-sprite.gif" />
+    <Content Include="Content\Images\default\dd\drop-add.gif" />
+    <Content Include="Content\Images\default\dd\drop-no.gif" />
+    <Content Include="Content\Images\default\dd\drop-yes.gif" />
+    <Content Include="Content\Images\default\editor\tb-sprite.gif" />
+    <Content Include="Content\Images\default\form\checkbox.gif" />
+    <Content Include="Content\Images\default\form\clear-trigger.gif" />
+    <Content Include="Content\Images\default\form\date-trigger.gif" />
+    <Content Include="Content\Images\default\form\error-tip-corners.gif" />
+    <Content Include="Content\Images\default\form\exclamation.gif" />
+    <Content Include="Content\Images\default\form\radio.gif" />
+    <Content Include="Content\Images\default\form\search-trigger.gif" />
+    <Content Include="Content\Images\default\form\text-bg.gif" />
+    <Content Include="Content\Images\default\form\trigger-tpl.gif" />
+    <Content Include="Content\Images\default\form\trigger.gif" />
+    <Content Include="Content\Images\default\gradient-bg.gif" />
+    <Content Include="Content\Images\default\grid\arrow-left-white.gif" />
+    <Content Include="Content\Images\default\grid\arrow-right-white.gif" />
+    <Content Include="Content\Images\default\grid\col-move-bottom.gif" />
+    <Content Include="Content\Images\default\grid\col-move-top.gif" />
+    <Content Include="Content\Images\default\grid\columns.gif" />
+    <Content Include="Content\Images\default\grid\dirty.gif" />
+    <Content Include="Content\Images\default\grid\done.gif" />
+    <Content Include="Content\Images\default\grid\drop-no.gif" />
+    <Content Include="Content\Images\default\grid\drop-yes.gif" />
+    <Content Include="Content\Images\default\grid\footer-bg.gif" />
+    <Content Include="Content\Images\default\grid\grid-blue-hd.gif" />
+    <Content Include="Content\Images\default\grid\grid-blue-split.gif" />
+    <Content Include="Content\Images\default\grid\grid-hrow.gif" />
+    <Content Include="Content\Images\default\grid\grid-loading.gif" />
+    <Content Include="Content\Images\default\grid\grid-split.gif" />
+    <Content Include="Content\Images\default\grid\grid-vista-hd.gif" />
+    <Content Include="Content\Images\default\grid\grid3-hd-btn.gif" />
+    <Content Include="Content\Images\default\grid\grid3-hrow-over.gif" />
+    <Content Include="Content\Images\default\grid\grid3-hrow.gif" />
+    <Content Include="Content\Images\default\grid\grid3-special-col-bg.gif" />
+    <Content Include="Content\Images\default\grid\grid3-special-col-sel-bg.gif" />
+    <Content Include="Content\Images\default\grid\group-by.gif" />
+    <Content Include="Content\Images\default\grid\group-expand-sprite.gif" />
+    <Content Include="Content\Images\default\grid\hd-pop.gif" />
+    <Content Include="Content\Images\default\grid\hmenu-asc.gif" />
+    <Content Include="Content\Images\default\grid\hmenu-desc.gif" />
+    <Content Include="Content\Images\default\grid\hmenu-lock.gif" />
+    <Content Include="Content\Images\default\grid\hmenu-lock.png" />
+    <Content Include="Content\Images\default\grid\hmenu-unlock.gif" />
+    <Content Include="Content\Images\default\grid\hmenu-unlock.png" />
+    <Content Include="Content\Images\default\grid\invalid_line.gif" />
+    <Content Include="Content\Images\default\grid\loading.gif" />
+    <Content Include="Content\Images\default\grid\mso-hd.gif" />
+    <Content Include="Content\Images\default\grid\nowait.gif" />
+    <Content Include="Content\Images\default\grid\page-first-disabled.gif" />
+    <Content Include="Content\Images\default\grid\page-first.gif" />
+    <Content Include="Content\Images\default\grid\page-last-disabled.gif" />
+    <Content Include="Content\Images\default\grid\page-last.gif" />
+    <Content Include="Content\Images\default\grid\page-next-disabled.gif" />
+    <Content Include="Content\Images\default\grid\page-next.gif" />
+    <Content Include="Content\Images\default\grid\page-prev-disabled.gif" />
+    <Content Include="Content\Images\default\grid\page-prev.gif" />
+    <Content Include="Content\Images\default\grid\pick-button.gif" />
+    <Content Include="Content\Images\default\grid\refresh.gif" />
+    <Content Include="Content\Images\default\grid\row-check-sprite.gif" />
+    <Content Include="Content\Images\default\grid\row-expand-sprite.gif" />
+    <Content Include="Content\Images\default\grid\row-over.gif" />
+    <Content Include="Content\Images\default\grid\row-sel.gif" />
+    <Content Include="Content\Images\default\grid\sort_asc.gif" />
+    <Content Include="Content\Images\default\grid\sort_desc.gif" />
+    <Content Include="Content\Images\default\grid\wait.gif" />
+    <Content Include="Content\Images\default\layout\collapse.gif" />
+    <Content Include="Content\Images\default\layout\expand.gif" />
+    <Content Include="Content\Images\default\layout\gradient-bg.gif" />
+    <Content Include="Content\Images\default\layout\mini-bottom.gif" />
+    <Content Include="Content\Images\default\layout\mini-left.gif" />
+    <Content Include="Content\Images\default\layout\mini-right.gif" />
+    <Content Include="Content\Images\default\layout\mini-top.gif" />
+    <Content Include="Content\Images\default\layout\ns-collapse.gif" />
+    <Content Include="Content\Images\default\layout\ns-expand.gif" />
+    <Content Include="Content\Images\default\layout\panel-close.gif" />
+    <Content Include="Content\Images\default\layout\panel-title-bg.gif" />
+    <Content Include="Content\Images\default\layout\panel-title-light-bg.gif" />
+    <Content Include="Content\Images\default\layout\stick.gif" />
+    <Content Include="Content\Images\default\layout\stuck.gif" />
+    <Content Include="Content\Images\default\layout\tab-close-on.gif" />
+    <Content Include="Content\Images\default\layout\tab-close.gif" />
+    <Content Include="Content\Images\default\menu\checked.gif" />
+    <Content Include="Content\Images\default\menu\group-checked.gif" />
+    <Content Include="Content\Images\default\menu\item-over.gif" />
+    <Content Include="Content\Images\default\menu\menu-parent.gif" />
+    <Content Include="Content\Images\default\menu\menu.gif" />
+    <Content Include="Content\Images\default\menu\unchecked.gif" />
+    <Content Include="Content\Images\default\panel\corners-sprite.gif" />
+    <Content Include="Content\Images\default\panel\left-right.gif" />
+    <Content Include="Content\Images\default\panel\light-hd.gif" />
+    <Content Include="Content\Images\default\panel\tool-sprite-tpl.gif" />
+    <Content Include="Content\Images\default\panel\tool-sprites.gif" />
+    <Content Include="Content\Images\default\panel\tools-sprites-trans.gif" />
+    <Content Include="Content\Images\default\panel\top-bottom.gif" />
+    <Content Include="Content\Images\default\panel\top-bottom.png" />
+    <Content Include="Content\Images\default\panel\white-corners-sprite.gif" />
+    <Content Include="Content\Images\default\panel\white-left-right.gif" />
+    <Content Include="Content\Images\default\panel\white-top-bottom.gif" />
+    <Content Include="Content\Images\default\progress\progress-bg.gif" />
+    <Content Include="Content\Images\default\qtip\bg.gif" />
+    <Content Include="Content\Images\default\qtip\close.gif" />
+    <Content Include="Content\Images\default\qtip\tip-sprite.gif" />
+    <Content Include="Content\Images\default\s.gif" />
+    <Content Include="Content\Images\default\shadow-c.png" />
+    <Content Include="Content\Images\default\shadow-lr.png" />
+    <Content Include="Content\Images\default\shadow.png" />
+    <Content Include="Content\Images\default\shared\blue-loading.gif" />
+    <Content Include="Content\Images\default\shared\calendar.gif" />
+    <Content Include="Content\Images\default\shared\glass-bg.gif" />
+    <Content Include="Content\Images\default\shared\hd-sprite.gif" />
+    <Content Include="Content\Images\default\shared\large-loading.gif" />
+    <Content Include="Content\Images\default\shared\left-btn.gif" />
+    <Content Include="Content\Images\default\shared\loading-balls.gif" />
+    <Content Include="Content\Images\default\shared\right-btn.gif" />
+    <Content Include="Content\Images\default\shared\warning.gif" />
+    <Content Include="Content\Images\default\sizer\e-handle-dark.gif" />
+    <Content Include="Content\Images\default\sizer\e-handle.gif" />
+    <Content Include="Content\Images\default\sizer\ne-handle-dark.gif" />
+    <Content Include="Content\Images\default\sizer\ne-handle.gif" />
+    <Content Include="Content\Images\default\sizer\nw-handle-dark.gif" />
+    <Content Include="Content\Images\default\sizer\nw-handle.gif" />
+    <Content Include="Content\Images\default\sizer\s-handle-dark.gif" />
+    <Content Include="Content\Images\default\sizer\s-handle.gif" />
+    <Content Include="Content\Images\default\sizer\se-handle-dark.gif" />
+    <Content Include="Content\Images\default\sizer\se-handle.gif" />
+    <Content Include="Content\Images\default\sizer\square.gif" />
+    <Content Include="Content\Images\default\sizer\sw-handle-dark.gif" />
+    <Content Include="Content\Images\default\sizer\sw-handle.gif" />
+    <Content Include="Content\Images\default\slider\slider-bg.png" />
+    <Content Include="Content\Images\default\slider\slider-thumb.png" />
+    <Content Include="Content\Images\default\slider\slider-v-bg.png" />
+    <Content Include="Content\Images\default\slider\slider-v-thumb.png" />
+    <Content Include="Content\Images\default\tabs\scroll-left.gif" />
+    <Content Include="Content\Images\default\tabs\scroll-right.gif" />
+    <Content Include="Content\Images\default\tabs\scroller-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tab-btm-inactive-left-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tab-btm-inactive-right-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tab-btm-left-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tab-btm-right-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tab-close.gif" />
+    <Content Include="Content\Images\default\tabs\tab-strip-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tab-strip-bg.png" />
+    <Content Include="Content\Images\default\tabs\tab-strip-btm-bg.gif" />
+    <Content Include="Content\Images\default\tabs\tabs-sprite.gif" />
+    <Content Include="Content\Images\default\toolbar\bg.gif" />
+    <Content Include="Content\Images\default\toolbar\btn-arrow-light.gif" />
+    <Content Include="Content\Images\default\toolbar\btn-arrow.gif" />
+    <Content Include="Content\Images\default\toolbar\btn-over-bg.gif" />
+    <Content Include="Content\Images\default\toolbar\gray-bg.gif" />
+    <Content Include="Content\Images\default\toolbar\tb-bg.gif" />
+    <Content Include="Content\Images\default\toolbar\tb-btn-sprite.gif" />
+    <Content Include="Content\Images\default\tree\arrows.gif" />
+    <Content Include="Content\Images\default\tree\drop-add.gif" />
+    <Content Include="Content\Images\default\tree\drop-between.gif" />
+    <Content Include="Content\Images\default\tree\drop-no.gif" />
+    <Content Include="Content\Images\default\tree\drop-over.gif" />
+    <Content Include="Content\Images\default\tree\drop-under.gif" />
+    <Content Include="Content\Images\default\tree\drop-yes.gif" />
+    <Content Include="Content\Images\default\tree\elbow-end-minus-nl.gif" />
+    <Content Include="Content\Images\default\tree\elbow-end-minus.gif" />
+    <Content Include="Content\Images\default\tree\elbow-end-plus-nl.gif" />
+    <Content Include="Content\Images\default\tree\elbow-end-plus.gif" />
+    <Content Include="Content\Images\default\tree\elbow-end.gif" />
+    <Content Include="Content\Images\default\tree\elbow-line.gif" />
+    <Content Include="Content\Images\default\tree\elbow-minus-nl.gif" />
+    <Content Include="Content\Images\default\tree\elbow-minus.gif" />
+    <Content Include="Content\Images\default\tree\elbow-plus-nl.gif" />
+    <Content Include="Content\Images\default\tree\elbow-plus.gif" />
+    <Content Include="Content\Images\default\tree\elbow.gif" />
+    <Content Include="Content\Images\default\tree\folder-open.gif" />
+    <Content Include="Content\Images\default\tree\folder.gif" />
+    <Content Include="Content\Images\default\tree\leaf.gif" />
+    <Content Include="Content\Images\default\tree\loading.gif" />
+    <Content Include="Content\Images\default\tree\s.gif" />
+    <Content Include="Content\Images\default\window\icon-error.gif" />
+    <Content Include="Content\Images\default\window\icon-info.gif" />
+    <Content Include="Content\Images\default\window\icon-question.gif" />
+    <Content Include="Content\Images\default\window\icon-warning.gif" />
+    <Content Include="Content\Images\default\window\left-corners.png" />
+    <Content Include="Content\Images\default\window\left-right.png" />
+    <Content Include="Content\Images\default\window\right-corners.png" />
+    <Content Include="Content\Images\default\window\top-bottom.png" />
+    <Content Include="Content\Images\Icons\calendar.gif" />
+    <Content Include="Content\Images\Icons\icon-error.gif" />
+    <Content Include="Content\Images\Styles\bodybg.png" />
+    <Content Include="Content\Images\Styles\compelligence-portada2_01.jpg" />
+    <Content Include="Content\Images\Styles\compelligence-portada_01.jpg" />
+    <Content Include="Content\Images\Styles\compelligence-portada_02.jpg" />
+    <Content Include="Content\Images\Styles\compelligence-portada_03.jpg" />
+    <Content Include="Content\Images\Styles\compelligence-portada_04.jpg" />
+    <Content Include="Content\Images\Styles\compelligence_portada_bg.jpg" />
+    <Content Include="Content\Images\Styles\compelligence_portada_bg2.jpg" />
+    <Content Include="Content\Images\Styles\tab.png" />
+    <Content Include="Content\Images\Styles\TabInactiveLeft.png" />
+    <Content Include="Content\Images\Styles\TabInactiveRight.png" />
+    <Content Include="Content\Images\Treeview\file.gif" />
+    <Content Include="Content\Images\Treeview\folder-closed.gif" />
+    <Content Include="Content\Images\Treeview\folder.gif" />
+    <Content Include="Content\Images\Treeview\folder_gray.gif" />
+    <Content Include="Content\Images\Treeview\folder_gray_closed.gif" />
+    <Content Include="Content\Images\Treeview\folder_selected.gif" />
+    <Content Include="Content\Images\Treeview\header_treeview.gif" />
+    <Content Include="Content\Styles\BackEndSite.css" />
+    <Content Include="Content\Styles\ext-all.css" />
+    <Content Include="Content\Styles\jqgrid\basic\grid.css" />
+    <Content Include="Content\Styles\jqgrid\basic\images\cd_run.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\dirty.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\down.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\find.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\first.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\folder.png" />
+    <Content Include="Content\Styles\jqgrid\basic\images\grid-blue-ft.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\grid-blue-hd.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\headerbg.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\headerleft.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\headerright.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\ico-close.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\last.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\line3.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\loading.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\minus.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\next.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\nochild.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\off-first.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\off-last.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\off-next.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\off-prev.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\plus.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\prev.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\refresh.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\resize.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\row_add.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\row_delete.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\row_edit.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\sort_asc.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\sort_desc.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\spacer.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\tab_close-on.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\tree_leaf.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\tree_minus.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\tree_plus.gif" />
+    <Content Include="Content\Styles\jqgrid\basic\images\up.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\grid.css" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\cd_run.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\dirty.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\down.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\find.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\first.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\folder.png" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\grid-blue-ft.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\grid-blue-hd.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\headerbg.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\headerleft.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\headerright.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\ico-close.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\last.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\line3.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\loading.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\minus.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\next.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\nochild.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\off-first.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\off-last.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\off-next.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\off-prev.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\plus.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\prev.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\refresh.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\resize.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\row_add.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\row_delete.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\row_edit.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\sort_asc.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\sort_desc.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\spacer.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\tab_close-on.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\tree_leaf.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\tree_minus.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\tree_plus.gif" />
+    <Content Include="Content\Styles\jqgrid\coffee\images\up.gif" />
+    <Content Include="Content\Styles\jqgrid\green\grid.css" />
+    <Content Include="Content\Styles\jqgrid\green\images\cd_run.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\dirty.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\down.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\find.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\first.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\folder.png" />
+    <Content Include="Content\Styles\jqgrid\green\images\grid-blue-ft.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\grid-blue-hd.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\headerbg.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\headerleft.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\headerright.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\ico-close.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\last.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\leaf.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\line3.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\loading.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\minus.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\next.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\nochild.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\off-first.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\off-last.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\off-next.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\off-prev.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\plus.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\prev.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\refresh.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\resize.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\row_add.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\row_delete.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\row_edit.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\sort_asc.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\sort_desc.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\spacer.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\tab_close-on.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\tree_leaf.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\tree_minus.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\tree_plus.gif" />
+    <Content Include="Content\Styles\jqgrid\green\images\up.gif" />
+    <Content Include="Content\Styles\jqgrid\jqModal.css" />
+    <Content Include="Content\Styles\jqgrid\sand\grid.css" />
+    <Content Include="Content\Styles\jqgrid\sand\images\cd_run.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\dirty.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\down.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\find.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\first.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\folder.png" />
+    <Content Include="Content\Styles\jqgrid\sand\images\grid-blue-ft.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\grid-blue-hd.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\headerbg.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\headerleft.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\headerright.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\ico-close.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\last.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\line3.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\loading.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\minus.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\next.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\nochild.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\off-first.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\off-last.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\off-next.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\off-prev.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\plus.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\prev.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\refresh.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\resize.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\row_add.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\row_delete.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\row_edit.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\sort_asc.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\sort_desc.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\spacer.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\tab_close-on.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\tree_leaf.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\tree_minus.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\tree_plus.gif" />
+    <Content Include="Content\Styles\jqgrid\sand\images\up.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\grid.css" />
+    <Content Include="Content\Styles\jqgrid\steel\images\._sprite5.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\Arrow2 Down.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\Arrow2 Up.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\bg.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\cd_run.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\control_090.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\control_270.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\dirty.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\down.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\fhbg.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\find.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\find1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\first.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\first.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\folder.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\headerleft1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\headerright1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\ico-close.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\last.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\last.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\line3.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\loading.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\minus.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\next.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\next.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\nochild.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\odown.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\off-first.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\off-last.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\off-next.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\off-prev.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\oup.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\plus.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\prev.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\prev.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\refresh.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\refresh1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\resize.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\row_add.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\row_add1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\row_delete.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\row_delete1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\row_edit.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\row_edit1.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\sort_asc.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\sort_desc.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\spacer.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\sprite.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\sprite5.png" />
+    <Content Include="Content\Styles\jqgrid\steel\images\tab_close-on.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\tree_leaf.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\tree_minus.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\tree_plus.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\up.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\images\wbg.gif" />
+    <Content Include="Content\Styles\jquery.treeview.css" />
+    <Content Include="Scripts\ext\ext-all.js" />
+    <Content Include="Scripts\ext\ext-base.js" />
+    <Content Include="Scripts\ext\ext-core.js" />
+    <Content Include="Scripts\jqgrid\grid.base-min.js" />
+    <Content Include="Scripts\jqgrid\grid.celledit-min.js" />
+    <Content Include="Scripts\jqgrid\grid.common-min.js" />
+    <Content Include="Scripts\jqgrid\grid.custom-min.js" />
+    <Content Include="Scripts\jqgrid\grid.formedit-min.js" />
+    <Content Include="Scripts\jqgrid\grid.import-min.js" />
+    <Content Include="Scripts\jqgrid\grid.inlinedit-min.js" />
+    <Content Include="Scripts\jqgrid\grid.postext-min.js" />
+    <Content Include="Scripts\jqgrid\grid.setcolumns-min.js" />
+    <Content Include="Scripts\jqgrid\grid.subgrid-min.js" />
+    <Content Include="Scripts\jqgrid\grid.tbltogrid-min.js" />
+    <Content Include="Scripts\jqgrid\grid.treegrid-min.js" />
+    <Content Include="Scripts\jqgrid\jquery.fmatter-min.js" />
+    <Content Include="Scripts\jqgrid\json2-min.js" />
+    <Content Include="Scripts\jqgrid\JsonXml-min.js" />
+    <Content Include="Scripts\jquery-validate\additional-methods.js" />
+    <Content Include="Scripts\jquery-validate\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery-validate\jquery.validate.pack.js" />
+    <Content Include="Scripts\jquery-validate\lib\jquery.form.js" />
+    <Content Include="Scripts\jquery-validate\lib\jquery.metadata.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_cn.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_cs.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_da.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_de.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_es.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_fr.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_hu.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_it.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_nl.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_no.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_pl.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_ptbr.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_ro.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_ru.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_se.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_tr.js" />
+    <Content Include="Scripts\jquery-validate\localization\messages_ua.js" />
+    <Content Include="Scripts\jquery.treeview.min.js" />
+    <Content Include="Views\BackEnd\Index.aspx" />
+    <Content Include="Views\Competitor\Edit.ascx" />
+    <Content Include="Views\Competitor\Index.ascx" />
+    <Content Include="Views\Competitor\List.ascx" />
+    <Content Include="Views\Industry\Edit.ascx" />
+    <Content Include="Views\Industry\Index.ascx" />
+    <Content Include="Views\Industry\List.ascx" />
+    <Content Include="Views\Kit\DetailList.ascx" />
+    <Content Include="Views\Event\Edit.ascx" />
+    <Content Include="Views\Event\Index.ascx" />
+    <Content Include="Views\Event\List.ascx" />
+    <Content Include="Views\Website\Edit.ascx" />
+    <Content Include="Views\Website\Index.ascx" />
+    <Content Include="Views\Website\List.ascx" />
+    <Content Include="Views\Team\Edit.ascx" />
+    <Content Include="Views\Team\Index.ascx" />
+    <Content Include="Views\Team\List.ascx" />
+    <Content Include="Views\File\Edit.ascx" />
+    <Content Include="Views\ContentPortal\Index.aspx" />
+    <Content Include="Views\Objective\Edit.ascx" />
+    <Content Include="Views\Objective\Index.ascx" />
+    <Content Include="Views\Objective\List.ascx" />
+    <Content Include="Views\Kit\Edit.ascx" />
+    <Content Include="Views\Kit\Index.ascx" />
+    <Content Include="Views\Kit\List.ascx" />
+    <Content Include="Views\Product\Index.ascx" />
+    <Content Include="Views\Product\List.ascx" />
+    <Content Include="Views\BackEnd\TreeviewMenu.ascx" />
+    <Content Include="Views\Project\Edit.ascx" />
+    <Content Include="Views\Project\Index.ascx" />
+    <Content Include="Views\Project\List.ascx" />
+    <Content Include="Views\TeamRole\Edit.ascx" />
+    <Content Include="Views\Shared\MasterPages\BackEndSite.Master" />
+    <Content Include="Views\User\Edit.ascx" />
+    <Content Include="Views\User\Index.ascx" />
+    <Content Include="Views\User\List.ascx" />
+    <Content Include="Views\CompetitorPartner\Edit.ascx" />
+    <Content Include="Views\CompetitorPartner\Index.ascx" />
+    <Content Include="Views\CompetitorPartner\List.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Design\images\PIE.php" />
+    <None Include="Content\Images\default\form\clear-trigger.psd" />
+    <None Include="Content\Images\default\form\date-trigger.psd" />
+    <None Include="Content\Images\default\form\search-trigger.psd" />
+    <None Include="Content\Images\default\form\trigger.psd" />
+    <None Include="Content\Images\default\shadow-c.psd" />
+    <None Include="Content\Images\default\window\left-corners.psd" />
+    <None Include="Content\Images\default\window\left-right.psd" />
+    <None Include="Content\Images\default\window\right-corners.psd" />
+    <None Include="Content\Images\default\window\top-bottom.psd" />
+    <None Include="Content\Images\home.svg" />
+    <None Include="Content\Styles\jqgrid\steel\images\._sprite5.psd" />
+    <None Include="Content\Styles\jqgrid\steel\images\sprite5.psd" />
+    <None Include="FilesRepository\Comparinator\CriteriaPricingTemplate.xls" />
+    <None Include="FilesRepository\Comparinator\CriteriaUploaderTemplate.xls" />
+    <None Include="FilesRepository\Comparinator\TemplateCriteriaUploader.xls" />
+    <None Include="FilesRepository\Comparinator\TemplateCriteriaUploaderData.xls" />
+    <None Include="FilesRepository\Comparinator\TemplatePricingUploader.xls" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FilesRepository\Contents\CompelligenceFile1.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile2.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile3.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile4.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile5.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile6.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile7.doc" />
+    <None Include="FilesRepository\Contents\CompelligenceFile8.doc" />
+    <None Include="resources\css\header.less" />
+    <None Include="resources\css\import.less" />
+    <None Include="resources\css\import_blue.less" />
+    <None Include="resources\css\import_burntOrange.less" />
+    <None Include="resources\css\import_green.less" />
+    <None Include="resources\css\import_magenta.less" />
+    <None Include="resources\css\import_purple.less" />
+    <None Include="resources\css\less_basicPageStyling.less" />
+    <None Include="resources\css\less_catalogSearch.less" />
+    <None Include="resources\css\less_contentTemplates.less" />
+    <None Include="resources\css\less_footer.less" />
+    <None Include="resources\css\less_grid_desktop.less" />
+    <None Include="resources\css\less_icons.less" />
+    <None Include="resources\css\less_library_mixin.less" />
+    <None Include="resources\css\less_loginRegister.less" />
+    <None Include="resources\css\less_ms_contentTemplates.less" />
+    <None Include="resources\css\less_navigation.less" />
+    <None Include="resources\css\less_normalize.less" />
+    <None Include="resources\css\less_portletTemplates.less" />
+    <None Include="resources\css\less_responsive.less" />
+    <None Include="resources\css\login.less" />
+    <None Include="resources\css\themes\library_theme_blueOther.less" />
+    <None Include="resources\css\themes\library_theme_blues.less" />
+    <None Include="resources\css\themes\library_theme_burntOrange.less" />
+    <None Include="resources\css\themes\library_theme_green.less" />
+    <None Include="resources\css\themes\library_theme_magenta.less" />
+    <None Include="resources\css\themes\library_theme_purple.less" />
+    <None Include="resources\fonts\Roboto.zip" />
+    <None Include="resources\fonts\Roboto\Roboto-Black.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-Bold.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-Italic.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-Light.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-LightItalic.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-Medium.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-Regular.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-Thin.ttf" />
+    <None Include="resources\fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <None Include="resources\images\icons\about.svg" />
+    <None Include="resources\images\icons\about_warning.svg" />
+    <None Include="resources\images\icons\about_white.svg" />
+    <None Include="resources\images\icons\add.svg" />
+    <None Include="resources\images\icons\add_white.svg" />
+    <None Include="resources\images\icons\arrow_shuffle_white.svg" />
+    <None Include="resources\images\icons\attachment_full.svg" />
+    <None Include="resources\images\icons\bell.svg" />
+    <None Include="resources\images\icons\briefcase_document.svg" />
+    <None Include="resources\images\icons\briefcase_document_white.svg" />
+    <None Include="resources\images\icons\chart_pie.svg" />
+    <None Include="resources\images\icons\chart_pie_white.svg" />
+    <None Include="resources\images\icons\check.svg" />
+    <None Include="resources\images\icons\checks.svg" />
+    <None Include="resources\images\icons\check_double_white.svg" />
+    <None Include="resources\images\icons\check_valid.svg" />
+    <None Include="resources\images\icons\check_white.svg" />
+    <None Include="resources\images\icons\clipboard.svg" />
+    <None Include="resources\images\icons\clipboard_white.svg" />
+    <None Include="resources\images\icons\comment_full.svg" />
+    <None Include="resources\images\icons\delete.svg" />
+    <None Include="resources\images\icons\delete_invalid.svg" />
+    <None Include="resources\images\icons\delete_white.svg" />
+    <None Include="resources\images\icons\delivery_truck.svg" />
+    <None Include="resources\images\icons\document_add.svg" />
+    <None Include="resources\images\icons\document_attachment.svg" />
+    <None Include="resources\images\icons\document_text.svg" />
+    <None Include="resources\images\icons\edit_white.svg" />
+    <None Include="resources\images\icons\error.svg" />
+    <None Include="resources\images\icons\first_aid.svg" />
+    <None Include="resources\images\icons\gearwheel.svg" />
+    <None Include="resources\images\icons\home.svg" />
+    <None Include="resources\images\icons\html_documentation.svg" />
+    <None Include="resources\images\icons\icons_documentation.svg" />
+    <None Include="resources\images\icons\invoice_dollar.svg" />
+    <None Include="resources\images\icons\key.svg" />
+    <None Include="resources\images\icons\magnifying_glass.svg" />
+    <None Include="resources\images\icons\magnifying_glass_nav.svg" />
+    <None Include="resources\images\icons\magnifying_glass_white.svg" />
+    <None Include="resources\images\icons\media_record.svg" />
+    <None Include="resources\images\icons\menu.svg" />
+    <None Include="resources\images\icons\menu_white.svg" />
+    <None Include="resources\images\icons\navigate_left.svg" />
+    <None Include="resources\images\icons\navigate_left_white.svg" />
+    <None Include="resources\images\icons\navigate_right.svg" />
+    <None Include="resources\images\icons\navigate_right2_white.svg" />
+    <None Include="resources\images\icons\navigate_right_white.svg" />
+    <None Include="resources\images\icons\neutral.svg" />
+    <None Include="resources\images\icons\notebook.svg" />
+    <None Include="resources\images\icons\notebook3_white.svg" />
+    <None Include="resources\images\icons\note_text.svg" />
+    <None Include="resources\images\icons\portfolio_folder.svg" />
+    <None Include="resources\images\icons\refresh.svg" />
+    <None Include="resources\images\icons\refresh_white.svg" />
+    <None Include="resources\images\icons\route_sign.svg" />
+    <None Include="resources\images\icons\shopping_cart_full.svg" />
+    <None Include="resources\images\icons\sign_forbidden.svg" />
+    <None Include="resources\images\icons\sign_stop.svg" />
+    <None Include="resources\images\icons\standby.svg" />
+    <None Include="resources\images\icons\star_0.svg" />
+    <None Include="resources\images\icons\star_1.svg" />
+    <None Include="resources\images\icons\star_2.svg" />
+    <None Include="resources\images\icons\star_3.svg" />
+    <None Include="resources\images\icons\star_4.svg" />
+    <None Include="resources\images\icons\star_5.svg" />
+    <None Include="resources\images\icons\user.svg" />
+    <None Include="resources\images\icons\users_relation.svg" />
+    <None Include="resources\images\icons\user_white.svg" />
+    <None Include="resources\images\icons\warning.svg" />
+    <None Include="Scripts\Home\show.json" />
+    <Content Include="Content\Images\home-black.png" />
+    <Content Include="Content\Images\Icons\gearwheel-blue.png" />
+    <Content Include="Content\Images\Icons\home-black.png" />
+    <Content Include="Content\Images\Icons\home_blue.png" />
+    <Content Include="Content\Images\Icons\home_v2.png" />
+    <Content Include="Content\Images\Icons\key.png" />
+    <Content Include="Content\Images\Icons\key_blue.png" />
+    <Content Include="Content\Images\Icons\logout_blue.png" />
+    <Content Include="Content\Images\Icons\menu-black.png" />
+    <Content Include="Content\Images\Icons\menu.png" />
+    <Content Include="Content\Images\Icons\menu_blue.png" />
+    <Content Include="Content\Images\Icons\user.png" />
+    <Content Include="Content\Images\Icons\users_relation.png" />
+    <Content Include="Content\Images\Icons\users_relation_blue.png" />
+    <Content Include="Content\Images\Icons\user_blue.png" />
+    <Content Include="Content\Images\menu-black.png" />
+    <Content Include="Content\Images\Styles\compelligence-1.png" />
+    <Content Include="Content\Styles\styles.css" />
+    <Content Include="factory\CompelligenceData.js" />
+    <Content Include="factory\CompelligenceHTTP.js" />
+    <Content Include="footer.htm" />
+    <Content Include="header.htm" />
+    <Content Include="home.htm" />
+    <Content Include="index.htm" />
+    <Content Include="login.htm" />
+    <Content Include="resources\css\angular-motion.min.css" />
+    <Content Include="resources\css\Documentation\p-icon.png" />
+    <Content Include="resources\css\Documentation\p5_documentation.html" />
+    <Content Include="resources\css\Documentation\p5_templates.html" />
+    <Content Include="resources\css\Documentation\puridiom_guy.png" />
+    <Content Include="resources\css\Documentation\tdcss.css" />
+    <Content Include="resources\css\Documentation\tdcss.js" />
+    <Content Include="resources\css\header.css" />
+    <Content Include="resources\css\login.css" />
+    <Content Include="resources\css\styles.css" />
+    <Content Include="resources\css\styles_blue.css" />
+    <Content Include="resources\css\styles_burntOrange.css" />
+    <Content Include="resources\css\styles_green.css" />
+    <Content Include="resources\css\styles_magenta.css" />
+    <Content Include="resources\css\styles_purple.css" />
+    <Content Include="resources\fonts\Roboto\LICENSE.txt" />
+    <Content Include="resources\images\bgGrey.png" />
+    <Content Include="resources\images\bgGreyBig.png" />
+    <Content Include="resources\images\bgWhite.png" />
+    <Content Include="resources\images\bgWhiteBig.png" />
+    <Content Include="resources\images\bgWhiteMed.png" />
+    <Content Include="resources\images\favicon.ico" />
+    <Content Include="resources\images\gearwheel.png" />
+    <Content Include="resources\images\home.png" />
+    <Content Include="resources\images\invalid.png" />
+    <Content Include="resources\images\key.png" />
+    <Content Include="resources\images\loader64.gif" />
+    <Content Include="resources\images\loading.gif" />
+    <Content Include="resources\images\loading_2.gif" />
+    <Content Include="resources\images\loading_3.gif" />
+    <Content Include="resources\images\logout.png" />
+    <Content Include="resources\images\menu.png" />
+    <Content Include="resources\images\p-icon.png" />
+    <Content Include="resources\images\p-logo.png" />
+    <Content Include="resources\images\PuridiomLoading.gif" />
+    <Content Include="resources\images\required.png" />
+    <Content Include="resources\images\user.png" />
+    <Content Include="resources\images\users_relation.png" />
+    <Content Include="resources\images\valid.png" />
+    <Content Include="resources\images\validation_orig copy 2.png" />
+    <Content Include="resources\js\angular-animate.js" />
+    <Content Include="resources\js\angular-cookies.js" />
+    <Content Include="resources\js\angular-resource.js" />
+    <Content Include="resources\js\angular-route.js" />
+    <Content Include="resources\js\angular-sanitize.js" />
+    <Content Include="resources\js\angular-strap.min.js" />
+    <Content Include="resources\js\angular-strap.tpl.min.js" />
+    <Content Include="resources\js\angular-touch.js" />
+    <Content Include="resources\js\angular.js" />
+    <Content Include="resources\js\app.js" />
+    <Content Include="resources\js\controllers\controllers.js" />
+    <Content Include="resources\js\controllers\DashboardController.js" />
+    <Content Include="resources\js\controllers\DesignController.js" />
+    <Content Include="resources\js\controllers\ErrorController.js" />
+    <Content Include="resources\js\controllers\HeaderController.js" />
+    <Content Include="resources\js\controllers\LoginController.js" />
+    <Content Include="resources\js\controllers\LogoutController.js" />
+    <Content Include="resources\js\controllers\main.js" />
+    <Content Include="resources\js\controllers\MessageAlertController.js" />
+    <Content Include="resources\js\controllers\RequisitionController.js" />
+    <Content Include="resources\js\controllers\RequisitionDashboardController.js" />
+    <Content Include="resources\js\controllers\ShoppingCartController.js" />
+    <Content Include="resources\js\controllers\TestCACHEController.js" />
+    <Content Include="resources\js\controllers\TestJSONController.js" />
+    <Content Include="resources\js\d3.js" />
+    <Content Include="resources\js\d3.min.js" />
+    <Content Include="resources\js\directives\barGraph.js" />
+    <Content Include="resources\js\directives\billTextBox.js" />
+    <Content Include="resources\js\directives\checkbox.js" />
+    <Content Include="resources\js\directives\checkboxtextbox.js" />
+    <Content Include="resources\js\directives\divbox.js" />
+    <Content Include="resources\js\directives\dragdropZone.js" />
+    <Content Include="resources\js\directives\dropdown.js" />
+    <Content Include="resources\js\directives\file.js" />
+    <Content Include="resources\js\directives\focus.js" />
+    <Content Include="resources\js\directives\graphZone.js" />
+    <Content Include="resources\js\directives\hidden.js" />
+    <Content Include="resources\js\directives\icon-builder.js" />
+    <Content Include="resources\js\directives\image.js" />
+    <Content Include="resources\js\directives\input-builder.js" />
+    <Content Include="resources\js\directives\inputButton.js" />
+    <Content Include="resources\js\directives\inputDate.js" />
+    <Content Include="resources\js\directives\inputTextArea.js" />
+    <Content Include="resources\js\directives\itemGroups.js" />
+    <Content Include="resources\js\directives\linkTextBox.js" />
+    <Content Include="resources\js\directives\mainmarketview-builder.js" />
+    <Content Include="resources\js\directives\mainview-builder.js" />
+    <Content Include="resources\js\directives\ng-scrollbar.js" />
+    <Content Include="resources\js\directives\ngenter.js" />
+    <Content Include="resources\js\directives\number.js" />
+    <Content Include="resources\js\directives\numbersonly.js" />
+    <Content Include="resources\js\directives\password.js" />
+    <Content Include="resources\js\directives\pieGraph.js" />
+    <Content Include="resources\js\directives\pressEnterKey.js" />
+    <Content Include="resources\js\directives\questionmainview-builder.js" />
+    <Content Include="resources\js\directives\radiobutton.js" />
+    <Content Include="resources\js\directives\range.js" />
+    <Content Include="resources\js\directives\search.js" />
+    <Content Include="resources\js\directives\shipTextBox.js" />
+    <Content Include="resources\js\directives\textbox.js" />
+    <Content Include="resources\js\directives\tile-builder.js" />
+    <Content Include="resources\js\directives\type-builder.js" />
+    <Content Include="resources\js\directives\vendorTextBox.js" />
+    <Content Include="resources\js\directives\view-builder.js" />
+    <Content Include="resources\js\example.js" />
+    <Content Include="resources\js\myApp2.js" />
+    <Content Include="resources\js\ngStorage.min.js" />
+    <Content Include="resources\js\puridiom-d3-directives.js" />
+    <Content Include="resources\js\services\AccountService.js" />
+    <Content Include="resources\js\services\ApprovalService.js" />
+    <Content Include="resources\js\services\BrowseOpenService.js" />
+    <Content Include="resources\js\services\BrowsePopupOpenService.js" />
+    <Content Include="resources\js\services\CatalogService.js" />
+    <Content Include="resources\js\services\CatalogViewAllService.js" />
+    <Content Include="resources\js\services\CheckOutService.js" />
+    <Content Include="resources\js\services\DashboardService.js" />
+    <Content Include="resources\js\services\DashboardTilesService.js" />
+    <Content Include="resources\js\services\httpService.js" />
+    <Content Include="resources\js\services\LoginService.js" />
+    <Content Include="resources\js\services\LogoutService.js" />
+    <Content Include="resources\js\services\ManagementService.js" />
+    <Content Include="resources\js\services\MarketPlaceDashboardService.js" />
+    <Content Include="resources\js\services\MessageAlertService.js" />
+    <Content Include="resources\js\services\MultiProcessService.js" />
+    <Content Include="resources\js\services\PoReviewFinalizeService.js" />
+    <Content Include="resources\js\services\PuridiomGetObject.js" />
+    <Content Include="resources\js\services\PuridiomHTTP.js" />
+    <Content Include="resources\js\services\QuestionService.js" />
+    <Content Include="resources\js\services\RegisterService.js" />
+    <Content Include="resources\js\services\RequisitionService.js" />
+    <Content Include="resources\js\services\ReviewFinalizeService.js" />
+    <Content Include="resources\js\services\RoutingService.js" />
+    <Content Include="resources\js\services\TwoColLineService.js" />
+    <Content Include="resources\js\services\TwoColService.js" />
+    <Content Include="resources\js\services\UserProfileService.js" />
+    <Content Include="resources\js\services\UserProfileViewService.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\icon-builder.js" />
+    <Content Include="Scripts\System\FrontEnd\EditAddSW.js" />
+    <Content Include="Scripts\d3.js" />
+    <Content Include="Scripts\System\FrontEnd\Functions.js" />
+    <Content Include="Scripts\System\FrontEnd\FunctionsFrontEnd.js" />
+    <Content Include="Views\ConfigurationGeneral\Index.ascx" />
+    <Content Include="Views\Configuration\ApprovalList.ascx" />
+    <Content Include="Views\Configuration\IndexConfiguration.ascx" />
+    <Content Include="Scripts\System\Help.js" />
+    <Content Include="Views\Report\IndexComparison.ascx" />
+    <Content Include="Views\Shared\MasterPages\ApprovalSite.Master" />
+    <Content Include="Models\Xml\EmailTemplate\ForgotUserNameNotification.xml" />
+    <Content Include="Scripts\browserselector.js" />
+    <Content Include="Scripts\jquery-idleTimeout.js" />
+    <Content Include="Scripts\System\Design\jquery.simple-watermark.js" />
+    <Content Include="Models\Xml\EmailTemplate\PrivateFeedBackNotification.xml" />
+    <Content Include="Scripts\System\FrontEnd\ComparinatorFilter.js" />
+    <Content Include="Scripts\System\FrontEnd\ComparinatorTools.js" />
+    <Content Include="Views\Comparinator\CellIndustryStandard.ascx" />
+    <Content Include="Views\Home\ForgotUserName.aspx" />
+    <Content Include="Views\Home\ForgotUserSuccess.aspx" />
+    <Content Include="Views\Home\UpdateSucessful.aspx" />
+    <Content Include="Views\Home\ForgotKennwort.aspx" />
+    <Content Include="Views\Shared\MasterPages\FrontEndSiteUser.Master" />
+    <Content Include="Content\HtmlEditor\images\buttonsPress.GIF" />
+    <Content Include="Content\Images\Icons\bullet_black.jpg" />
+    <Content Include="Content\Images\Icons\comp_headg01.png" />
+    <Content Include="Content\Images\Icons\current_Industry.jpg" />
+    <Content Include="Content\Images\Icons\export_word.gif" />
+    <Content Include="Content\Images\Icons\filter-a1.png" />
+    <Content Include="Content\Images\Icons\filter-a2.png" />
+    <Content Include="Content\Images\Icons\filter-a3.png" />
+    <Content Include="Content\Images\Icons\filter-a4.png" />
+    <Content Include="Content\Images\Icons\filterpointerposition_small.PNG" />
+    <Content Include="Content\Images\Icons\followers.jpeg" />
+    <Content Include="Content\Images\Icons\global.jpg" />
+    <Content Include="Content\Images\Icons\icon-global1.jpg" />
+    <Content Include="Content\Images\Icons\icon-lft-arrow-blue1.jpg" />
+    <Content Include="Content\Images\Icons\icon-rft-arrow-green.jpg" />
+    <Content Include="Content\Images\Icons\icon-rft-arrow-green1.jpg" />
+    <Content Include="Content\Images\Icons\sub-IndustryRoll-up.jpg" />
+    <Content Include="Content\Images\Menu\rhm1_hover_menu.png" />
+    <Content Include="Content\Images\Menu\rhm1_hover_r.png" />
+    <Content Include="Content\Images\Menu\rhm1_hover_rh.png" />
+    <Content Include="Content\Images\Styles\compelligence-logo.png" />
+    <Content Include="Content\Images\Styles\HeaderContentPortal.png" />
+    <Content Include="Content\Images\Styles\new_logo.png" />
+    <Content Include="Content\Images\Styles\webMaintenance.jpg" />
+    <Content Include="Content\Styles\Home.css" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\animated-overlay.gif" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui-1.10.3\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Content\Styles\Comparisons.css" />
+    <Content Include="Content\Styles\tinytable2.style.css" />
+    <Content Include="Models\Xml\Browse\CompetitiveMessagingDetail.xml" />
+    <Content Include="Models\Xml\Browse\ConfigurationLabelsAll.xml" />
+    <Content Include="Models\Xml\Browse\UserAccountHistory.xml" />
+    <Content Include="Models\Xml\Browse\DealArchivedAll.xml" />
+    <Content Include="Models\Xml\Browse\IndustryCustomerDetailHierarchy.xml" />
+    <Content Include="Models\Xml\Browse\IndustryTrendDetailHierarchy.xml" />
+    <Content Include="Models\Xml\Browse\NewsByCompetitorDetail.xml" />
+    <Content Include="Models\Xml\Browse\PositioningReport.xml" />
+    <Content Include="Models\Xml\Browse\ProductIndustryDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\StrengthWeaknessDetail.xml" />
+    <Content Include="Models\Xml\EmailTemplate\CustomErrorNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\ErrorSendEmail.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NewsletterAddressIncorrectSend.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NotificationResetPassword.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NotificationSmtpServer.xml" />
+    <Content Include="Models\Xml\Filter\PositioningAllByCompetitorByIndustryReport.xml" />
+    <Content Include="Models\Xml\Filter\PositioningAllByProductByIndustryReport.xml" />
+    <Content Include="Models\Xml\Filter\PositioningAllReport.xml" />
+    <Content Include="Models\Xml\Filter\PositioningByCompetitorAndIndustryReport.xml" />
+    <Content Include="Models\Xml\Filter\PositioningByProductAndIndustryReport.xml" />
+    <Content Include="Models\Xml\Filter\PositioningReport.xml" />
+    <Content Include="Models\Xml\Filter\UserAccountHistory.xml" />
+    <Content Include="Models\Xml\Search\InternalSearchAnalyst.xml" />
+    <Content Include="Models\Xml\Search\InternalSearchPartner.xml" />
+    <Content Include="Models\Xml\Search\InternalSearchManager.xml" />
+    <Content Include="Scripts\cluetip\images\arrow-src.gif" />
+    <Content Include="Scripts\cluetip\images\arrowdown.gif" />
+    <Content Include="Scripts\cluetip\images\arrowleft.gif" />
+    <Content Include="Scripts\cluetip\images\arrowright.gif" />
+    <Content Include="Scripts\cluetip\images\arrowup.gif" />
+    <Content Include="Scripts\cluetip\images\bl.gif" />
+    <Content Include="Scripts\cluetip\images\bl.png" />
+    <Content Include="Scripts\cluetip\images\br.gif" />
+    <Content Include="Scripts\cluetip\images\br.png" />
+    <Content Include="Scripts\cluetip\images\darrowdown.gif" />
+    <Content Include="Scripts\cluetip\images\darrowleft.gif" />
+    <Content Include="Scripts\cluetip\images\darrowright.gif" />
+    <Content Include="Scripts\cluetip\images\darrowup.gif" />
+    <Content Include="Scripts\cluetip\images\itunes.png" />
+    <Content Include="Scripts\cluetip\images\rarrowdown.gif" />
+    <Content Include="Scripts\cluetip\images\rarrowleft.gif" />
+    <Content Include="Scripts\cluetip\images\rarrowright.gif" />
+    <Content Include="Scripts\cluetip\images\rarrowup.gif" />
+    <Content Include="Scripts\cluetip\images\tl.gif" />
+    <Content Include="Scripts\cluetip\images\tl.png" />
+    <Content Include="Scripts\cluetip\images\tr.gif" />
+    <Content Include="Scripts\cluetip\images\tr.png" />
+    <Content Include="Scripts\cluetip\images\wait.gif" />
+    <Content Include="Scripts\cluetip\jquery.cluetip-1.2.10.js" />
+    <Content Include="Scripts\cluetip\jquery.cluetip-1.2.10.min.js" />
+    <Content Include="Scripts\cluetip\jquery.cluetip.css" />
+    <Content Include="Scripts\cluetip\jquery.cluetip.js" />
+    <Content Include="Scripts\cluetip\jquery.cluetip.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.1.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\System\BackEnd\hierarchy.js" />
+    <Content Include="Scripts\System\BackEnd\NewsLetter.js" />
+    <Content Include="Scripts\System\BackEnd\updateicp.js" />
+    <Content Include="Scripts\System\Design\jquery.simple-watermark.js" />
+    <Content Include="Scripts\System\FrontEnd\Comparisons.js" />
+    <Content Include="Scripts\System\FrontEnd\Menu.js" />
+    <Content Include="Scripts\System\FrontEnd\Result.js" />
+    <Content Include="Views\Answer\FrontEndRespond.aspx" />
+    <Content Include="Views\Answer\ShortRespond.ascx" />
+    <Content Include="Views\Answer\Respond.ascx" />
+    <Content Include="Views\Answer\SuccessMessage.aspx" />
+    <Content Include="Views\Browse\NewsLetterPopup.ascx" />
+    <Content Include="Views\Comparinator\CellDetail.ascx" />
+    <Content Include="Views\Comparinator\RowHeaderFilter.ascx" />
+    <Content Include="Views\Comparinator\CellRelevancy.ascx" />
+    <Content Include="Views\Comparinator\CellBenefit.ascx" />
+    <Content Include="Views\Comparinator\CellCost.ascx" />
+    <Content Include="Views\Comparinator\CellProperty.ascx" />
+    <Content Include="Views\Comparinator\ResultNews.ascx" />
+    <Content Include="Views\Comparinator\SalesToolsResult.ascx" />
+    <Content Include="Views\CompetitiveMessaging\DetailList.ascx" />
+    <Content Include="Views\CompetitiveMessaging\Edit.ascx" />
+    <Content Include="Views\ConfigurationLabels\DetailList.ascx" />
+    <Content Include="Views\ConfigurationLabels\Edit.ascx" />
+    <Content Include="Views\ConfigurationLabels\Index.ascx" />
+    <Content Include="Views\ConfigurationLabels\List.ascx" />
+    <Content Include="Views\Configuration\Defaults.ascx" />
+    <Content Include="Views\CustomError\Index.aspx" />
+    <Content Include="Views\CustomError\Maintenance.aspx" />
+    <Content Include="Views\File\EditTemplate.ascx" />
+    <Content Include="Views\ForumDiscussion\ExternalMessage.ascx" />
+    <Content Include="Views\Forum\FeedBackResponse.ascx" />
+    <Content Include="Views\Forum\Discussions.ascx" />
+    <Content Include="Views\Forum\DiscussionsResponse.ascx" />
+    <Content Include="Views\Forum\ExternalMessage.ascx" />
+    <Content Include="Views\Forum\ExternalResponse.ascx" />
+    <Content Include="Views\Forum\FeedBackMessage.ascx" />
+    <Content Include="Views\HistoryField\DetailList.ascx" />
+    <Content Include="Views\Home\Shutdown.aspx" />
+    <Content Include="Views\Home\IndexEmailApproved.aspx" />
+    <Content Include="Views\MaintenanceAccount\UpdateSeting.aspx" />
+    <Content Include="Views\MyProfile\EditPasswordFront.aspx" />
+    <Content Include="Views\MyProfile\EditPopEmailCfg.aspx" />
+    <Content Include="Views\MyProfile\EditProfileFront.aspx" />
+    <Content Include="Views\Shared\MasterPages\FrontEndSiteOnly.Master" />
+    <Content Include="Content\Design\images\bg-caption.png" />
+    <Content Include="Content\Design\images\bg-form-top.jpg" />
+    <Content Include="Content\Design\images\bg-list-h.jpg" />
+    <Content Include="Content\Design\images\bg-row-1.jpg" />
+    <Content Include="Content\Design\images\bg-row-11.jpg" />
+    <Content Include="Content\Design\images\bg-row-12.jpg" />
+    <Content Include="Content\Design\images\bg-row-13.jpg" />
+    <Content Include="Content\Design\images\bg-row-14.jpg" />
+    <Content Include="Content\Design\images\bg-row-15.jpg" />
+    <Content Include="Content\Design\images\bg-row-16.jpg" />
+    <Content Include="Content\Design\images\bg-row-17.jpg" />
+    <Content Include="Content\Design\images\bg-row-18.jpg" />
+    <Content Include="Content\Design\images\bg-row-19.jpg" />
+    <Content Include="Content\Design\images\bg-row-2.jpg" />
+    <Content Include="Content\Design\images\bg-submenu-li-h.jpg" />
+    <Content Include="Content\Design\images\bg-submenu-li.jpg" />
+    <Content Include="Content\Design\images\bg-submenu.png" />
+    <Content Include="Content\Design\images\logo.png" />
+    <Content Include="Content\Design\images\logo1.png" />
+    <Content Include="Content\Design\images\marker-1.gif" />
+    <Content Include="Content\Design\images\pic-1.gif" />
+    <Content Include="Content\Design\images\PIE.htc" />
+    <Content Include="Content\HtmlEditor\images\buttons.gif" />
+    <Content Include="Content\HtmlEditor\images\toolbar.gif" />
+    <Content Include="Content\HtmlEditor\jquery.cleditor.css" />
+    <Content Include="Content\HtmlEditor\jquery.cleditor.js" />
+    <Content Include="Content\HtmlEditor\jquery.cleditor.min.js" />
+    <Content Include="Content\Images\default\panel\back-orang02.gif" />
+    <Content Include="Content\Images\default\panel\back-orangev.gif" />
+    <Content Include="Content\Images\default\panel\Content-back2.gif" />
+    <Content Include="Content\Images\default\Remove.PNG" />
+    <Content Include="Content\Images\Icons\add.png" />
+    <Content Include="Content\Images\Icons\close-gray.gif" />
+    <Content Include="Content\Images\Icons\collapse.gif" />
+    <Content Include="Content\Images\Icons\commentsz.png" />
+    <Content Include="Content\Images\Icons\CommentWhite.png" />
+    <Content Include="Content\Images\Icons\comp_cornerd.png" />
+    <Content Include="Content\Images\Icons\comp_cornerg.png" />
+    <Content Include="Content\Images\Icons\comp_cornerr.png" />
+    <Content Include="Content\Images\Icons\comp_cornerw.png" />
+    <Content Include="Content\Images\Icons\comp_grouphead.png" />
+    <Content Include="Content\Images\Icons\comp_grouphead2.png" />
+    <Content Include="Content\Images\Icons\comp_headg.png" />
+    <Content Include="Content\Images\Icons\comp_headg02.png" />
+    <Content Include="Content\Images\Icons\comp_sethead.png" />
+    <Content Include="Content\Images\Icons\comp_sethead2.png" />
+    <Content Include="Content\Images\Icons\comp_setheadl.png" />
+    <Content Include="Content\Images\Icons\comp_tablehead.png" />
+    <Content Include="Content\Images\Icons\comp_tableheadl.png" />
+    <Content Include="Content\Images\Icons\comp_tableheado.png" />
+    <Content Include="Content\Images\Icons\criteriaprevent_off.png" />
+    <Content Include="Content\Images\Icons\criteriaprevent_on.png" />
+    <Content Include="Content\Images\Icons\expand.gif" />
+    <Content Include="Content\Images\Icons\export_excel.png" />
+    <Content Include="Content\Images\Icons\export_pdf.gif" />
+    <Content Include="Content\Images\Icons\favicon.ico" />
+    <Content Include="Content\Images\Icons\icon_csv.png" />
+    <Content Include="Content\Images\Icons\library-download.png" />
+    <Content Include="Content\Images\Icons\library-remote.png" />
+    <Content Include="Content\Images\Icons\library-upload.png" />
+    <Content Include="Content\Images\Icons\library-view.png" />
+    <Content Include="Content\Images\Icons\next.png" />
+    <Content Include="Content\Images\Icons\none-icon.png" />
+    <Content Include="Content\Images\Icons\none.png" />
+    <Content Include="Content\Images\Icons\notes_icon_hidden.png" />
+    <Content Include="Content\Images\Icons\properties.png" />
+    <Content Include="Content\Images\Icons\refresh.gif" />
+    <Content Include="Content\Images\Icons\sort-curve.png" />
+    <Content Include="Content\Images\Icons\sort-single.png" />
+    <Content Include="Content\Images\Icons\sort-solid-black.png" />
+    <Content Include="Content\Images\Icons\sort-solid-gray.png" />
+    <Content Include="Content\Images\Icons\sort-solid.png" />
+    <Content Include="Content\Images\Icons\sort-topdown.png" />
+    <Content Include="Content\Images\Icons\tools_close.png" />
+    <Content Include="Content\Images\Icons\tools_show.png" />
+    <Content Include="Content\Images\Menu\rhm1_bg.gif" />
+    <Content Include="Content\Images\Menu\rhm1_bg40.gif" />
+    <Content Include="Content\Images\Menu\rhm1_bg41.gif" />
+    <Content Include="Content\Images\Menu\rhm1_hover_l.gif" />
+    <Content Include="Content\Images\Menu\rhm1_hover_l.png" />
+    <Content Include="Content\Images\Menu\rhm1_hover_lh.gif" />
+    <Content Include="Content\Images\Menu\rhm1_hover_r.gif" />
+    <Content Include="Content\Images\Menu\rhm1_hover_rh.gif" />
+    <Content Include="Content\Images\Menu\rhm1_l.gif" />
+    <Content Include="Content\Images\Menu\rhm1_l40.gif" />
+    <Content Include="Content\Images\Menu\rhm1_r.gif" />
+    <Content Include="Content\Images\Menu\rhm1_r40.gif" />
+    <Content Include="Content\Images\Menu\search-btn.gif" />
+    <Content Include="Content\Images\Menu\search-btn.png" />
+    <Content Include="Content\Images\Menu\search-icon.png" />
+    <Content Include="Content\Images\Styles\angle-nxs-bkg.gif" />
+    <Content Include="Content\Images\Styles\angle-nxs.gif" />
+    <Content Include="Content\Images\Styles\arrow-square.gif" />
+    <Content Include="Content\Images\Styles\asc.gif" />
+    <Content Include="Content\Images\Styles\BackGroundMenus.png" />
+    <Content Include="Content\Images\Styles\BackgroundSlider.jpg" />
+    <Content Include="Content\Images\Styles\bg-content.jpg" />
+    <Content Include="Content\Images\Styles\bg-row-1.jpg" />
+    <Content Include="Content\Images\Styles\bg-row-2.jpg" />
+    <Content Include="Content\Images\Styles\bg.gif" />
+    <Content Include="Content\Images\Styles\bgButton.gif" />
+    <Content Include="Content\Images\Styles\BGGreyGrad1.gif" />
+    <Content Include="Content\Images\Styles\bgOFF.gif" />
+    <Content Include="Content\Images\Styles\BGYellowGrad1.gif" />
+    <Content Include="Content\Images\Styles\bg_body.jpg" />
+    <Content Include="Content\Images\Styles\bg_utility_nav.jpg" />
+    <Content Include="Content\Images\Styles\bg_utility_nav_on.jpg" />
+    <Content Include="Content\Images\Styles\big-image1.jpg" />
+    <Content Include="Content\Images\Styles\big-image2.jpg" />
+    <Content Include="Content\Images\Styles\big-image3.jpg" />
+    <Content Include="Content\Images\Styles\bodybg-line.png" />
+    <Content Include="Content\Images\Styles\bodybg-logo.png" />
+    <Content Include="Content\Images\Styles\bottom-shadow.gif" />
+    <Content Include="Content\Images\Styles\Browse.gif" />
+    <Content Include="Content\Images\Styles\Browse.jpg" />
+    <Content Include="Content\Images\Styles\Browsehover.gif" />
+    <Content Include="Content\Images\Styles\Buttonbrowse.gif" />
+    <Content Include="Content\Images\Styles\button_down.png" />
+    <Content Include="Content\Images\Styles\button_gray.png" />
+    <Content Include="Content\Images\Styles\button_long_off.gif" />
+    <Content Include="Content\Images\Styles\button_long_on.gif" />
+    <Content Include="Content\Images\Styles\button_up.png" />
+    <Content Include="Content\Images\Styles\cbg.gif" />
+    <Content Include="Content\Images\Styles\Compelligence.png" />
+    <Content Include="Content\Images\Styles\compelligenceStart.png" />
+    <Content Include="Content\Images\Styles\compelligence_contentright_title.gif" />
+    <Content Include="Content\Images\Styles\compelligence_panel_bg.jpg" />
+    <Content Include="Content\Images\Styles\compelligence_panel_title.gif" />
+    <Content Include="Content\Images\Styles\desc.gif" />
+    <Content Include="Content\Images\Styles\en.9530b7e7dba1551550507315591d061b.png" />
+    <Content Include="Content\Images\Styles\gray_background.jpg" />
+    <Content Include="Content\Images\Styles\help.gif" />
+    <Content Include="Content\Images\Styles\iconComments.png" />
+    <Content Include="Content\Images\Styles\Iconhex2.jpg" />
+    <Content Include="Content\Images\Styles\icon_comments2.png" />
+    <Content Include="Content\Images\Styles\Image1.png" />
+    <Content Include="Content\Images\Styles\Image2.png" />
+    <Content Include="Content\Images\Styles\Image3.png" />
+    <Content Include="Content\Images\Styles\Image_Root_0.gif" />
+    <Content Include="Content\Images\Styles\important.gif" />
+    <Content Include="Content\Images\Styles\info.gif" />
+    <Content Include="Content\Images\Styles\item_bottom.PNG" />
+    <Content Include="Content\Images\Styles\line.png" />
+    <Content Include="Content\Images\Styles\list_remove.png" />
+    <Content Include="Content\Images\Styles\logo.png" />
+    <Content Include="Content\Images\Styles\logo_header.jpg" />
+    <Content Include="Content\Images\Styles\menu.png" />
+    <Content Include="Content\Images\Styles\nav01_center_1.gif" />
+    <Content Include="Content\Images\Styles\nav01_center_1a.gif" />
+    <Content Include="Content\Images\Styles\navtop_18x36.gif" />
+    <Content Include="Content\Images\Styles\obj123geo80shd18pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj126geo85shd20pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj127geo86shd21pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj131geo93shd24pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj132geo94shd25pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj138geo100pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj139geo99shd26pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj140geo101shd27pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj145geo108pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj146geo107pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj160geo115shd30pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj16geo16pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj19geo19pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj1geo1pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj20geo20pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj24geo23shd4pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj278geo124shd48pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj336geo127shd49pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj340title379pg1p2.png" />
+    <Content Include="Content\Images\Styles\obj366geo124shd48pg1p2.png" />
+    <Content Include="Content\Images\Styles\ok.png" />
+    <Content Include="Content\Images\Styles\OpenYourAccountForFREE.png" />
+    <Content Include="Content\Images\Styles\page1-img1.png" />
+    <Content Include="Content\Images\Styles\page1-img2.png" />
+    <Content Include="Content\Images\Styles\page1-img3.png" />
+    <Content Include="Content\Images\Styles\page1-img4.jpg" />
+    <Content Include="Content\Images\Styles\page1-img5.jpg" />
+    <Content Include="Content\Images\Styles\page1-img6.jpg" />
+    <Content Include="Content\Images\Styles\panelrigth_title_0.gif" />
+    <Content Include="Content\Images\Styles\panelrigth_title_01.gif" />
+    <Content Include="Content\Images\Styles\panelrigth_title_02.gif" />
+    <Content Include="Content\Images\Styles\panelrigth_title_10.gif" />
+    <Content Include="Content\Images\Styles\panelrigth_title_15.png" />
+    <Content Include="Content\Images\Styles\panelrigth_title_4.jpg" />
+    <Content Include="Content\Images\Styles\panelrigth_title_8.jpg" />
+    <Content Include="Content\Images\Styles\popup-header-bg.gif" />
+    <Content Include="Content\Images\Styles\radar_bg_0.gif" />
+    <Content Include="Content\Images\Styles\radar_bg_1.gif" />
+    <Content Include="Content\Images\Styles\resizableBar.JPG" />
+    <Content Include="Content\Images\Styles\Return.jpeg" />
+    <Content Include="Content\Images\Styles\row_li.jpg" />
+    <Content Include="Content\Images\Styles\sm-image1.jpg" />
+    <Content Include="Content\Images\Styles\sm-image2.jpg" />
+    <Content Include="Content\Images\Styles\sm-image3.jpg" />
+    <Content Include="Content\Images\Styles\statistics.png" />
+    <Content Include="Content\Images\Styles\tablesorter_bkgrd.png" />
+    <Content Include="Content\Images\Styles\tablesorter_expand.png" />
+    <Content Include="Content\Images\Styles\thead_gradient.gif" />
+    <Content Include="Content\Images\Styles\title.gif" />
+    <Content Include="Content\Images\Styles\TitleMenuContenLef_12.gif" />
+    <Content Include="Content\Images\Styles\TopBarFrontEnd_13.gif" />
+    <Content Include="Content\Images\Styles\TopBarFrontEnd_16.gif" />
+    <Content Include="Content\Images\Styles\undefperson.jpg" />
+    <Content Include="Content\Images\Styles\UploadFile.jpg" />
+    <Content Include="Content\Images\Styles\uploading.gif" />
+    <Content Include="Content\Images\Styles\user_icon.jpg" />
+    <Content Include="Content\Images\Styles\Winning.jpg" />
+    <Content Include="Content\Images\Styles\write.png" />
+    <Content Include="Content\Images\Treeview\minus.gif" />
+    <Content Include="Content\Images\Treeview\plus.gif" />
+    <Content Include="Content\Images\Treeview\treeview-black-line.gif" />
+    <Content Include="Content\Images\Treeview\treeview-black.gif" />
+    <Content Include="Content\Images\Treeview\treeview-default-line.gif" />
+    <Content Include="Content\Images\Treeview\treeview-default.gif" />
+    <Content Include="Content\Images\Treeview\treeview-famfamfam-line.gif" />
+    <Content Include="Content\Images\Treeview\treeview-famfamfam.gif" />
+    <Content Include="Content\Images\Treeview\treeview-gray-line.gif" />
+    <Content Include="Content\Images\Treeview\treeview-gray.gif" />
+    <Content Include="Content\Images\Treeview\treeview-red-line.gif" />
+    <Content Include="Content\Images\Treeview\treeview-red.gif" />
+    <Content Include="Content\Styles\BackEndPopupComment.css" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Content\Styles\calendartheme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Styles\calendartheme\theme.css" />
+    <Content Include="Content\Styles\Comments.css" />
+    <Content Include="Content\Styles\fileuploader.css" />
+    <Content Include="Content\Styles\fullcalendar.css" />
+    <Content Include="Content\Styles\HomePage.css" />
+    <Content Include="Content\Styles\images\imageshadow.gif" />
+    <Content Include="Content\Styles\images\imageshadow.JPG" />
+    <Content Include="Content\Styles\images\arrow-square.gif" />
+    <Content Include="Content\Styles\images\asc.gif" />
+    <Content Include="Content\Styles\images\bg.gif" />
+    <Content Include="Content\Styles\images\desc.gif" />
+    <Content Include="Content\Styles\images\first.gif" />
+    <Content Include="Content\Styles\images\grippie.png" />
+    <Content Include="Content\Styles\comparinator.css" />
+    <Content Include="Content\Styles\images\header-bg.gif" />
+    <Content Include="Content\Styles\images\header-selected-bg.gif" />
+    <Content Include="Content\Styles\images\last.gif" />
+    <Content Include="Content\Styles\images\next.gif" />
+    <Content Include="Content\Styles\images\norating.png" />
+    <Content Include="Content\Styles\Discussion.css" />
+    <Content Include="Content\Styles\images\previous.gif" />
+    <Content Include="Content\Styles\images\sort.gif" />
+    <Content Include="Content\Styles\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Styles\indicator.gif" />
+    <Content Include="Content\Styles\jqgrid\steel\jquery.searchFilter.css" />
+    <Content Include="Content\Styles\jqgrid\steel\ui.jqgrid.css" />
+    <Content Include="Content\Styles\jqgrid\steel\ui.multiselect.css" />
+    <Content Include="Content\Styles\jquery-ui\jquery.ui.spinner.css" />
+    <Content Include="Content\Styles\jquery-ui\jquery.ui.theme.css" />
+    <Content Include="Content\Styles\jquery.alerts.css" />
+    <Content Include="Content\Styles\jquery.autocomplete.css" />
+    <Content Include="Content\Styles\jquery.multiselect.css" />
+    <Content Include="Content\Styles\jquery.multiselect.filter.css" />
+    <Content Include="Content\Styles\loading.gif" />
+    <Content Include="Content\Styles\rhm1.css" />
+    <Content Include="Content\Styles\rte.css" />
+    <Content Include="Content\Styles\Sticky\stickytooltip.css" />
+    <Content Include="Content\Styles\StyleSorterTabla.css" />
+    <Content Include="Content\Styles\Survey.css" />
+    <Content Include="Content\Styles\thickbox.css" />
+    <Content Include="Content\Styles\tinytable.style.css" />
+    <Content Include="FilesRepository\NewsLetter\NewsLetter_18283613671875002.xml" />
+    <Content Include="FilesRepository\NewsLetter\NewsLetter_18283613671875003.xml" />
+    <Content Include="FilesRepository\Templates\11934438921875001_1,0_20090812.txt" />
+    <Content Include="FilesRepository\Templates\11943101281250002_6,0_newsletter.html" />
+    <Content Include="FilesRepository\Templates\18290066109375017_2,0_newsletter.html" />
+    <Content Include="Models\Xml\Browse\ActionHistoryDashboard.xml" />
+    <Content Include="Models\Xml\Browse\ActionHistoryDetail.xml" />
+    <Content Include="Models\Xml\Browse\BudgetTypeAll.xml" />
+    <Content Include="Models\Xml\Browse\CalendarAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorAllSearch.xml" />
+    <Content Include="App_GlobalResources\MessagesResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MessagesResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Models\Xml\Browse\DiscussionDashboard.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorCompetitorDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialBalanceSheetAnnual.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialCashFlowAnnual.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialIncomeStatementAnnual.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorTeamDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorTrendDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialIncomeStatementQuarterly.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialBalanceSheetQuarterly.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorFinancialCashFlowQuarterly.xml" />
+    <Content Include="Models\Xml\Browse\EntityEventDetail.xml" />
+    <Content Include="Models\Xml\Browse\EventPast.xml" />
+    <Content Include="Models\Xml\Browse\EventPastAll.xml" />
+    <Content Include="Models\Xml\Browse\EventPastAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\ForumResponseDashboard.xml" />
+    <Content Include="Models\Xml\Browse\IndustryCompetitorDetailHierarchy.xml" />
+    <Content Include="Models\Xml\Browse\IndustryFinancialDetail.xml" />
+    <Content Include="Models\Xml\Browse\DealSupportArchived.xml" />
+    <Content Include="Models\Xml\Browse\CustomFieldAll.xml" />
+    <Content Include="Models\Xml\Browse\DealSupportForFilter.xml" />
+    <Content Include="Models\Xml\Browse\EventsForFilter.xml" />
+    <Content Include="Models\Xml\Browse\IndustryByParentDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\IndustryProductDetailHierarchy.xml" />
+    <Content Include="Models\Xml\Browse\IndustryTrendDetail.xml" />
+    <Content Include="Models\Xml\Browse\KitByParent.xml" />
+    <Content Include="Models\Xml\Browse\KitWithAchieved.xml" />
+    <Content Include="Models\Xml\Browse\LibraryAllSelect.xml" />
+    <Content Include="Models\Xml\Browse\LibraryFileDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\LibraryNewsAll.xml" />
+    <Content Include="Models\Xml\Browse\LibraryNewsAllSerarch.xml" />
+    <Content Include="Models\Xml\Browse\MarketTypeAll.xml" />
+    <Content Include="Models\Xml\Browse\MarketTypeDetail.xml" />
+    <Content Include="Models\Xml\Browse\MarketTypeDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\NewsAll.xml" />
+    <Content Include="Models\Xml\Browse\NewsAllByCompetitor.xml" />
+    <Content Include="Models\Xml\Browse\NewsAllByIndustry.xml" />
+    <Content Include="Models\Xml\Browse\NewsAllByProduct.xml" />
+    <Content Include="Models\Xml\Browse\NewsDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\NewsLetterSectionEvent.xml" />
+    <Content Include="Models\Xml\Browse\NewsLetterSectionNews.xml" />
+    <Content Include="Models\Xml\Browse\NewsScoringAll.xml" />
+    <Content Include="Models\Xml\Browse\ObjectiveByParent.xml" />
+    <Content Include="Models\Xml\Browse\ObjectiveWithAchieved.xml" />
+    <Content Include="Models\Xml\Browse\NewsTrendDetail.xml" />
+    <Content Include="Models\Xml\Filter\EventReport.xml" />
+    <Content Include="Models\Xml\Filter\PlanReport.xml" />
+    <Content Include="Models\Xml\Browse\PositioningAll.xml" />
+    <Content Include="Models\Xml\Browse\PositioningAllByHierarchy.xml" />
+    <Content Include="Models\Xml\Browse\PositioningByHierarchy.xml" />
+    <Content Include="Models\Xml\Browse\PriceDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProductTeamDetail.xml" />
+    <Content Include="Models\Xml\Browse\test.xml" />
+    <Content Include="Models\Xml\Browse\ThreatDetail.xml" />
+    <Content Include="Models\Xml\Browse\TrendDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\TrendEventDetail.xml" />
+    <Content Include="Models\Xml\Browse\UserDetail.xml" />
+    <Content Include="Models\Xml\Browse\UserDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\UserIndustryDetail.xml" />
+    <Content Include="Models\Xml\Browse\UserProfileAll.xml" />
+    <Content Include="Models\Xml\Browse\UserProfileDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\UserRelationAll.xml" />
+    <Content Include="Models\Xml\Browse\WinLossAnalysisAll.xml" />
+    <Content Include="Models\Xml\Browse\WinLossAnalysisDashboard.xml" />
+    <Content Include="Models\Xml\EmailTemplate\ForgotPasswordNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NewCompanyNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\TopNewsNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\UserAddedAtprojectNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\UserHomeContact.xml" />
+    <Content Include="Models\Xml\Filter\CompetitorFinancialByCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\CalendarReport.xml" />
+    <Content Include="Models\Xml\Filter\CustomerReport.xml" />
+    <Content Include="Models\Xml\Filter\DealReport.xml" />
+    <Content Include="Models\Xml\Filter\KitReport.xml" />
+    <Content Include="Models\Xml\Filter\LocationDetail.xml" />
+    <Content Include="Models\Xml\Filter\MarketTypeReport.xml" />
+    <Content Include="Models\Xml\Filter\NewsletterReport.xml" />
+    <Content Include="Models\Xml\Filter\NewsScoringAll.xml" />
+    <Content Include="Models\Xml\Filter\ObjectiveReport.xml" />
+    <Content Include="Models\Xml\Filter\ProductByTierByCompetitorByTier.xml" />
+    <Content Include="Models\Xml\Filter\ProductByTierByIndustryByTier.xml" />
+    <Content Include="Models\Xml\Filter\ProductReport.xml" />
+    <Content Include="Models\Xml\Filter\ProductsByTier.xml" />
+    <Content Include="Models\Xml\Browse\ProductTrendDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProjectArchiveAll.xml" />
+    <Content Include="Models\Xml\Browse\ProjectInactiveAll.xml" />
+    <Content Include="Models\Xml\Browse\ProjectObjecitveDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProjectsWithStatusCompleted.xml" />
+    <Content Include="Models\Xml\Browse\TeamIndustryDetail.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaIndustryDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProductFamilyAll.xml" />
+    <Content Include="Models\Xml\Browse\LibraryNewsDetail.xml" />
+    <Content Include="Models\Xml\Browse\SourceAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\PartnerCompetitorDetail.xml" />
+    <Content Include="Models\Xml\Browse\EventTypeAll.xml" />
+    <Content Include="Models\Xml\Browse\Event.xml" />
+    <Content Include="Models\Xml\Browse\DealSupport.xml" />
+    <Content Include="Models\Xml\Browse\DealsWithAttach.xml" />
+    <Content Include="Models\Xml\Browse\EntityLibraryAll.xml" />
+    <Content Include="Models\Xml\Browse\EventDetail.xml" />
+    <Content Include="Models\Xml\Browse\EventDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\Events.xml" />
+    <Content Include="Models\Xml\Browse\IndustryByParent.xml" />
+    <Content Include="Models\Xml\Browse\IndustryCustomerDetail.xml" />
+    <Content Include="Models\Xml\Browse\IndustrySupplierDetail.xml" />
+    <Content Include="Models\Xml\Browse\PartnerDetail.xml" />
+    <Content Include="Models\Xml\Browse\PartnerDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\EventTrendDetail.xml" />
+    <Content Include="Models\Xml\EmailTemplate\CompetitiveNewsNotification.xml" />
+    <Content Include="Models\Xml\Filter\ComparinatorByProduct.xml" />
+    <Content Include="Models\Xml\Filter\ComparinatorByProductsWithoutValues.xml" />
+    <Content Include="Models\Xml\Filter\ComparinatorByProductWithValues.xml" />
+    <Content Include="Models\Xml\Filter\CompetitorByTier.xml" />
+    <Content Include="Models\Xml\Filter\CompetitorByTierByIndustryByTier.xml" />
+    <Content Include="Models\Xml\Filter\DealByEndUser.xml" />
+    <Content Include="Models\Xml\Filter\EndUserByDeal.xml" />
+    <Content Include="Models\Xml\Filter\FeedbackByProject.xml" />
+    <Content Include="Models\Xml\Filter\IndustryByHierarchy.xml" />
+    <Content Include="Models\Xml\Filter\IndustryByTier.xml" />
+    <Content Include="Models\Xml\Filter\IndustryFinancialByIndustry.xml" />
+    <Content Include="Models\Xml\Filter\NewsByCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\NewsByProduct.xml" />
+    <Content Include="Models\Xml\Filter\ObjectiveByParent.xml" />
+    <Content Include="Models\Xml\Filter\ObjectiveByType.xml" />
+    <Content Include="Models\Xml\Filter\ProductsByCompetitorShort.xml" />
+    <Content Include="Models\Xml\Filter\ProductsByIndustryWhitoutDescriptionAndPicture.xml" />
+    <Content Include="Models\Xml\Filter\ImplicationsByDeal.xml" />
+    <Content Include="Models\Xml\Filter\ImplicationsByIndustryAndCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\ImplicationsByIndustryCompetitorAndProduct.xml" />
+    <Content Include="Models\Xml\Filter\ImplicationsByProductAndIndustry.xml" />
+    <Content Include="Models\Xml\Filter\LibrariesByDeal.xml" />
+    <Content Include="Models\Xml\Browse\LibraryByEntityAll.xml" />
+    <Content Include="Models\Xml\Browse\ProductSupplierDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProjectDashboard.xml" />
+    <Content Include="Models\Xml\Browse\QuizClassificationDetail.xml" />
+    <Content Include="Models\Xml\Browse\ResultDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorSupplierDetail.xml" />
+    <Content Include="Models\Xml\Browse\CustomerAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\CustomerProductDetail.xml" />
+    <Content Include="Models\Xml\Browse\DealAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\EntityRelationDetail.xml" />
+    <Content Include="Models\Xml\Browse\EventAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\IndustryAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\KitAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\LibraryAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\NewsLetterDestination.xml" />
+    <Content Include="Models\Xml\Browse\NewsLetterSection.xml" />
+    <Content Include="Models\Xml\Browse\NuggetAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\ObjectiveAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\PartnerAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\ProductCustomerDetail.xml" />
+    <Content Include="Models\Xml\Browse\SupplierAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\SurveyAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\WinLossAllSearch.xml" />
+    <Content Include="Models\Xml\EmailTemplate\AddEntityNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\BudgetDeleteNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\BudgetUpdateNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\CommentNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\CompetitorStatusNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\ActivationNewAccountNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\RejectedNewAccountNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NotificationToNewUser.xml" />
+    <Content Include="Models\Xml\EmailTemplate\RequestCompanyDnsMessage.xml" />
+    <Content Include="Models\Xml\EmailTemplate\UserProfileStatusNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\UserRegistrationApprovalNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\EntityUpdateNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\RelatedCreateNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\EntityDeleteNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\CustomerNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\DealPhaseNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\EntityCreateNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\EntityDueDateNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\FileCheckInNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\FileCheckOutNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\IndustryStatusNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NewClientCompany.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NewsLetterNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\NuggetNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\ProjectStatusNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\RatingNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\SurveyNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\WinLossThanks.xml" />
+    <Content Include="Models\Xml\Filter\CalendarsByUser.xml" />
+    <Content Include="Models\Xml\Filter\CompetitorsbyIndustry.xml" />
+    <Content Include="Models\Xml\Filter\ActionHistorybyUser.xml" />
+    <Content Include="Models\Xml\Filter\BudgetsbyProject.xml" />
+    <Content Include="Models\Xml\Filter\LibrariesByProject.xml" />
+    <Content Include="Models\Xml\Filter\LibraryAll.xml" />
+    <Content Include="Models\Xml\Filter\PlansByCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\ApprovalListMembersByProject.xml" />
+    <Content Include="Models\Xml\Filter\CriteriaValuesByCompetitorAndIndustry.xml" />
+    <Content Include="Models\Xml\Filter\CriteriaValuesByProductAndIndustry.xml" />
+    <Content Include="Models\Xml\Filter\LocationsByPartner.xml" />
+    <Content Include="Models\Xml\Filter\EmployeesByPartner.xml" />
+    <Content Include="Models\Xml\Filter\PlansByDeal.xml" />
+    <Content Include="Models\Xml\Filter\PlansByProduct.xml" />
+    <Content Include="Models\Xml\Filter\ImplicationsByProject.xml" />
+    <Content Include="Models\Xml\Filter\LibrariesByType.xml" />
+    <Content Include="Models\Xml\Filter\LocationsByCustomer.xml" />
+    <Content Include="Models\Xml\Filter\LocationsBySupplier.xml" />
+    <Content Include="Models\Xml\Filter\EmployeesByCustomer.xml" />
+    <Content Include="Models\Xml\Filter\LabelsByProject.xml" />
+    <Content Include="Models\Xml\Filter\EmployeesBySupplier.xml" />
+    <Content Include="Models\Xml\Filter\MetricsbyProject.xml" />
+    <Content Include="Models\Xml\Filter\LocationsByCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\EmployeesbyCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\PlansByIndustry.xml" />
+    <Content Include="Models\Xml\Filter\PositioningAll.xml" />
+    <Content Include="Models\Xml\Filter\PositioningByCompetitorAndIndustry.xml" />
+    <Content Include="Models\Xml\Filter\ProductsByCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\ProjectReport.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyIndustries.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyKits.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyObjectives.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsByOwner.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyProducts.xml" />
+    <Content Include="Models\Xml\Filter\ReportClient.xml" />
+    <Content Include="Models\Xml\Filter\SurveyReport.xml" />
+    <Content Include="Models\Xml\Filter\TeamAll.xml" />
+    <Content Include="Models\Xml\Filter\TeamWithTeamMember.xml" />
+    <Content Include="Models\Xml\Filter\PlansbyProject.xml" />
+    <Content Include="Models\Xml\Filter\CriteriasByCriteriaGroupAndCriteriaSet.xml" />
+    <Content Include="Models\Xml\Filter\PositioningByProductAndIndustry.xml" />
+    <Content Include="Models\Xml\Filter\ProductsByIndustry.xml" />
+    <Content Include="Models\Xml\Filter\SurveyByQuestions.xml" />
+    <Content Include="Models\Xml\Filter\NuggetByQuestions.xml" />
+    <Content Include="Models\Xml\Filter\DealsbyCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\DealsbyIndustry.xml" />
+    <Content Include="Models\Xml\Filter\DealsbyProduct.xml" />
+    <Content Include="Models\Xml\Filter\EventsbyCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\EventsbyIndustry.xml" />
+    <Content Include="Models\Xml\Filter\EventsbyProduct.xml" />
+    <Content Include="Models\Xml\Filter\LibrariesbyCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\LibrariesbyIndustry.xml" />
+    <Content Include="Models\Xml\Filter\LibrariesbyProduct.xml" />
+    <Content Include="Models\Xml\Filter\LibraryExternalSourceByType.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyCompetitor.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyContentSatisfaction.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyCustomer.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyIndustry.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyKit.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyObjective.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyProduct.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyStatus.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbySupplier.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyTeam.xml" />
+    <Content Include="Models\Xml\Filter\ProjectsbyWebDownload.xml" />
+    <Content Include="Models\Xml\Browse\TrendAll.xml" />
+    <Content Include="Models\Xml\Filter\ThreatDetail.xml" />
+    <Content Include="Models\Xml\Filter\TrendAll.xml" />
+    <Content Include="Models\Xml\Filter\TrendCoverage.xml" />
+    <Content Include="Models\Xml\Filter\TrendsByIndustry.xml" />
+    <Content Include="Models\Xml\Filter\WinLossByQuestions.xml" />
+    <Content Include="Models\Xml\Filter\TeamMemberByTeamAndProject.xml" />
+    <Content Include="Models\Xml\Filter\UsersProfilebySecurityGroup.xml" />
+    <Content Include="Models\Xml\Filter\WinLossReport.xml" />
+    <Content Include="Models\Xml\SalesForce\PageComparinator.xml" />
+    <Content Include="Models\Xml\SalesForce\PageSurvey.xml" />
+    <Content Include="Models\Xml\SalesForce\PageContentPortal.xml" />
+    <Content Include="Models\Xml\Security\Credential.xml" />
+    <Content Include="Scripts\ajaxupload.js" />
+    <Content Include="Scripts\CKeditor\ckeditor.js" />
+    <Content Include="Scripts\CKeditor\config.js" />
+    <Content Include="Scripts\CKeditor\contents.css" />
+    <Content Include="Scripts\CKeditor\lang\en.js" />
+    <Content Include="Scripts\CKeditor\lang\es.js" />
+    <Content Include="Scripts\CKeditor\lang\_languages.js" />
+    <Content Include="Scripts\CKeditor\lang\_translationstatus.txt" />
+    <Content Include="Scripts\CKeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\CKeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Scripts\CKeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Scripts\CKeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\CKeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\CKeditor\plugins\adobeair\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\autogrow\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\CKeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\CKeditor\plugins\items\AddItems.jpg" />
+    <Content Include="Scripts\CKeditor\plugins\items\icon-items.png" />
+    <Content Include="Scripts\CKeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\CKeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\CKeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\CKeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Scripts\CKeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Scripts\CKeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\CKeditor\plugins\lang\en.js" />
+    <Content Include="Scripts\CKeditor\plugins\lang\es.js" />
+    <Content Include="Scripts\CKeditor\plugins\lang\_languages.js" />
+    <Content Include="Scripts\CKeditor\plugins\lang\_translationstatus.txt" />
+    <Content Include="Scripts\CKeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\CKeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\CKeditor\plugins\link\images\anchor.gif" />
+    <Content Include="Scripts\CKeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\CKeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\CKeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\CKeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Scripts\CKeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="Scripts\CKeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="Scripts\CKeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Scripts\CKeditor\plugins\placeholder\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\CKeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\CKeditor\plugins\items\folder_gray_closed.gif" />
+    <Content Include="Scripts\CKeditor\plugins\items\iconComments.png" />
+    <Content Include="Scripts\CKeditor\plugins\items\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\CKeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="Scripts\CKeditor\plugins\styles\styles\default.js" />
+    <Content Include="Scripts\CKeditor\plugins\tableresize\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\CKeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\plugin.js" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Scripts\CKeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="Scripts\CKeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\CKeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\CKeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\CKeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\CKeditor\styles\styles\default.js" />
+    <Content Include="Scripts\CKeditor\skins\kama\dialog.css" />
+    <Content Include="Scripts\CKeditor\skins\kama\editor.css" />
+    <Content Include="Scripts\CKeditor\skins\kama\icons.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\icons_rtl.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\mini.gif" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\noimage.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\sprites.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Scripts\CKeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Scripts\CKeditor\skins\kama\skin.js" />
+    <Content Include="Scripts\CKeditor\skins\kama\templates.css" />
+    <Content Include="Scripts\CKeditor\themes\default\theme.js" />
+    <Content Include="Scripts\compelligence.encode.js" />
+    <Content Include="Scripts\fileuploader.js" />
+    <Content Include="Scripts\Home\f.gif" />
+    <Content Include="Scripts\Home\follow_button.htm" />
+    <Content Include="Scripts\Home\widgets.js" />
+    <Content Include="Scripts\jqgrid\grid.addons.js" />
+    <Content Include="Scripts\jqgrid\grid.base.js" />
+    <Content Include="Scripts\jqgrid\grid.celledit.js" />
+    <Content Include="Scripts\jqgrid\grid.common.js" />
+    <Content Include="Scripts\jqgrid\grid.custom.js" />
+    <Content Include="Scripts\jqgrid\grid.filter.js" />
+    <Content Include="Scripts\jqgrid\grid.formedit.js" />
+    <Content Include="Scripts\jqgrid\grid.grouping.js" />
+    <Content Include="Scripts\jqgrid\grid.import.js" />
+    <Content Include="Scripts\jqgrid\grid.inlinedit.js" />
+    <Content Include="Scripts\jqgrid\grid.jqueryui.js" />
+    <Content Include="Scripts\jqgrid\grid.loader.js" />
+    <Content Include="Scripts\jqgrid\grid.locale-en-min.js" />
+    <Content Include="Scripts\jqgrid\grid.postext.js" />
+    <Content Include="Scripts\jqgrid\grid.setcolumns.js" />
+    <Content Include="Scripts\jqgrid\grid.subgrid.js" />
+    <Content Include="Scripts\jqgrid\grid.tbltogrid.js" />
+    <Content Include="Scripts\jqgrid\grid.treegrid.js" />
+    <Content Include="Scripts\jqgrid\jquery.contextmenu.js" />
+    <Content Include="Scripts\jqgrid\jquery.fmatter.js" />
+    <Content Include="Scripts\jqgrid\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jqgrid\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jqgrid\jquery.tablednd.js" />
+    <Content Include="Scripts\jqgrid\JsonXml.js" />
+    <Content Include="Scripts\jqgrid\jquery.searchFilter.js" />
+    <Content Include="Scripts\jqgrid\ui.multiselect.js" />
+    <Content Include="Scripts\jquery-ui\glob.js" />
+    <Content Include="Scripts\jquery-ui\jquery.numeric.js" />
+    <Content Include="Scripts\jquery-ui\jquery.ui.button.js" />
+    <Content Include="Scripts\jquery-ui\jquery.ui.core.js" />
+    <Content Include="Scripts\jquery-ui\jquery.ui.spinner.js" />
+    <Content Include="Scripts\jquery-ui\jquery.ui.widget.js" />
+    <Content Include="Scripts\jquery-ui\ui.spinner.js" />
+    <Content Include="Scripts\jquery.ajaxQueue.js" />
+    <Content Include="Scripts\jquery.alerts.js" />
+    <Content Include="Scripts\jquery.autocomplete.min.js" />
+    <Content Include="Scripts\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.cookiejar.pack.js" />
+    <Content Include="Scripts\jquery.filestyle.js" />
+    <Content Include="Scripts\jquery.json.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.2.2.min.js" />
+    <Content Include="Scripts\jquery.meio.mask.min.js" />
+    <Content Include="Scripts\jquery.mousewheel.min.js" />
+    <Content Include="Models\Xml\EmailTemplate\DiscussionNotification.xml" />
+    <Content Include="Scripts\jquery.multiselect.filter.js" />
+    <Content Include="Scripts\jquery.multiselect.js" />
+    <Content Include="Scripts\jquery.multiselect.min.js" />
+    <Content Include="Scripts\jquery.rte.js" />
+    <Content Include="Scripts\jquery.tableFilter.js" />
+    <Content Include="Scripts\Sticky\stickytooltip.js" />
+    <Content Include="Scripts\System\BackEnd\fullcalendar.min.js" />
+    <Content Include="Scripts\System\BackEnd\Interface.js" />
+    <Content Include="Scripts\System\BackEnd\jquery-1.5.2.min.js" />
+    <Content Include="Scripts\System\BackEnd\jquery-latest.js" />
+    <Content Include="Scripts\System\BackEnd\jquery-ui-1.8.11.custom.min.js" />
+    <Content Include="Scripts\System\BackEnd\jquery.tablesorter.js" />
+    <Content Include="Scripts\System\BackEnd\Resizable.js" />
+    <Content Include="Scripts\System\Design\cufon-replace.js" />
+    <Content Include="Scripts\System\Design\cufon-yui.js" />
+    <Content Include="Scripts\System\Design\html5.js" />
+    <Content Include="Scripts\System\Design\jquery.galleriffic.js" />
+    <Content Include="Scripts\System\Design\jquery.opacityrollover.js" />
+    <Content Include="Scripts\System\Design\Ubuntu_400.font.js" />
+    <Content Include="Scripts\System\Design\Ubuntu_700.font.js" />
+    <Content Include="Scripts\System\FrontEnd\Comparinator.js" />
+    <Content Include="Scripts\System\FrontEnd\Download.js" />
+    <Content Include="Scripts\System\FrontEnd\SendComment.js" />
+    <Content Include="Scripts\System\FrontEnd\Strings.js" />
+    <Content Include="Scripts\System\FrontEnd\Toggle.js" />
+    <Content Include="Scripts\System\jquery.cycle.all.js" />
+    <Content Include="Scripts\System\jquery.cycle.all.min.js" />
+    <Content Include="Scripts\System\jquery.cycle.lite.min.js" />
+    <Content Include="Scripts\System\Question.2.js" />
+    <Content Include="Scripts\System\Question.js" />
+    <Content Include="Scripts\thickbox-compressed.js" />
+    <Content Include="Scripts\Timer.js" />
+    <Content Include="Scripts\tinytable.script.js" />
+    <Content Include="Views\ActionHistory\DetailList.ascx" />
+    <Content Include="Views\Browse\BrowsePopupCols.aspx" />
+    <Content Include="Views\Browse\ContentBrowsePopup.aspx" />
+    <Content Include="Views\Browse\PositioningBrowsePopup.aspx" />
+    <Content Include="Views\Browse\IndustryBrowsePopup.aspx" />
+    <Content Include="Views\Calendar\CreateCalendar.ascx" />
+    <Content Include="Views\ClientCompanyFiles\Edit.ascx" />
+    <Content Include="Views\ClientCompanyFiles\Index.aspx" />
+    <Content Include="Views\ClientCompanyFiles\List.ascx" />
+    <Content Include="Views\ComparinatorCriteriaUploader\Index.ascx" />
+    <Content Include="Views\Comparinator\Edit.ascx" />
+    <Content Include="Views\Comparinator\Elements.ascx" />
+    <Content Include="Views\Comparinator\RowCriteria.ascx" />
+    <Content Include="Views\Comparinator\SalesForceCMP.ascx" />
+    <Content Include="Views\CompetitorCompetitor\DetailList.ascx" />
+    <Content Include="Views\CompetitorFinancial\DetailList.ascx" />
+    <Content Include="Views\CompetitorFinancial\Edit.ascx" />
+    <Content Include="Views\CompetitorSupplier\DetailList.ascx" />
+    <Content Include="Views\Configurations\Index.ascx" />
+    <Content Include="Views\Configuration\Configuration.ascx" />
+    <Content Include="Views\Configuration\ApprovalProject.ascx" />
+    <Content Include="Views\Configuration\Index.ascx" />
+    <Content Include="Views\Configuration\IndexApproval.ascx" />
+    <Content Include="Views\Configuration\UserToReceiveTop.ascx" />
+    <Content Include="Views\ContentPortal\PopupContent.ascx" />
+    <Content Include="Views\Deal\DetailList.ascx" />
+    <Content Include="Views\Event\EventsCalendar.ascx" />
+    <Content Include="Views\MaintenanceAccount\ConfigurationEmail.aspx" />
+    <Content Include="Views\MaintenanceAccount\EditCompanyPayment.aspx" />
+    <Content Include="Views\MaintenanceAccount\EditCompanySalesforce.aspx" />
+    <Content Include="Views\MaintenanceAccount\EditCompanySubscription.aspx" />
+    <Content Include="Views\MarketType\DetailList.ascx" />
+    <Content Include="Views\Newsletter\NewsLetterCalendar.ascx" />
+    <Content Include="Views\News\DetailList.ascx" />
+    <Content Include="Views\Price\DetailList.ascx" />
+    <Content Include="Views\Price\Edit.ascx" />
+    <Content Include="Views\Product\Comments.aspx" />
+    <Content Include="Views\Report\FilterDynamicFinancial.ascx" />
+    <Content Include="Views\Report\FilterDynamic.ascx" />
+    <Content Include="Views\Report\ListDynamic.ascx" />
+    <Content Include="Views\Report\IndexDynamic.ascx" />
+    <Content Include="Views\SalesForce\Comments.ascx" />
+    <Content Include="Views\SalesForce\FeedBack.ascx" />
+    <Content Include="Views\SalesForce\Response.ascx" />
+    <Content Include="Views\Survey\SurveyHtml.ascx" />
+    <Content Include="Views\StrengthWeakness\DetailList.ascx" />
+    <Content Include="Views\StrengthWeakness\Edit.ascx" />
+    <Content Include="Views\Swot\EditSwot.ascx" />
+    <Content Include="Views\Swot\Index.ascx" />
+    <Content Include="Views\Template\DetailList.ascx" />
+    <Content Include="Views\Threat\DetailList.ascx" />
+    <Content Include="Views\Threat\Edit.ascx" />
+    <Content Include="Views\Trend\DetailList.ascx" />
+    <Content Include="Views\UserRelation\DetailList.ascx" />
+    <Content Include="Views\User\DetailHistory.ascx" />
+    <Content Include="Views\User\DetailList.ascx" />
+    <Content Include="Views\WhitePaper\Index.aspx" />
+    <Content Include="Views\WhitePaper\Edit.ascx" />
+    <Content Include="Views\WhitePaper\WhiteDownloads.ascx" />
+    <Content Include="Views\WhitePaper\List.ascx" />
+    <Content Include="Views\WinLossAnalysis\Edit.ascx" />
+    <Content Include="Views\WinLossAnalysis\FullIndex.ascx" />
+    <Content Include="Views\MaintenanceAccount\ForgotPassword.aspx" />
+    <Content Include="Views\MaintenanceAccount\FormCredential.aspx" />
+    <Content Include="Views\MaintenanceAccount\ForgotPassword.aspx" />
+    <Content Include="Views\News\Edit.ascx" />
+    <Content Include="Views\MaintenanceAccount\EditCompany.aspx" />
+    <Content Include="Views\MaintenanceAccount\Listuser.aspx" />
+    <Content Include="Views\MaintenanceAccount\ViewFormResetPassword.aspx" />
+    <Content Include="Views\Positioning\Index.ascx" />
+    <Content Include="Views\Positioning\List.ascx" />
+    <Content Include="Views\Report\DynViewReport.aspx" />
+    <Content Include="Views\SalesForce\ContentPortal.ascx" />
+    <Content Include="Views\ContentPortal\SalesForceMetric.ascx" />
+    <Content Include="Views\SalesForce\Survey.ascx" />
+    <Content Include="Views\News\Index.ascx" />
+    <Content Include="Views\CustomField\Edit.ascx" />
+    <Content Include="Views\CustomField\Index.ascx" />
+    <Content Include="Views\CustomField\List.ascx" />
+    <Content Include="Views\EmailApprove\ApproveProjectDeleteError.aspx" />
+    <Content Include="Views\IndustryFinancial\Edit.ascx" />
+    <Content Include="Views\IndustryFinancial\DetailList.ascx" />
+    <Content Include="Views\Home\IndexApproved.aspx" />
+    <Content Include="Views\Industry\CustomCriteriaStep1.ascx" />
+    <Content Include="Views\Industry\CustomCriteriaStep2.ascx" />
+    <Content Include="Views\LibraryNews\CompetitiveNews.aspx" />
+    <Content Include="Views\MarketType\Edit.ascx" />
+    <Content Include="Views\MarketType\Index.ascx" />
+    <Content Include="Views\MarketType\List.ascx" />
+    <Content Include="Views\Criteria\EditDetail.ascx" />
+    <Content Include="Views\Library\Upload.ascx" />
+    <Content Include="Views\Newsletter\Editor.ascx" />
+    <Content Include="Views\NewsScoring\Edit.ascx" />
+    <Content Include="Views\NewsScoring\Index.ascx" />
+    <Content Include="Views\NewsScoring\List.ascx" />
+    <Content Include="Views\News\List.ascx" />
+    <Content Include="Views\ProductFamily\DetailList.ascx" />
+    <Content Include="Views\ContentPortal\MenuContent.ascx" />
+    <Content Include="Views\ContentPortal\SocialLogContent.ascx" />
+    <Content Include="Views\Criteria\DetailList.ascx" />
+    <Content Include="Views\LibraryNews\DetailList.ascx" />
+    <Content Include="Views\LibraryNews\Edit.ascx" />
+    <Content Include="Views\EventType\Edit.ascx" />
+    <Content Include="Views\EventType\Index.ascx" />
+    <Content Include="Views\EventType\List.ascx" />
+    <Content Include="Views\ForumComment\DetailList.ascx" />
+    <Content Include="Views\ForumComment\Edit.ascx" />
+    <Content Include="Views\ForumDiscussion\DetailList.ascx" />
+    <Content Include="Views\ForumDiscussion\Edit.ascx" />
+    <Content Include="Views\ForumFeedback\DetailList.ascx" />
+    <Content Include="Views\Forum\Index.aspx" />
+    <Content Include="Views\Forum\IndexDetail.aspx" />
+    <Content Include="Views\MyCompany\EditPassword.aspx" />
+    <Content Include="Views\MyCompany\EditProfile.aspx" />
+    <Content Include="Views\BudgetType\Edit.ascx" />
+    <Content Include="Views\BudgetType\Index.ascx" />
+    <Content Include="Views\BudgetType\List.ascx" />
+    <Content Include="Views\Dashboard\DashboardPopup.ascx" />
+    <Content Include="Views\Deal\DetailGridAttach.ascx" />
+    <Content Include="Views\DealSupport\Rating.ascx" />
+    <Content Include="Views\EmailApproveRegistration\ApproveError.aspx" />
+    <Content Include="Views\EmailApproveRegistration\ApproveNewUserError.aspx" />
+    <Content Include="Views\EmailApproveRegistration\ApproveNewUser.aspx" />
+    <Content Include="Views\EmailApproveRegistration\ApproveNewUserList.aspx" />
+    <Content Include="Views\EmailApprove\ApproveProject.aspx" />
+    <Content Include="Views\EmailApprove\ApproveProjectList.aspx" />
+    <Content Include="Views\Events\Comments.aspx" />
+    <Content Include="Views\Event\DetailList.ascx" />
+    <Content Include="Views\Library\Entities.ascx" />
+    <Content Include="Views\CompetitorPartner\DetailList.ascx" />
+    <Content Include="Views\ProductFamily\Edit.ascx" />
+    <Content Include="Views\ProjectArchive\Approve.aspx" />
+    <Content Include="Views\ProjectArchive\ApproveList.aspx" />
+    <Content Include="Views\ProjectArchive\Comments.aspx" />
+    <Content Include="Views\ProjectArchive\DetailList.ascx" />
+    <Content Include="Views\ProjectArchive\Edit.ascx" />
+    <Content Include="Views\ProjectArchive\Index.ascx" />
+    <Content Include="Views\ProjectArchive\List.ascx" />
+    <Content Include="Views\Project\Comments.aspx" />
+    <Content Include="Views\QuizClassification\DetailList.ascx" />
+    <Content Include="Views\QuizClassification\Edit.ascx" />
+    <Content Include="Views\Criterias\Index.ascx" />
+    <Content Include="Views\DealSupport\Edit.aspx" />
+    <Content Include="Views\DealSupport\List.ascx" />
+    <Content Include="Views\DealSupport\Opportunity.aspx" />
+    <Content Include="Views\DealSupport\Options.ascx" />
+    <Content Include="Views\DealSupport\Comments.aspx" />
+    <Content Include="Views\EntityRelation\DetailList.ascx" />
+    <Content Include="Views\EntityRelation\Edit.ascx" />
+    <Content Include="Models\Xml\Filter\ProjectAll.xml" />
+    <Content Include="Views\Events\Edit.aspx" />
+    <Content Include="Views\Events\Index.aspx" />
+    <Content Include="Views\Events\List.ascx" />
+    <Content Include="Views\Events\Options.ascx" />
+    <Content Include="Views\Forum\Comments.ascx" />
+    <Content Include="Views\Forum\CommentsResponse.ascx" />
+    <Content Include="Views\Library\Nugget.ascx" />
+    <Content Include="Views\Report\PreViewReport.aspx" />
+    <Content Include="Views\Report\FilterEvent.ascx" />
+    <Content Include="Views\Report\ListEvent.ascx" />
+    <Content Include="Views\Report\IndexEvent.ascx" />
+    <Content Include="Views\SalesForce\Index.ascx" />
+    <Content Include="Views\Shared\FrontEndDownloadSection.ascx" />
+    <Content Include="Views\ShortSurvey\Questions.ascx" />
+    <Content Include="Views\Trend\Edit.ascx" />
+    <Content Include="Views\Trend\Index.ascx" />
+    <Content Include="Views\Trend\List.ascx" />
+    <Content Include="Views\Website\Editpanel.ascx" />
+    <Content Include="Views\WinLossAnalysis\Index.ascx" />
+    <Content Include="Views\WinLossAnalysis\List.ascx" />
+    <Content Include="Views\WinLossReport\SuccessMessage.aspx" />
+    <Content Include="Views\WinLossReport\Questions.aspx" />
+    <Content Include="Views\Registration\ClientCompany.aspx" />
+    <Content Include="Views\Registration\ClientCompanySuccess.aspx" />
+    <Content Include="Views\Registration\EmailConfiguration.aspx" />
+    <Content Include="Views\Registration\EmailConfigurationSuccess.aspx" />
+    <Content Include="Views\Registration\User.aspx" />
+    <Content Include="Views\Registration\UserSuccess.aspx" />
+    <Content Include="Views\Shared\BackEndFormMessages.ascx" />
+    <Content Include="Views\Shared\FrontEndFormMessages.ascx" />
+    <Content Include="Views\Shared\MasterPages\BackEndBlockingPopupSite.Master" />
+    <Content Include="Content\Images\Ajax\loadingkit.gif" />
+    <Content Include="Content\Images\Icons\close.gif" />
+    <Content Include="Content\Images\Icons\closedate.png" />
+    <Content Include="Content\Images\Icons\ComparinatorIcon.png" />
+    <Content Include="Content\Images\Icons\ComparinatorSmallIcon.png" />
+    <Content Include="Content\Images\Icons\Competitor.png" />
+    <Content Include="Content\Images\Icons\CompetitorSmallIcon.png" />
+    <Content Include="Content\Images\Icons\ContentSmallIcon.png" />
+    <Content Include="Content\Images\Icons\date.png" />
+    <Content Include="Content\Images\Icons\db_status.png" />
+    <Content Include="Content\Images\Icons\deal.png" />
+    <Content Include="Content\Images\Icons\DealIcon.png" />
+    <Content Include="Content\Images\Icons\DealSmallIcon.png" />
+    <Content Include="Content\Images\Icons\descriptionSmallIcon.png" />
+    <Content Include="Content\Images\Icons\find.png" />
+    <Content Include="Content\Images\Icons\home.png" />
+    <Content Include="Content\Images\Icons\industry.png" />
+    <Content Include="Content\Images\Icons\IndustryIcon.png" />
+    <Content Include="Content\Images\Icons\industrySmallIcon.png" />
+    <Content Include="Content\Images\Icons\nuggetSmallIcon.png" />
+    <Content Include="Content\Images\Icons\product.png" />
+    <Content Include="Content\Images\Icons\productSmall.png" />
+    <Content Include="Content\Images\Icons\ProductSmallIcon.png" />
+    <Content Include="Content\Images\Icons\searchPage.png" />
+    <Content Include="Content\Images\Icons\statusSmall.png" />
+    <Content Include="Content\Images\Icons\SurveySmallIcon.png" />
+    <Content Include="Content\Images\Icons\WinlossSmallIcon.png" />
+    <Content Include="Content\Images\Styles\back_gray.jpg" />
+    <Content Include="Content\Images\Styles\back_navigationLink.gif" />
+    <Content Include="Content\Images\Styles\back_navigationLinkBlue1.gif" />
+    <Content Include="Content\Images\Styles\back_navigationLinkBlue1.png" />
+    <Content Include="Content\Images\Styles\back_navigationLinkBlue2.gif" />
+    <Content Include="Content\Images\Styles\button.png" />
+    <Content Include="Content\Images\Styles\button_go.jpg" />
+    <Content Include="Content\Images\Styles\computer.jpg" />
+    <Content Include="Content\Images\Styles\contentbg.jpg" />
+    <Content Include="Content\Images\Styles\contentbgblue1.gif" />
+    <Content Include="Content\Images\Styles\contentbgblue1.jpg" />
+    <Content Include="Content\Images\Styles\contentbgblue2.jpg" />
+    <Content Include="Content\Images\Styles\contentpanelbg.jpg" />
+    <Content Include="Content\Images\Styles\contentpanelbgblue2.jpg" />
+    <Content Include="Content\Images\Styles\fieldsetbackground.gif" />
+    <Content Include="Content\Images\Styles\fronendBakgroundBlue1.jpg" />
+    <Content Include="Content\Images\Styles\fronendBakgroundBlue2.jpg" />
+    <Content Include="Content\Images\Styles\headeraccordionblue1.gif" />
+    <Content Include="Content\Images\Styles\headeraccordionblue2.gif" />
+    <Content Include="Content\Images\Styles\headerpanelblue1.gif" />
+    <Content Include="Content\Images\Styles\headerpanelblue2.gif" />
+    <Content Include="Content\Images\Styles\headerRow.gif" />
+    <Content Include="Content\Images\Styles\input_text.jpg" />
+    <Content Include="Content\Images\Styles\input_text.png" />
+    <Content Include="Content\Images\Styles\items.png" />
+    <Content Include="Content\Images\Styles\Items_page.png" />
+    <Content Include="Content\Images\Styles\logo_header.png" />
+    <Content Include="Content\Images\Styles\sbutton_off.gif" />
+    <Content Include="Content\Images\Styles\scroller-td.gif" />
+    <Content Include="Content\Images\Styles\text_body01.jpg" />
+    <Content Include="Content\Images\Styles\text_body02.jpg" />
+    <Content Include="Content\Images\Styles\TopBarComparinator.png" />
+    <Content Include="Content\Images\Styles\TopBarDealSupport.png" />
+    <Content Include="Content\Images\Styles\TopBarFronEndBlue1.png" />
+    <Content Include="Content\Images\Styles\TopBarFronEndBlue2.png" />
+    <Content Include="Content\Images\Styles\TopBarFrontEnd.png" />
+    <Content Include="Content\Styles\images\ui-bg_highlight-soft_75_bacfd7_1x100.png" />
+    <Content Include="Content\Styles\images\ui-header_popup.gif" />
+    <Content Include="Content\Styles\jquery-ui\images\folder.png" />
+    <Content Include="Content\Styles\jquery-ui\images\page_white_text.png" />
+    <Content Include="Content\Styles\jquery-ui\images\toggle-collapse-dark.png" />
+    <Content Include="Content\Styles\jquery-ui\images\toggle-collapse-light.png" />
+    <Content Include="Content\Styles\jquery-ui\images\toggle-expand-dark.png" />
+    <Content Include="Content\Styles\jquery-ui\images\toggle-expand-light.png" />
+    <EmbeddedResource Include="Models\Xml\Browse\CompetitorCriteriaDetail.xml" />
+    <Content Include="Models\Xml\Browse\ApprovalDashboard.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorProductDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorIndustryDetail.xml" />
+    <Content Include="Models\Xml\Browse\BudgetDashboard.xml" />
+    <Content Include="Models\Xml\Browse\CalendarDashboard.xml" />
+    <Content Include="Models\Xml\Browse\CalendarAll.xml" />
+    <Content Include="Models\Xml\Browse\CommentsDashboard.xml" />
+    <Content Include="Models\Xml\Browse\ApprovalListDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorCustomerDetail.xml" />
+    <Content Include="Models\Xml\Browse\AnswerDetail.xml" />
+    <Content Include="Models\Xml\Browse\CustomerDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\CustomerDetail.xml" />
+    <Content Include="Models\Xml\Browse\CustomerCompetitorDetail.xml" />
+    <Content Include="Models\Xml\Browse\LibraryDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\LibraryExternalSourceAll.xml" />
+    <Content Include="Models\Xml\Browse\LibraryTypeAll.xml" />
+    <Content Include="Models\Xml\Browse\NewsletterAll.xml" />
+    <Content Include="Models\Xml\Browse\PlanDashboard.xml" />
+    <Content Include="Models\Xml\Browse\ProjectDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\ProjectTeamDetail.xml" />
+    <Content Include="Models\Xml\Browse\SourceAll.xml" />
+    <Content Include="Models\Xml\Browse\SourceDetail.xml" />
+    <Content Include="Models\Xml\Browse\SourceDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\SurveyResponseDashboard.xml" />
+    <Content Include="Models\Xml\Browse\FeedbackDashboard.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaGroupDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaGroupIndustryDetail.xml" />
+    <Content Include="Models\Xml\Browse\IndustryCriteriaGroupDetail.xml" />
+    <Content Include="Models\Xml\Browse\EventDashboard.xml" />
+    <Content Include="Models\Xml\Browse\DealDashboard.xml" />
+    <Content Include="Models\Xml\Browse\ProductAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\ProjectAllSearch.xml" />
+    <Content Include="Models\Xml\Browse\ForumResponse.xml" />
+    <EmbeddedResource Include="Models\Xml\Browse\IndustryCriteriaDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProjectDetail.xml" />
+    <Content Include="Models\Xml\Browse\LocationDetail.xml" />
+    <Content Include="Models\Xml\Browse\EmployeeDetail.xml" />
+    <Content Include="Models\Xml\Browse\NuggetAll.xml" />
+    <Content Include="Models\Xml\Browse\ProductCriteriaDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProductDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\IndustryDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\ProductIndustryDetail.xml" />
+    <Content Include="Models\Xml\Browse\ProductCompetitorDetail.xml" />
+    <Content Include="Models\Xml\Browse\IndustryCompetitorDetail.xml" />
+    <Content Include="Models\Xml\Browse\IndustryProductDetail.xml" />
+    <Content Include="Models\Xml\Browse\QuestionDetail.xml" />
+    <Content Include="Models\Xml\Browse\SurveyAll.xml" />
+    <Content Include="Models\Xml\Browse\WinLossAll.xml" />
+    <Content Include="Models\Xml\EmailTemplate\DealOpenNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\FeedbackNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\LibraryItemNewAlertNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\ProjectApprovalNotification.xml" />
+    <Content Include="Models\Xml\EmailTemplate\WinLossNotification.xml" />
+    <Content Include="Models\Xml\Filter\CompetitorAll.xml" />
+    <Content Include="Models\Xml\Filter\EventAll.xml" />
+    <Content Include="Models\Xml\Filter\IndustryAll.xml" />
+    <Content Include="Models\Xml\Filter\TemplateAll.xml" />
+    <Content Include="Models\Xml\Filter\UserAll.xml" />
+    <Content Include="Models\Xml\Search\InternalSearch.xml" />
+    <Content Include="Scripts\jqgrid\jqDnR.js" />
+    <Content Include="Scripts\jqgrid\jqModal.js" />
+    <Content Include="Scripts\jquery.treeTable.js" />
+    <Content Include="Scripts\System\CascadingDropDown.js" />
+    <Content Include="Scripts\System\FrontEnd\Comments.js" />
+    <Content Include="Scripts\System\FrontEnd\hovertip.js" />
+    <Content Include="Scripts\System\FrontEnd\Messages.js" />
+    <Content Include="Scripts\System\FrontEnd\Utils.js" />
+    <Content Include="Scripts\System\Retrieve.js" />
+    <Content Include="Views\Answer\DetailList.ascx" />
+    <Content Include="Views\ApprovalList\DetailList.ascx" />
+    <Content Include="Views\MaintenanceAccount\EnableAccount.aspx" />
+    <Content Include="Views\MaintenanceAccount\DisableAccount.aspx" />
+    <Content Include="Views\MaintenanceAccount\DeleteAccount.aspx" />
+    <Content Include="Views\MaintenanceAccount\List.aspx" />
+    <Content Include="Views\MaintenanceAccount\Index.aspx" />
+    <Content Include="Views\MaintenanceAccount\ResetUserPassword.aspx" />
+    <Content Include="Views\Competitor\DetailList.ascx" />
+    <Content Include="Views\Calendar\Edit.ascx" />
+    <Content Include="Views\Calendar\Index.ascx" />
+    <Content Include="Views\Calendar\List.ascx" />
+    <Content Include="Views\Newsletter\Edit.ascx" />
+    <Content Include="Views\Newsletter\Index.ascx" />
+    <Content Include="Views\Newsletter\List.ascx" />
+    <Content Include="Views\Dashboard\DashboardContent.ascx" />
+    <Content Include="Views\Library\ShowFile.aspx" />
+    <Content Include="Views\Shared\ToolMenuContent.ascx" />
+    <Content Include="Views\Source\DetailList.ascx" />
+    <Content Include="Views\Source\Edit.ascx" />
+    <Content Include="Views\Source\Index.ascx" />
+    <Content Include="Views\Source\List.ascx" />
+    <Content Include="Views\Customer\DetailList.ascx" />
+    <Content Include="Views\LibraryExternalSource\Edit.ascx" />
+    <Content Include="Views\LibraryExternalSource\Index.ascx" />
+    <Content Include="Views\LibraryExternalSource\List.ascx" />
+    <Content Include="Views\LibraryType\Edit.ascx" />
+    <Content Include="Views\LibraryType\Index.ascx" />
+    <Content Include="Views\LibraryType\List.ascx" />
+    <Content Include="Views\CriteriaGroup\DetailList.ascx" />
+    <Content Include="Views\EmailApprove\ApproveError.aspx" />
+    <Content Include="Views\Forum\FeedBack.ascx" />
+    <Content Include="Views\CompetitorCriteria\DetailList.ascx" />
+    <Content Include="Views\CompetitorCriteria\Edit.ascx" />
+    <Content Include="Views\Home\LogOutResponse.ascx" />
+    <Content Include="Views\IndustryCriteria\DetailList.ascx" />
+    <Content Include="Views\IndustryCriteria\Edit.ascx" />
+    <Content Include="Views\Location\DetailList.ascx" />
+    <Content Include="Views\Location\Edit.ascx" />
+    <Content Include="Views\ContentPortal\ShortSurveyContent.ascx" />
+    <Content Include="Views\Employee\DetailList.ascx" />
+    <Content Include="Views\Employee\Edit.ascx" />
+    <Content Include="Views\Employee\EditPassword.ascx" />
+    <Content Include="Views\Library\DetailList.ascx" />
+    <Content Include="Views\Library\Index.ascx" />
+    <Content Include="Views\Library\List.ascx" />
+    <Content Include="Views\EmailApprove\ApproveProjectError.aspx" />
+    <Content Include="Views\Project\DetailList.ascx" />
+    <Content Include="Views\ProductCriteria\DetailList.ascx" />
+    <Content Include="Views\ProductCriteria\Edit.ascx" />
+    <Content Include="Views\Report\List.ascx" />
+    <Content Include="Views\Report\Filter.ascx" />
+    <Content Include="Views\ContentSearch\Results.aspx" />
+    <Content Include="Views\ContentPortal\SurveyContent.ascx" />
+    <Content Include="Views\ContentPortal\NuggetContent.ascx" />
+    <Content Include="Views\ContentPortal\WinLossContent.ascx" />
+    <Content Include="Views\Industry\DetailList.ascx" />
+    <Content Include="Views\Library\Edit.ascx" />
+    <Content Include="Views\Nugget\DetailList.ascx" />
+    <Content Include="Views\Nugget\Edit.ascx" />
+    <Content Include="Views\Nugget\Index.ascx" />
+    <Content Include="Views\Nugget\List.ascx" />
+    <Content Include="Views\Product\DetailList.ascx" />
+    <Content Include="Views\Question\DetailList.ascx" />
+    <Content Include="Views\Question\Edit.ascx" />
+    <Content Include="Views\InternalSearch\Index.ascx" />
+    <Content Include="Views\InternalSearch\Results.ascx" />
+    <Content Include="Views\Shared\MasterPages\DealSupport.Master" />
+    <Content Include="Content\Images\Icons\columns.gif" />
+    <Content Include="Content\Images\Icons\folder_go.png" />
+    <Content Include="Content\Images\Icons\folder_wrench.png" />
+    <Content Include="Content\Images\Styles\BodyBGComparinator.png" />
+    <Content Include="Content\Images\Styles\buttonBackend.gif" />
+    <Content Include="Content\Images\Styles\button_off.gif" />
+    <Content Include="Content\Images\Styles\button_on.gif" />
+    <Content Include="Content\Images\Styles\comment.png" />
+    <Content Include="Content\Images\Styles\compelligence.stars.gif" />
+    <Content Include="Content\Images\Styles\icon-doc.png" />
+    <Content Include="Content\Images\Styles\icon-ext.png" />
+    <Content Include="Content\Images\Styles\icon-pdf.png" />
+    <Content Include="Content\Images\Styles\icon-ppt.png" />
+    <Content Include="Content\Images\Styles\icon-rar.png" />
+    <Content Include="Content\Images\Styles\icon-txt.png" />
+    <Content Include="Content\Images\Styles\icon-xls.png" />
+    <Content Include="Content\Images\Styles\icon-zip.png" />
+    <Content Include="Content\Images\Styles\shadow.png" />
+    <Content Include="Content\Images\Styles\shadow2-reverse.png" />
+    <Content Include="Content\Images\Styles\shadow2.png" />
+    <Content Include="Models\Xml\Browse\TeamDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\TeamDetail.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaAll.xml" />
+    <Content Include="Models\Xml\Browse\CustomerAll.xml" />
+    <Content Include="Models\Xml\Browse\LibraryAll.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaGroupAll.xml" />
+    <Content Include="Models\Xml\Browse\CriteriaSetAll.xml" />
+    <Content Include="Models\Xml\Browse\TeamMemberDetail.xml" />
+    <Content Include="Models\Xml\Browse\PositioningDetail.xml" />
+    <Content Include="Models\Xml\Browse\TeamRoleDetail.xml" />
+    <Content Include="Models\Xml\Browse\UnitMeasureAll.xml" />
+    <Content Include="Models\Xml\Dashboard\Dashboard.xml" />
+    <Content Include="Scripts\ext\portal.js" />
+    <Content Include="Scripts\System\FrontEnd\Upload.js" />
+    <Content Include="Views\Budget\DetailList.ascx" />
+    <Content Include="Views\Budget\Edit.ascx" />
+    <Content Include="Views\Criteria\Edit.ascx" />
+    <Content Include="Views\Criteria\Index.ascx" />
+    <Content Include="Views\Criteria\List.ascx" />
+    <Content Include="Views\CriteriaSet\Edit.ascx" />
+    <Content Include="Views\CriteriaSet\Index.ascx" />
+    <Content Include="Views\CriteriaSet\List.ascx" />
+    <Content Include="Views\Customer\Edit.ascx" />
+    <Content Include="Views\Customer\Index.ascx" />
+    <Content Include="Views\Customer\List.ascx" />
+    <Content Include="Views\CriteriaGroup\Edit.ascx" />
+    <Content Include="Views\CriteriaGroup\Index.ascx" />
+    <Content Include="Views\CriteriaGroup\List.ascx" />
+    <Content Include="Views\Dashboard\Index.ascx" />
+    <Content Include="Views\DealSupport\Index.aspx" />
+    <Content Include="Views\Positioning\DetailList.ascx" />
+    <Content Include="Views\Positioning\Edit.ascx" />
+    <Content Include="Views\Metric\DetailList.ascx" />
+    <Content Include="Views\Metric\Edit.ascx" />
+    <Content Include="Views\Plan\DetailList.ascx" />
+    <Content Include="Views\Plan\Edit.ascx" />
+    <Content Include="Views\Label\DetailList.ascx" />
+    <Content Include="Views\Label\Edit.ascx" />
+    <Content Include="Content\Images\Icons\action_icon.png" />
+    <Content Include="Content\Images\Icons\link_icon.png" />
+    <Content Include="Content\Images\Icons\notes_icon.png" />
+    <Content Include="Content\Styles\BackEndPopupSite.css" />
+    <Content Include="Content\Styles\jquery.tooltip.css" />
+    <Content Include="Models\Xml\Browse\ImplicationDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\ObjectiveDetailSelect.xml" />
+    <Content Include="Scripts\jquery.tooltip.min.js" />
+    <Content Include="Views\Report\Index.ascx" />
+    <Content Include="Views\Shared\MasterPages\BackEndPopupSite.Master" />
+    <Content Include="Content\Images\Ajax\loadingblue.gif" />
+    <Content Include="Content\Images\Ajax\loadinggray.gif" />
+    <Content Include="Content\Images\Ajax\loadingsmall.gif" />
+    <Content Include="Content\Images\Icons\testnote.gif" />
+    <Content Include="Content\Images\Icons\testnoteh.gif" />
+    <Content Include="Content\Images\Styles\compelligence-logo-header.jpg" />
+    <Content Include="Content\Images\Icons\testfeedback.gif" />
+    <Content Include="Content\Images\Icons\testforum.gif" />
+    <Content Include="Content\Images\Styles\content_bg.gif" />
+    <Content Include="Content\Images\Styles\content_frontend_bg.gif" />
+    <Content Include="Content\Images\Styles\stars.gif" />
+    <Content Include="Content\Styles\FrontEndSite.css" />
+    <Content Include="Content\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="Content\Styles\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Styles\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Content\Styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Styles\jquery-ui\ui.accordion.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.all.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.base.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.core.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.datepicker.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.dialog.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.progressbar.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.resizable.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.slider.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.tabs.css" />
+    <Content Include="Content\Styles\jquery-ui\ui.theme.css" />
+    <Content Include="Content\Styles\rating.css" />
+    <Content Include="Models\Xml\Browse\BudgetDetail.xml" />
+    <Content Include="Models\Xml\Browse\CompetitorDetailSelect.xml" />
+    <EmbeddedResource Include="Models\Xml\Browse\KitDetailSelect.xml" />
+    <Content Include="Models\Xml\Browse\FileDetail.xml" />
+    <Content Include="Models\Xml\Browse\ImplicationDetail.xml" />
+    <EmbeddedResource Include="Models\Xml\Browse\KitDetail.xml" />
+    <Content Include="Models\Xml\Browse\LabelDetail.xml" />
+    <Content Include="Models\Xml\Browse\LibraryDetail.xml" />
+    <Content Include="Models\Xml\Browse\MetricDetail.xml" />
+    <Content Include="Models\Xml\Browse\ObjectiveDetail.xml" />
+    <Content Include="Models\Xml\Browse\PlanDetail.xml" />
+    <Content Include="Scripts\effects.core.js" />
+    <Content Include="Scripts\effects.highlight.js" />
+    <Content Include="Scripts\jquery-ui\effects.core.js" />
+    <Content Include="Scripts\jquery-ui\effects.highlight.js" />
+    <Content Include="Scripts\jquery-ui\jquery.bgiframe.js" />
+    <Content Include="Scripts\jquery-ui\ui.core.js" />
+    <Content Include="Scripts\jquery-ui\ui.dialog.js" />
+    <Content Include="Scripts\jquery-ui\ui.draggable.js" />
+    <Content Include="Scripts\jquery-ui\ui.resizable.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.floatingbox.js" />
+    <Content Include="Scripts\System\FrontEnd\Rating.js" />
+    <Content Include="Models\Xml\Browse\CompetitorAll.xml" />
+    <Content Include="Models\Xml\Browse\ContentTypeAll.xml" />
+    <Content Include="Models\Xml\Browse\DealAll.xml" />
+    <Content Include="Models\Xml\Browse\EventAll.xml" />
+    <Content Include="Models\Xml\Browse\IndustryAll.xml" />
+    <EmbeddedResource Include="Models\Xml\Browse\KitAll.xml" />
+    <Content Include="Models\Xml\Browse\ObjectiveAll.xml" />
+    <Content Include="Models\Xml\Browse\ProductAll.xml" />
+    <Content Include="Models\Xml\Browse\SupplierAll.xml" />
+    <Content Include="Models\Xml\Browse\TeamAll.xml" />
+    <Content Include="Models\Xml\Browse\TemplateAll.xml" />
+    <Content Include="Models\Xml\Browse\UserAll.xml" />
+    <Content Include="Models\Xml\Browse\PartnerAll.xml" />
+    <Content Include="Models\Xml\Browse\WebsiteAll.xml" />
+    <Content Include="Scripts\System\BackEnd\Browse.js" />
+    <Content Include="Scripts\System\BackEnd\DataGrid.js" />
+    <Content Include="Scripts\System\BackEnd\Dialogs.js" />
+    <Content Include="Scripts\System\BackEnd\Filter.js" />
+    <Content Include="Scripts\System\BackEnd\Form.js" />
+    <Content Include="Scripts\System\BackEnd\Functions.js" />
+    <Content Include="Scripts\System\BackEnd\TreeNodes.js" />
+    <Content Include="Scripts\System\BackEnd\Utility.js" />
+    <Content Include="Views\Browse\BrowsePopup.aspx" />
+    <Content Include="Scripts\System\FrontEnd\FeedBack.js" />
+    <Content Include="Views\Comparinator\Index.aspx" />
+    <Content Include="Views\ContentType\Edit.ascx" />
+    <Content Include="Views\ContentType\Index.ascx" />
+    <Content Include="Views\ContentType\List.ascx" />
+    <Content Include="Views\Implication\DetailList.ascx" />
+    <Content Include="Views\Implication\Edit.ascx" />
+    <Content Include="Views\File\DetailList.ascx" />
+    <Content Include="Views\Objective\DetailList.ascx" />
+    <Content Include="Views\Answer\Edit.ascx" />
+    <Content Include="Views\LongSurvey\SuccessMessage.aspx" />
+    <Content Include="Views\Survey\SurveyBack.ascx" />
+    <Content Include="Views\Survey\Reorder.ascx" />
+    <Content Include="Views\Survey\Survey.aspx" />
+    <Content Include="Views\Survey\DetailList.ascx" />
+    <Content Include="Views\Survey\Edit.ascx" />
+    <Content Include="Views\Survey\Index.ascx" />
+    <Content Include="Views\LongSurvey\Questions.aspx" />
+    <Content Include="Views\Survey\List.ascx" />
+    <Content Include="Views\TeamMember\DetailList.ascx" />
+    <Content Include="Views\TeamMember\Edit.ascx" />
+    <Content Include="Views\TeamRole\DetailList.ascx" />
+    <Content Include="Views\Team\DetailList.ascx" />
+    <Content Include="Views\Template\Edit.ascx" />
+    <Content Include="Views\Template\Index.ascx" />
+    <Content Include="Views\Template\List.ascx" />
+    <Content Include="Views\MyProfile\EditPassword.aspx" />
+    <Content Include="Views\User\EditPassword.ascx" />
+    <Content Include="Views\MyProfile\EditProfile.aspx" />
+    <Content Include="Views\MyProfile\EditEmailCfg.aspx" />
+    <Content Include="Views\Website\EditDetail.ascx" />
+    <Content Include="Views\Website\EditPreview.ascx" />
+    <Content Include="Views\WinLoss\DetailList.ascx" />
+    <Content Include="Views\WinLoss\Edit.ascx" />
+    <Content Include="Views\WinLoss\Index.ascx" />
+    <Content Include="Views\WinLoss\List.ascx" />
+    <Content Include="Views\Shared\ComparinatorContent.ascx" />
+    <Content Include="Views\ContentPortal\LeftContent.ascx" />
+    <Content Include="Views\Shared\MasterPages\FrontEndSite.Master" />
+    <Content Include="Models\Xml\Browse\ProjectAll.xml" />
+    <Content Include="Views\Comparinator\Result.ascx" />
+    <Content Include="Views\Supplier\Edit.ascx" />
+    <Content Include="Views\Supplier\Index.ascx" />
+    <Content Include="Views\Supplier\List.ascx" />
+    <Content Include="Views\Deal\Edit.ascx" />
+    <Content Include="Views\Deal\Index.ascx" />
+    <Content Include="Views\Deal\List.ascx" />
+    <Content Include="Views\Shared\MasterPages\Comparinator.Master" />
+    <Content Include="Views\WinLoss\WinLoss.aspx" />
+    <Content Include="Views\WinLoss\WinLossBack.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="Content\Images\Logos\" />
+    <Folder Include="FilesRepository\ClientCompanyFiles\" />
+    <Folder Include="FilesRepository\Images\" />
+    <Folder Include="FilesRepository\Library\" />
+    <Folder Include="FilesRepository\Reports\" />
+    <Folder Include="FilesRepository\Temp\" />
+    <Folder Include="FilesRepository\WhitePapers\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Reports\Out\" />
+    <Folder Include="Views\Shared\ControlPages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5035</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

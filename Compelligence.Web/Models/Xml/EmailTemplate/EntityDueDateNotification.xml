@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: Due Date of $P{EntityType} $P{Name}]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>  
+      <div>The DueDate of <b>$P{EntityType}</b> "<b>$P{Name}</b>"  was changed to <b>$P{DueDate}</b>  by <b>$P{LastUser}</b></div>
+      <br />
+      <div>Thanks $P{Owner}</div>
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

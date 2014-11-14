@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EntityLibraryAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>EntityLibraryAllView</entity>
+      <property>EntityName</property>
+      <label>EntityLibraryEntityName</label>
+    </column>
+    <column>
+      <entity>EntityLibraryAllView</entity>
+      <property>Type</property>
+      <label>EntityLibraryEntityType</label>
+      <type class="StandardData">DomainObjectType</type>
+    </column>
+    <column>
+      <entity>EntityLibraryAllView</entity>
+      <property>CreatedDate</property>
+      <label>EntityLibraryCreatedDate</label>
+    </column>
+    <column>
+      <entity>EntityLibraryAllView</entity>
+      <property>CreatedBy</property>
+      <label>EntityLibraryCreatedBy</label>
+    </column>
+    <column hidden="true">
+      <entity>EntityLibraryAllView</entity>
+      <property>EntityType</property>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[
+      
+      var elEntityType = $.trim($(this).jqGrid('getCell', id, 'EntityLibraryAllView.EntityType'));
+      var currentScope = null;
+      var currentEntity = null;
+      if (elEntityType == '$C{DomainObjectType.Project}') {
+      currentScope = 'Workspace';
+      currentEntity = 'Project';
+      }
+      if (elEntityType == '$C{DomainObjectType.Deal}') {
+      currentScope = 'Workspace';
+      currentEntity = 'Deal';
+      }
+      if (elEntityType == '$C{DomainObjectType.Event}') {
+      currentScope = 'Workspace';
+      currentEntity = 'Event';
+      }
+      if (elEntityType == '$C{DomainObjectType.Objective}') {
+      currentScope = 'Environment';
+      currentEntity = 'Objective';
+      }
+      if (elEntityType == '$C{DomainObjectType.Kit}') {
+      currentScope = 'Environment';
+      currentEntity = 'Kit';
+      }
+      if (elEntityType == '$C{DomainObjectType.Industry}') {
+      currentScope = 'Environment';
+      currentEntity = 'Industry';
+      }
+      if (elEntityType == '$C{DomainObjectType.Competitor}') {
+      currentScope = 'Environment';
+      currentEntity = 'Competitor';
+      }
+      if (elEntityType == '$C{DomainObjectType.Product}') {
+      currentScope = 'Environment';
+      currentEntity = 'Product';
+      }
+      if (elEntityType == '$C{DomainObjectType.Customer}') {
+      currentScope = 'Environment';
+      currentEntity = 'Customer';
+      }
+      if (elEntityType == '$C{DomainObjectType.Template}') {
+      currentScope = 'Admin';
+      currentEntity = 'Template';
+      }
+      if (elEntityType == '$C{DomainObjectType.Team}') {
+      currentScope = 'Admin';
+      currentEntity = 'Team';
+      }
+      if (elEntityType == '$C{DomainObjectType.TeamMember}') {
+      currentScope = 'Admin';
+      currentEntity = 'TeamMember';
+      }
+      if (elEntityType == '$C{DomainObjectType.Website}') {
+      currentScope = 'Admin';
+      currentEntity = 'Website';
+      }
+      var currentPath = '$P{currentPath}';
+      if (currentPath.indexOf('/Library.aspx') >= 0)           
+    { currentPath = currentPath.substring(0, currentPath.indexOf('/Library')); }     
+      if (currentScope != null && currentEntity != null) {
+        var innercode = " if (BackEndTabs.getItem('AdminTabs_" + currentScope + "Tab') != null) { ";
+        innercode += " BackEndTabs.setActiveTab('AdminTabs_" + currentScope + "Tab'); ";
+        innercode += " if (" + currentScope + "Subtabs != null) { ";
+        innercode += "    SetAndCleanActiveTab('AdminTabs_"+currentScope+"Tab','"+currentScope+"Tab_"+currentEntity+"Content');";
+        innercode += "    showEntity(currentPath+'/"+currentEntity+".aspx/Edit', '"+currentScope+"', '"+currentEntity+"', id, '"+currentEntity+"All', '#"+currentEntity+"Content');";
+        innercode += "    searchEntityWithTab(currentPath+'/"+currentEntity+".aspx/GetEntityName',id,currentPath,'"+currentEntity+"','"+currentScope+"');";
+        innercode += " } else { alert('You do not have access to item'); } ";
+        innercode += " } else { alert('You do not have access to item'); } ";
+        eval(innercode);
+      }
+      ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EntityLibraryAllView as EntityLibraryAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EntityLibraryAllView.ClientCompany = '$S{ClientCompany}' and EntityLibraryAllView.EntityType <> '$C{DomainObjectType.ForumResponse}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EntityLibraryAllView.EntityName
+    ]]>
+  </orderBy>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

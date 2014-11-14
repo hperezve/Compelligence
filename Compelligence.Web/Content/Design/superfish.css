@@ -1,0 +1,66 @@
+.sf-menu ul {
+	position:		absolute;
+	width:			170px; /* left offset of submenus need to match (see below) */
+	background:url(images/bg-submenu.png) 0 0 no-repeat;
+	padding: 0;
+	z-index:200;
+}
+
+.sf-menu ul li {
+	width:			100%;
+	background:url(images/bg-submenu-li.jpg) 0 0 repeat-x;
+}
+.sf-menu ul li:hover {
+	background:url(images/bg-submenu-li-h.jpg) 0 0 repeat-x;
+}
+.sf-menu li {
+	position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			10px;
+	top:			53px; /* match top ul list item height */
+	z-index:		99;
+	padding-top: 18px;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	background:none;
+	width:179px;
+	padding:0px;
+	margin:0;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			169px; /* match ul width */
+	top:			0px;
+}
+
+
+
+.sf-menu li:hover li a, 
+.sf-menu li.sfHover li a {
+	display:block;
+	border: none;
+	color:#fff;
+	background:none;
+	font-size:15px;
+	line-height:1.2em;
+	height: 29px;
+	width:156px; 
+	padding:10px 0 0 14px;
+	text-align:left;
+}
+.sf-menu li li a:hover, .sf-menu li li.sfHover a {display:block; background:url(../images/bg-submenu-li-h.jpg) 0 0 repeat-x;}
+.sf-menu li li li {
+	position:relative;
+	background:url(../images/bg-submenu-li-h.jpg) 0 0 repeat-x;
+	width:179px;
+	text-align:left;
+}
+.sf-menu li li.sfHover li a {color:#fff; width:165px; background:none;}
+.sf-menu li li.sfHover li a:hover { background:url(../images/bg-submenu-li.jpg) 0 0 repeat-x;}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	outline:		0;
+}

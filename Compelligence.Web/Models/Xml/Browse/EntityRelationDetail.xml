@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true" showall="false" togglecolumns="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>EntityRelationDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+      <entity>EntityRelationDetailView</entity>
+      <property>TypeName</property>
+      <label>EntityRelationTypeName</label>
+    </column>
+    <column >
+      <entity>EntityRelationDetailView</entity>
+      <property>Type</property>
+      <label>EntityRelationType</label>
+      <type class="StandardData">EntityRelationType</type>
+    </column>
+    <column >
+      <entity>EntityRelationDetailView</entity>
+      <property>Description</property>
+      <label>EntityRelationDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>EntityRelationDetailView</entity>
+      <property>CreatedDate</property>
+      <label>EntityRelationCreatedDate</label>
+      <type>Date</type>
+    </column>
+    <column >
+      <entity>EntityRelationDetailView</entity>
+      <property>UserName</property>
+      <label>EntityRelationCreatedBy</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EntityRelationDetailView as EntityRelationDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EntityRelationDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EntityRelationDetailView.TypeName
+    ]]>
+  </orderBy>
+</browse>
+

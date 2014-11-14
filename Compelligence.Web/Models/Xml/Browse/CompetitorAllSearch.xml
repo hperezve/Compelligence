@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>CompetitorAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity width="250">CompetitorAllView</entity>
+      <property>Name</property>
+      <label>CompetitorName</label>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>AssignedToName</property>
+      <label>CompetitorAssignedTo</label>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>Status</property>
+      <label>CompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>Budget</property>
+      <type>Decimal</type>
+      <label>CompetitorBudget</label>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>Description</property>
+      <label>CompetitorDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>Phone</property>
+      <label>CompetitorPhone</label>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>Fax</property>
+      <label>CompetitorFax</label>
+    </column>
+    <column >
+      <entity>CompetitorAllView</entity>
+      <property>Website</property>
+      <label>CompetitorWebsite</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CompetitorAllView as CompetitorAllView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   CompetitorAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CompetitorAllView.Name
+    ]]>
+  </orderBy>
+</browse>

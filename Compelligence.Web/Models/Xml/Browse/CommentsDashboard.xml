@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>    
+    <column hidden="true" id="true" filter="false">
+      <entity>DiscussionDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>Response</property>
+      <label>DiscussionDashboardResponse</label>
+    </column>
+    <column hidden="true">
+      <entity>DiscussionDashboardView</entity>
+      <property>EntityType</property>
+    </column>
+    <column hidden="true">
+      <entity>DiscussionDashboardView</entity>
+      <property>EntityId</property>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>CreatedByName</property>
+      <label>DiscussionDashboardCreatedByName</label>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>CreatedDate</property>
+      <label>DiscussionDashboardCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[
+      var commEntityType = $.trim($(this).jqGrid('getCell', id, 'DiscussionDashboardView.EntityType'));
+      var commEntityId = $.trim($(this).jqGrid('getCell', id, 'DiscussionDashboardView.EntityId'));
+      var currentScope = null; 
+      var currentEntity = null; 
+      
+      if (commEntityType == '$C{DomainObjectType.Project}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Project.aspx'; 
+      } 
+      if (commEntityType == '$C{DomainObjectType.Deal}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'DealSupport.aspx'; 
+      } 
+      if (commEntityType == '$C{DomainObjectType.Event}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Events.aspx'; 
+      } 
+      if (commEntityType == '$C{DomainObjectType.Product}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Product.aspx'; 
+      }       
+      
+      if (currentScope != null && currentEntity != null) { 
+       
+        getCommentEntity('$P{currentPath}', currentScope, currentEntity, commEntityId);        
+        
+      } else { 
+        alert('You do not have access to item'); 
+      } 
+    ]]>
+    </event>
+  </events>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.DiscussionDashboardView as DiscussionDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[    
+    DiscussionDashboardView.ClientCompany = '$S{ClientCompany}' AND
+    DiscussionDashboardView.Type = '$C{ForumType.Comment}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    DiscussionDashboardView.CreatedDate DESC
+    ]]>
+  </orderBy>
+</browse>

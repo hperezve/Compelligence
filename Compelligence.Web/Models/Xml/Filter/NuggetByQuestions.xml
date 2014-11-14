@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>NuggetByQuestionsView</entity>
+      <property>QuestionText</property>
+      <label>QuestionText</label>
+    </column>
+    <column>
+      <entity>NuggetByQuestionsView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>NuggetByQuestionsView</entity>
+      <property>QuestionType</property>
+      <label>QuestionTypeReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.NuggetByQuestionsView as NuggetByQuestionsView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    NuggetByQuestionsView.ClientCompany = '$S{ClientCompany}' AND NuggetByQuestionsView.QuizTargetType = '$C{QuizType.Nugget}' And NuggetByQuestionsView.Title is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    NuggetByQuestionsView.Title
+    ]]>
+  </orderBy>
+</browse>

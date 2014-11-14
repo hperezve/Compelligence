@@ -1,0 +1,32 @@
+(function(){
+//Section 1 : Code to execute when the toolbar button is pressed
+var a= {
+exec:function(editor){
+/*
+ var theSelectedText = editor.getSelection().getNative();
+ var FormattedText = '<opening>'+theSelectedText+'</opening>';
+ alert(FormattedText);
+ editor.insertHtml(FormattedText);*/
+			$("#WorkspaceNewsletterEditFormContent").dialog('open');
+ 			//CKEDITOR.dialog.add( 'opening', this.path + 'dialogs/opening.js' );
+	}
+},
+
+//Section 2 : Create the button and add the functionality to it
+b='opening';
+CKEDITOR.plugins.add(b,{
+	init:function(editor){
+	var command = editor.addCommand( 'opening', new CKEDITOR.dialogCommand( 'opening' ) );
+		command.modes = { wysiwyg:1, source:1 };
+		command.canUndo = false;
+
+	
+	editor.ui.addButton("opening",{
+			label:'opening', 
+			icon:this.path+"icon-doc.png",
+			command: 'opening'
+			});
+				CKEDITOR.dialog.add( 'opening', this.path + 'dialogs/opening.js' );
+		}
+	}); 
+})();

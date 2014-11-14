@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>EventName</property>
+      <label>EventNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>ProductName</property>
+      <label>EventsbyProductViewProductName</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>TimeFrame</property>
+      <label>EventTimeFrameReport</label>
+      <type class="StandardData">EventTypePeriod</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyProductView</entity>
+      <property>StartDate</property>
+      <label>EventStartDateReport</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyProductView</entity>
+      <property>EndDate</property>
+      <label>EventEndDate</label>
+      <type>Date</type>
+    </column>
+    <column hidden="true" >
+      <entity>EventsbyIndustryView</entity>
+      <property>StartIntervalDate</property>
+      <label>EventStartIntervalDate</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>AssignedToName</property>
+      <label>EventAssignedToName</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>EventTypeName</property>
+      <label>EventType</label>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>ProductStatus</property>
+      <label>ImplicationsReportProductStatus</label>
+      <type class="StandardData">ReportProductStatus</type>
+    </column>
+    <column>
+      <entity>EventsbyProductView</entity>
+      <property>ProductTier</property>
+      <label>ImplicationsReportProductTier</label>
+      <type class="StandardData">ReportProductTier</type>
+    </column>
+    <column>
+      <entity>ProjectsbyProductsView</entity>
+      <property>DueDate</property>
+      <label>ProjectDueDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EventsbyProductView as EventsbyProductView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EventsbyProductView.ClientCompany = '$S{ClientCompany}' AND EventsbyProductView.ProductId is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EventsbyProductView.ProductId
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

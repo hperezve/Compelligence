@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>ProductName</property>
+      <label>PositioningReportProductName</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>IndustryName</property>
+      <label>PositioningIndustryId</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>CompetitorName</property>
+      <label>PositioningCompetitorId</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>ClientProductName</property>
+      <label>PositioningClientProductName</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>HowWePosition</property>
+      <label>PositioningHowWePosition</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>HowTheyAttack</property>
+      <label>PositioningHowTheyAttack</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>HowWeDefend</property>
+      <label>PositioningHowWeDefend</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>HowTheyPosition</property>
+      <label>PositioningHowTheyPosition</label>
+    </column>
+    <column>
+      <entity>PositioningAllByProductByIndustryReportView</entity>
+      <property>HowWeAttack</property>
+      <label>PositioningHowWeAttack</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningAllByProductByIndustryReportView as PositioningAllByProductByIndustryReportView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   PositioningAllByProductByIndustryReportView.ClientCompany = '$S{ClientCompany}' and PositioningAllByProductByIndustryReportView.P_PositioningRelation= '$C{PositioningRelation.Positioning}' and PositioningAllByProductByIndustryReportView.P_IsCompetitorCompany='N' and PositioningAllByProductByIndustryReportView.P_EntityType='$C{PositioningEntityType.Product}' and PositioningAllByProductByIndustryReportView.P_Status='$C{PositioningStatus.Enabled}' 
+    and PositioningAllByProductByIndustryReportView.PC_PositioningRelation= '$C{PositioningRelation.Positioning}' and PositioningAllByProductByIndustryReportView.PC_IsCompetitorCompany='Y' and PositioningAllByProductByIndustryReportView.PC_EntityType='$C{PositioningEntityType.Product}' and PositioningAllByProductByIndustryReportView.PC_Status='$C{PositioningStatus.Enabled}' 
+     and PositioningAllByProductByIndustryReportView.CM_PositioningRelation= '$C{PositioningRelation.CompetitiveMessaging}' and PositioningAllByProductByIndustryReportView.CM_IsCompetitorCompany='Y' and PositioningAllByProductByIndustryReportView.CM_EntityType='$C{PositioningEntityType.Product}' and PositioningAllByProductByIndustryReportView.CM_Status='$C{PositioningStatus.Enabled}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningAllByProductByIndustryReportView.IndustryName, PositioningAllByProductByIndustryReportView.CompetitorName, PositioningAllByProductByIndustryReportView.ProductName, PositioningAllByProductByIndustryReportView.ClientProductName
+    ]]>
+  </orderBy>
+</browse>

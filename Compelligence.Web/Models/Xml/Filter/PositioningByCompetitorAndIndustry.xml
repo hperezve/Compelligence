@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>PositioningName</property>
+      <label>PositioningNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>PositioningForType</property>
+      <label>PositioningForTypeReport</label>
+      <type class="StandardData">PositioningForType</type>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>PositioningByCompetitorAndIndustryViewIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>PositioningByCompetitorAndIndustryViewIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>CompetitorName</property>
+      <label>CompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>CompetitorStatus</property>
+      <label>PositioningByCompetitorAndIndustryViewCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>CompetitorTier</property>
+      <label>PositioningByCompetitorAndIndustryViewCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>ProjectAssignedToName</label>
+    </column>
+    <column>
+      <entity>PositioningByCompetitorAndIndustryView</entity>
+      <property>Source</property>
+      <label>PositioningSourceReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningByCompetitorAndIndustryView as PositioningByCompetitorAndIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningByCompetitorAndIndustryView.ClientCompany = '$S{ClientCompany}' And PositioningByCompetitorAndIndustryView.EntityType = '$C{DomainObjectType.Competitor}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningByCompetitorAndIndustryView.IndustryName
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>

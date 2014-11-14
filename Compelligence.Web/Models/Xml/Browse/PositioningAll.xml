@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>PositioningAllView</entity>
+      <property>Id</property>
+    </column>
+    <column >
+          <entity>PositioningAllView</entity>
+          <property>Content</property>
+          <label>PositioningContent</label>
+    </column>
+    <column >
+      <entity>PositioningAllView</entity>
+      <property>Name</property>
+      <label>PositioningName</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>ForType</property>
+      <label>PositioningForType</label>
+      <type class="StandardData">PositioningForType</type>
+    </column>
+    <column  width="200">
+      <entity>PositioningAllView</entity>
+      <property>Type</property>
+      <label>PositioningType</label>
+      <type class="StandardData">PositioningAllType</type>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>Source</property>
+      <label>PositioningSource</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>EntityType</property>
+      <label>PositioningEntityType</label>
+      <type class="StandardData">PositioningEntityType</type>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>EntityName</property>
+      <label>PositioningEntityName</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>IndustryName</property>
+      <label>PositioningIndustryName</label>
+    </column>
+    <column>
+      <entity>PositioningAllView</entity>
+      <property>IsMaster</property>
+      <label>PositioningIsMaster</label>
+      <type class="StandardData">PositioningMaster</type>
+    </column>
+    <column hidden="true">
+      <entity>PositioningAllView</entity>
+      <property>EntityId</property>
+    </column>
+    <column hidden="true">
+      <entity>PositioningAllView</entity>
+      <property>IndustryId</property>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PositioningAllView as PositioningAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PositioningAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PositioningAllView.Name
+    ]]>
+  </orderBy>
+  <onSelectRow>
+    <![CDATA[
+    getEntity('$P{urlEdit}', '$P{scope}', '$P{controller}', id, '$P{browseId}','$P{container}');
+    ]]>
+  </onSelectRow>
+  <loadComplete>
+    <![CDATA[
+    hideLoadingDialog();
+    ]]>
+  </loadComplete>
+</browse>
+

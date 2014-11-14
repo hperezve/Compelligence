@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>SurveyResponseDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>SurveyResponseDashboardView</entity>
+      <property>Name</property>
+      <label>SurveyResponseDashboardName</label>
+    </column>
+    <column>
+      <entity>SurveyResponseDashboardView</entity>
+      <property>CreatedByName</property>
+      <label>SurveyResponseDashboardCreatedBy</label>
+    </column>
+    <column>
+      <entity>SurveyResponseDashboardView</entity>
+      <property>DateResponse</property>
+      <label>SurveyResponseDashboardDateResponse</label>
+    </column>
+    <column>
+      <entity>SurveyResponseDashboardView</entity>
+      <property>Type</property>
+      <label>SurveyResponseDashboardType</label>
+      <type class="StandardData">SurveyType</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[       
+      var currentPath = '$P{currentPath}';             
+      if (currentPath.indexOf('/Survey.aspx') >= 0)           
+      { currentPath = currentPath.substring(0, currentPath.indexOf('/Survey')); }      
+      
+      WorkspaceSubtabs.setActiveTab('WorkspaceTab_SurveyContent');      
+			showEntity(currentPath+'/Survey.aspx/Edit', 'Workspace', 'Survey', id, 'SurveyAll', '#SurveyContent');            
+      ]]>
+    </event>
+  </events>  
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.SurveyResponseDashboardView as SurveyResponseDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    SurveyResponseDashboardView.ClientCompany = '$S{ClientCompany}' AND 
+    SurveyResponseDashboardView.CreatedBy = '$P{UserId}' AND
+    SurveyResponseDashboardView.TargetType = '$C{QuizType.Survey}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    SurveyResponseDashboardView.CreatedDate DESC
+    ]]>
+  </orderBy>
+</browse>
+
+
+
+

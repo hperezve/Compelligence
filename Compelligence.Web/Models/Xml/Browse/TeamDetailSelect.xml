@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" multiselect="true">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>TeamDetailSelectView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>TeamDetailSelectView</entity>
+      <property>Name</property>
+      <label>TeamName</label>
+    </column>
+    <column>
+      <entity>TeamDetailSelectView</entity>
+      <property>AssignedToName</property>
+      <label>TeamAssignedTo</label>
+    </column>
+    
+    <column>
+      <entity>TeamDetailSelectView</entity>
+      <property>Email</property>
+      <label>TeamEmail</label>
+    </column>
+    <column>
+      <entity>TeamDetailSelectView</entity>
+      <property>Status</property>
+      <label>TeamStatus</label>
+      <type class="StandardData">TeamStatus</type>
+    </column>
+    <column>
+      <entity>TeamDetailSelectView</entity>
+      <property>StartDate</property>
+      <label>TeamDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.TeamDetailSelectView  as TeamDetailSelectView 
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   TeamDetailSelectView.ClientCompany = '$S{ClientCompany}' and TeamDetailSelectView.Status ='$C{TeamStatus.Enabled}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    TeamDetailSelectView.Name
+    ]]>
+  </orderBy>
+</browse>

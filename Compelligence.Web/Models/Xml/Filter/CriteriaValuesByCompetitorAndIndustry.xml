@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>CriteriaName</property>
+      <label>CriteriaNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>CriteriaSetName</property>
+      <label>CriteriaSetNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>CriteriaGroupName</property>
+      <label>CriteriaGroupNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>CompetitorName</property>
+      <label>CriteriaCompetitorNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>CompetitorStatus</property>
+      <label>CriteriaValuesByCompetitorAndIndustryCompetitorStatus</label>
+      <type class="StandardData">CompetitorStatus</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>CompetitorTier</property>
+      <label>CriteriaValuesByCompetitorAndIndustryCompetitorTier</label>
+      <type class="StandardData">CompetitorTier</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>IndustryName</property>
+      <label>CriteriaIndustryNameReport</label>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>IndustryStatus</property>
+      <label>CriteriaValuesByCompetitorAndIndustryIndustryStatus</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>IndustryTier</property>
+      <label>CriteriaValuesByCompetitorAndIndustryIndustryTier</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+    <column>
+      <entity>CriteriaValuesByCompetitorAndIndustryView</entity>
+      <property>Value</property>
+      <label>CriteriaIndustryValueReport</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.CriteriaValuesByCompetitorAndIndustryView as CriteriaValuesByCompetitorAndIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    CriteriaValuesByCompetitorAndIndustryView.ClientCompany = '$S{ClientCompany}' AND CriteriaValuesByCompetitorAndIndustryView.CriteriaGroupName is not null AND CriteriaValuesByCompetitorAndIndustryView.CriteriaName is not null
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    CriteriaValuesByCompetitorAndIndustryView.CriteriaGroupName
+    ]]>
+  </orderBy>
+</browse>

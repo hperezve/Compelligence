@@ -1,0 +1,2313 @@
+
+/////////////
+// ADMIN HEADING -- PORTLET TEMPLATE
+///////////
+article.adminHeadingPortlet {
+	margin:0.5em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 100%);
+	.displayFlex();
+	.flexFlow(row nowrap);
+	.borderRadius(0.25em);
+	position:relative;
+	.pageTitle {
+		.flex(0 1 100%);
+	}
+	.status {
+		.flex(0 0 auto);
+		margin: 0px;
+		width: 7em;
+		height: 1em;
+		position: absolute;
+		right: 0em;
+		height: 100%;
+		top: 0em;
+		.borderRadius(0em 0.4em 0.4em 0em);
+		border: 1px solid rgba(0,0,0,0.2);
+		.shadow(inset 2px 0px 1px rgba(0,0,0,0.2));
+		&.error {
+			background: #DD1100 url(../images/icons_white/error.svg) no-repeat center center;
+			background-size:1.75em;
+		}
+		&.success {
+			background: #11CC00 url(../images/icons_white/check.svg) no-repeat center center;
+			background-size:1.75em;
+		}
+	}
+}
+
+article.namePortlet,
+article.stepNamePortlet,
+article.elementListPortlet,
+article.customizePortlet,
+article.pullOutListPortlet,
+article.staticListPortlet {
+	margin:0.5em 3em;
+	padding:0px;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+	min-width:22rem;
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+		button {
+			float:right;
+			margin:-0.35em -0.55em 0em 0em;
+			.borderRadius(0em 0.25em 0em 0.25em);
+			border-top:0em none transparent;
+			border-right:0em none transparent;
+		}
+		.btnGroup {
+			float:right;
+			margin:-0.35em -0.55em 0em 0em;
+			padding:0em;
+			button {
+				float:left;
+				margin:0em;
+				.borderRadius(0em);
+				&:first-of-type {
+					.borderRadius(0em 0em 0em 0.25em);
+				}
+				&:last-of-type {
+					.borderRadius(0em 0.25em 0em 0em);
+				}
+			}
+		}
+	}
+}
+
+article.pullOutListPortlet {
+	position:fixed;
+	right:-22em;
+	top:15.7em;
+	margin:0em;
+	.borderRadius(0em 0em 0em 0.25em);
+	border:1px solid rgba(0,0,0,0.25);
+	&.OpenPlease {
+		right:0em;
+	}
+	.tabPullOut {
+		padding:0.75em 0em 0.65em;
+		width:51px;
+		display:block;
+		top:0em;
+		left:0em;
+		margin:-1px 0em 0em -51px;
+		background-color:@primary;
+		.normalTwoColorGradient(left, @primary, darken(@primary, 7%));
+		position:absolute;
+		border:1px solid rgba(0,0,0,0.25);
+		.borderRadius(0.25em 0em 0em 0.25em);
+		&:hover {
+			cursor:pointer;
+			.normalTwoColorGradient(left, darken(@primary, 10%), darken(@primary, 17%));
+		}
+		.number {
+			text-align:center;
+			width:100%;
+			font-size:1.1em;
+			color:@light;
+		}
+		.icon-button {
+			margin:0em auto 0.4em auto;
+		}
+	}
+	.listOfQuestions {
+		li {
+			.ellipsis();
+			.number {
+				display:inline-block;
+				padding:0em 0.45em 0em 0em;
+				color:@labelColor;
+				font-size:1.3em;
+			}
+		}
+	}
+}
+
+article.namePortlet {
+	margin:0.5em 10em;
+	.topInput {
+		padding:1em 2em;
+		label {
+			.displayFlex();
+			.flexFlow(row nowrap);
+			.text {
+				.flex(0 0 auto);
+				padding:0.2em 0.5em 0em 0em;
+			}
+			textarea {
+				.flex(0 1 100%);
+				padding:0.25em 0.4em;
+			}
+		}
+	}
+}
+article.stepNamePortlet {
+	margin:0.5em 3em;
+	.topInput {
+		padding:1em 2em;
+		label {
+			.displayFlex();
+			.flexFlow(row nowrap);
+			.text {
+				.flex(0 0 auto);
+				padding:0.2em 0.5em 0em 0em;
+			}
+			textarea {
+				.flex(0 1 100%);
+				padding:0.25em 0.4em;
+			}
+		}
+	}
+}
+article.elementListPortlet {
+	.insideArea {
+		.displayFlex();
+		.flexFlow(row nowrap);
+		.tableNames {
+			.shadow(5px 0px 10px rgba(0,0,0,0.1));
+			.flex(0 1 50%);
+			border-right:1px solid rgba(0,0,0,0.25);
+			ul {
+				max-height:23em;
+				overflow:auto;
+				li {
+					padding:0.25em 1em 0.25em 3.35em;
+					position:relative;
+					&.listHeader {
+						padding:0.5em 1em;
+					}
+					button {
+						background:transparent;
+						margin: 0em;
+						display: inline-block;
+						min-height: 0em;
+						position: absolute;
+						left: 0em;
+						top: 0em;
+						height: 100%;
+						border: 0em none transparent;
+						border-right: 1px solid rgba(0,0,0,0.1);
+						width: 3em;
+						padding: 0em;
+						.transition(0.25s);
+						&.hover {
+							.transition(0.25s);
+						}
+						&.active {
+							.transition(0.25s);
+						}
+					}
+					&:hover {
+						background-color:fadeout(desaturate(@primary, 20%), 55%);
+						cursor:pointer;
+						.transition(0.3s);
+					}
+				}
+			}
+		}
+		.tableElements {
+			.flex(0 1 50%);
+
+			input.filter {
+				width:100%;
+				margin:0em;
+				height:45px;
+				font-size:1em;
+				padding:1em;
+				border-right:0px none transparent;
+				border-left:0px none transparent;
+			}
+			ul {
+				.displayFlex();
+				.flexFlow(row wrap);
+				.flexJustify(start, flex-start);
+				padding:0.5em;
+				max-height:20em;
+				overflow:auto;
+				margin:0em 0em 0.5em;
+				li {
+					margin:0.2em;
+					background-color:fadeout(desaturate(@primary,30%), 60%);
+					color:@labelColor;
+					padding:0.4em 0.7em 0.35em;
+					border:1px solid rgba(0,0,0,0.15);
+					.borderRadius(0.2em);
+					.transition(0.25s);
+					&:hover {
+						background-color:fadeout(desaturate(@primary,25%), 45%);
+						.transition(0.25s);
+						cursor:pointer;
+						border-color:rgba(0,0,0,0.25);
+						.shadowExtra(1px 1px 2px rgba(0,0,0,0.35), inset 0px 0px 0px 1px rgba(0,0,0,0.2), inset 0px 0px 4px rgba(0,0,0,0.35));
+					}
+				}
+			}
+		}
+	}
+}
+
+article.customizePortlet {
+	.insideArea {
+		.displayFlex();
+		.flexFlow(row nowrap);
+		.questionTitle {
+			padding:1em 2em;
+			.flex(0 1 50%);
+			border-right:1px solid rgba(0,0,0,0.25);
+			.shadow(5px 0px 10px rgba(0,0,0,0.1));
+			label {
+				width:100%;
+				text-align:left;
+			}
+			textarea {
+				width:100%;
+			}
+		}
+		.rulesEntry {
+			.flex(0 1 50%);
+			.displayFlex();
+			.flexFlow(row wrap);
+			.alignItems(start, flex-start);
+			position: relative;
+			padding-bottom: 3em;
+			.buttons {
+				.displayFlex();
+				.flexFlow(row nowrap);
+				.alignItems(start, flex-start);
+				position:absolute;
+				bottom:0em;
+				left:0em;
+				width:100%;
+				button {
+					.flex(1 1 auto);
+					background:fadeout(desaturate(@primary, 20%), 35%);
+					.icon-button {
+						width:1.6em;
+						height:1.6em;
+						object {
+							width:1.6em;
+							height:1.6em;
+						}
+					}
+				}
+			}
+			.twoColInputsContent {
+				.flex(0 1 100%);
+			}
+		}
+	}
+}
+
+
+article.staticListPortlet {
+	margin:0.5em 10em;
+	.listOfQuestions {
+		li {
+			.ellipsis();
+			position:relative;
+
+			padding-right:5em;
+			&.listHeader {
+				background-color:@labelColor;
+				padding-left:5em;
+				.number {
+					color:@light;
+				}
+			}
+			button {
+				min-width:0em;
+				min-height:0em;
+				display:inline-block;
+				position:absolute;
+				left:0em;
+				top:0em;
+				width:4.5em;
+				height:100%;
+				padding:0em;
+				background:transparent;
+				border: 0em none transparent;
+				border-right: 1px solid rgba(0,0,0,0.1);
+				.transition(0.25s);
+				&.hover {
+					.transition(0.25s);
+				}
+				&.active {
+					.transition(0.25s);
+				}
+				&.delete {
+					left:auto;
+					right:0em;
+					border: 0em none transparent;
+					border-left: 1px solid rgba(0,0,0,0.1);
+				}
+			}
+			.number {
+				display:inline-block;
+				padding:0em 0.45em 0em 0em;
+				color:@labelColor;
+				font-size:1.3em;
+			}
+		}
+	}
+}
+
+
+.addItemParent {
+	.flex(0 1 100%);
+	.displayFlex();
+	.flexFlow(row nowrap);
+	@media (max-width:875px) {
+		.flexFlow(row wrap);
+	}
+	.leftSide {
+		.flex(0 1 100%);
+		.displayFlex();
+		.flexFlow(column wrap);
+		@media (max-width:875px) {
+			.order(1);
+		}
+		.addItem {
+			.flex(0 1 auto);
+			margin:0.5em;
+			padding:0px;
+			background-color:@light;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			.borderRadius(0.25em);
+			display:block;
+			@media (max-width:875px) {
+				display:none;
+			}
+			// H1 Heading For Tile
+			h1.portlet-heading {
+				.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+				position:relative;
+				padding:0.3em 0.5em 0.3em 2.75rem;
+			}
+			.inputArea {
+				.flex(0 1 100%);
+				.displayFlex();
+				.flexFlow(row wrap);
+				.inputs {
+					padding:0.5em;
+					.flex(0 1 100%);
+					.displayFlex();
+					.flexFlow(row wrap);
+					.flexJustify(start, flex-start);
+					.alignItems();
+
+					input, textarea {
+						.flex(0 1 100%);
+					}
+					input {
+						max-width:14em;
+					}
+					.inputRow {
+						.flex(0 1 100%);
+						.displayFlex();
+						.flexFlow(row nowrap);
+						padding:0.25em 0em 0em;
+						input {
+							.flex(0 1 auto);
+							margin:0em 0.5em 0em 0em;
+							min-width:0em;
+						}
+						.currCode {
+							max-width:5em;
+						}
+					}
+				}
+				.buttons {
+					.flex(0 1 100%);
+					.displayFlex();
+					.flexFlow(row nowrap);
+					button {
+						.flex(1 1 auto);
+						margin:0em;
+						background:fadeout(desaturate(@primary, 20%), 35%);
+						border:1px solid rgba(0,0,0,0.2);
+						border-left:0px none transparent;
+						&:last-of-type {
+							border-right:0px none transparent;
+							.borderRadius(0em 0em 0.3em 0em);
+						}
+						&:first-of-type {
+							.borderRadius(0em 0em 0em 0.3em);
+						}
+						&:hover {
+							background:fadeout(desaturate(@primary, 20%), 5%);
+						}
+						.icon-button {
+							width:1.5rem;
+							height:1.5rem;
+							object {
+								width:1.5rem;
+								height:1.5rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		.itemListParent {
+			.flex(1 0 auto);
+			margin:0.5em;
+			padding:0px;
+			background-color:@light;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			.borderRadius(0.25em);
+			// H1 Heading For Tile
+			h1.portlet-heading {
+				.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+				position:relative;
+				padding:0.3em 0.5em 0.3em 2.75rem;
+			}
+			.itemList {
+
+				.buttonBrowseItemList {
+					li {
+						.displayFlex();
+						.flexFlow(row nowrap);
+						border-bottom:1px solid rgba(0,0,0,0.1);
+						&:nth-of-type(2n) {
+							background-color:fadeout(desaturate(@primary, 20%), 85%);
+						}
+						.itemImage {
+							.flex(0 0 5em);
+							padding:0em 0.2em 0em 0.65em;
+							background-color:@light;
+							img {
+								width:4em;
+								height:auto;
+							}
+						}
+						.browseRows {
+							.displayFlex();
+							.flexFlow(row wrap);
+							.flex(0 1 100%);
+							.flexJustify(start, flex-start);
+							.alignItems();
+							.topRow {
+								.flex(0 1 100%);
+								.displayFlex();
+								padding:0.35em 0.5em 0em;
+								.flexFlow(row nowrap);
+								.itemName {
+									.flex(0 1 50%);
+									color:@labelColor;
+									font-size:1.15em;
+									.quantity {
+										display:inline-block;
+										padding:0.10em 0.5em 0.09em;
+										margin:-0.1em 0.25em 0em 0em;
+										.borderRadius(0.5em);
+										background-color:fadeout(desaturate(@primary, 20%), 65%);
+										color:@labelColor;
+										font-size:0.85em;
+									}
+								}
+								.price {
+									.flex(0 1 50%);
+									text-align:right;
+									.currCode {
+										display:inline-block;
+										color:@labelColor;
+										text-transform:uppercase;
+										font-variant:small-caps;
+										font-size:0.9em;
+									}
+									.number {
+										display:inline-block;
+										color:@primary;
+										font-weight:500;
+										font-size:1.2em;
+									}
+								}
+							}
+							.bottomRow {
+								padding:0.25em 0.5em;
+								.flex(0 1 100%);
+							}
+						}
+						.buttons {
+							.flex(0 0 3em);
+							button {
+								width:100%;
+								float:left;
+								margin:0em;
+								padding:0em;
+								background:fadeout(desaturate(@primary, 20%), 35%);
+								border:1px solid rgba(0,0,0,0.2);
+								border-bottom:0px none transparent;
+								border-right:0px none transparent;
+								&:last-of-type {
+									border-bottom:1px solid rgba(0,0,0,0.2);
+								}
+								&:hover {
+									background:fadeout(desaturate(@primary, 20%), 5%);
+								}
+							}
+						}
+						&.active {
+							.normalTwoColorGradient(top, lighten(@activeRow, 3%), darken(@activeRow, 7%));
+							.shadow(inset 0px 0px 1em rgba(0,0,0,0.1));
+						}
+					}
+				}
+			}
+		}
+	}
+	.rightSide {
+		.flex(0 0 40%);
+		.displayFlex();
+		.flexFlow(row wrap);
+		@media @tablet {
+			.flex(0 0 50%);
+		}
+		@media (max-width:875px) {
+			.order(0);
+			.flex(0 1 100%);
+		}
+		.addItemDetails {
+			.flex(0 1 100%);
+			margin:0.5em;
+			padding:0px;
+			background-color:@light;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			.borderRadius(0.25em);
+			// H1 Heading For Tile
+			h1.portlet-heading {
+				.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+				position:relative;
+				padding:0.3em 0.5em 0.3em 2.75rem;
+				.itemNumber {
+					display:inline-block;
+				}
+			}
+
+		}
+		.itemListParent {
+			.flex(0 1 100%);
+			margin:0.5em;
+			padding:0px;
+			background-color:@light;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			.borderRadius(0.25em);
+			// H1 Heading For Tile
+			h1.portlet-heading {
+				.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+				position:relative;
+				padding:0.3em 0.5em 0.3em 2.75rem;
+			}
+			.itemList {
+
+				.buttonBrowseItemList {
+					li {
+						.displayFlex();
+						.flexFlow(row nowrap);
+						border-bottom:1px solid rgba(0,0,0,0.1);
+						&:nth-of-type(2n) {
+							background-color:fadeout(desaturate(@primary, 20%), 85%);
+						}
+						.itemImage {
+							.flex(0 0 5em);
+							padding:0em 0.2em 0em 0.65em;
+							background-color:@light;
+							img {
+								width:4em;
+								height:auto;
+							}
+						}
+						.browseRows {
+							.displayFlex();
+							.flexFlow(row wrap);
+							.flex(0 1 100%);
+							.flexJustify(start, flex-start);
+							.alignItems();
+							.topRow {
+								.flex(0 1 100%);
+								.displayFlex();
+								padding:0.35em 0.5em 0em;
+								.flexFlow(row nowrap);
+								.itemName {
+									.flex(0 1 50%);
+									color:@labelColor;
+									font-size:1.15em;
+									.quantity {
+										display:inline-block;
+										padding:0.10em 0.5em 0.09em;
+										margin:-0.1em 0.25em 0em 0em;
+										.borderRadius(0.5em);
+										background-color:fadeout(desaturate(@primary, 20%), 65%);
+										color:@labelColor;
+										font-size:0.85em;
+									}
+								}
+								.price {
+									.flex(0 1 50%);
+									text-align:right;
+									.currCode {
+										display:inline-block;
+										color:@labelColor;
+										text-transform:uppercase;
+										font-variant:small-caps;
+										font-size:0.9em;
+									}
+									.number {
+										display:inline-block;
+										color:@primary;
+										font-weight:500;
+										font-size:1.2em;
+									}
+								}
+							}
+							.bottomRow {
+								padding:0.25em 0.5em;
+								.flex(0 1 100%);
+							}
+						}
+						.buttons {
+							.flex(0 0 3em);
+							.displayFlex();
+							.flexFlow(column nowrap);
+							button {
+								.flex(1 1 auto);
+								margin:0em;
+								padding:0em;
+								text-align:center;
+								background:fadeout(desaturate(@primary, 20%), 35%);
+								border:1px solid rgba(0,0,0,0.2);
+								border-bottom:0px none transparent;
+								border-right:0px none transparent;
+								&:last-of-type {
+									border-bottom:1px solid rgba(0,0,0,0.2);
+								}
+								&:hover {
+									background:fadeout(desaturate(@primary, 20%), 5%);
+								}
+								.icon-button {
+									height:1.55em;
+									width:1.55em;
+									margin:0em auto;
+									object {
+										height:1.55em;
+										width:1.55em;
+									}
+								}
+							}
+						}
+						&.active {
+							.normalTwoColorGradient(top, lighten(@activeRow, 3%), darken(@activeRow, 7%));
+							.shadow(inset 0px 0px 1em rgba(0,0,0,0.1));
+						}
+					}
+				}
+			}
+		}
+		.addItem {
+			.flex(0 1 100%);
+			margin:0.5em;
+			padding:0px;
+			background-color:@light;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			.borderRadius(0.25em);
+			display:none;
+			@media (max-width:875px) {
+				display:block;
+			}
+			// H1 Heading For Tile
+			h1.portlet-heading {
+				.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+				position:relative;
+				padding:0.3em 0.5em 0.3em 2.75rem;
+			}
+			.inputArea {
+				.flex(0 1 100%);
+				.displayFlex();
+				.flexFlow(row wrap);
+				.inputs {
+					padding:0.5em;
+					.flex(0 1 100%);
+					.displayFlex();
+					.flexFlow(row wrap);
+					.flexJustify(start, flex-start);
+					.alignItems();
+
+					input, textarea {
+						.flex(0 1 100%);
+					}
+					input {
+						max-width:14em;
+					}
+					.inputRow {
+						.flex(0 1 100%);
+						.displayFlex();
+						.flexFlow(row nowrap);
+						padding:0.25em 0em 0em;
+						input {
+							.flex(0 1 auto);
+							margin:0em 0.5em 0em 0em;
+							min-width:0em;
+						}
+						.currCode {
+							max-width:5em;
+						}
+					}
+				}
+				.buttons {
+					.flex(0 1 100%);
+					.displayFlex();
+					.flexFlow(row nowrap);
+					button {
+						.flex(1 1 auto);
+						margin:0em;
+						background:fadeout(desaturate(@primary, 20%), 35%);
+						border:1px solid rgba(0,0,0,0.2);
+						border-left:0px none transparent;
+						&:last-of-type {
+							border-right:0px none transparent;
+						}
+						&:hover {
+							background:fadeout(desaturate(@primary, 20%), 5%);
+						}
+						.icon-button {
+							width:1.5rem;
+							height:1.5rem;
+							object {
+								width:1.5rem;
+								height:1.5rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+article.headingButtonsSlide {
+	.flex(1 0 auto);
+	.order(1);
+	position: fixed;
+	right: 0em;
+	top: 4.75rem;
+	z-index: 99;
+	.btnGroup {
+		padding:0em;
+		.displayFlex();
+		.flexFlow(column wrap);
+		button {
+			padding:0.85em 1.5em;
+			border-bottom:0px none transparent;
+			text-align:left;
+			.flex(0 1 auto);
+			margin-right: -7.5em;
+			&:first-of-type {
+				.borderRadius(0.25em 0em 0em 0em);
+			}
+			&:last-of-type {
+				.borderRadius(0em 0em 0em 0.25em );
+			}
+			.icon-button {
+				float:left;
+				width:1.3rem;
+				height:1.3rem;
+				object {
+					float:left;
+					width:1.3rem;
+					height:1.3rem;
+				}
+				&.rightSide {
+					float:right;
+					object {
+						float:right;
+					}
+				}
+				@media @mobile {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			.text {
+				padding:0em 0em 0em 1em;
+			}
+			&:hover {
+				margin-right:0em;
+				margin-left:-7.5em;
+			}
+		}
+	}
+	@media @mobile {
+		left: 0em;
+		bottom: 0em;
+		top:auto;
+		.btnGroup {
+			.flexFlow(row wrap);
+			button {
+				.flex(1 1 auto);
+				.borderRadius(0em) !important;
+				&:hover {
+					margin:0em;
+					margin-right:0em;
+					margin-left:0em;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.portletScreen {
+	.displayFlex();
+	.flexFlow(row wrap);
+	.flexJustify(start, flex-start);
+	margin:0px;
+	padding:0px;
+}
+
+article.tileButtons {
+	.displayFlex();
+	.flexFlow(row nowrap);
+	.flexJustify(center, center);
+	.flex(0 1 100%);
+	margin:1em 0em 0.5em;
+	padding:0em;
+	button {
+		.flex(0 1 9.5em);
+		min-height:0em;
+		padding:0.5em 0em;
+		a {
+			color:@light;
+		}
+		&:first-of-type {
+			.borderRadius(0.25em 0em 0em 0.25em);
+			border-right:0px none transparent;
+		}
+		&:last-of-type {
+			.borderRadius(0em 0.25em 0.25em 0em);
+		}
+		@media @mobile {
+			height: 44px;
+			padding: 0.15em 0em 0em;
+		}
+	}
+}
+
+
+/////////////
+// DASHBOARD -- PORTLET TEMPLATE
+///////////
+article.dashboardPortlet, article.graphPortlet {
+	margin:0.5em;
+	padding:0px;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 auto);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 1.75em 0.3em 2.75rem;
+
+		// options icon
+		.icon-gearwheel {
+			width:1.2rem;
+			height:1.2rem;
+			margin:0em;
+			position: absolute;
+			top: 0.65em;
+			right: 0.65em;
+			object {
+				height:1.1rem;
+				width:1.2rem;
+				display:block;
+			}
+			&:hover {
+				cursor:pointer;
+			}
+		}
+		.icon-portlet {
+			width: 1.65rem;
+			height: 2rem;
+			position:absolute;
+			top:0.25em;
+			left:0.4em;
+			margin: 0em;
+			object {
+				width:1.65rem;
+				height:2rem;
+				display:block;
+			}
+		}
+	}
+}
+.icon-portlet {
+	width: 1.65rem;
+	height: 2rem;
+	position:absolute;
+	top:0.25em;
+	left:0.4em;
+	margin: 0em;
+	object {
+		width:1.65rem;
+		height:2rem;
+		display:block;
+	}
+}
+
+
+/////////////
+// DASHBOARD TILES -- PORTLET TEMPLATE
+///////////
+.portletScreenTiles {
+	.displayFlex();
+	.flexFlow(row nowrap);
+	.flexJustify(start, flex-start);
+	margin:1.5em 5em 0em;
+	padding:0px;
+	overflow:auto;
+	@media @tablet {
+		margin:1.5em 0em 0em;
+	}
+	@media @mobile {
+		margin:1.5em 0em 0em;
+	}
+	.portletPage {
+		.flex(1 0 100%);
+		.displayFlex();
+		.flexFlow(row wrap);
+		article.dashboardTilesPortlet {
+			margin:0.5em;
+			padding:0px;
+			background-color:@light;
+			.shadow(0px 2px 2px rgba(0,0,0,0.3));
+			.flex(1 0 30%);
+			.borderRadius(0.25em);
+
+			// H1 Heading For Tile
+			h1.portlet-heading {
+				font-size: 1.4em;
+				font-weight: 400;
+				padding: 0.5em 0.75em;
+				color: @light;
+			}
+
+			// Content/Number for Tile
+			h3 {
+				text-align: center;
+				font-size: 3em;
+				padding: 0em 0em 0.25em;
+				margin: 0px;
+				color:@light;
+				text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+				.displayFlex();
+				.flexFlow(row nowrap);
+				.number {
+					.flex(1 0 auto);
+					text-align:center;
+				}
+
+				// Tile Icon
+				.icon-tile {
+					width: 2.75rem;
+					height: 2.75rem;
+					margin: 0em;
+					.flex(1 0 auto);
+					margin:0.2em 0.05em 0em -0.2em;
+					height:1.21em;
+					object {
+						width:2.75rem;
+						height:2.75rem;
+						display:block;
+						margin:0px auto;
+					}
+				}
+			}
+			&:nth-of-type(2n) {
+				.normalTwoColorGradient(top,lighten(@labelColor, 8%), @labelColor );
+			}
+			&:nth-of-type(2n+1) {
+				.normalTwoColorGradient(top, @labelColor, darken(@labelColor, 8%) );
+			}
+
+			// Description for Tile
+			.description {
+				.normalTwoColorGradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0) );
+				width: 100%;
+				color: @light;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				float: left;
+				padding: 0.5em 0.65em 0.6em;
+				font-size: 0.8em;
+				font-weight: 300;
+				letter-spacing: 0.04em;
+			}
+		}
+	}
+	article.portletPagination {
+		.flex(1 0 100%);
+		text-align:center;
+		margin:0em 0em 0.5em;
+		border-bottom: 1px solid rgba(0,0,0,0.075);
+		padding: 0em 0em 0.5em;
+		box-shadow: 0px 8px 20px -10px fadeout(darken(@primary, 20%), 80%);
+		.page {
+			background-color:transparent;
+			border:2px solid fadeout(@labelColor, 20%);
+			padding:0em 0.65em;
+			font-size:0.5em;
+			margin:0.35em;
+			text-align:center;
+			.borderRadius(50%);
+			color:@light;
+			cursor:pointer;
+			font-weight:300;
+			.shadow(0px 1px 1px rgba(0,0,0,0.15));
+			&.selected {
+				background-color: fadeout(@labelColor, 20%);
+				border:2px solid transparent;
+			}
+		}
+	}
+}
+.icon-tileRefresh {
+	width:1.25rem;
+	height:1.25rem;
+	margin:0em;
+	padding:0em;
+	display:none;
+	position:absolute;
+	top:0.2em;
+	right:0.2em;
+	object {
+		height:1.25rem;
+		width:1.25rem;
+		float:right;
+	}
+}
+
+article.dashboardTilesPortlet {
+	margin:0.5em;
+	padding:0px 0px 2.3rem 0px;
+	.normalTwoColorGradient(top, @labelColor, darken(@labelColor, 8%) );
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 17em);
+	.borderRadius(0.25em);
+	position:relative;
+	@media (max-width:585px) {
+		.flex(0 1 100%);
+		margin:0.5em 1em;
+	}
+	h1.portlet-heading {
+		font-size: 1.4em;
+		font-weight: 400;
+		padding:0.5em 1em 0.5em 0.75em;
+		color: @light;
+		position:relative;
+	}
+	h3 {
+		text-align: center;
+		font-size: 3em;
+		padding: 0em 0em 0.25em;
+		margin: 0px;
+		color:@light;
+		text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+		.displayFlex();
+		.flexFlow(row nowrap);
+		.number {
+			text-align:center;
+		}
+		.icon-tile {
+			width: 2.75rem;
+			height: 2.75rem;
+			margin:0.25em 0em 0em 0em;
+			height:1.21em;
+			object {
+				width:2.75rem;
+				height:2.75rem;
+				display:block;
+				margin:0px auto;
+			}
+		}
+		&.full {
+			.number {
+				.flex(1 0 auto);
+			}
+			.icon-tile {
+				.flex(0 0 30%);
+				text-align:center;
+			}
+		}
+		&.half {
+			.number {
+				.flex(0 0 100%);
+			}
+			.icon-tile {
+				.flex(0 0 100%);
+			}
+		}
+		&.graph {
+			.icon-graph_example {
+				max-width:100%;
+				max-height:7em;
+				margin:0px auto;
+				object {
+				}
+			}
+		}
+	}
+	&:nth-of-type(2n) {
+		.normalTwoColorGradient(top,lighten(@labelColor, 8%), @labelColor );
+	}
+	.description {
+		.normalTwoColorGradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0) );
+		width: 100%;
+		color: @light;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 0.5em 0.65em 0.6em;
+		font-size: 0.8em;
+		font-weight: 300;
+		letter-spacing: 0.04em;
+		.ellipsis();
+		height: 2.8em;
+		line-height: 1.9em;
+		position:absolute;
+		bottom:0px;
+		left:0px;
+	}
+}
+article.dashboardTilesPortlet_Double {
+	margin:0.5em;
+	padding:0px 0px 2.3rem 0px;
+	.normalTwoColorGradient(top, @labelColor, darken(@labelColor, 8%) );
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 35em);
+	.borderRadius(0.25em);
+	position:relative;
+	@media (min-width:641px) and (max-width:723px) {
+		.flex(0 1 17em);
+	}
+	@media (max-width:585px) {
+		.flex(0 1 100%);
+		margin:0.5em 1em;
+	}
+	h1.portlet-heading {
+		font-size: 1.4em;
+		font-weight: 400;
+		padding:0.5em 1em 0.5em 0.75em;
+		color: @light;
+		position:relative;
+	}
+	h3 {
+		text-align: center;
+		font-size: 3em;
+		padding: 0em 0em 0.25em;
+		margin: 0px;
+		color:@light;
+		text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+		.displayFlex();
+		.flexFlow(row nowrap);
+		text-align:center;
+		.number {
+			text-align:left;
+			.input-group {
+				width:75%;
+				.displayFlex();
+				.flexFlow(row nowrap);
+				font-size:1.2rem;
+				margin:0.65em auto 0em;
+				button {
+					.flex(0 1 auto);
+					text-align:center;
+					padding:0em 0.7em;
+					height:50px;
+				}
+				input {
+					max-width:100%;
+					min-width:0em;
+					.flex(0 1 100%);
+					height:50px;
+					margin:0em;
+				}
+			}
+		}
+		.icon-tile {
+			width: 2.75rem;
+			height: 2.75rem;
+			margin:0.25em 0em 0em 0em;
+			height:1.21em;
+			object {
+				width:2.75rem;
+				height:2.75rem;
+				display:block;
+				margin:0px auto;
+			}
+		}
+		&.full {
+			.number {
+				.flex(1 1 100%);
+			}
+			.icon-tile {
+				.flex(0 1 50%);
+			}
+		}
+		&.half {
+			.number {
+				.flex(0 0 100%);
+			}
+			.icon-tile {
+				.flex(0 0 100%);
+			}
+		}
+		&.graph {
+			.icon-graph_example {
+				max-width:100%;
+				max-height:7em;
+				margin:0px auto;
+				object {
+				}
+			}
+		}
+	}
+	&:nth-of-type(2n) {
+		.normalTwoColorGradient(top,lighten(@labelColor, 8%), @labelColor );
+	}
+	.description {
+		.normalTwoColorGradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0) );
+		width: 100%;
+		color: @light;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 0.5em 0.65em 0.6em;
+		font-size: 0.8em;
+		font-weight: 300;
+		letter-spacing: 0.04em;
+		.ellipsis();
+		height: 2.8em;
+		line-height: 1.9em;
+		position:absolute;
+		bottom:0px;
+		left:0px;
+	}
+}
+
+
+@media @mobile {
+	.portletScreenTiles {
+		.flexFlow(row wrap);
+		.portletPage {
+			.flex(1 0 100%);
+			.displayFlex();
+			.flexFlow(row wrap);
+			article.dashboardTilesPortlet {
+				.flex(0 1 100%);
+
+				// H1 Heading For Tile
+				h1.portlet-heading {
+				}
+
+				// Content/Number for Tile
+				h3 {
+					width:100%;
+					font-size:2.5em;
+					padding:0em 0em 0.25em;
+					.number {
+					}
+
+					// Tile Icon
+					.icon-tile {
+						display:none;
+					}
+				}
+				.description + h3 {
+					padding:0em;
+					width:50%;
+					float:left;
+				}
+				// Description for Tile
+				.description {
+					width:50%;
+					float:left;
+					.normalTwoColorGradient(left, rgba(0,0,0,0.05), rgba(0,0,0,0) );
+					border-top:0px none transparent;
+					border-left: 1px solid rgba(255, 255, 255, 0.1);
+					height:6.4em;
+					overflow-y:hidden;
+					margin:-0.5em 0em 0em 0em;
+				}
+			}
+		}
+	}
+}
+
+
+/////////////
+// REVIEW -- PORTLET TEMPLATE
+///////////
+article.reviewPortlet   {
+	margin:0.5em;
+	padding:0px;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 auto);
+	.borderRadius(0.25em);
+	min-width:22rem;
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+		button {
+			float:right;
+			margin:-0.35em -0.55em 0em 0em;
+			.borderRadius(0em 0.25em 0em 0.25em);
+			border-top:0em none transparent;
+			border-right:0em none transparent;
+		}
+	}
+
+	@media @mobile {
+		min-width:0em;
+	}
+}
+article.reviewPortletFullWidth   {
+	margin:0.5em;
+	padding:0px;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+		button {
+			float:right;
+			margin:-0.35em -0.55em 0em 0em;
+			.borderRadius(0em 0.25em 0em 0.25em);
+			border-top:0em none transparent;
+			border-right:0em none transparent;
+		}
+	}
+
+	@media @mobile {
+		min-width:0em;
+	}
+}
+
+/////////////
+// ROUTING -- PORTLET TEMPLATE
+///////////
+article.routingPortlet {
+	margin:0.5em;
+	padding:0px;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+	min-width:22rem;
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		.btnGroup {
+			position:absolute;
+			right:0em;
+			top:0em;
+			height:100%;
+			font-size:0.9rem;
+			padding:0em;
+			button {
+				position:relative;
+				height:100%;
+				&:last-of-type{
+					.borderRadius(0em 0.2em 0em 0em);
+				}
+			}
+		}
+
+		// portlet type icon
+		.iconCreate(delivery_truck, 1.65rem, 2rem, -2px 6px 0px -5px);
+		.iconCreate(shopping_cart_full, 1.65rem, 2rem, 4px 6px 0px -5px);
+		.iconCreate(portfolio_folder, 1.65rem, 2rem, -1px 6px 0px -7px);
+	}
+	.notes {
+		white-space:normal !important;
+		padding:0em 0.35em;
+	}
+	textarea {
+		width:100%;
+		max-width:100%;
+		min-width:0em;
+	}
+	.icon-approval {
+		display: block;
+		padding: 0em;
+		height: 1em;
+		width: 1em;
+		object {
+			height: 1em;
+			width: 1em;
+		}
+	}
+	ul.columnList_3,
+	ul.columnList_4,
+	ul.columnList_5,
+	ul.columnList_6,
+	ul.columnList_7 {
+		li {
+			.displayFlex(); .flexFlow(row wrap);
+			.buttons {
+				.flex(0 0 5em);
+				padding:0em 0em 0em 0.25em;
+				button {
+					margin:0em;
+					padding:0.5em 0.5em 0.65em 0.5em;
+					min-width:0em;
+					min-height:0em;
+					float:left;
+					&.disabled {
+						opacity:0.6;
+						cursor:default;
+						object {
+							opacity:0.5;
+						}
+						&:hover, &:active, &:focus {
+							background-color:@primary;
+						}
+					}
+				}
+				@media @mobile {
+					display:none;
+				}
+			}
+			.delete {
+				.flex(0 0 5em);
+			}
+			.number {
+				.flex(0 0 2em);
+				@media @mobile {
+					.flex(0 1 100%);
+				}
+			}
+		}
+	}
+}
+.approvalsReviewPortlet {
+   .displayFlex();
+	.flexFlow(row wrap);
+	.flexJustify(start, flex-start);
+	padding:0em;
+   margin: 0.5em 1em;
+   background-color: fadeout(@light, 50%);
+   .borderRadius(0.5em);
+   border: 1px solid rgba(0,0,0,0.2);
+   .shadow(0px 2px 3px rgba(0,0,0,0.2));
+	article {
+		border:1px solid rgba(0,0,0,0.2);
+		background-color: fadeout(@light, 30%);
+	}
+}
+
+
+/////////////
+// HEADING -- PORTLET TEMPLATE
+///////////
+article.headingPortlet {
+	margin:0.5em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 100%);
+	.displayFlex();
+	.flexFlow(row nowrap);
+	.borderRadius(0.25em);
+}
+article.headingButtons {
+	.flex(1 0 auto);
+	.order(1);
+	position: fixed;
+	right: 0em;
+	top: 4.75rem;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	z-index: 99;
+	.btnGroup {
+		padding:0em;
+		.displayFlex();
+		.flexFlow(row wrap);
+		button {
+			padding:0.85em 1.5em;
+			border-bottom:0px none transparent;
+			&:first-of-type {
+				.borderRadius(0.25em 0em 0em 0em);
+			}
+			&:last-of-type {
+				.borderRadius(0em 0.25em 0em 0em);
+			}
+			.icon-button {
+				float:left;
+				width:1.3rem;
+				height:1.3rem;
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+				object {
+					float:left;
+					width:1.3rem;
+					height:1.3rem;
+				}
+				&.rightSide {
+					float:right;
+					object {
+						float:right;
+					}
+				}
+				@media @mobile {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			.text {
+				display:none;
+				@media @mobile {
+					display:block;
+					.ellipsis();
+				}
+			}
+		}
+	}
+	@media @mobile {
+		left: 0em;
+		bottom: 0em;
+		top:auto;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		.btnGroup {
+			button {
+				.flex(1 1 auto);
+				.borderRadius(0em) !important;
+			}
+		}
+	}
+}
+article.headingInfo {
+	margin:0em;
+	.order(0);
+	.flex(1 100%);
+	.displayFlex();
+	.flexFlow(row wrap);
+	.requisitionNumber {
+		color:@primary;
+		font-weight:700;
+		padding: 0.3em 0.7em;
+		.flex(1 auto);
+		font-size:1.4em;
+	}
+	h1 {
+		.flex(4 1 auto);
+		text-align:center;
+		padding:0.3em 0em 0em;
+	}
+	.status {
+		.flex(1 auto);
+		font-size:1.06em;
+		text-align:right;
+		padding: 0.7em 1em 0em;
+		font-weight:700;
+	}
+	.btnGroup {
+		padding:0em;
+		margin:0em;
+		height:2.831143rem;
+		.flex(0 0 auto);
+		button {
+			height:2.831143rem;
+		}
+	}
+}
+
+
+@media @mobile {
+	article.headingInfo {
+		.requisitionNumber {
+			.order(1);
+			.flex(0 0 100%);
+			text-align:center;
+		}
+		h1 {
+			.order(0);
+			.flex(0 0 100%);
+		}
+		.status {
+			.flex(0 0 100%);
+			.order(2);
+			text-align:center;
+			padding: 0em 0em;
+		}
+		.btnGroup {
+			.order(3);
+			.flex(0 0 100%);
+			button {
+				width:50%;
+			}
+		}
+	}
+}
+
+/////////////
+// HEADING -- PORTLET TEMPLATE
+///////////
+article.totalsPortlet {
+	margin:0.5em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 100%);
+	.displayFlex();
+	.borderRadius(0.25em);
+	ul {
+		.flex(1 0 100%);
+		.totals {
+			.displayFlex();
+			.flexFlow(row wrap);
+			.flexJustify(start, flex-start);
+			.totalsLine {
+				.flex(0 1 100%);
+				.displayFlex();
+				.flexFlow(row nowrap);
+				.flexJustify(end, flex-end);
+				color:@primary;
+				font-size:1.25em;
+				padding:0em 0.5em;
+				text-align:right;
+				display:inline-block;
+				letter-spacing:0.03em;
+				.currCode {
+					font-size:0.7em;
+					color:@labelColor;
+					padding:0em 0em 0em 0.25em;
+					display:inline-block;
+				}
+				.labelText {
+					font-size:0.7em;
+					color:@labelColor;
+					padding:0em 0.25em 0em 0em;
+					display:inline-block;
+				}
+			}
+			&:last-of-type {
+				.totalsLine {
+					font-weight:700;
+					letter-spacing:normal;
+				}
+			}
+		}
+	}
+}
+
+
+/////////////
+// Comments Add -- PORTLET TEMPLATE
+///////////
+article.commentsAddPortlet,   {
+	margin:0.5em;
+	padding:0em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 1 47%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-portlet {
+		width: 1.65rem;
+		height: 2rem;
+		position:absolute;
+		top:0.25em;
+		left:0.4em;
+		margin: 0em;
+		object {
+			width:1.65rem;
+			height:2rem;
+			display:block;
+		}
+	}
+	.icon-button {
+		width: 1.4rem;
+		height: 1.4rem;
+		margin: 0em auto;
+		object {
+			width:1.4rem;
+			height:1.4rem;
+			display:block;
+		}
+	}
+	.options {
+		.displayFlex();
+		.flexFlow(row wrap);
+		.inputArea{
+			padding:0.5em 0.5em 0.25em;
+			.flex(0 1 100%);
+			textarea {
+				width:100%;
+				height:6em;
+			}
+		}
+		.print {
+			.flex(0 1 35%);
+			padding:0em 0.5em 0.25em;
+			input {
+				margin-left:0.25em;
+			}
+		}
+		.placement {
+			.flex(0 1 65%);
+			padding:0em 0.5em 0.25em;
+			input {
+				margin-left:0.25em;
+			}
+		}
+		.submit {
+			.flex(0 1 auto);
+			button {
+				.displayFlex();
+				.flexFlow(row nowrap);
+				float:right;
+				.text {
+					padding:0.1em 0em 0em 0.5em;
+					@media @mobile {
+						display:none;
+					}
+				}
+			}
+		}
+		.standard {
+			.flex(1 1 auto);
+			button {
+				.displayFlex();
+				.flexFlow(row nowrap);
+				float:right;
+				.text {
+					padding:0.1em 0em 0em 0.5em;
+					@media @mobile {
+						display:none;
+					}
+				}
+			}
+		}
+	}
+
+	@media @mobile {
+		min-width:0em;
+	}
+}
+.icon-button {
+	width: 1.15rem;
+	height: 1.15rem;
+	margin: 0em auto;
+	object {
+		width:1.15rem;
+		height:1.15rem;
+		display:block;
+	}
+}
+
+/////////////
+// Comments Add -- PORTLET TEMPLATE
+///////////
+article.commentsBrowsePortlet,   {
+	margin:0.5em;
+	padding:0em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 1 47%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-portlet {
+		width: 1.65rem;
+		height: 2rem;
+		position:absolute;
+		top:0.25em;
+		left:0.4em;
+		margin: 0em;
+		object {
+			width:1.65rem;
+			height:2rem;
+			display:block;
+		}
+	}
+	.icon-button {
+		width: 1.4rem;
+		height: 1.4rem;
+		margin: 0em auto;
+		object {
+			width:1.4rem;
+			height:1.4rem;
+			display:block;
+		}
+	}
+}
+
+/////////////
+// Comments Show -- PORTLET TEMPLATE
+///////////
+article.commentsShowPortlet,   {
+	margin:0.5em;
+	padding:0em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-portlet {
+		width: 1.65rem;
+		height: 2rem;
+		position:absolute;
+		top:0.25em;
+		left:0.4em;
+		margin: 0em;
+		object {
+			width:1.65rem;
+			height:2rem;
+			display:block;
+		}
+	}
+	ul.commentList_6 {
+		.displayFlex();
+		.flexFlow(row wrap);
+		li {
+			.flex(0 1 100%);
+			.displayFlex();
+			.flexFlow(row wrap);
+			border-bottom:1px solid rgba(0,0,0,0.1);
+			padding:0px;
+			&:last-of-type {
+				border:0em none transparent;
+			}
+			.column_1, .column_2,
+			.column_3, .column_4,
+			.column_5, .column_6,
+			.column_7 {
+				padding:0em 0.5em;
+				.detailLabel { width:auto; color:@labelColor; padding:0em 0.3em 0em 0em; }
+			}
+			.edit_white {
+				.flex(1 1 auto);
+				.order(1);
+				padding:0em;
+				button {
+					width:auto;
+					float:right;
+				}
+				@media (min-width:700px) {
+					.flex(1 1 auto);
+				}
+			}
+			.lastChangedBy_UI {
+				.flex(0 1 auto);
+				padding-top:0.35em;
+				padding-bottom:0.2em;
+				color:@labelColor;
+				.ellipsis();
+				&:after {
+					content:":";
+				}
+				@media (min-width:700px) {
+					.flex(0 1 20%);
+					padding:0em 0em 0em 0.5em;
+					text-align:right;
+				}
+			}
+			.delete_white {
+				.flex(0 1 auto);
+				.order(2);
+				padding:0em;
+				button {
+					width:auto;
+					float:right;
+				}
+				@media (min-width:700px) {
+					.flex(0 1 auto);
+				}
+			}
+			.stdText {
+				.flex(0 1 100%);
+				padding:0em 0.5em 0.25em;
+				@media (min-width:700px) {
+					.flex(0 1 80%);
+				}
+			}
+			.commentPrint {
+				.flex(0 1 100%);
+				& > * {
+					& > * {
+						.displayFlex();
+						.flexFlow(row nowrap);
+						text-align:right;
+						.detailLabel {
+							padding:0em 0.25em 0em 0em;
+							display:inline-block;
+							border:0em none transparent;
+						}
+						@media (min-width:700px) {
+							.detailLabel {
+								.flex(0 1 20%);
+								padding:0em 0.25em 0em 0em;
+							}
+							.text {
+								padding:0em 0.25em;
+							}
+						}
+					}
+				}
+			}
+			.commentPlace {
+				.flex(0 1 100%);
+				& > * {
+					& > * {
+						.displayFlex();
+						.flexFlow(row nowrap);
+						text-align:right;
+						.detailLabel {
+							padding:0em 0.25em 0em 0em;
+							display:inline-block;
+							border:0em none transparent;
+						}
+						@media (min-width:700px) {
+							.detailLabel {
+								.flex(0 1 20%);
+								padding:0em 0.25em 0em 0em;
+							}
+							.text {
+								padding:0em 0.25em;
+							}
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				.delete {
+					button {
+						.borderRadius(0em 0em 0.15em 0em);
+					}
+				}
+				.edit {
+					button {
+						.borderRadius(0em 0em 0em  0.15em);
+					}
+				}
+			}
+		}
+	}
+
+	@media @mobile {
+		min-width:0em;
+	}
+}
+
+
+/////////////
+// Comments Add -- PORTLET TEMPLATE
+///////////
+article.attachmentsAddPortlet,   {
+	margin:0.5em;
+	padding:0em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-portlet {
+		width: 1.65rem;
+		height: 2rem;
+		position:absolute;
+		top:0.25em;
+		left:0.4em;
+		margin: 0em;
+		object {
+			width:1.65rem;
+			height:2rem;
+			display:block;
+		}
+	}
+	.icon-button {
+		width: 1.4rem;
+		height: 1.4rem;
+		margin: 0em auto;
+		object {
+			width:1.4rem;
+			height:1.4rem;
+			display:block;
+		}
+	}
+	.inputArea {
+		.displayFlex();
+		.flexFlow(row wrap);
+		.flexJustify(center, center);
+		padding:0em 0.5em;
+		label {
+			&.title {
+				.flex(0 1 100%);
+				@media (min-width:700px) {
+					.flex(0 1 50%);
+				}
+				@media (min-width:1000px) {
+					.flex(0 1 auto);
+				}
+			}
+			&.file {
+				.flex(0 1 100%);
+				input[type="file"] {
+					line-height:0.1em;
+					padding:0em;
+				}
+				@media (min-width:700px) {
+					.flex(0 1 50%);
+					input[type="file"] {
+						padding: 0.65em 0em 0em 0em;
+					}
+				}
+				@media (min-width:1000px) {
+					.flex(0 1 auto);
+				}
+			}
+			&.print {
+				.flex(0 1 100%);
+				@media (min-width:1000px) {
+					.flex(0 1 auto);
+					margin:0.6em 0em 0em 0em;
+				}
+			}
+			.text {
+				display:inline-block;
+			}
+
+		}
+	}
+}
+
+
+
+/////////////
+// Comments Add -- PORTLET TEMPLATE
+///////////
+article.attachmentsPortlet,   {
+	margin:0.5em;
+	padding:0em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-portlet {
+		width: 1.65rem;
+		height: 2rem;
+		position:absolute;
+		top:0.25em;
+		left:0.4em;
+		margin: 0em;
+		object {
+			width:1.65rem;
+			height:2rem;
+			display:block;
+		}
+	}
+	.icon-button {
+		width: 1.4rem;
+		height: 1.4rem;
+		margin: 0em auto;
+		object {
+			width:1.4rem;
+			height:1.4rem;
+			display:block;
+		}
+	}
+	ul{
+		.columnRow {
+			.text {
+				.ellipsis();
+				max-width:100%;
+			}
+			.buttons {
+				.flex(0 1 6em);
+				padding:0em 0.5em;
+				button {
+					float:right;
+				}
+			}
+		}
+	}
+}
+
+
+
+/////////////
+// APPROVAL -- PORTLET TEMPLATE
+///////////
+article.approvalPortlet {
+	margin:0.5em;
+	padding:0px;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(0 1 100%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-approval {
+		display: block;
+		padding: 0em;
+		height: 1em;
+		width: 1em;
+		object {
+			height: 1em;
+			width: 1em;
+		}
+	}
+	ul {
+		&.columnList_3,
+		&.columnList_4,
+		&.columnList_5,
+		&.columnList_6,
+		&.columnList_7,
+		&.columnList_8,
+		&.columnList_9,
+		&.columnList_10 {
+			li.columnRow {
+				.column_1, .column_2,
+				.column_3, .column_4,
+				.column_5, .column_6,
+				.column_7, .column_8,
+				.column_9, .column_10 {
+					&.comment {
+						.flex(0 1 100%);
+						overflow:visible;
+						white-space:pre-wrap;
+						text-overflow:inherit;
+						.detailLabel {
+							display:inline-block !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/////////////
+// Comments Add -- PORTLET TEMPLATE
+///////////
+article.approvalNotesPortlet,   {
+	margin:0.5em;
+	padding:0em;
+	background-color:@light;
+	.shadow(0px 2px 2px rgba(0,0,0,0.3));
+	.flex(1 1 47%);
+	.borderRadius(0.25em);
+
+	// H1 Heading For Dashboard Portlet
+	h1.portlet-heading {
+		.shadow(inset 0px -10px 15px -15px rgba(0,0,0,0.25));
+		position:relative;
+		padding:0.3em 0.5em 0.3em 2.75rem;
+	}
+	.icon-portlet {
+		width: 1.65rem;
+		height: 2rem;
+		position:absolute;
+		top:0.25em;
+		left:0.4em;
+		margin: 0em;
+		object {
+			width:1.65rem;
+			height:2rem;
+			display:block;
+		}
+	}
+	.icon-button {
+		width: 1.4rem;
+		height: 1.4rem;
+		margin: 0em auto;
+		object {
+			width:1.4rem;
+			height:1.4rem;
+			display:block;
+		}
+	}
+	.options {
+		.displayFlex();
+		.flexFlow(row wrap);
+		.inputArea{
+			padding:0.5em 0.5em 0.25em;
+			.flex(0 1 100%);
+			textarea {
+				width:100%;
+				height:6em;
+			}
+		}
+	}
+	@media @mobile {
+		min-width:0em;
+	}
+}
+
+
+/////////////
+// POPUP BROWSE -- PORTLET TEMPLATE
+///////////
+.popupBrowse {
+	.flex( 0 0 80%);
+	background-color:@light;
+	border:1px solid rgba(0,0,0,0.35);
+	.borderRadius(0.25em);
+	.shadow(0px 2px 2px rgba(0,0,0,0.15));
+	margin:-2px auto 0.75em auto;
+	//z-index:-9999;
+}

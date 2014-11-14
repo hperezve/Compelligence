@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false" sql-query="Browse.DashboardDiscussion">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>DiscussionDashboardView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>Response</property>
+      <label>DiscussionDashboardResponse</label>
+    </column>
+    <column hidden="true">
+      <entity>DiscussionDashboardView</entity>
+      <property>EntityType</property>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>EntityName</property>
+      <label>DiscussionDashboardEntityName</label>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>CreatedByName</property>
+      <label>DiscussionDashboardCreatedByName</label>
+    </column>
+    <column>
+      <entity>DiscussionDashboardView</entity>
+      <property>CreatedDate</property>
+      <label>DiscussionDashboardCreatedDate</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <events>
+    <event name="ondblClickRow">
+      <![CDATA[
+      var dissEntityType = $.trim($(this).jqGrid('getCell', id, 'DiscussionDashboardView.EntityType'));
+      var currentScope = null; 
+      var currentEntity = null; 
+      if (dissEntityType == '$C{DomainObjectType.Project}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Project'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Deal}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Deal'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Event}') { 
+        currentScope = 'Workspace'; 
+        currentEntity = 'Event'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Objective}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Objective'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Kit}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Kit'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Industry}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Industry'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Competitor}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Competitor'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Product}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Product'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Customer}') { 
+        currentScope = 'Environment'; 
+        currentEntity = 'Customer'; 
+      } 
+      if (dissEntityType == '$C{DomainObjectType.Template}') { 
+        currentScope = 'Admin'; 
+        currentEntity = 'Template'; 
+      }
+      
+      if (currentScope != null && currentEntity != null) { 
+        var innercode = " if (BackEndTabs.getItem('AdminTabs_" + currentScope + "Tab') != null) { ";
+        innercode += " BackEndTabs.setActiveTab('AdminTabs_" + currentScope + "Tab'); ";
+        innercode += " if (" + currentScope + "Subtabs != null) { ";
+        innercode += " postLoadContent = function() {";
+        innercode += " getDiscussionEntityId('$P{currentPath}', currentScope, currentEntity, id); ";
+        innercode += " };";
+        innercode += currentScope + "Subtabs.setActiveTab('" + currentScope + "Tab_" + currentEntity + "Content');";
+        innercode += " } else { alert('You do not have access to item'); } ";
+        innercode += " } else { alert('You do not have access to item'); } ";
+        eval(innercode);
+      } else { 
+        alert('You do not have access to item'); 
+      } 
+    ]]>
+    </event>
+  </events>
+</browse>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>ProductCriteriaDetailView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>ProductCriteriaDetailView</entity>
+      <property>GroupName</property>
+      <label>ProductCriteriaGroupName</label>
+    </column>
+    <column>
+      <entity>ProductCriteriaDetailView</entity>
+      <property>SetName</property>
+      <label>ProductCriteriaSetName</label>
+    </column>
+    <column>
+      <entity>ProductCriteriaDetailView</entity>
+      <property>CriteriaName</property>
+      <label>ProductCriteriaCriteriaName</label>
+    </column>
+    <column>
+      <entity>ProductCriteriaDetailView</entity>
+      <property>Value</property>
+      <label>ProductCriteriaValue</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.ProductCriteriaDetailView as ProductCriteriaDetailView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+   ProductCriteriaDetailView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    ProductCriteriaDetailView.CriteriaName
+    ]]>
+  </orderBy>
+</browse>

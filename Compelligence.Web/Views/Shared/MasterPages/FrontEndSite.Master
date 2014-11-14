@@ -1,0 +1,152 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Compelligence.Security.Managers" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title></title>
+    </asp:ContentPlaceHolder>
+    <link href="<%= Url.Content("~/Content/Images/Icons/favicon.ico") %>" rel="shortcut icon"
+        type="image/x-icon" />
+    <link href="<%= Url.Content("~/Content/Styles/FrontEndSite.css") %>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%= Url.Content("~/Content/Styles/rating.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="Styles" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="<%= Url.Content("~/Scripts/jquery-1.9.1.js") %>" type="text/javascript"></script>
+
+    <script src="<%= Url.Content("~/Scripts/jquery-migrate-1.1.1.js") %>" type="text/javascript"></script>
+
+    <script src="<%= Url.Content("~/Scripts/System/FrontEnd/Menu.js") %>" type="text/javascript"></script>
+
+    <script src="<%= Url.Content("~/Scripts/jquery-idleTimeout.js") %>" type="text/javascript""></script>
+
+    <script src="<%= Url.Content("~/Scripts/System/Help.js") %>" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function hiddenOptionsMenu() {
+            $("#optionsMenu").addClass('ng-hide');
+        };
+        function showOptionsMenu() {
+            if ($("#optionsMenu").hasClass('ng-hide')) {
+                $("#optionsMenu").removeClass('ng-hide');
+            }
+        };
+        $(document).ready(function() {
+            $(document).idleTimeout({
+                inactivity: '<%= Session["SessionTimeout"] %>',
+                noconfirm: 60000,
+                sessionAlive: 0,
+                redirect_url: '<%= Url.Action("TimeOut", "Home") %>',
+                logout_cancel: '<%= Url.Action("Login", "Home") %>',
+                dialogText: "Your Compelligence session is about to time out. Do you wish to continue?"
+            });
+            $(".sideNav").click(function() {
+                if ($("#optionsMenu").hasClass('ng-hide')) {
+                    showOptionsMenu();
+                }
+                else {
+                    $("#optionsMenu").addClass('ng-hide');
+                    $("#optionsMenu").slideDown("slow");
+                }
+            });
+        }); 
+    </script>
+
+    <script type="text/javascript">
+        var maxAncho = 300 //define la anchura máxima de la imagen
+        var maxAlto = 250 //define la altura máxima de la imagen
+        function fotilla() {
+            var maxwidth = 98;
+            var maxheight = 47.5;
+            var imagen = document.getElementById("img");
+            if (imagen.width > maxwidth || imagen.height > maxheight) {
+                var scale = Math.min((maxwidth / imagen.width), (maxheight / imagen.height), 1);
+                var new_width = Math.floor(scale * imagen.width);
+                var new_height = Math.floor(scale * imagen.height);
+                imagen.width = new_width;
+                imagen.height = new_height;
+            }
+        }
+    </script>
+
+</head>
+<body id="FrontEndBody">
+    <div>
+        <header> <!--<header>-->
+        <nav class="mainNavigationBar">
+            <a class="sideNav" ng-click="showLeftPlease = !showLeftPlease">
+                <div class="icon-nav">
+                    <%--<img class="headerLogo" src="../Content/Images/Icons/menu_blue.png" />--%>
+                    <object data="../Content/Images/Icons/menu_blue.png" type="image/png"></object>
+                    <div class="linkTitle">Menu</div>
+                </div>
+            </a>
+            <% string ImageUrlFrontEnd = (string)Session["Imageurl"];
+               string dynstyle = string.Empty;
+               if (!string.IsNullOrEmpty(ImageUrlFrontEnd))
+               {%>
+            <a class="logo ng-hide" ng-show="showCompanyLogo">
+                <img class="headerLogo" src="<%=Html.ImageUrl(ImageUrlFrontEnd)%>" />
+            </a>
+            <%} %>
+            <a class="companyLogo">
+                <img class="headerLogo" src="../Content/Images/Styles/compelligence-1.png" alt="Compelligence v2.0" />
+            </a>
+            <a href="../Home.aspx/GoToHome"  class="dashboardHome ng-hide" ng-hide="hideMenu"  ng-show="showOptionMenu">
+                <div class="icon-nav">
+                    <%--<img class="headerLogo" src="../Content/Images/Icons/home_blue.png" />--%>
+                    <object data="../Content/Images/Icons/home_blue.png" type="image/png"></object>
+                    <div class="linkTitle">Home</div>
+                </div>
+            </a>
+        </nav>
+    </header>
+        <section id="optionsMenu" ng-click="showLeftPlease = !showLeftPlease" ng-show="showLeftPlease"
+            class="overlayMenu leftTopMenu ng-hide">
+        <ul class="menuList">
+           <li >
+                <a href="../Comparinator.aspx/Index">
+                    <div class="icon-sidebar">
+                        <object data="../Content/Images/Icons/users_relation_blue.png" type="image/png"></object>
+                    </div>
+                    <div class="text">Generate a competitive sales stategy</div>
+                </a>
+            </li>
+            <li>
+                <a href="../ContentPortal.aspx/Index">
+                    <div class="icon-sidebar">
+                        <object data="../Content/Images/Icons/gearwheel-blue.png" type="image/png"></object>
+                    </div>
+                    <div class="text">Research Markets & Competitors</div>
+                </a>
+            </li>
+
+            <li><a href="../Home.aspx/Logout">
+					<div class="icon-sidebar">
+						<object data="../Content/Images/Icons/logout_blue.png" type="image/png"></object>
+					</div>
+					<div class="text">Logout</div>
+				</a>
+			</li>
+        </ul>
+    </section>
+    </div>
+    <div id="content">
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div id="contentright" class="mainRightCol">
+            <asp:ContentPlaceHolder ID="RightMainContent" runat="server" />
+        </div>
+    </div>
+    <div id="HelpDialog" style="display: none;">
+    </div>
+</body>
+</html>

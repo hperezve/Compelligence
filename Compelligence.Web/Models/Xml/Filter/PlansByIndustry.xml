@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>IndustryName</property>
+      <label>IndustryNameReport</label>
+    </column>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>Task</property>
+      <label>PlanTaskReport</label>
+    </column>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>Type</property>
+      <label>PlanTypeReport</label>
+      <type class="StandardData">PlanType</type>
+    </column>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>DueDate</property>
+      <label>PlanDueDateReport</label>
+      <type>Date</type>
+    </column>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>AssignedToName</property>
+      <label>PlanAssignedToNameReport</label>
+    </column>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>Status</property>
+      <label>PlanStatusReport</label>
+      <type class="StandardData">IndustryStatus</type>
+    </column>
+    <column>
+      <entity>PlansByIndustryView</entity>
+      <property>Tier</property>
+      <label>PlanTierReport</label>
+      <type class="StandardData">IndustryTier</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.PlansByIndustryView as PlansByIndustryView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    PlansByIndustryView.ClientCompany = '$S{ClientCompany}' AND PlansByIndustryView.EntityType = '$C{DomainObjectType.Industry}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    PlansByIndustryView.IndustryId
+    ]]>
+  </orderBy>
+</browse>

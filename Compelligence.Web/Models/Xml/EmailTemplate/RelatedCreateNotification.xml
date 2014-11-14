@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <subject><![CDATA[$P{keyWordCompany}: $P{EntityTypeParent} $P{ParentName} has been related.]]></subject>
+  <message>
+    <![CDATA[
+  <html>
+    <head>
+    </head>
+    <body>
+      <div>THIS IS AN AUTOMATED MESSAGE, DO NOT REPLY.</div>
+      <br/>
+      <div>The following item has been changed. The changes are listed below. For full information about what has changed, visit the $P{urlCompany} and locate this object.</div>
+      <br/>
+      <div>Object Name: <b>$P{EntityTypeParent}</b> "<b>$P{ParentName}</b>"</div>
+      <div>User who did this: <b>$P{CreatedBy}</b></div>
+      <div>Changed Event: The $P{EntityTypeParent} <b>$P{ParentName}</b> has been related with $P{EntityTypeChild} <b>$P{ChildName}</b>.</div>
+      <br/>
+      <div>If you did not expect this message or don't want to receive mails in future, please contact $P{emailOriginalAdmin}.</div>
+      <br/>
+      <div>This is an automated message. Please do not reply.</div>      
+    <body>
+  </html>
+  ]]>
+  </message>
+</email>

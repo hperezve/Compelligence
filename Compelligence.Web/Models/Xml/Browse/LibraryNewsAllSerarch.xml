@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>LibraryNewsAllView</entity>
+      <property>Id</property>
+    </column>
+    <column>
+      <entity>LibraryNewsAllView</entity>
+      <property>Name</property>
+      <label>LibraryNewsName</label>
+    </column>
+    <column >
+      <entity>LibraryNewsAllView</entity>
+      <property>Description</property>
+      <label>LibraryNewsDescription</label>
+      <type class="HtmlPlaneOneLine">Description</type>
+    </column>
+    <column>
+      <entity>LibraryNewsAllView</entity>
+      <property>AssignedTo</property>
+      <label>LibraryNewsAssignedTo</label>
+    </column>
+    <column>
+      <entity>LibraryNewsAllView</entity>
+      <property>AssignedToName</property>
+      <label>LibraryNewsAssignedToName</label>
+    </column>
+    <column>
+      <entity>LibraryNewsAllView</entity>
+      <property>Source</property>
+      <label>LibraryNewsSource</label>
+    </column>
+    <column>
+      <entity>LibraryNewsAllView</entity>
+      <property>Author</property>
+      <label>LibraryNewsAuthor</label>
+    </column>
+    <column>
+      <entity>LibraryNewsAllView</entity>
+      <property>DateAdded</property>
+      <label>LibraryNewsDateAdded</label>
+      <type>Date</type>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.LibraryNewsAllView as LibraryNewsAllView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    LibraryNewsAllView.ClientCompany = '$S{ClientCompany}'
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    LibraryNewsAllView.Name
+    ]]>
+  </orderBy>
+
+</browse>

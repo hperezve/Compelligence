@@ -1,0 +1,738 @@
+2014-07-17 12:26:36,423 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object &SessionFactory
+2014-07-17 12:26:36,533 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de TCP, error: 0 - Tiempo de espera de la operación de espera agotado.) ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name 'SessionFactory' defined in 'assembly [Compelligence.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null], resource [Compelligence.DataAccess.Config.Dao.xml] line 36' : Initialization of object failed : Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de TCP, error: 0 - Tiempo de espera de la operación de espera agotado.) ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de TCP, error: 0 - Tiempo de espera de la operación de espera agotado.)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.LoginWithFailover(Boolean useFailoverHost, String primaryHost, String failoverHost, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   en System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   en NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   en NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   en NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   en NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   en NHibernate.Cfg.Configuration.BuildSessionFactory()
+   en Spring.Data.NHibernate.LocalSessionFactoryObject.NewSessionFactory(Configuration config)
+   en Spring.Data.NHibernate.LocalSessionFactoryObject.AfterPropertiesSet()
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InvokeInitMethods(Object target, String name, IConfigurableObjectDefinition definition)
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper)
+   en Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper)
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   en Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments)
+   en Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments)
+   en Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure)
+   en Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name)
+   en Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons()
+   en Spring.Context.Support.AbstractApplicationContext.Refresh()
+   en Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations)
+   en Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations)
+   en _dynamic_Spring.Context.Support.WebApplicationContext..ctor(Object[] )
+   en Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments)
+   en Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor)
+   en Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext()
+   en Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources)
+   en Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources)
+   en Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   en System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   en System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   en System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   en System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   en System.Web.HttpContext.GetSection(String sectionName)
+   en System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   en System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   en System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   en Spring.Util.ConfigurationUtils.GetSection(String sectionName)
+   en Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath)
+2014-07-17 12:28:10,817 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object &SessionFactory
+2014-07-17 12:28:10,862 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de TCP, error: 0 - Tiempo de espera de la operación de espera agotado.) ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name 'SessionFactory' defined in 'assembly [Compelligence.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null], resource [Compelligence.DataAccess.Config.Dao.xml] line 36' : Initialization of object failed : Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de TCP, error: 0 - Tiempo de espera de la operación de espera agotado.) ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de TCP, error: 0 - Tiempo de espera de la operación de espera agotado.)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.LoginWithFailover(Boolean useFailoverHost, String primaryHost, String failoverHost, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   en System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   en NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   en NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   en NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   en NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   en NHibernate.Cfg.Configuration.BuildSessionFactory()
+   en Spring.Data.NHibernate.LocalSessionFactoryObject.NewSessionFactory(Configuration config)
+   en Spring.Data.NHibernate.LocalSessionFactoryObject.AfterPropertiesSet()
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InvokeInitMethods(Object target, String name, IConfigurableObjectDefinition definition)
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper)
+   en Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper)
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   en Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments)
+   en Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments)
+   en Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure)
+   en Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name)
+   en Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons()
+   en Spring.Context.Support.AbstractApplicationContext.Refresh()
+   en Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations)
+   en Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations)
+   en _dynamic_Spring.Context.Support.WebApplicationContext..ctor(Object[] )
+   en Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments)
+   en Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor)
+   en Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext()
+   en Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources)
+   en Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources)
+   en Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   en System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   en System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   en System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   en System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   en System.Web.HttpContext.GetSection(String sectionName)
+   en System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   en System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   en System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   en Spring.Util.ConfigurationUtils.GetSection(String sectionName)
+   en Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath)
+2014-07-17 12:44:50,747 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:45:53,061 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:45:58,743 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:46:03,855 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:46:06,239 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:51:13,361 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:52:52,564 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 14:54:50,019 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:09:14,024 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:09:33,544 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:09:33,570 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:11:32,861 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:11:32,863 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:13:27,830 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:13:45,475 [10] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:13:45,496 [10] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:15:11,548 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:17:24,348 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:19:38,745 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParserStateObject.WriteSni()
+   en System.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode)
+   en System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   en System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   en System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   en System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   en System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   en System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   en System.Data.Common.DbConnection.System.Data.IDbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   en NHibernate.Transaction.AdoTransaction.Begin(IsolationLevel isolationLevel)
+2013-06-24 11:14:09,668 [8] ERROR Spring.Data.NHibernate.SessionFactoryUtils [(null)] - Could not close Hibernate Session
+NHibernate.SessionException: Session was already closed
+   en NHibernate.Impl.SessionImpl.Close()
+   en Spring.Data.NHibernate.SessionFactoryUtils.CloseSession(ISession session)
+2014-07-14 16:28:33,030 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 16:34:44,453 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 16:48:46,618 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 16:49:49,386 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 16:52:06,191 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 16:52:42,037 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 17:00:14,263 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 17:28:52,453 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 17:29:48,432 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 17:48:08,221 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 17:56:22,364 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-14 17:57:10,095 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 08:52:02,745 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 08:55:41,308 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:09:45,213 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:11:46,115 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:14:16,056 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:17:26,907 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:28:07,585 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:36:03,876 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:37:51,905 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:38:28,534 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:40:03,872 [6] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:43:42,297 [6] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:44:22,024 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:45:03,788 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:53:21,961 [6] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 09:56:44,498 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:08:41,198 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:13:14,207 [6] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:22:37,388 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:23:17,451 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:35:51,997 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:43:45,829 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:46:53,724 [6] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:59:06,795 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 10:59:48,161 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 11:13:30,073 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 11:23:30,539 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 11:24:21,100 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-15 12:46:20,629 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationsController
+2014-07-21 14:46:11,999 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:19:38,757 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:21:57,558 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:21:57,570 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:20,640 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:20,641 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:45,402 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:25:53,023 [11] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:53,024 [11] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:56,361 [11] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:56,362 [11] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:57,481 [11] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:57,482 [11] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:57,775 [11] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:57,777 [11] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:58,038 [11] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:58,040 [11] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:25:59,697 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:25:59,698 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:27:17,899 [12] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:27:39,501 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-17 15:27:39,523 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-17 15:29:16,043 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:37:08,505 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:38:17,536 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:39:26,219 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:43:28,200 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:47:57,659 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:51:50,333 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:52:20,973 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:55:29,206 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:56:25,589 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 15:57:13,836 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:00:36,517 [12] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:01:24,747 [12] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:01:49,993 [13] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:02:09,192 [14] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:02:37,571 [13] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:05:31,642 [14] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:07:33,148 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:08:01,480 [14] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:08:50,638 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:09:45,031 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:16:06,376 [12] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:18:53,544 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:26:03,724 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:30:29,304 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:34:36,653 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:38:40,238 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-17 16:46:44,909 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 15:32:15,963 [8] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 15:32:16,134 [8] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 15:33:41,764 [8] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 15:33:41,809 [8] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 15:48:30,498 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 15:48:30,538 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 15:53:59,858 [6] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 15:53:59,870 [6] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 16:00:36,767 [6] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 16:00:36,777 [6] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 16:20:28,812 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 16:32:11,625 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] -    GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 16:46:03,317 [6] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 16:46:03,357 [6] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 16:53:02,687 [11] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 16:53:02,697 [11] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 16:55:11,156 [9] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 16:55:11,166 [9] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 16:57:15,056 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 17:26:39,651 [13] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+
+2014-07-21 17:56:51,845 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 18:02:37,151 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 18:23:40,524 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-21 18:24:14,140 [8] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-21 18:24:14,163 [8] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-21 18:28:41,779 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 09:35:52,772 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 09:39:29,367 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 09:40:53,075 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 10:39:38,583 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 10:41:02,504 [8] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 10:55:18,197 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 15:09:38,082 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 15:57:16,622 [9] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 15:59:39,237 [10] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-22 15:59:39,271 [10] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-22 16:00:53,089 [4] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-22 16:00:53,100 [4] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-22 16:26:31,214 [12] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-07-22 16:53:17,471 [4] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-22 16:53:17,513 [4] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-22 16:53:34,007 [12] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: INSERT INTO ClientCompanyHelp ([EntityType], [Subject], [Content], [ActionFrom], [CreatedBy], [CreatedDate], [LastChangedBy], [LastChangedDate], [ClientCompany]) VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); select SCOPE_IDENTITY()
+System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   en NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2014-07-22 16:53:34,017 [12] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - String or binary data would be truncated.
+The statement has been terminated.
+2014-07-23 11:29:01,368 [11] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-09-01 10:47:50,047 [10] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-10-06 09:42:40,918 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-10-06 09:47:47,415 [4] INFO  Compelligence.BusinessLogic.Implementation.SalesForceService [(null)] - SalesForce.User :
+2014-10-06 09:47:47,424 [4] INFO  Compelligence.BusinessLogic.Implementation.SalesForceService [(null)] - SalesForce.Password :
+2014-10-06 09:55:01,191 [14] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-10-06 10:01:32,332 [13] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-10-06 10:05:20,152 [4] ERROR Spring.Objects.Factory.Support.WebObjectFactory [(null)] - GetObjectInternal: error obtaining object ConfigurationGeneralController
+2014-11-13 17:02:21,973 [9] INFO  Compelligence.BusinessLogic.Implementation.LibraryExternalSourceService [(null)] - Found (0) Library.News by URL: Honda Motor Co.
+2014-11-13 17:02:22,721 [9] INFO  Compelligence.BusinessLogic.Implementation.LibraryService [(null)] - Check duplicates in 0 library news

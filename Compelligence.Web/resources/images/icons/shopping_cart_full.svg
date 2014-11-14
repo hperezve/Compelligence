@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../css/styles.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1024px" height="1024px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 10240 10240" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>shopping_cart_full icon</title>
+	<desc>shopping_cart_full icon from the IconExperience.com O-Collection. Copyright by INCORS GmbH (www.incors.com).</desc>
+	<path id="curve3" class="primaryIconColor" d="M7360 7680c530,0 960,430 960,960 0,530 -430,960 -960,960 -530,0 -960,-430 -960,-960 0,-530 430,-960 960,-960zm-5120 0c530,0 960,430 960,960 0,530 -430,960 -960,960 -530,0 -960,-430 -960,-960 0,-530 430,-960 960,-960z"/>
+	<path id="curve2" class="primaryIconColor" d="M1920 7356c-264,0 -478,-214 -478,-478 0,-264 214,-478 478,-478l5120 0 -448 -1084c-45,-102 -52,-211 -27,-311l-1 0 752 -3008c37,-149 140,-263 270,-321l1228 -656c233,-124 523,-36 647,197 124,233 36,523 -197,647l-1069 571 -661 2644 682 1605 0 0c27,60 41,125 41,195 0,264 -214,478 -478,478l-5859 0z"/>
+	<path id="curve1" class="secondaryIconColor" d="M1407 1600l4813 0c204,0 379,88 504,252 125,165 166,360 116,563l-772 3167c-83,342 -414,555 -751,483l-3616 -767c-261,-55 -452,-257 -500,-525l-426 -2400c-35,-198 12,-383 138,-538 126,-155 295,-236 491,-236zm0 656l426 2400c0,0 0,0 0,0l3616 767 772 -3167 -4813 0z"/>
+	<path id="curve0" class="primaryIconColor" d="M3273 412l2495 573c142,33 240,156 248,294l-3270 0 144 -627c39,-172 212,-280 384,-240zm2458 2164l-439 1912c-39,172 -212,280 -384,240l-2495 -573c-172,-39 -280,-212 -240,-384l275 -1195 3283 0z"/>
+</svg>

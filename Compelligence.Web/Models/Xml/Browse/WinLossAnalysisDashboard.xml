@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse showall="false" togglecolumns="false">
+  <select>
+    <column hidden="true" id="true" filter="false">
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>Id</property>
+    </column>     
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>IndustryId</property>
+      <label>WinLossAnalysisIndustry</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>CompetitorId</property>
+      <label>WinLossAnalysisCompetitor</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>NumberPeriods</property>
+      <label>WinLossAnalysisNumber</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>StartDate</property>
+      <label>WinLossAnalysisDate</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>TimePeriod</property>
+      <label>WinLossAnalysisTime</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>WinLossPercent</property>
+      <label>WinLossAnalysisPercent</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>WinLossTotal</property>
+      <label>WinLossAnalysisTotal</label>
+    </column>
+    <column>
+      <entity>WinLossAnalysisDashboardView</entity>
+      <property>Date</property>
+      <label>WinLossAnalysisDateC</label>
+    </column>
+   
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.WinLossAnalysisDashboardView as WinLossAnalysisDashboardView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    WinLossAnalysisDashboardView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    WinLossAnalysisDashboardView.Date DESC
+    ]]>
+  </orderBy>
+</browse>

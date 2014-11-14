@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<browse>
+  <select>
+    <column>
+      <entity>EndUserByDealView</entity>
+      <property>UserName</property>
+      <label>EndUserByDealUserName</label>
+    </column>
+    <column>
+      <entity>EndUserByDealView</entity>
+      <property>Email</property>
+      <label>EndUserByDealEmail</label>
+    </column>
+    <column>
+      <entity>EndUserByDealView</entity>
+      <property>Status</property>
+      <label>EndUserByDealStatus</label>
+      <type class="StandardData">UserStatus</type>
+    </column>
+    <column>
+      <entity>EndUserByDealView</entity>
+      <property>Phone</property>
+      <label>EndUserByDealPhone</label>
+    </column>
+    <column>
+      <entity>EndUserByDealView</entity>
+      <property>DealName</property>
+      <label>EndUserByDealDealName</label>
+    </column>
+    <column>
+      <entity>EndUserByDealView</entity>
+      <property>DealAssignedToName</property>
+      <label>EndUserByDealDealAssignedToName</label>
+    </column>
+  </select>
+  <from>
+    <![CDATA[
+    Compelligence.Domain.Entity.Views.EndUserByDealView as EndUserByDealView
+    ]]>
+  </from>
+  <where>
+    <![CDATA[
+    EndUserByDealView.ClientCompany = '$S{ClientCompany}' 
+    ]]>
+  </where>
+  <orderBy>
+    <![CDATA[
+    EndUserByDealView.UserName
+    ]]>
+  </orderBy>
+</browse>
