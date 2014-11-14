@@ -251,3 +251,5 @@ D:\CompelligenceProjects.(IP-interna)\1705_N\CompelligenceV2\1705B_NewStyle\Comp
 D:\CompelligenceProjects.(IP-interna)\1705_N\CompelligenceV2\1705B_NewStyle\Compelligence.Web\obj\Debug\Compelligence.Web.pdb
 D:\CompelligenceProjects.(IP-interna)\1705_N\CompelligenceV2\1705B_NewStyle\Compelligence.Web\bin\Compelligence.DataSource.dll
 D:\CompelligenceProjects.(IP-interna)\1705_N\CompelligenceV2\1705B_NewStyle\Compelligence.Web\bin\Compelligence.DataSource.pdb
+D:\CompelligenceProjects.(IP-interna)\1705_N\CompelligenceV4\Compelligence.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\CompelligenceProjects.(IP-interna)\1705_N\CompelligenceV4\Compelligence.Web\obj\Debug\Compelligence.Web.dll
